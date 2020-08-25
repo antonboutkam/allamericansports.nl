@@ -1,0 +1,111 @@
+<translation>
+    <lbl_supplier>Supplier</lbl_supplier>
+    <lbl_ledger>Ledger</lbl_ledger>
+    <lbl_listview>List view</lbl_listview>
+    <lbl_thumbview>Thumb view</lbl_thumbview>
+    <lbl_options>Options</lbl_options>
+    <lbl_addoption>Add option</lbl_addoption>
+    <lbl_addproduct>Add product</lbl_addproduct>
+    <lbl_haspart>Has part</lbl_haspart>
+    <lbl_ispartof>Is part of</lbl_ispartof>
+    <lbl_grouping>Grouping</lbl_grouping>
+    <lbl_extra_images>Extra images</lbl_extra_images>
+    <lbl_inc_vat>Including vat</lbl_inc_vat>
+    <lbl_ex_vat>Excluding vat</lbl_ex_vat>
+    <lbl_link_product>You can start linking products after this product is saved.</lbl_link_product>
+    <lbl_producttype>Product type</lbl_producttype>
+    <lbl_size>Dimensions</lbl_size>
+    <lbl_weight>Weight</lbl_weight>
+    <lbl_choose>please choose</lbl_choose>
+    <lbl_productcatalogue>Procutcatalogue</lbl_productcatalogue>
+    <lbl_searchproduct>Find product</lbl_searchproduct>
+    <lbl_print_barcodes>Print barcodes</lbl_print_barcodes>
+    <lbl_actions>Actions</lbl_actions>
+    <lbl_addproduct>Add product</lbl_addproduct>
+    <lbl_overview>Product catalogue</lbl_overview>
+    <lbl_add>Add</lbl_add>
+    <lbl_export>Export</lbl_export>
+    <lbl_exceexport>Export to excel</lbl_exceexport>
+    <lbl_search_product>Find product</lbl_search_product>
+    <lbl_searchfield>(ean code, articlenumber, productname, description, barcode)</lbl_searchfield>
+    <lbl_simplesearch>Simple search</lbl_simplesearch>
+    <lbl_advsearch>Advanced search</lbl_advsearch>
+    <lbl_companyname>Company name</lbl_companyname>
+    <lbl_website>Website</lbl_website>
+    <lbl_postalcode>Postalcode</lbl_postalcode>
+    <lbl_city>City</lbl_city>
+    <lbl_found_products>Found products</lbl_found_products>
+    <lbl_articlenumber>Articlenumber</lbl_articlenumber>
+    <lbl_productname>Productname</lbl_productname>
+    <lbl_purchaseprice>Purchase price</lbl_purchaseprice>
+    <lbl_saleprice>Sale price</lbl_saleprice>
+    <lbl_price>Price</lbl_price>
+    <lbl_adviceprice>Adviceprice</lbl_adviceprice>
+    <lbl_discount>Discount</lbl_discount>
+    <lbl_margin>Margin</lbl_margin>
+    <lbl_stock_global>Stock</lbl_stock_global>
+    <lbl_stock>Stock</lbl_stock>
+    <lbl_edit_product>Edit product</lbl_edit_product>
+    <lbl_product_add>Add product</lbl_product_add>    
+    <lbl_products>products</lbl_products>
+    <lbl_print_barcode>Print barcode</lbl_print_barcode>
+    <lbl_view_product>View product</lbl_view_product>    
+    <lbl_isoffer>Is an offer</lbl_isoffer>
+    <lbl_inwebshop>Available in the webshop</lbl_inwebshop>
+    <lbl_general>General</lbl_general>
+    <lbl_add_product>Add product</lbl_add_product>
+    <lbl_back_to_overview>Back to the overview</lbl_back_to_overview>
+    <lbl_barcodes>barcodes</lbl_barcodes>
+    <lbl_barcodesucf>Barcodes</lbl_barcodesucf>            
+    <lbl_productname>Productname</lbl_productname>
+    <lbl_type>Product type</lbl_type>
+    <lbl_size>Size</lbl_size>
+    <lbl_stock>Stocks</lbl_stock>
+    <lbl_location>Location</lbl_location>
+    <lbl_quantity>Quantity </lbl_quantity>
+    <lbl_unavailable>This product is currently not in stock.</lbl_unavailable>
+    <lbl_prices>Prices</lbl_prices>
+    <lbl_purchase_price>Purchase price</lbl_purchase_price>
+    <lbl_saleprice>Sale price</lbl_saleprice>
+    <lbl_price>Price</lbl_price>
+    <lbl_colors>Colors</lbl_colors>
+    <lbl_materials>Materials</lbl_materials>    
+    <lbl_color>Color</lbl_color>
+    <lbl_material>Material</lbl_material>            
+    <lbl_image>Picture</lbl_image>
+    <lbl_stock>Stock</lbl_stock>
+    <lbl_please_choose>Please choose</lbl_please_choose>
+    <lbl_barcode>barcode</lbl_barcode>
+    <lbl_extrainfo>Extra information</lbl_extrainfo>    
+    <lbl_description>Description</lbl_description>  
+    <lbl_general>General</lbl_general>
+    <lbl_productname>Productname</lbl_productname>
+    <lbl_size>Size</lbl_size>
+    <lbl_image>Picture</lbl_image>
+    <lbl_stock>Stock</lbl_stock>
+    <lbl_please_choose>Please choose</lbl_please_choose>
+    <lbl_purchase_price>Purchaseprice</lbl_purchase_price>
+    <lbl_saleprice>Saleprice</lbl_saleprice>
+    <lbl_price>Price</lbl_price>
+    <lbl_adviceprice>Adviceprice</lbl_adviceprice>
+    <lbl_colors>Colors</lbl_colors>
+    <lbl_materials>Materials</lbl_materials>
+    <lbl_color>Color</lbl_color>
+    <lbl_material>Material</lbl_material>
+    <lbl_altbarcodes>Alternative barcodes</lbl_altbarcodes>
+    <lbl_barcodes>Barcodes</lbl_barcodes>
+    <lbl_barcode>barcode</lbl_barcode>
+    <lbl_extrainfo>Extra information</lbl_extrainfo>
+    <lbl_description>Description</lbl_description>
+    <lbl_actions>Actions</lbl_actions>
+    <lbl_Save>Save</lbl_Save>
+    <lbl_Save_next>Save + next product</lbl_Save_next>
+    <lbl_Cancel>Cancel</lbl_Cancel>
+    <lbl_stored-ok>Productinformation stored</lbl_stored-ok>
+    <lbl_err-stock-no-location>You have to specify the warehouse location for the products.</lbl_err-stock-no-location>
+    <lbl_err-no-art-num>You must specify an articlenumber.</lbl_err-no-art-num>
+    <lbl_err-dupl-artnum>The provided articlenumber already exists in our database, please choose a different articlenumber.</lbl_err-dupl-artnum>
+    <lbl_err-prod-noname>The field productname is mandatory.</lbl_err-prod-noname>          
+	
+	<lbl_sizetable>Size tables</lbl_sizetable>
+</translation>

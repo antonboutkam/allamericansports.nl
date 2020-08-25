@@ -1,0 +1,20 @@
+<translation>
+    <nav_home>Home</nav_home>
+    <nav_relationmanagement>Relation management</nav_relationmanagement>
+    <nav_stock>Stock</nav_stock>
+    <nav_orders>Orders</nav_orders>
+    <nav_productcatalogue>Productcataloque</nav_productcatalogue>
+    <nav_billing>Billing</nav_billing>
+    <nav_reports>Reports</nav_reports>
+    <nav_settings>Settings</nav_settings>
+    <lbl_signout>sign out</lbl_signout>
+    <lbl_path>Path</lbl_path>
+    <lbl_rack>Rack</lbl_rack>
+    <lbl_shelf>Shelf</lbl_shelf>
+    <nav_cms>CMS</nav_cms>    
+    <lbl_productgroups>Product groups</lbl_productgroups>
+    <lbl_discountgroups>Discount groups</lbl_discountgroups>
+    <lbl_addproduct>Add product</lbl_addproduct>
+    <lbl_spotlight>Frontpage products</lbl_spotlight>    
+    <lbl_supportbutton>Support</lbl_supportbutton>    
+</translation>

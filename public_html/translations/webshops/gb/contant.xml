@@ -1,0 +1,13 @@
+<translation>
+    <transl_wiretransfer>Cash payment</transl_wiretransfer>
+    <transl_dearsirmrs>Dear sir/mrs</transl_dearsirmrs> 
+    <transl_wethankyou>We kindly thank you for your order at</transl_wethankyou>        
+    <transl_youhavechosen><![CDATA[
+    You have chosen to pay us in cash in our shop.  
+    We look forward to seeing you in our shop. 
+    Please take your ordernumber with you.                     
+    ]]></transl_youhavechosen>        
+    <transl_yourordernumberis>Your ordernumber is</transl_yourordernumberis>    
+    <transl_transer>Please transfer</transl_transer>    
+    <transl_toaccountnumber>to the bank account number that can be found below</transl_toaccountnumber>    
+</translation>

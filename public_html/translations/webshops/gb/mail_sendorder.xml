@@ -1,0 +1,29 @@
+<translation>
+    <trans_dear>Dear</trans_dear>
+    <trans_thanksforyourorderat>Thank you for your order at </trans_thanksforyourorderat>
+    <trans_ifyouhaveanyquestionscontactusat>If you have any questions, please contact us by sending us an email. Our e-mail address is</trans_ifyouhaveanyquestionscontactusat>
+    <trans_oryoucanreachusbyphone>or you can reach us by phone</trans_oryoucanreachusbyphone>
+    <trans_whenthepaymentisinwewill>As soon as we received the payment, we will ship your order</trans_whenthepaymentisinwewill>
+    <trans_order>Order</trans_order>
+    <trans_placedon>order placed on</trans_placedon>
+    <trans_billinginformation>Billing address</trans_billinginformation>
+    <trans_paymentinfo>Payment details</trans_paymentinfo>
+    <trans_chosenpaymethod>Chosen paymethod</trans_chosenpaymethod>
+    <trans_sendinformation>Information about the package</trans_sendinformation>
+    <trans_sendmethod>Send method</trans_sendmethod>
+    <trans_sameasbillingaddress>Same as billing address</trans_sameasbillingaddress>
+    <trans_deliversatyourhouse>Delivery at your home - Shippingcost</trans_deliversatyourhouse> 
+    <trans_youwillcomeandpickup>You will pick up the goods</trans_youwillcomeandpickup>
+    <trans_item>Item</trans_item>
+    <trans_articlenum>Articlenumber</trans_articlenum>
+    <trans_quantity>Quantity</trans_quantity>
+    <trans_subtotal>Subtotal</trans_subtotal>
+    <trans_transactioncosts>Transactioncosts</trans_transactioncosts>
+    <trans_sendcosts>Shipping</trans_sendcosts>
+    <trans_vat>VAT</trans_vat>
+    <trans_total>Total</trans_total>
+    <trans_withkindregards>Best regards</trans_withkindregards>
+    <trans_thankyoumail>Thank you for your order</trans_thankyoumail>	
+    <trans_size>Size</trans_size>
+    <trans_color>Color</trans_color>
+</translation>

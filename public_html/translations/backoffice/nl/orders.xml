@@ -1,0 +1,170 @@
+<translation>
+    <lbl_billinglanguage>Factuur taal</lbl_billinglanguage>
+    <lbl_orderpicker>Orders picken</lbl_orderpicker>
+    <lbl_orders>Bestellingen</lbl_orders>
+    <lbl_actions>Acties</lbl_actions>
+    <lbl_add>Toevoegen</lbl_add>
+    <lbl_accept_order>Bestelling opnemen</lbl_accept_order>
+    <lbl_order_picker>Order picken</lbl_order_picker>
+    <lbl_find_order>Bestelling zoeken</lbl_find_order>
+    <lbl_overview>Overzicht</lbl_overview>
+    <lbl_paid>Betaald</lbl_paid>
+    <lbl_yes>Ja</lbl_yes>
+    <lbl_no>Nee</lbl_no>
+    <lbl_salesemployee>Verkoopmedewerker</lbl_salesemployee>
+    <lbl_deliveredsend>Geleverd / verzonden</lbl_deliveredsend>
+    <lbl_customer>Klant</lbl_customer>
+    <lbl_parked>Geparkeerd</lbl_parked>
+    <lbl_stock>Voorraad</lbl_stock>
+    <lbl_orderacceptationdate>Order acceptatie datum</lbl_orderacceptationdate>
+    <lbl_chooseayear>kies een jaartal</lbl_chooseayear>
+    <lbl_choosamonth>kies een maand</lbl_choosamonth>
+    <lbl_month_01>januari</lbl_month_01>
+    <lbl_month_02>februari</lbl_month_02>
+    <lbl_month_03>maart</lbl_month_03>
+    <lbl_month_04>april</lbl_month_04>
+    <lbl_month_05>mei</lbl_month_05>
+    <lbl_month_06>juni</lbl_month_06>
+    <lbl_month_07>juli</lbl_month_07>
+    <lbl_month_08>augustus</lbl_month_08>
+    <lbl_month_09>september</lbl_month_09>
+    <lbl_month_10>oktober</lbl_month_10>
+    <lbl_month_11>november</lbl_month_11>
+    <lbl_month_12>december</lbl_month_12>
+    <lbl_chooseaday>kies een dag</lbl_chooseaday>
+    <lbl_no_orders_found>Er zijn geen orders gevonden</lbl_no_orders_found>
+    <lbl_orders>Bestellingen</lbl_orders>
+    <lbl_found_orders>gevonden bestellingen</lbl_found_orders>
+    <lbl_order>order</lbl_order>
+    <lbl_status>Status</lbl_status>
+    <lbl_sinds>Sinds</lbl_sinds>
+    <lbl_relation>Relatie</lbl_relation>
+    <lbl_subtotal>Subtotaal</lbl_subtotal>
+    <lbl_vat>Btw</lbl_vat>
+    <lbl_total>Totaal</lbl_total>
+
+    <lbl_take_order>Bestelling opnemen</lbl_take_order>
+    <lbl_sure_remove>Weet u zeker dat u dit product wilt verwijderen?</lbl_sure_remove>
+    <lbl_order_info>Bestel informatie</lbl_order_info>
+    <lbl_customer_info>Klantinformatie</lbl_customer_info>
+    <lbl_customer_connect>Wilt u deze bestelling aan een klant koppelen?</lbl_customer_connect>
+    <lbl_no_customer_connect>Bestelling niet gekoppeld aan een klant</lbl_no_customer_connect>
+    <lbl_find_customer>Klant opzoeken</lbl_find_customer>
+    <lbl_new_customer>Nieuwe klant</lbl_new_customer>
+    <lbl_no_cust_connect>Niet koppelen aan een klant</lbl_no_cust_connect>
+    <lbl_products>Producten</lbl_products>
+    <lbl_pay>Afrekenen</lbl_pay>
+    <lbl_roundup>Afronden</lbl_roundup>
+    <lbl_paymethod>Betaalmethode</lbl_paymethod>
+    <lbl_discount>Korting</lbl_discount>
+    <lbl_fixed_amount>Vast bedrag</lbl_fixed_amount>
+    <lbl_perc_purchaseprice>Percentage aankoopwaarde</lbl_perc_purchaseprice>
+    <lbl_delivery>Levering</lbl_delivery>
+    <lbl_direct_delivery>Ik geef deze bestelling direct mee.</lbl_direct_delivery>
+    <lbl_send_later>De bestelling wordt later verzonden.</lbl_send_later>
+    <lbl_working_from_stock>U werkt momenteel vanuit de voorraad </lbl_working_from_stock>
+    <lbl_finalize>Afronden</lbl_finalize>
+    <lbl_park>Parkeren</lbl_park>
+    <lbl_cancel>Annuleren</lbl_cancel>
+    <lbl_outoforder>Product niet voorradig</lbl_outoforder>
+    
+    <lbl_err_no_products>Deze bestelling bevat nog geen producten, u kunt hem daarom niet afronden.</lbl_err_no_products>
+    <lbl_err_no_stockselection>U moet nog aangeven of de levering direct plaatsvind.</lbl_err_no_stockselection>
+    <lbl_err_no_paymethod>U heeft nog niet aangegeven hoe deze klant gaat betalen.</lbl_err_no_paymethod>
+    <lbl_err_out_of_stock>Er zijn nog maar @@productcount@@ producten van dit type voorradig, u kunt de order invoeren maar dan zal er een backorder plaats gaan vinden.</lbl_err_out_of_stock>
+    <lbl_err_invalid_input>Ongeldige invoer, probeer het nog een keer</lbl_err_invalid_input>
+    <lbl_prompt_direct_payment><![CDATA[Heeft de betaling plaatsgevonden?
+typ ja als de klant direct betaald, typ nee voor op rekening.]]></lbl_prompt_direct_payment>
+    <lbl_inf_yes>ja</lbl_inf_yes>
+    <lbl_inf_no>nee</lbl_inf_no>
+    <lbl_general>Algemeen</lbl_general>
+    <lbl_address>Adres</lbl_address>
+    <lbl_delivery_address>Afleveradres</lbl_delivery_address>    
+    <lbl_firm>Firma</lbl_firm>
+    
+    <lbl_street>Straat</lbl_street>
+    <lbl_phone>Telefoon</lbl_phone>
+    <lbl_zipcode>Postcode</lbl_zipcode>
+    <lbl_mobile_phone>Mobiel</lbl_mobile_phone>
+    <lbl_city>Woonplaats</lbl_city>
+    <lbl_email>Email</lbl_email>
+    <lbl_country>Land</lbl_country>        
+    <lbl_articlenumber>Artikelnummer</lbl_articlenumber>
+
+    <lbl_productname>Productnaam</lbl_productname>
+    <lbl_count>Aantal</lbl_count>
+    <lbl_pieceprice>Stukprijs</lbl_pieceprice>
+    <lbl_price>Prijs</lbl_price>    
+    <lbl_subtotal>Subtotaal</lbl_subtotal>
+
+    <lbl_article_property>Artikel eigenschap</lbl_article_property>
+    <lbl_barcode>Barcode</lbl_barcode>
+    <lbl_add_product>Product toevoegen</lbl_add_product>
+    <lbl_view_product>Product bekijken</lbl_view_product>
+    <lbl_find_article>Artikelnummer opzoeken</lbl_find_article>
+    <lbl_display_results>Resultaten weergeven</lbl_display_results>
+    <lbl_results_found>resultaten gevonden</lbl_results_found>
+    
+    <lbl_type>Type</lbl_type>
+    <lbl_firmname>Firmanaam</lbl_firmname>
+    <lbl_street>Straat</lbl_street>
+    <lbl_city>Woonplaats</lbl_city>
+    <lbl_take_order>Bestelling opnemen</lbl_take_order>    
+
+
+
+
+    <lbl_orderinfo>Bestelinformatie</lbl_orderinfo>
+    <lbl_ordercollect>Bestelling verzamelen</lbl_ordercollect>
+    <lbl_pickorder>Order picken</lbl_pickorder>
+    <lbl_soldby>Verkocht door</lbl_soldby>
+    <lbl_soldto>Verkocht aan</lbl_soldto>
+    <lbl_selldate>Verkoopdatum</lbl_selldate>
+    <lbl_phoneseller>Telefoon verkoper</lbl_phoneseller>
+    <lbl_custaddress>Klant adres</lbl_custaddress>
+    <lbl_zipandcity>Postcode + woonplaats</lbl_zipandcity>
+    <lbl_phone>Telefoon</lbl_phone>
+    <lbl_bill>Factuur</lbl_bill>
+    <lbl_summate>Aanmaning</lbl_summate>
+    <lbl_copy_bill>Kopie factuur</lbl_copy_bill>
+    <lbl_warehouseplan>Magazijnplan</lbl_warehouseplan>
+    <lbl_packageorder>Pakbon</lbl_packageorder>
+    <lbl_paymentstatus>Betaalstatus</lbl_paymentstatus>
+    <lbl_paid>Betaald</lbl_paid>
+    <lbl_sendsummation>Aanmaning sturen</lbl_sendsummation>
+    <lbl_wait>Afwachten</lbl_wait>
+    <lbl_location>Locatie</lbl_location>
+    <lbl_articlenumber>Artikelnummer</lbl_articlenumber>
+    <lbl_productname>Productnaam</lbl_productname>
+    <lbl_path>Pad</lbl_path>
+    <lbl_rack>Rek</lbl_rack>
+    <lbl_shelf>Plank</lbl_shelf>
+    <lbl_quantity>Aantal</lbl_quantity>
+    <lbl_package>Verpakking</lbl_package>
+    <lbl_pack_order>Order inpakken</lbl_pack_order>
+    <lbl_everythingfits>Alles past in een doos</lbl_everythingfits>
+    <lbl_roundup>Afronden</lbl_roundup>
+    <lbl_park>Parkeren</lbl_park>
+    <lbl_cancel>Annuleren</lbl_cancel>
+    <lbl_backtooverview>Terug naar het overzicht</lbl_backtooverview>
+    <lbl_sureroundup>Weet je zeker dat je deze bestelling af wilt ronden?</lbl_sureroundup>
+    <lbl_surecancel>Weet je zeker dat je deze bestelling wilt annuleren?</lbl_surecancel>
+    <lbl_notallproductshavepackage>Nog niet alle producten zijn aan een verpakking toegewezen.</lbl_notallproductshavepackage>
+    <lbl_ordercompletedredirect>De bestelling is afgerond, je wordt nu terug gestuurd naar het "orderpick" venster.</lbl_ordercompletedredirect>
+    <lbl_neverpays><![CDATA[Je staat op het punt om een uitstaande betaling permanent de status niet betaald te geven. 
+Weet je zeker dat deze klant nooit meer gaat betalen?]]></lbl_neverpays>
+    <lbl_customerpaid><![CDATA[Hiermee geef je aan dat de klant heeft betaald. 
+Weet je zeker dat de klant heeft betaald?
+    ]]></lbl_customerpaid>    
+    
+    
+    <lbl_showdeleted>Toon verwijderde orders</lbl_showdeleted>
+    
+    
+    
+    
+    
+    
+    
+         
+</translation>

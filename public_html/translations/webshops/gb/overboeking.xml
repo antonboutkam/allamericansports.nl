@@ -1,0 +1,13 @@
+<translation>
+    <transl_wiretransfer>Wire transfer</transl_wiretransfer>
+    <transl_dearsirmrs>Dear sir/mrs</transl_dearsirmrs> 
+    <transl_wethankyou>We kindly thank you for your order at</transl_wethankyou>        
+    <transl_youhavechosen><![CDATA[
+    You have chosen to pay us trough wiretransfer.
+    As soon as the money has been signed on to our bankaccount, we will proceed by sending you the goods.
+    Please note your ordernummer when making a payment.                
+    ]]></transl_youhavechosen>        
+    <transl_yourordernumberis>Your ordernumber is</transl_yourordernumberis>    
+    <transl_transer>Please transfer</transl_transer>    
+    <transl_toaccountnumber>to the bank account number that can be found below</transl_toaccountnumber>    
+</translation>

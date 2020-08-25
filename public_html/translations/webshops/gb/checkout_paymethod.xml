@@ -1,0 +1,9 @@
+<translation>
+	<trans_paymethod_payment>Payment</trans_paymethod_payment>
+    <trans_paymethod_paymenthow>How would you like to make your payment?</trans_paymethod_paymenthow>
+	<trans_paymethod_back_two>Back to Step 2</trans_paymethod_back_two>
+	<trans_paymethod_skip>Move to Step 4</trans_paymethod_skip>
+	<trans_paymethod_step_three>Step 3</trans_paymethod_step_three>
+    <trans_transactiekosten>Transaction costs</trans_transactiekosten>
+    <trans_free>Free</trans_free>
+</translation>

@@ -1,0 +1,39 @@
+<translation>
+	<trans_definition>Definition</trans_definition>
+	<trans_number>Number</trans_number>
+	<trans_price>Price</trans_price>
+	<trans_total>Total</trans_total>
+	<trans_subtotal>Subtotal</trans_subtotal>
+	<trans_shipping>Shipping</trans_shipping>
+	<trans_transaction>Transaction</trans_transaction>
+	<trans_vat>VAT</trans_vat>
+	<trans_continue_shop>Continue Shopping</trans_continue_shop>
+	<trans_next_step>Next Step</trans_next_step>
+	
+	<trans_your_data>Your Data</trans_your_data>
+	<trans_myaccount_name>First name</trans_myaccount_name>
+	<trans_myaccount_surname>Last name</trans_myaccount_surname>
+	<trans_myaccount_companyame>Company Name</trans_myaccount_companyame>
+	<trans_myaccount_email>E-mail</trans_myaccount_email>
+	<trans_myaccount_phone>Telephone</trans_myaccount_phone>
+	<trans_myaccount_street_no>Street</trans_myaccount_street_no>
+	<trans_myaccount_postcode>Postal code and number</trans_myaccount_postcode>
+	<trans_myaccount_city>City</trans_myaccount_city>
+	<trans_myaccount_country>Country</trans_myaccount_country>
+	<trans_myaccount_create_account>Create an account for your next visit</trans_myaccount_create_account>
+	<trans_myaccount_password>Password</trans_myaccount_password>
+	<trans_myaccount_confirm_password>Confirm Password</trans_myaccount_confirm_password>
+	<trans_myaccount_send_same_address>Ship to the same address</trans_myaccount_send_same_address>
+	<trans_myaccount_have_account>Do you already have an account</trans_myaccount_have_account>
+	<trans_myaccount_login>Login</trans_myaccount_login>    
+	<trans_myaccount_forgot_password>Forgot Password</trans_myaccount_forgot_password>
+	<trans_myaccount_skip_step_two>Move to Step 2</trans_myaccount_skip_step_two>
+	<trans_myaccount_password_reset>Reset Password</trans_myaccount_password_reset>
+	<trans_myaccount_password_sent>Enter your e-mail address and we will send you a new password</trans_myaccount_password_sent>
+	<trans_myaccount_email_not_database>The email address you entered is not in our database</trans_myaccount_email_not_database>
+	<trans_myaccount_shoppingcart>Shopping Cart</trans_myaccount_shoppingcart>
+    <trans_whatonbill>What should we write in the invoice?</trans_whatonbill>
+	<trans_step_one>Step 1</trans_step_one>
+	
+	
+</translation>

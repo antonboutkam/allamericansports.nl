@@ -1,0 +1,114 @@
+<translation>
+    <lbl_actions>Actions</lbl_actions>
+    <lbl_products>products</lbl_products>
+    <lbl_search_stock>Find in stock</lbl_search_stock>
+    <lbl_current_stock>View current stock</lbl_current_stock>
+    <lbl_mutations>Stock mutations</lbl_mutations>
+    <lbl_current>Current stock</lbl_current>
+    <lbl_fill>Add delivery to stock</lbl_fill>
+    <lbl_return>Return</lbl_return>
+    <lbl_location>Location</lbl_location>
+    <lbl_all_locations>All locations</lbl_all_locations>
+    <lbl_filter>Filter</lbl_filter>
+    <lbl_search_field>(articlenumber, productname, description, material, barcode)</lbl_search_field>
+    <lbl_stocks>Stocks</lbl_stocks>
+    <lbl_articlenumber>Articlenumber</lbl_articlenumber>
+    <lbl_productname>Productname</lbl_productname>
+    <lbl_location>Location</lbl_location>
+    <lbl_quantity>Quantity</lbl_quantity>
+    <lbl_purchase>Purchase</lbl_purchase>
+    <lbl_sale>Sale</lbl_sale>
+    <lbl_view_product>View product</lbl_view_product>
+    <lbl_products_of_type>Products of type</lbl_products_of_type>
+    <lbl_move>move</lbl_move>
+    <lbl_remove_from_stock>Remove products from stock</lbl_remove_from_stock>
+    <lbl_totals>Total</lbl_totals>
+    <lbl_reason>reason</lbl_reason>
+    <lbl_theft>theft</lbl_theft>
+    <lbl_broken>damaged</lbl_broken>
+    <lbl_giveaway>give away</lbl_giveaway>
+    <lbl_mustspecifyreason>You must specify a reason.</lbl_mustspecifyreason>
+
+    <lbl_stock>stock</lbl_stock>
+    <lbl_fill_stock>fill stock</lbl_fill_stock>
+    <lbl_move>move stock</lbl_move>
+    <lbl_product_to_be_added>Products to be added</lbl_product_to_be_added>
+    <lbl_articlenumber>Articlenumber</lbl_articlenumber>
+    <lbl_articlename>Articlename</lbl_articlename>
+    <lbl_quantity>Quantity</lbl_quantity>
+    <lbl_location>Location</lbl_location>
+    <lbl_path>Path</lbl_path>
+    <lbl_rack>Rack</lbl_rack>
+    <lbl_shelf>Shelf</lbl_shelf>
+    <lbl_viewproduct>View product</lbl_viewproduct>
+    <lbl_remove_product>Remove product</lbl_remove_product>
+    <lbl_select_location_for>Select location for</lbl_select_location_for>
+    <lbl_unknown>unknown</lbl_unknown>
+    <lbl_open_warehouseplan>Open warehouseplan</lbl_open_warehouseplan>
+    <lbl_save_delivery>Save delivery</lbl_save_delivery>
+    <lbl_remove_all>Remove everything</lbl_remove_all>
+    <lbl_not_all_asigned>You must first assign all products to a location in the warehouse.</lbl_not_all_asigned>
+    <lbl_delivery_added>Delivery added, redirecting back to stock overview in @@seconds@@ seconds</lbl_delivery_added>    
+    <lbl_article_property>Article property</lbl_article_property>
+    <lbl_barcode>Barcode</lbl_barcode>
+    <lbl_add_product>Add product</lbl_add_product>
+    <lbl_view_product>View product</lbl_view_product>
+    <lbl_find_article>Find articlenumber</lbl_find_article>
+    <lbl_display_results>View results</lbl_display_results>
+    <lbl_results_found>Results found</lbl_results_found>   
+
+
+    <lbl_warehouseplan>Warehouseplan</lbl_warehouseplan>
+    <lbl_selectloation>Select location</lbl_selectloation>
+    <lbl_actions>Actions</lbl_actions>
+    <lbl_edit>Edit</lbl_edit>
+    <lbl_warehouse_decoration>Add / Edit Warehouses</lbl_warehouse_decoration>
+    <lbl_move_product>Move</lbl_move_product>
+    <lbl_move_product>Move product</lbl_move_product>
+    <lbl_move_shelf>Move shelf</lbl_move_shelf>
+    <lbl_export>Export</lbl_export>
+    <lbl_decoration>Export warehouse configuration</lbl_decoration>
+    <lbl_export_stock>Export stock</lbl_export_stock>
+    <lbl_locations>Locations</lbl_locations>
+    <lbl_product_count>Productcount</lbl_product_count>
+    <lbl_to_location>To location</lbl_to_location>
+    <lbl_others>Others</lbl_others>
+    <lbl_locationfor>location for</lbl_locationfor>
+    <lbl_path>Path</lbl_path>
+    <lbl_rack>Rack</lbl_rack>
+    <lbl_shelf>Shelf</lbl_shelf>
+    <lbl_products_groups_shelf>Product types per shelf</lbl_products_groups_shelf>
+    <lbl_products_shelf>Products on shelf</lbl_products_shelf>
+    <lbl_stock>Stock</lbl_stock>
+    <lbl_choose>Choose location</lbl_choose>
+    <lbl_move_here>Move here</lbl_move_here>        
+
+
+    <lbl_move_stock>Move stock</lbl_move_stock>
+    <lbl_from_location>From location</lbl_from_location>
+    <lbl_to_location>From location</lbl_to_location>
+    <lbl_reserve_stock>Reserve stock</lbl_reserve_stock>
+    <lbl_cancel>Cancel</lbl_cancel>
+
+    <lbl_non_numeric>The form contains a non integer value.</lbl_non_numeric>
+    <lbl_not_same_location>You can't move products to the location where they come from.</lbl_not_same_location>
+    <lbl_prepare_move>Would you like to prepare this delivery directly?</lbl_prepare_move>
+    <lbl_stock_reserved>We reserved the stock for you, next we will open the warehouse plan and for you and then we will redirect you to the frontpage.</lbl_stock_reserved>
+    <lbl_stock_no_items>Your basket does not contain any items, please specify what products will be moved.</lbl_stock_no_items>
+    <lbl_err_to_many>You are trying to move more products then we have in stock at this location.</lbl_err_to_many>
+    <lbl_roundup>Round up</lbl_roundup>
+
+    <lbl_movestock>Move stock</lbl_movestock>
+    <prepare_to_send>Prepare internal delivery</prepare_to_send>
+    <process_send>Process internal delivery</process_send>
+
+    <lbl_put_in_racks>Place internal delivery on shelfs </lbl_put_in_racks>
+    <lbl_not_all_assigned>Not all products are assigned to a location in the warehouse yet.</lbl_not_all_assigned>
+    <lbl_processed>This delivery is now processed</lbl_processed>
+
+    <lbl_deliveryid>Delivery id</lbl_deliveryid>
+    <lbl_created_on>Created on</lbl_created_on>
+    <lbl_created_by>Created by</lbl_created_by>
+    <lbl_from_location>From location</lbl_from_location>
+    <lbl_to_location>To location</lbl_to_location>
+</translation>

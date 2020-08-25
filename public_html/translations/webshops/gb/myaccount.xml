@@ -1,0 +1,45 @@
+<translation>
+    <lbl_ship_to_billingaddress>Ship to billing address</lbl_ship_to_billingaddress>
+	<trans_aboutme>My account</trans_aboutme>
+	<trans_billingaddr>Billing address</trans_billingaddr>
+    <trans_deliveryaddress>Delivery address</trans_deliveryaddress>
+	<trans_firstname>First name</trans_firstname>
+	<trans_lastname>Last name</trans_lastname>
+	<trans_emailaddr>E-mailaddress</trans_emailaddr>
+	<trans_phone>Phonenumber</trans_phone>
+	<trans_pleaseprovideavalid>Please specify a valid e-mailaddress</trans_pleaseprovideavalid>
+	<trans_addrhousenum>Address + street number</trans_addrhousenum>
+    <lbl_my_orders>My orders</lbl_my_orders>
+	<lbl_postalcode>Zipcode</lbl_postalcode>
+	<lbl_city>City</lbl_city>
+	<lbl_country>Country</lbl_country>
+	<lbl_company>Company</lbl_company>
+	<lbl_savechanges>Save changes</lbl_savechanges>
+	<lbl_deliveryaddr>Delivery address</lbl_deliveryaddr>
+	<lbl_pleaseschoose>Please choose</lbl_pleaseschoose>
+	<lbl_changepassword>Change password</lbl_changepassword>
+	<lbl_password>Password</lbl_password>
+	<lbl_confirmpassword>Confirm password</lbl_confirmpassword>
+	<lbl_newsletter>Newsletter</lbl_newsletter>
+	<lbl_subscribeme>Join our newsletter</lbl_subscribeme>
+	<lbl_youarenowsubscribed>You have been signed in to our newsletter</lbl_youarenowsubscribed>
+	<lbl_fromnowyouareunsubscribed>From now on you will no longer recieve our newsletter</lbl_fromnowyouareunsubscribed>
+	<lbl_passwordsdonotmatch>The provided password are not the same</lbl_passwordsdonotmatch>
+	<lbl_bill>Bill</lbl_bill>
+	<lbl_ordernum>Ordernumber</lbl_ordernum>
+	<lbl_createdon>Created on</lbl_createdon>
+	<lbl_paid>Paid</lbl_paid>
+	<lbl_send>Send</lbl_send>
+	<lbl_tracktrace>Track &amp; trace</lbl_tracktrace>
+	<lbl_mybill>My bill</lbl_mybill>
+	<lbl_showbill>Show bill</lbl_showbill>
+	<lbl_sendmoneyto>Send money to: </lbl_sendmoneyto>
+
+	<lbl_clickherefor>No, click here for the payment details</lbl_clickherefor>
+	<lbl_noclickheretopay>No, click here to pay</lbl_noclickheretopay>
+	<lbl_no>no</lbl_no>
+
+	<lbl_whenyouorderproducts>Your order history is empty. When you place an order it will become visible here.</lbl_whenyouorderproducts>
+    
+	<lbl_thanksforyourorder>Thanks for your order</lbl_thanksforyourorder>        
+</translation>    

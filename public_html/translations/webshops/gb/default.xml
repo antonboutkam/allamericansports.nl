@@ -1,0 +1,55 @@
+<translation>
+     <trans_custservice>Customer service</trans_custservice>
+     <trans_contact>Contact</trans_contact>
+     <trans_faq>FAQ</trans_faq>
+     <trans_login>Sign in</trans_login>	
+    <trans_logout>Sign out</trans_logout>	
+    <trans_register>Register</trans_register>	
+    <trans_myaccount>My account</trans_myaccount>	
+    <trans_search>Search...</trans_search>		
+    <trans_mybag>My sports bag</trans_mybag>	
+    <trans_products>products</trans_products>	
+    <trans_severalsportswear>Sportswear collection</trans_severalsportswear>			
+    <trans_usp1><![CDATA[Free shipping on orders over &euro; 75,-]]></trans_usp1>	
+    <trans_usp2>100% satisfaction guaranteed</trans_usp2>		
+    <trans_usp3>Thuiswinkelwaarborg</trans_usp3>	
+    <trans_usp4>Money back guarantee</trans_usp4>	
+    <trans_moreinfo>Customer service</trans_moreinfo>	
+    <trans_newsletter>Sign up for our newsletter</trans_newsletter>	
+    <trans_signup>Sign up</trans_signup>	    
+    <trans_tips>Tips</trans_tips>	
+    <trans_brands>Brands</trans_brands>	
+    <trans_follow>Follow us</trans_follow>	
+    <trans_howmaywe>How may we help you</trans_howmaywe>
+    <trans_availabledaily>daily available</trans_availabledaily>
+    <trans_from>from</trans_from>
+    <trans_untill>till</trans_untill>
+     <trans_oclock><![CDATA[&nbsp;]]></trans_oclock>
+     <trans_mailus>Contact us by mail</trans_mailus>
+     <trans_haveaquestion>a question about our </trans_haveaquestion>
+     <trans_aboutourarticles><![CDATA[ products?]]></trans_aboutourarticles>
+     <trans_clickheretochat><![CDATA[Click here to chat<br />]]></trans_clickheretochat>
+     <trans_visitourshowroom>Visit our showroom?</trans_visitourshowroom>
+    <trans_clickheretomakeanappointment><![CDATA[Click here to make<br />an appointment]]></trans_clickheretomakeanappointment>
+    <trans_about>About</trans_about>
+    <trans_foundresults>Found results for the keyword</trans_foundresults>        
+    <trans_link_custservice>customer-service</trans_link_custservice>
+    <trans_link_faq>faq</trans_link_faq>
+    <trans_fillin>Please fill in your e-mailaddres</trans_fillin>
+    <trans_sizetable>Size table</trans_sizetable>
+    <trans_link_aboutalla>about-us</trans_link_aboutalla>
+    <trans_link_showroom>our-showroom</trans_link_showroom>
+    <transl_popupulararticles>Popular products</transl_popupulararticles>
+    <tansl_moreinformation>More information</tansl_moreinformation>    
+	<trans_wouldyouliketocall>Want to give us a call?</trans_wouldyouliketocall>
+	<trans_clickhereforthenumber>Click here for our number</trans_clickhereforthenumber>	
+	<trans_callusurl>call-us</trans_callusurl>
+    <trans_visitourshowroom>Visit our showroom</trans_visitourshowroom>
+    <trans_errormsg>Error</trans_errormsg>
+    <trans_page_not_exist>The page your looking for doesn't exist.</trans_page_not_exist>
+    <trans_page_lookingfor>The page that your looking for can be deleted, or has another name or is temporary not available.</trans_page_lookingfor>
+    <trans_trythenext>Please try the following steps:</trans_trythenext>
+    <trans_trynext_1>If you wrote the URL (the address) yourself, please check if it is correctly spelled.</trans_trynext_1>
+    <trans_trynext_2>If you reached the page by clicking on a link in the website, please contact the webmaster. The e-mail address is  </trans_trynext_2>
+    <trans_trynext_3>Click back in your Web browser to view the previous page or go to the home page</trans_trynext_3>
+</translation>

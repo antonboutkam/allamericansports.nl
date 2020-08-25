@@ -1,0 +1,103 @@
+<translation>
+    <relationmanagement>Relation management</relationmanagement>
+    <findrelation>Find relation</findrelation>
+    <lbl_relations>relations</lbl_relations>
+    <lbl_add>Add</lbl_add>
+    <add_customer>Add customer</add_customer>
+    <add_supplier>Add supplier</add_supplier>
+    <add_prospect>Add prospect</add_prospect>
+    <lbl_export>Export</lbl_export>
+    <excel_export>Excel export</excel_export>
+    <phonelist>Phonelist</phonelist>
+    <email_addresses>Email addresses</email_addresses>
+    <search_default_val>(firmname, customername, zipcode, city, first name, last name)</search_default_val>
+    <simple_search>Simple search</simple_search>
+    <adv_search>Advanced search</adv_search>
+    
+    <website>Website</website>
+    <postalcode>Postal code</postalcode>
+    <city>City</city>
+    <type>Type</type>
+    <customers>customers</customers>
+    <prospects>prospects</prospects>
+    <suppliers>suppliers</suppliers>
+    <found_relations>Found relations</found_relations>    
+    <sort_type>Type</sort_type>
+    <sort_firm>Firm</sort_firm>
+    <sort_phone>Phonenumber</sort_phone>
+    <sort_mail>Email address</sort_mail>
+    <sort_street>Street</sort_street>
+    <sort_city>City</sort_city>
+    <lbl_general>General</lbl_general>
+    <lbl_companyname>Company name</lbl_companyname>
+    <lbl_phone>Phone</lbl_phone>
+    <lbl_website>Website</lbl_website>
+    <lbl_mobile>Mobile</lbl_mobile>
+    <lbl_type>Type</lbl_type>
+    <lbl_fax>Fax</lbl_fax>
+    <lbl_email>Email</lbl_email>
+    <lbl_actions>Actions</lbl_actions>
+    <lbl_backtooverview>Back to overview</lbl_backtooverview>
+    <lbl_customerinfo>Customer information</lbl_customerinfo>
+    <lbl_contactperson>Contact person</lbl_contactperson>
+    <lbl_customernumber>Customer number</lbl_customernumber>
+    <lbl_billingaddress>Billing address</lbl_billingaddress>
+    <lbl_deliveryaddress>Delivery address</lbl_deliveryaddress>
+    <lbl_street>Street</lbl_street>
+    <lbl_number>Number</lbl_number>
+    <lbl_kaartje>open map</lbl_kaartje>
+    <lbl_omschrijving>Description</lbl_omschrijving>
+    <lbl_show_address>Show addres information</lbl_show_address>
+    <lbl_hide_address>Hide address information</lbl_hide_address>
+    <lbl_accountmanager>Account manager</lbl_accountmanager>
+    <lbl_paymentlimit>Customer credit limit</lbl_paymentlimit>
+    <lbl_cust_segment>Customer segment</lbl_cust_segment>
+    <lbl_latest_bills>Latest bills</lbl_latest_bills>
+    <lbl_total_bill_count>Total bills</lbl_total_bill_count>
+    <lbl_bill_no>Billnumber</lbl_bill_no>
+    <lbl_created_on>Created on</lbl_created_on>
+    <lbl_paid_on>Paid on</lbl_paid_on>
+    <lbl_amount>Amount</lbl_amount>
+    <lbl_notes>Notes</lbl_notes>
+    <lbl_show_all_bills>Show all bills</lbl_show_all_bills>
+    <lbl_by>By</lbl_by>
+    <lbl_on>on</lbl_on>
+    <lbl_type>Type</lbl_type>
+    <lbl_cp_unknown>Contactpersoon onbekend</lbl_cp_unknown>
+    <lbl_add_relation>Add customer</lbl_add_relation>
+    <lbl_suppliers>Suppliers</lbl_suppliers>    
+    <lbl_relation>Relation</lbl_relation>
+    <lbl_edit>edit</lbl_edit>
+    <lbl_general>General</lbl_general>
+    <lbl_companyname>Company name</lbl_companyname>
+    <lbl_client>customer</lbl_client>
+    <lbl_prospect>prospect</lbl_prospect>
+    <lbl_supplier>supplier</lbl_supplier>
+    <lbl_contactinformation>Contact information</lbl_contactinformation>
+    <lbl_sallutation>Sallutation</lbl_sallutation>
+    <lbl_mr>mr</lbl_mr>
+    <lbl_mrs>mrs</lbl_mrs>
+    <lbl_phone>Phone</lbl_phone>
+    <lbl_firstname>First name</lbl_firstname>
+    <lbl_mobile>Mobile</lbl_mobile>
+    <lbl_lastname>Last name</lbl_lastname>
+    <lbl_email>Email</lbl_email>
+    <lbl_fax>Fax</lbl_fax>
+    <lbl_website>Website</lbl_website>
+    <lbl_billingaddress>Billing address</lbl_billingaddress>
+    <lbl_deliveryaddress>Delivery address</lbl_deliveryaddress>
+    <lbl_streetnumber>Street + number</lbl_streetnumber>
+    <lbl_postal>Zip code</lbl_postal>
+    <lbl_description>Description</lbl_description>
+    <lbl_same_as_billing>Gelijk aan factuuradres</lbl_same_as_billing>
+    <lbl_city>City</lbl_city>
+    <lbl_country>Country</lbl_country>
+    <lbl_save>Save</lbl_save>
+    <lbl_cancel>Cancel</lbl_cancel>
+    <lbl_stored-ok>Customer information stored</lbl_stored-ok>
+    <lbl_rel_overview>Overview</lbl_rel_overview>
+    <lbl_rel_add>Add Relation</lbl_rel_add>
+    <lbl_newsletter_brief>Newsletter subscriptions</lbl_newsletter_brief>
+    <lbl_newsletter_send>Send Newsletter</lbl_newsletter_send>
+   
+</translation>

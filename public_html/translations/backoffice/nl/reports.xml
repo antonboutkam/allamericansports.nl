@@ -1,0 +1,15 @@
+<translation>
+    <lbl_reports>Rapportages</lbl_reports>
+    <lbl_dataloading>Loading data!</lbl_dataloading>
+    <lbl_chooseaday>kies een dag</lbl_chooseaday>
+    <lbl_turnover_brutoprofit>Omzet / bruto winst</lbl_turnover_brutoprofit>
+    <lbl_staff>Personeel</lbl_staff>
+    <lbl_location>Locatie</lbl_location>
+    <lbl_year>Jaar</lbl_year>
+    <lbl_month>Maand</lbl_month>
+    <lbl_day>Dag</lbl_day>
+    <lbl_alllocations>Alle locaties</lbl_alllocations>
+    <lbl_choosamonth>kies een maand</lbl_choosamonth>
+    <lbl_loading>loading...</lbl_loading>
+    <lbl_grouping>Groepering</lbl_grouping>    
+</translation>

@@ -1,0 +1,22 @@
+<translation>
+    <lbl_bill>FACTUUR</lbl_bill>
+    <lbl_articlenumber>ARTIKELNUMMER</lbl_articlenumber>
+    <lbl_description>OMSCHRIJVING</lbl_description>
+    <lbl_quantity>AANTAL</lbl_quantity>
+    <lbl_price>PRIJS</lbl_price>
+    <lbl_total>BEDRAG</lbl_total>
+    <lbl_paymethod>BETAALMETHODE</lbl_paymethod>
+    <lbl_paybefore>VERVALDATUM</lbl_paybefore>
+    <lbl_vatnumber>BTW nummer</lbl_vatnumber>
+    <lbl_helpedby>U bent geholpen door</lbl_helpedby>
+    <lbl_remarks>Opmerkingen</lbl_remarks>
+    <lbl_date>DATUM</lbl_date>
+    <lbl_customernumber>KLANTNUMMER</lbl_customernumber>
+    <lbl_type>TYPE</lbl_type>
+    <lbl_page>PAGE</lbl_page>
+    <lbl_vat>BTW</lbl_vat>
+    <lbl_amount>BEDRAG</lbl_amount>
+    <lbl_totals>TOTAAL</lbl_totals>
+    <lbl_summation>Betalingsherinnering, graag betalen voor</lbl_summation>
+    <lbl_billcopy>Kopie factuur</lbl_billcopy>
+</translation>

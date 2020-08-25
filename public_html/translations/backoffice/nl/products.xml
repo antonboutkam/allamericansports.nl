@@ -1,0 +1,112 @@
+<translation>
+    <lbl_supplier>Leverancier</lbl_supplier>
+    <lbl_ledger>Grootboek</lbl_ledger>
+    <lbl_listview>Lijst weergave</lbl_listview>
+    <lbl_thumbview>Thumbnail weergave</lbl_thumbview>
+    <lbl_options>Opties</lbl_options>
+    <lbl_addoption>Optie toevoegen</lbl_addoption>
+    <lbl_addproduct>Product toevoegen</lbl_addproduct>
+    <lbl_haspart>Heeft als onderdeel</lbl_haspart>
+    <lbl_ispartof>Is onderdeel van</lbl_ispartof>
+    <lbl_grouping>Groepering</lbl_grouping>
+    <lbl_extra_images>Extra afbeeldingen</lbl_extra_images>
+    <lbl_inc_vat>Inclusief BTW</lbl_inc_vat>
+    <lbl_ex_vat>Exclusief BTW</lbl_ex_vat>
+    <lbl_link_product>U kunt een product pas koppelen aan andere producten als deze is opgeslagen.</lbl_link_product>
+    <lbl_producttype>Product type</lbl_producttype>
+    <lbl_size>Afmetingen</lbl_size>
+    <lbl_weight>Gewicht</lbl_weight>
+    <lbl_choose>maak een keuze</lbl_choose>
+    <lbl_productcatalogue>Productcatalogus</lbl_productcatalogue>
+    <lbl_searchproduct>Product zoeken</lbl_searchproduct>
+    <lbl_print_barcodes>Barcodes printen</lbl_print_barcodes>
+    <lbl_actions>Acties</lbl_actions>
+    <lbl_addproduct>Product toevoegen</lbl_addproduct>
+    <lbl_overview>Product catalogus</lbl_overview>
+    <lbl_add>Toevoegen</lbl_add>
+    <lbl_export>Exporteren</lbl_export>
+    <lbl_exceexport>Excel export</lbl_exceexport>
+    <lbl_search_product>Producten zoeken</lbl_search_product>
+    <lbl_searchfield>(ean code, artikelnummer, productnaam, omschrijving, barcode)</lbl_searchfield>
+    <lbl_simplesearch>Eenvoudig zoeken</lbl_simplesearch>
+    <lbl_advsearch>Geavanceerd zoeken</lbl_advsearch>
+    <lbl_companyname>Bedrijfsnaam</lbl_companyname>
+    <lbl_website>Website</lbl_website>
+    <lbl_postalcode>Postcode</lbl_postalcode>
+    <lbl_city>Woonplaats</lbl_city>
+    <lbl_found_products>Gevonden producten</lbl_found_products>
+    <lbl_articlenumber>Artikelnummer</lbl_articlenumber>
+    <lbl_productname>Productnaam</lbl_productname>
+    <lbl_purchaseprice>Inkoopprijs</lbl_purchaseprice>
+    <lbl_saleprice>Verkoopprijs</lbl_saleprice>
+    <lbl_price>Prijs</lbl_price>
+    <lbl_adviceprice>Adviesprijs</lbl_adviceprice>
+    <lbl_discount>Korting</lbl_discount>
+    <lbl_margin>Marge</lbl_margin>
+    <lbl_stock_global>Voorraad</lbl_stock_global>
+    <lbl_stock>Voorraad</lbl_stock>    
+    <lbl_edit_product>Product bewerken</lbl_edit_product>
+    <lbl_product_add>Product toevoegen</lbl_product_add>
+    <lbl_products>producten</lbl_products>    
+    <lbl_print_barcode>Barcode printen</lbl_print_barcode>
+    <lbl_view_product>Product bekijken</lbl_view_product>    
+    <lbl_isoffer>In de aanbieding</lbl_isoffer>
+    <lbl_inwebshop>Beschikbaar in de webshop</lbl_inwebshop>
+    <lbl_general>Algemeen</lbl_general>
+    <lbl_add_product>Product toevoegen</lbl_add_product>
+    <lbl_back_to_overview>Terug naar het overzicht</lbl_back_to_overview>
+    <lbl_barcodes>barcodes</lbl_barcodes>
+    <lbl_barcodesucf>Barcodes</lbl_barcodesucf>            
+    <lbl_productname>Productnaam</lbl_productname>
+    <lbl_type>Product type</lbl_type>
+    <lbl_size>Maat</lbl_size>
+    <lbl_stock>Voorraden</lbl_stock>
+    <lbl_location>Lokatie</lbl_location>
+    <lbl_quantity>Aantal</lbl_quantity>
+    <lbl_unavailable>Dit product is momenteel niet voorradig.</lbl_unavailable>
+    <lbl_prices>Prijzen</lbl_prices>
+    <lbl_purchase_price>Inkoopprijs</lbl_purchase_price>
+    <lbl_saleprice>Verkoopprijs</lbl_saleprice>
+    <lbl_price>Prijs</lbl_price>
+    <lbl_colors>Kleuren</lbl_colors>
+    <lbl_materials>Materialen</lbl_materials>    
+    <lbl_color>Kleur</lbl_color>
+    <lbl_material>Materiaal</lbl_material>            
+    <lbl_image>Afbeelding</lbl_image>
+    <lbl_stock>Voorraad</lbl_stock>
+    <lbl_please_choose>Maak een keuze</lbl_please_choose>
+    <lbl_barcode>barcode</lbl_barcode>
+    <lbl_extrainfo>Extra informatie</lbl_extrainfo>    
+    <lbl_description>Omschrijving</lbl_description> 
+    <lbl_general>Algemeen</lbl_general>
+    
+    <lbl_productname>Productnaam</lbl_productname>
+    <lbl_size>Maat</lbl_size>
+    <lbl_image>Afbeelding</lbl_image>
+    <lbl_stock>Voorraad</lbl_stock>
+    <lbl_please_choose>Maak een keuze</lbl_please_choose>
+    <lbl_purchase_price>Inkoopprijs</lbl_purchase_price>
+    <lbl_saleprice>Verkoopprijs</lbl_saleprice>
+    <lbl_price>Prijs</lbl_price>
+    <lbl_adviceprice>Adviesprijs</lbl_adviceprice>
+    <lbl_colors>Kleuren</lbl_colors>
+    <lbl_materials>Materialen</lbl_materials>
+    <lbl_color>Kleur</lbl_color>
+    <lbl_material>Materiaal</lbl_material>
+    <lbl_altbarcodes>Alternatieve Barcodes</lbl_altbarcodes>
+    <lbl_barcodes>Barcodes</lbl_barcodes>
+    <lbl_barcode>barcode</lbl_barcode>
+    <lbl_extrainfo>Extra informatie</lbl_extrainfo>
+    <lbl_description>Omschrijving</lbl_description>
+    <lbl_actions>Acties</lbl_actions>
+    <lbl_Save>Opslaan</lbl_Save>
+    <lbl_Save_next>Opslaan + nieuw product</lbl_Save_next>
+    <lbl_Cancel>Annuleren</lbl_Cancel>
+    <lbl_stored-ok>Productinformatie opgeslagen</lbl_stored-ok>
+    <lbl_err-stock-no-location>U dient de lokatie van het product op te geven.</lbl_err-stock-no-location>
+    <lbl_err-no-art-num>U moet verplicht een artikelnummer opgeven.</lbl_err-no-art-num>
+    <lbl_err-dupl-artnum>Het opgegeven artikelnummer komt al voor in onze database, kies een ander artikelnummer.</lbl_err-dupl-artnum>
+    <lbl_err-prod-noname>Het veld productnaam is niet ingevuld, dit is een verplicht veld.</lbl_err-prod-noname>          
+	
+	<lbl_sizetable>Maat tabellen</lbl_sizetable>
+</translation>

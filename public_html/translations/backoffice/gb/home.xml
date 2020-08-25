@@ -1,0 +1,29 @@
+<translation>
+    <welcome_txt>Welcome at the Backoffice system of</welcome_txt>
+    <welcome_txt_sub>This part of our website is only accessible by authorized staff.</welcome_txt_sub>
+    <lbl_email>Email adres</lbl_email>
+    <password>Password</password>
+    <lbl_password>Password</lbl_password>
+    <current_location>Current location</current_location>
+    <signin>Sign in</signin>
+    <forgot_pass>Forgot password</forgot_pass>
+    <invalid_pass>Invalid e-mailaddress/password</invalid_pass>
+    <reset_pass>Reset password</reset_pass>
+    <provide_email>Please provide your email address so we can send you a new password.</provide_email>
+    <not_in_db>The provided email address does not exist in our database.</not_in_db>
+    <new_send>We sent your new password to the provided email address.</new_send>    
+    <reset>Reset</reset>
+    <find_customer>Find customer</find_customer>
+    <take_order>Take order</take_order>
+    <find_bill>Find bill</find_bill>
+    <pick_order>Pick order</pick_order>
+    <stock>Stock</stock>
+    <print_barcodes>Print barcodes</print_barcodes>
+    <welcome_back>Welcome back</welcome_back>
+    <notes_lbl>Notes</notes_lbl>
+    <add_note>Add note</add_note>
+    <note_by>by</note_by>
+    <no_notes>There currently are no notes</no_notes>    
+    <your_location>your location</your_location>
+    <specify_location>Please specify your location</specify_location>
+</translation>

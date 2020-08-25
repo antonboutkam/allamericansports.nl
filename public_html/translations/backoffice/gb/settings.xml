@@ -1,0 +1,150 @@
+<translation>
+    <lbl_current_page>Current page</lbl_current_page>
+    <lbl_logfiles>Log files</lbl_logfiles>
+    <lbl_settings>Settings</lbl_settings>
+    <lbl_users>Users</lbl_users>
+    <lbl_users_lc>users</lbl_users_lc>
+    <lbl_user_removed>User removed</lbl_user_removed>
+    <lbl_sure_remove>Are you sure you wish to remove USERNAME?</lbl_sure_remove>
+    <lbl_paymethods>Paymethods</lbl_paymethods>
+    <lbl_paymethods_lc>paymethods</lbl_paymethods_lc>
+    <lbl_paymethod_removed>Remove paymethod</lbl_paymethod_removed>
+    <lbl_sure_remove_paymethod>Are you sure you wish to remove this paymethod?</lbl_sure_remove_paymethod>
+    <lbl_name>Name</lbl_name>
+    <lbl_mail>Email</lbl_mail>
+    <lbl_phone>Phone</lbl_phone>
+    <lbl_mobile>Mobile</lbl_mobile>
+    <lbl_job>Role / job</lbl_job>
+    <lbl_access>Access</lbl_access>
+    <lbl_add_user>Create new user</lbl_add_user>
+    <lbl_paymethod>Paymethod</lbl_paymethod>
+    <lbl_price_type>Price type</lbl_price_type>
+    <lbl_price>Price</lbl_price>
+    <lbl_paymethod_inactive>This paymethod is currently inactive</lbl_paymethod_inactive>
+    <lbl_paymethod_active>This paymethod is currently active</lbl_paymethod_active>
+    <lbl_add_paymethod>Add new paymethod</lbl_add_paymethod>    
+    
+
+    <lbl_warehouseplan>Warehouseplan</lbl_warehouseplan>
+    <lbl_selectloation>Select location</lbl_selectloation>
+    <lbl_actions>Actions</lbl_actions>
+    <lbl_edit>Edit</lbl_edit>
+    <lbl_warehouse_decoration>Add / Edit Warehouses</lbl_warehouse_decoration>
+    <lbl_move_product>Move</lbl_move_product>
+    <lbl_move_product>Move product</lbl_move_product>
+    <lbl_move_shelf>Move shelf</lbl_move_shelf>
+    <lbl_export>Export</lbl_export>
+    <lbl_decoration>Export warehouse configuration</lbl_decoration>
+    <lbl_export_stock>Export stock</lbl_export_stock>
+    <lbl_locations>Locations</lbl_locations>
+    <lbl_product_count>Productcount</lbl_product_count>
+    <lbl_to_location>To location</lbl_to_location>
+    <lbl_others>Others</lbl_others>
+    <lbl_locationfor>location for</lbl_locationfor>
+    <lbl_path>Path</lbl_path>
+    <lbl_rack>Rack</lbl_rack>
+    <lbl_shelf>Shelf</lbl_shelf>
+    <lbl_products_groups_shelf>Product types per shelf</lbl_products_groups_shelf>
+    <lbl_products_shelf>Products on shelf</lbl_products_shelf>
+    <lbl_stock>Stock</lbl_stock>
+    <lbl_choose>Choose location</lbl_choose>
+    <lbl_move_here>Move here</lbl_move_here>  
+    <lbl_about>About</lbl_about>      
+
+
+    <lbl_warehouse_routing>Warehouse properties</lbl_warehouse_routing>
+    <lbl_warehouselocations>Warehouse locations</lbl_warehouselocations>
+    <lbl_cannotremove>Cannot remove warehouse, you must first remove all racks inside it.</lbl_cannotremove>
+    <lbl_removed>Removed warehouse</lbl_removed>
+    <lbl_locations>Locations</lbl_locations>
+    <lbl_name>Name</lbl_name>
+    <lbl_phone>Phone</lbl_phone>
+    <lbl_streetandnumber>Street + number</lbl_streetandnumber>
+    <lbl_email>Email</lbl_email>
+    <lbl_zipcode>Zip code</lbl_zipcode>
+    <lbl_city>City</lbl_city>
+    <lbl_country>Country</lbl_country>
+    <lbl_save>Save</lbl_save>
+    <lbl_cancel>Cancel</lbl_cancel>
+    <lbl_routing>Routing</lbl_routing>
+    <lbl_path>Path</lbl_path>
+    <lbl_rack>Rack</lbl_rack>
+    <lbl_shelf>Shelf</lbl_shelf>
+    <lbl_product_groups># product groups</lbl_product_groups>
+    <lbl_products># products</lbl_products>
+    <lbl_cannot_remove_has_products>Cannot remove rack while it has products inside it, please assign products to another location first.</lbl_cannot_remove_has_products>
+    <lbl_rack_removed>Removed rack</lbl_rack_removed>  
+    <lbl_street>Street</lbl_street>    
+    <lbl_add_location>Add location</lbl_add_location>
+
+
+    <lbl_add_user>Add user</lbl_add_user>  
+    <lbl_edit_user>Edit user</lbl_edit_user>
+    <lbl_usernamepassord>Sign in details</lbl_usernamepassord>
+    <lbl_email_address>Email address</lbl_email_address>
+    <lbl_password>Password</lbl_password>
+    <lbl_access>Access</lbl_access>
+    <lbl_user_admin>administrator</lbl_user_admin>
+    <lbl_user_commercial>commercial</lbl_user_commercial>
+    <lbl_user_warehouse>warehouse</lbl_user_warehouse>
+    <lbl_user_supplier>supplier</lbl_user_supplier>
+    <lbl_status>Status</lbl_status>
+    <lbl_active>active</lbl_active>
+    <lbl_disabled>disabled</lbl_disabled>
+    <lbl_employee_information>Employee information</lbl_employee_information>
+    <lbl_full_name>Full name</lbl_full_name>
+    <lbl_phone>Phone</lbl_phone>
+    <lbl_address>Address</lbl_address>
+    <lbl_mobile>Mobile</lbl_mobile>
+    <lbl_zipcode>Postalcode</lbl_zipcode>
+    <lbl_job>Job</lbl_job>
+    <lbl_city>City</lbl_city>
+    <lbl_birthdate>Birthdate</lbl_birthdate>
+    <lbl_country>Country</lbl_country>
+    <lbl_iso2countrycode>Iso2 countrycode</lbl_iso2countrycode>
+    <lbl_create>Create</lbl_create>
+    <lbl_opslaan>Save</lbl_opslaan>
+    <lbl_save_info>Information saved</lbl_save_info> 
+
+
+    <lbl_add_paymethod>Add paymethod</lbl_add_paymethod>
+    <lbl_edit_paymethod>Edit paymethod</lbl_edit_paymethod>
+    <lbl_paymethod_ucf>Paymethod</lbl_paymethod_ucf>
+    <lbl_active>Active</lbl_active>
+    <lbl_paymethod>Paymethod</lbl_paymethod>
+    <lbl_free>free</lbl_free>
+    <lbl_percentage>percentage</lbl_percentage>
+    <lbl_fixed_amount>fixed_amount</lbl_fixed_amount>
+    <lbl_save>Save</lbl_save>
+    <lbl_information_stored>Information saved</lbl_information_stored>                
+	
+	<lbl_sizetable>Size tables</lbl_sizetable>
+	<lbl_sizetable_lc>size tables</lbl_sizetable_lc>
+	<lbl_filename>Filename</lbl_filename> 
+	<lbl_title>Title</lbl_title> 
+	<lbl_add_size>Add new sizetable</lbl_add_size>
+	<lbl_edit_size>Edit Size</lbl_edit_size>
+	<lbl_size_details>Size Details</lbl_size_details>
+
+    <lbl_logfiles>Log files</lbl_logfiles>
+    <lbl_system>System</lbl_system>
+    <lbl_seo>Seo</lbl_seo>
+    <lbl_barcodes>Barcodes</lbl_barcodes>
+    <lbl_fielddefinitions>Field definitions</lbl_fielddefinitions>
+    <lbl_webshops>Webshops</lbl_webshops>
+    <lbl_billing>Billing</lbl_billing>
+    <lbl_paymethods>Paymethods</lbl_paymethods>
+    <lbl_locationswarehouse>Locations &amp; Warehouseplan</lbl_locationswarehouse>
+    <lbl_usersprivileges>Users &amp; Privileges</lbl_usersprivileges>    
+    <lbl_maattabellen>Size tables</lbl_maattabellen>
+    <lbl_webshop_size_tables>Webshop size tables</lbl_webshop_size_tables>
+    <lbl_uploadsizetable>Upload size table</lbl_uploadsizetable>
+    <lbl_suredeletefiletable>Are you sure that you wish to delete this sizetable?</lbl_suredeletefiletable>
+    <lbl_titlemandatory>You cannot save a size table without a title</lbl_titlemandatory>
+    <lbl_none_defined>No pages have been defined</lbl_none_defined>
+    <lbl_forwebshop>for webshop</lbl_forwebshop>
+    <lbl_addpage>Add new page</lbl_addpage>
+    <lbl_find>Search...</lbl_find>
+    <lbl_pageslc>results</lbl_pageslc>
+    <lbl_pages_inshop>Pages</lbl_pages_inshop>
+</translation>

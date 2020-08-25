@@ -1,0 +1,12 @@
+<translation>
+	<trans_sendmethod_checkout>Verzenden</trans_sendmethod_checkout>
+	<trans_sendmethod_step_two>Stap 2</trans_sendmethod_step_two>
+	<trans_sendmethod_send>verzenden</trans_sendmethod_send>
+	<trans_sendmethod_back_one>Terug naar stap 1</trans_sendmethod_back_one>
+	<trans_sendmethod_skip>Verder naar stap 3</trans_sendmethod_skip>
+    <transl_send>Verzenden</transl_send>  
+    <transl_international>internationaal</transl_international>
+    <transl_pickup>Bestelling ophalen</transl_pickup>
+    <transl_free>gratis</transl_free>    
+    <transl_sendhow>Hoe wilt u uw bestelling ontvangen?</transl_sendhow>
+</translation>

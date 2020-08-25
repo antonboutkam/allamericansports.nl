@@ -1,0 +1,12 @@
+<translation>
+    <transl_name>Name</transl_name>
+    <transl_email>E-mail</transl_email>
+    <transl_phone>Phone</transl_phone>
+    <transl_subject>Subject</transl_subject>
+    <transl_note>Message</transl_note>
+    <transl_send>Send message</transl_send>  
+    <trans_thanksmsg><![CDATA[Thanks for your message, we will try to read and if needed respond to your email as quick as possible.<br />          
+          You will get automaticly redirected in <span id="seconds">10</span> seconds to the frontpage.]]></trans_thanksmsg>
+    <trans_thanksend><![CDATA[Met vriendelijke groet, <br/> Team Allamericansports.nl]]></trans_thanksend> 
+    <trans_nameerror>asdf</trans_nameerror>
+</translation>

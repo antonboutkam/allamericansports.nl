@@ -1,0 +1,32 @@
+<translation>
+    <lbl_order>Bestelling</lbl_order>    
+    <lbl_sure_delete>Weet u zeker dat u dit product wilt verwijderen?</lbl_sure_delete>
+    <lbl_helped_by>Geholpen door</lbl_helped_by>
+    <lbl_helped_on>Geholpen op</lbl_helped_on>
+    <lbl_created>Aangemaakt</lbl_created>
+    <lbl_accepted>Geaccepteerd</lbl_accepted>
+    <lbl_picked>Gepicked</lbl_picked>
+    <lbl_send>Verzonden</lbl_send>
+    <lbl_approved>Goedgekeurd</lbl_approved>
+    <lbl_payment_approved>Betaling gekeurd</lbl_payment_approved>
+    <lbl_articlenumber>Artikelnummer</lbl_articlenumber>
+    <lbl_productname>Productnaam</lbl_productname>
+    <lbl_quantity>Aantal</lbl_quantity>
+    <lbl_pieceprice>Stukprijs</lbl_pieceprice>
+    <lbl_price>Prijs</lbl_price>
+    <lbl_subtotal>Subtotaal</lbl_subtotal>
+
+    <!-- ook in order_new.xml -->
+    <lbl_general>Algemeen</lbl_general>
+    <lbl_address>Adres</lbl_address>
+    <lbl_delivery_address>Afleveradres</lbl_delivery_address>    
+    <lbl_firm>Firma</lbl_firm>    
+    <lbl_street>Straat</lbl_street>
+    <lbl_phone>Telefoon</lbl_phone>
+    <lbl_zipcode>Postcode</lbl_zipcode>
+    <lbl_mobile_phone>Mobiel</lbl_mobile_phone>
+    <lbl_city>Woonplaats</lbl_city>
+    <lbl_email>Email</lbl_email>
+    <lbl_country>Land</lbl_country>        
+    
+</translation>

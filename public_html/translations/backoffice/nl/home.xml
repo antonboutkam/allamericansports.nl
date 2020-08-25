@@ -1,0 +1,30 @@
+<translation>
+    <welcome_txt>Welkom bij het Backoffice systeem van</welcome_txt>
+    <welcome_txt_sub>Dit onderdeel van onze site uitsluitend toegankelijk voor ons personeel.</welcome_txt_sub>
+    <email>Email adres</email>
+    <lbl_email>Email adres</lbl_email>
+    <password>Wachtwoord</password>
+    <lbl_password>Wachtwoord</lbl_password>
+    <current_location>Huidige locatie</current_location>
+    <signin>Inloggen</signin>
+    <forgot_pass>Wachtwoord vergeten</forgot_pass>
+    <invalid_pass>Ongeldig e-mailadres/wachtwoord</invalid_pass>
+    <reset_pass>Wachtwoord resetten</reset_pass>
+    <provide_email>Geef hieronder uw email adres op en we sturen u een nieuw wachtwoord.</provide_email>
+    <not_in_db>Het opgegeven email adres komt niet voor in onze database.</not_in_db>
+    <new_send>Uw nieuwe wachtwoord is verstuurd naar uw e-mailadres.</new_send>    
+    <reset>Resetten</reset>
+    <find_customer>Klant zoeken</find_customer>
+    <take_order>Bestelling opnemen</take_order>
+    <find_bill>Factuur opzoeken</find_bill>
+    <pick_order>Order picken</pick_order>
+    <stock>Voorraad</stock>
+    <print_barcodes>Barcodes printen</print_barcodes>
+    <welcome_back>Welkom terug</welcome_back>
+    <notes_lbl>Notities</notes_lbl>
+    <add_note>Notitie toevoegen</add_note>
+    <note_by>by</note_by>
+    <no_notes>Er zijn op dit moment geen notities</no_notes>    
+    <your_location>uw locatie</your_location>
+    <specify_location>Geef alstublieft uw locatie op</specify_location>
+</translation>

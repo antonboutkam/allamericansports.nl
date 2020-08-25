@@ -1,0 +1,31 @@
+<translation>    
+    <transl_createyouraccount>Create your account</transl_createyouraccount>    
+    <transl_deliverstribe>We try to approve your profile within 48 hours. </transl_deliverstribe>
+    <transl_iamnew>I am new</transl_iamnew>
+    <transl_companyname>Companyname</transl_companyname>
+    <transl_providecompanyname>Please provide your companyname.</transl_providecompanyname>
+    <transl_chamberofcom>Chamber of commerce</transl_chamberofcom>
+    <transl_provicechamber>Please provice your chamber of commerce number.</transl_provicechamber>
+    <transl_phonenum>Phonenumber</transl_phonenum>
+    <transl_pleaseprovidephone>Please provide your phonenumber.</transl_pleaseprovidephone>
+    <transl_mrmrs>Mr/Mrs</transl_mrmrs>
+    <transl_mr>Mr</transl_mr>
+    <transl_mrs>Mrs</transl_mrs>
+    <transl_firstname>First name</transl_firstname>
+    <transl_lastname>Last name</transl_lastname>
+    <transl_phonenum>Phonenumber</transl_phonenum>
+    <transl_faxnum>Faxnumber</transl_faxnum>
+    <transl_emailaddr>E-mail</transl_emailaddr>
+    <transl_password>Password</transl_password>
+    <transl_passwordconfirm>Confirm password</transl_passwordconfirm>
+    <transl_register>Create account</transl_register>    
+    <transl_mandatory>Mandatory fields</transl_mandatory>
+    <transl_pleaseprovideyourfirstname>Please provide your firstname.</transl_pleaseprovideyourfirstname>
+    <transl_pleaseprovideyourlastname>Please provide your lastname.</transl_pleaseprovideyourlastname>
+    <transl_pleaseprovideyourphone>Please provide your phonenumber.</transl_pleaseprovideyourphone>
+    <transl_pleaseprovideemail>Please provide your e-mailaddress.</transl_pleaseprovideemail>
+    <transl_pleaseprovidevalidemail>Please provide a valid e-mail address.</transl_pleaseprovidevalidemail>       
+    <transl_choosepassfor>Please choose a password for your account.</transl_choosepassfor>
+    <transl_passnotsame>The provided passwords doe not match.</transl_passnotsame>
+    <transl_youraccounthasbeencreated>Your account has been created. We will now redirect you to the frontpage!</transl_youraccounthasbeencreated>
+</translation>

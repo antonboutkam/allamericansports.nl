@@ -1,0 +1,40 @@
+<translation>
+    <trans_final_checkok>Controle</trans_final_checkok>
+	<trans_final_check>Please check all data</trans_final_check>
+	<trans_final_billing_address>Billing Address</trans_final_billing_address>
+	<trans_final_edit_data>Edit data</trans_final_edit_data>
+	<trans_final_name>Name</trans_final_name>
+	<trans_final_companyname>Company Name</trans_final_companyname>
+	<trans_final_address>Address</trans_final_address>
+	<trans_final_postcode>Postcode</trans_final_postcode>
+	<trans_final_city>City</trans_final_city>
+	<trans_final_country>Country</trans_final_country>
+	<trans_final_payment>Payment method</trans_final_payment>
+	<trans_final_change_payment>Change payment</trans_final_change_payment>
+	<trans_final_shipping_method>Shipping method</trans_final_shipping_method>
+	<trans_final_change_shipping_method>Change shipping method</trans_final_change_shipping_method>
+	<trans_final_check_shoppingcart>Check your shopping cart</trans_final_check_shoppingcart>
+	<trans_final_productcode>Product code</trans_final_productcode>
+	<trans_final_article>Article</trans_final_article>
+	<trans_final_price_per_piece>Price per item</trans_final_price_per_piece>
+	<trans_final_number>Quantity</trans_final_number>
+	<trans_final_price>Price</trans_final_price>
+	<trans_final_discount>Discount</trans_final_discount>
+	<trans_final_shipping>Shipping</trans_final_shipping>
+	<trans_final_total_ex_vat>Total ex VAT</trans_final_total_ex_vat>
+	<trans_final_vat>Of which is VAT</trans_final_vat>
+	<trans_final_total>Total</trans_final_total>
+	<trans_final_message>Do you have a message for the recipient or other comments</trans_final_message>
+	<trans_final_terms_conditions>I agree to the</trans_final_terms_conditions>
+	<trans_final_terms_conditions_link> terms and conditions</trans_final_terms_conditions_link>
+	<trans_final_transaction>Transaction</trans_final_transaction>
+	<trans_final_delivery_address>Delivery Address</trans_final_delivery_address>
+    <trans_final_size>Size</trans_final_size>
+    <trans_final_color>Color</trans_final_color>
+    <trans_makepayment>Pay order</trans_makepayment>
+    <trans_backtostepthree>Back to step 3</trans_backtostepthree>
+    <trans_agree_terms_err>Please agree to our terms and conditions</trans_agree_terms_err>   
+	<trans_step_four>Step 4</trans_step_four>
+    <trans_pickup_order>You will pickup the order</trans_pickup_order> 	
+	<trans_send_order>Ship order</trans_send_order>
+</translation>

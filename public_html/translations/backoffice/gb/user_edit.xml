@@ -1,0 +1,29 @@
+<translation>
+    <lbl_add_user>Add user</lbl_add_user>  
+    <lbl_edit_user>Edit user</lbl_edit_user>
+    <lbl_usernamepassord>Sign in details</lbl_usernamepassord>
+    <lbl_email_address>Email address</lbl_email_address>
+    <lbl_password>Password</lbl_password>
+    <lbl_access>Access</lbl_access>
+    <lbl_user_admin>administrator</lbl_user_admin>
+    <lbl_user_commercial>commercial</lbl_user_commercial>
+    <lbl_user_warehouse>warehouse</lbl_user_warehouse>
+    <lbl_user_supplier>supplier</lbl_user_supplier>
+    <lbl_status>Status</lbl_status>
+    <lbl_active>active</lbl_active>
+    <lbl_disabled>disabled</lbl_disabled>
+    <lbl_employee_information>Employee information</lbl_employee_information>
+    <lbl_full_name>Full name</lbl_full_name>
+    <lbl_phone>Phone</lbl_phone>
+    <lbl_address>Address</lbl_address>
+    <lbl_mobile>Mobile</lbl_mobile>
+    <lbl_zipcode>Postalcode</lbl_zipcode>
+    <lbl_job>Job</lbl_job>
+    <lbl_city>City</lbl_city>
+    <lbl_birthdate>Birthdate</lbl_birthdate>
+    <lbl_country>Country</lbl_country>
+    <lbl_iso2countrycode>Iso2 countrycode</lbl_iso2countrycode>
+    <lbl_create>Create</lbl_create>
+    <lbl_opslaan>Save</lbl_opslaan>
+    <lbl_save_info>Information saved</lbl_save_info>    
+</translation>

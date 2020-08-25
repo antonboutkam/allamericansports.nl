@@ -1,0 +1,40 @@
+<translation>   
+    <trans_final_checkok>Controle</trans_final_checkok>
+	<trans_final_check>Is uw bestelling zo helemaal in orde?</trans_final_check>
+	<trans_final_billing_address>Factuuradres</trans_final_billing_address>
+	<trans_final_edit_data>Wijzig gegevens</trans_final_edit_data>
+	<trans_final_name>Naam</trans_final_name>
+	<trans_final_companyname>Bedrijfsnaam</trans_final_companyname>
+	<trans_final_address>Adres</trans_final_address>
+	<trans_final_postcode>Postcode</trans_final_postcode>
+	<trans_final_city>Stad</trans_final_city>
+	<trans_final_country>Land</trans_final_country>
+	<trans_final_payment>Betaalmethode</trans_final_payment>
+	<trans_final_change_payment>Wijzig betaalmethode</trans_final_change_payment>
+	<trans_final_shipping_method>Verzendwijze</trans_final_shipping_method>
+	<trans_final_change_shipping_method>Wijzig verzendwijze</trans_final_change_shipping_method>
+	<trans_final_check_shoppingcart>Controleer uw winkelwagentje</trans_final_check_shoppingcart>
+	<trans_final_productcode>Productcode</trans_final_productcode>
+	<trans_final_article>Artikel</trans_final_article>
+	<trans_final_price_per_piece>Prijs per stuk</trans_final_price_per_piece>
+	<trans_final_number>Aantal</trans_final_number>
+	<trans_final_price>Prijs</trans_final_price>
+	<trans_final_discount>Korting</trans_final_discount>
+	<trans_final_shipping>Verzendkosten</trans_final_shipping>
+	<trans_final_total_ex_vat>Totaal ex btw</trans_final_total_ex_vat>
+	<trans_final_vat>Waarvan BTW</trans_final_vat>
+	<trans_final_total>Totaal</trans_final_total>
+	<trans_final_message>Heb je nog een bericht voor de ontvanger of andere opmerkingen</trans_final_message>
+	<trans_final_terms_conditions>Ik ga akkoord met de</trans_final_terms_conditions>
+	<trans_final_terms_conditions_link>algemene voorwaarden</trans_final_terms_conditions_link>
+	<trans_final_transaction>Transactiekosten</trans_final_transaction>
+	<trans_final_delivery_address>Afleveradres</trans_final_delivery_address>
+    <trans_final_size>Maat</trans_final_size>
+    <trans_final_color>Kleur</trans_final_color>
+    <trans_makepayment>Afrekenen</trans_makepayment>
+    <trans_backtostepthree>Terug naar stap 3</trans_backtostepthree>
+    <trans_agree_terms_err>Om de bestelling af te kunnen ronden moet u akkoord gaan met onze algemene voorwaarden</trans_agree_terms_err>     
+	<trans_step_four>Stap 4</trans_step_four>	 
+    <trans_pickup_order>U komt de bestelling afhalen</trans_pickup_order>  	
+    <trans_send_order>Bestelling verzenden</trans_send_order>
+</translation>

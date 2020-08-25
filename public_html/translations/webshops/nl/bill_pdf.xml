@@ -1,0 +1,41 @@
+<translation>
+    <lbl_bill>FACTUUR</lbl_bill>
+    <lbl_articlenumber>ARTIKELNUMMER</lbl_articlenumber>
+    <lbl_description>OMSCHRIJVING</lbl_description>
+    <lbl_quantity>AANTAL</lbl_quantity>
+    <lbl_price>PRIJS</lbl_price>
+    <lbl_total>BEDRAG</lbl_total>
+    <lbl_paymethod>BETAALMETHODE</lbl_paymethod>
+    <lbl_paybefore>VERVALDATUM</lbl_paybefore>
+    <lbl_vatnumber>BTW nummer</lbl_vatnumber>
+    <lbl_helpedby>U bent geholpen door</lbl_helpedby>
+    <lbl_remarks>Opmerkingen</lbl_remarks>
+    <lbl_date>DATUM</lbl_date>
+    <lbl_customernumber>KLANTNUMMER</lbl_customernumber>
+    <lbl_type>TYPE</lbl_type>
+    <lbl_page>PAGE</lbl_page>
+    <lbl_vat>BTW</lbl_vat>
+    <lbl_vat_low>BTW LAAG</lbl_vat_low>
+    <lbl_vat_high>BTW HOOG</lbl_vat_high>
+    <lbl_amount>BEDRAG</lbl_amount>
+    <lbl_totals>TOTAAL</lbl_totals>
+    <lbl_summation>Betalingsherinnering, graag betalen voor</lbl_summation>
+    <lbl_billcopy>Kopie factuur</lbl_billcopy>
+    <lbl_bank_company_info>Bank/bedrijf gegevens</lbl_bank_company_info>
+    <lbl_terms_and_conditions>Op deze factuur zijn de algemene voorwaarden van toepassing, deze kunt u vinden op www.allamericansports.nl/page/algemenevoorwaarden</lbl_terms_and_conditions>    
+    
+    <lbl_percentage>Percentage</lbl_percentage>
+    <lbl_discount>Korting</lbl_discount>
+    <lbl_discountpercent>Kortingspercentage</lbl_discountpercent>
+    <lbl_transactioncosts>Transactiekosten</lbl_transactioncosts>
+    <lbl_sendcost>order-/verzendkosten</lbl_sendcost>
+    <lbl_sendcostbox>Verzendkosten</lbl_sendcostbox>
+    <lbl_vat_ucf>Btw</lbl_vat_ucf>
+    <lbl_kvk>KvK</lbl_kvk>
+    <lbl_yourref>Uw referentienummer</lbl_yourref>         
+    <lbl_relation_discount>Klantkorting</lbl_relation_discount>    
+    <lbl_color>Kleur</lbl_color>
+    <lbl_size>Maat</lbl_size>
+    <lbl_color_uc>KLEUR</lbl_color_uc>
+    <lbl_size_uc>MAAT</lbl_size_uc>        
+</translation>

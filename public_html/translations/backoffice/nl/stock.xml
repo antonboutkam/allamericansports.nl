@@ -1,0 +1,117 @@
+<translation>
+    <lbl_actions>Acties</lbl_actions>
+    <lbl_products>rijen</lbl_products>    
+    <lbl_search_stock>Voorraad doorzoeken</lbl_search_stock>
+    <lbl_current_stock>Huidige voorraad</lbl_current_stock>
+    <lbl_current>Huidige voorraad bekijken</lbl_current>
+    <lbl_mutations>Mutaties bekijken</lbl_mutations>
+    <lbl_fill>Levering invoeren</lbl_fill>
+    <lbl_return>Retourneren</lbl_return>
+    <lbl_location>Locatie</lbl_location>
+    <lbl_all_locations>Alle locaties</lbl_all_locations>
+    <lbl_filter>Filter</lbl_filter>
+    <lbl_search_field>(artikelnummer, productnaam, omschrijving, materiaal, barcode)</lbl_search_field>
+    <lbl_stocks>Voorraden</lbl_stocks>
+    <lbl_articlenumber>Artikelnummer</lbl_articlenumber>
+    <lbl_productname>Productnaam</lbl_productname>
+    <lbl_location>Locatie</lbl_location>
+    <lbl_quantity>Aantal</lbl_quantity>
+    <lbl_purchase>Inkoop</lbl_purchase>
+    <lbl_sale>Verkoop</lbl_sale>
+    <lbl_view_product>Product bekijken</lbl_view_product>
+    <lbl_products_of_type>Producten van type</lbl_products_of_type>
+    <lbl_move>verplaatsen</lbl_move>
+    <lbl_remove_from_stock>Producten uit voorraad verwijderen</lbl_remove_from_stock>
+    <lbl_totals>Totaal</lbl_totals>
+    <lbl_reason>reden</lbl_reason>
+    <lbl_theft>diefstal</lbl_theft>
+    <lbl_broken>defect</lbl_broken>
+    <lbl_giveaway>weg gegeven</lbl_giveaway>
+    <lbl_mustspecifyreason>U moet een reden opgeven.</lbl_mustspecifyreason>
+
+    <lbl_stock>voorraad</lbl_stock>
+    <lbl_fill_stock>Voorraad aanvullen</lbl_fill_stock>
+    <lbl_move>Voorraad verplaatsen</lbl_move>
+    <lbl_product_to_be_added>Toe te voegen producten</lbl_product_to_be_added>
+    <lbl_articlenumber>Artikelnummer</lbl_articlenumber>
+    <lbl_articlename>Artikelnaam</lbl_articlename>
+    <lbl_quantity>Aantal</lbl_quantity>
+    <lbl_location>Locatie</lbl_location>
+    <lbl_path>Pad</lbl_path>
+    <lbl_rack>Stelling</lbl_rack>
+    <lbl_shelf>Plank</lbl_shelf>
+    <lbl_viewproduct>Product bekijken</lbl_viewproduct>
+    <lbl_remove_product>Product verwijderen</lbl_remove_product>
+    <lbl_select_location_for>Locatie selecteren voor</lbl_select_location_for>
+    <lbl_unknown>onbekend</lbl_unknown>
+    <lbl_open_warehouseplan>Open magazijnplan</lbl_open_warehouseplan>
+    <lbl_save_delivery>Levering opslaan</lbl_save_delivery>
+    <lbl_remove_all>Alles verwijderen</lbl_remove_all>
+    <lbl_not_all_asigned>U heeft nog niet aan alle producten een locatie in het magazijn toegewezen.</lbl_not_all_asigned>
+    <lbl_delivery_added>Levering toegevoegd, terug naar vooraaad in @@seconds@@ seconden</lbl_delivery_added>    
+    <lbl_article_property>Artikel eigenschap</lbl_article_property>
+    <lbl_barcode>Barcode</lbl_barcode>
+    <lbl_add_product>Product toevoegen</lbl_add_product>
+    <lbl_view_product>Product bekijken</lbl_view_product>
+    <lbl_find_article>Artikelnummer opzoeken</lbl_find_article>
+    <lbl_display_results>Resultaten weergeven</lbl_display_results>
+    <lbl_results_found>resultaten gevonden</lbl_results_found>
+
+
+    <lbl_warehouseplan>Magazijnplan</lbl_warehouseplan>
+    <lbl_selectloation>Selecteer locatie</lbl_selectloation>
+    <lbl_actions>Acties</lbl_actions>
+    <lbl_edit>Bewerken</lbl_edit>
+    <lbl_warehouse_decoration>Magazijn inrichting</lbl_warehouse_decoration>
+    <lbl_move_product>Verleggen</lbl_move_product>
+    <lbl_move_product>Product verleggen</lbl_move_product>
+    <lbl_move_shelf>Plank verleggen</lbl_move_shelf>
+    <lbl_export>Exporteren</lbl_export>
+    <lbl_decoration>Inrichting exporteren</lbl_decoration>
+    <lbl_export_stock>Voorraad exporteren</lbl_export_stock>
+    <lbl_locations>Locaties</lbl_locations>
+    <lbl_product_count>Aantal producten</lbl_product_count>
+    <lbl_to_location>Naar locatie</lbl_to_location>
+    <lbl_others>Overig</lbl_others>
+    <lbl_locationfor>locatie voor</lbl_locationfor>
+    <lbl_path>Pad</lbl_path>
+    <lbl_rack>Rek</lbl_rack>
+    <lbl_shelf>Plank</lbl_shelf>
+    <lbl_products_groups_shelf>Product groepen/plank</lbl_products_groups_shelf>
+    <lbl_products_shelf>Producten/plank</lbl_products_shelf>
+    <lbl_stock>Voorraad</lbl_stock>
+    <lbl_choose>Locatie kiezen</lbl_choose>
+    <lbl_move_here>Hierheen verplaatsen</lbl_move_here>
+
+
+    <lbl_move_stock>Voorraad verplaatsen</lbl_move_stock>
+    <lbl_from_location>Vanaf lokatie</lbl_from_location>
+
+    <lbl_move_stock>Move stock</lbl_move_stock>
+    <lbl_from_location>From location</lbl_from_location>
+    <lbl_to_location>Naar lokatie</lbl_to_location>
+    <lbl_reserve_stock>Voorraad reserveren</lbl_reserve_stock>
+    <lbl_cancel>Annuleren</lbl_cancel>
+
+    <lbl_non_numeric>Het formulier bevat niet numerieke waarden.</lbl_non_numeric>
+    <lbl_not_same_location>Het is niet mogelijk om producten niet verplaatsen naar de lokatie waar ze vandaan komen</lbl_not_same_location>
+    <lbl_prepare_move>Wilt u deze verplaatsing direct klaarzetten?</lbl_prepare_move>
+    <lbl_stock_reserved>De voorraad is gereserveerd, we openen nu het magazijnplan voor u en we sturen u daarna door naar de voorpagina.</lbl_stock_reserved>
+    <lbl_stock_no_items>Uw "winkelwagen" bevat geen items of de aantallen zijn niet ingevuld. Geef alstublieft aan welke producten u wilt gaan verplaatsen.</lbl_stock_no_items>
+    <lbl_err_to_many>Van bepaalde producten heeft u aangegeven er meer te willen verplaatsen dan dat er voorrradig zijn.</lbl_err_to_many>
+    <lbl_roundup>Afronden</lbl_roundup>
+
+    <lbl_movestock>Voorraad verplaatsen</lbl_movestock>
+    <prepare_to_send>Zending klaarmaken</prepare_to_send>
+    <process_send>Zending verwerken </process_send>
+
+    <lbl_put_in_racks>Interne levering in rekken leggen</lbl_put_in_racks>
+    <lbl_not_all_assigned>Nog niet aan alle producten is een lokatie toegekend</lbl_not_all_assigned>
+    <lbl_processed>Deze levering is verwerkt</lbl_processed>
+
+    <lbl_deliveryid>Levering nummer</lbl_deliveryid>
+    <lbl_created_on>Aangemaakt op</lbl_created_on>
+    <lbl_created_by>Aangemaakt door</lbl_created_by>
+    <lbl_from_location>Vanaf lokatie</lbl_from_location>
+    <lbl_to_location>Naar lokatie</lbl_to_location>
+</translation>

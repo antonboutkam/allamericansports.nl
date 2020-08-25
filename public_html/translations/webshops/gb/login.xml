@@ -1,0 +1,26 @@
+<translation>
+    <transl_alreadyclient>I am a client already</transl_alreadyclient>    
+    <transl_usernamepassincorrect>Username or password incorrect</transl_usernamepassincorrect>
+    <transl_email>E-mailadres</transl_email>
+    <transl_password>Password</transl_password>
+    <transl_forgotpass>Forgot your password?</transl_forgotpass>
+    <transl_resetpass>Reset pass</transl_resetpass>
+    <transl_settingsback>Back to the signin window</transl_settingsback>
+    <transl_iamnew>I am new</transl_iamnew>    
+    <transl_signup>Sign up</transl_signup>
+    <transl_signin>Sign in</transl_signin>        
+    <lbl_registeredclients>Existing clients</lbl_registeredclients>
+    <transl_newclients>New clients</transl_newclients>
+    <transl_bycreatinganaccount>By creating an account for our webshop you are able to go trough the paymentprocess faster and this enables you to track the status of your orders.</transl_bycreatinganaccount>
+    <transl_signup>Aanmelden</transl_signup>
+    <transl_signuporcreate>Sign up or create an account</transl_signuporcreate>
+    <transl_alreadyhaveanaccount>Already have an account? Then you can sign in below</transl_alreadyhaveanaccount>    
+    <transl_mandatory>Mandatory fields</transl_mandatory>
+    <transl_fillbelow>Please fill in your e-mailaddress below and we will send you a new password.</transl_fillbelow>
+    <transl_loginagain>Back to the sign in form</transl_loginagain>
+    <transl_oops>Oops!</transl_oops>
+    <transl_notinourdb>The provided e-mailaddress is not in our database.</transl_notinourdb>
+    <transl_sendbyemail>Your new password has been send to you trough e-mail</transl_sendbyemail>
+    <transl_createaccount>Create an account</transl_createaccount>    
+    <transl_please_provide_valid>The provided email / password combination could not be found in our database, please try again.</transl_please_provide_valid>    
+</translation>

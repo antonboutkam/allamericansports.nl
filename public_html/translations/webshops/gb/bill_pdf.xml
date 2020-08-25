@@ -1,0 +1,40 @@
+<translation>
+    <lbl_bill>INVOICE</lbl_bill>
+    <lbl_articlenumber>ARTICLENUMBER</lbl_articlenumber>
+    <lbl_description>DESCRIPTION</lbl_description>
+    <lbl_quantity>QUANTITY</lbl_quantity>
+    <lbl_price>PRICE</lbl_price>
+    <lbl_total>AMOUNT</lbl_total>
+    <lbl_paymethod>PAYMETHOD</lbl_paymethod>
+    <lbl_paybefore>PAY BEFORE</lbl_paybefore>
+    <lbl_vatnumber>VAT Number</lbl_vatnumber>
+    <lbl_helpedby>U have been helped by</lbl_helpedby>
+    <lbl_remarks>Remarks</lbl_remarks>
+    <lbl_date>DATE</lbl_date>
+    <lbl_customernumber>CUSTOMER ID</lbl_customernumber>
+    <lbl_type>TYPE</lbl_type>
+    <lbl_page>PAGE</lbl_page>
+    <lbl_vat>VAT</lbl_vat>
+    <lbl_vat_low>VAT LOW</lbl_vat_low>
+    <lbl_vat_high>VAT HIGH</lbl_vat_high>
+    <lbl_amount>AMOUNT</lbl_amount>
+    <lbl_totals>TOTAL</lbl_totals>
+    <lbl_summation>This is a summation, the ultimate paydate was</lbl_summation>
+    <lbl_billcopy>Copy</lbl_billcopy>
+    <lbl_bank_company_info>Bank/company information</lbl_bank_company_info>
+    <lbl_terms_and_conditions>Terms and conditions apply, our terms and conditions can be found at: www.allamericansports.nl/page/algemenevoorwaarden</lbl_terms_and_conditions>    
+    <lbl_percentage>Percentage</lbl_percentage>
+    <lbl_discount>Discount</lbl_discount>
+    <lbl_discountpercent>Discount percentage</lbl_discountpercent>
+    <lbl_transactioncosts>Transaction costs</lbl_transactioncosts>
+    <lbl_sendcost>Order-/shipping costs</lbl_sendcost>
+    <lbl_sendcostbox>Order-/shipping costs</lbl_sendcostbox>
+    <lbl_vat_ucf>Vat</lbl_vat_ucf>
+    <lbl_kvk>Coc</lbl_kvk>
+    <lbl_yourref>Your reference</lbl_yourref>    
+    <lbl_relation_discount>Customer discount</lbl_relation_discount>
+    <lbl_color>Color</lbl_color>
+    <lbl_size>Size</lbl_size>
+    <lbl_color_uc>COLOR</lbl_color_uc>
+    <lbl_size_uc>SIZE</lbl_size_uc>    
+</translation>

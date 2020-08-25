@@ -1,0 +1,26 @@
+<translation>
+    <transl_alreadyclient>Ik ben al klant</transl_alreadyclient>    
+    <transl_usernamepassincorrect>Gebruikersnaam of wachtwoord incorrect</transl_usernamepassincorrect>
+    <transl_email>E-mailadres</transl_email>
+    <transl_password>Wachtwoord</transl_password>
+    <transl_forgotpass>Wachtwoord vergeten?</transl_forgotpass>
+    <transl_resetpass>Wachtwoord resetten</transl_resetpass>
+    <transl_settingsback>Terug naar inloggen</transl_settingsback>
+    <transl_iamnew>Ik ben nieuw</transl_iamnew>    
+    <transl_signup>Aanmelden</transl_signup>
+    <transl_signin>Inloggen</transl_signin>
+    <lbl_registeredclients>Geregistreerde klanten</lbl_registeredclients>
+    <transl_newclients>Nieuwe klanten</transl_newclients>
+    <transl_bycreatinganaccount>Door een account te maken in deze winkel kunt u sneller het betalingsproces doorlopen en de status van uw verzendingen volgen.</transl_bycreatinganaccount>
+    <transl_signup>Aanmelden</transl_signup>
+    <transl_signuporcreate>Login of maak een account aan</transl_signuporcreate>
+    <transl_alreadyhaveanaccount>Heeft u al een account dan kunt u hieronder inloggen.</transl_alreadyhaveanaccount>
+    <transl_mandatory>Verplichte velden</transl_mandatory>
+    <transl_fillbelow>Vul hier uw e-mail adres in en we zullen u een nieuw wachtwoord sturen.</transl_fillbelow>
+    <transl_loginagain>Opnieuw inloggen</transl_loginagain>
+    <transl_oops>Oops!</transl_oops>
+    <transl_notinourdb>Het opgegeven e-mailadres komt niet voor in onze database.</transl_notinourdb>
+    <transl_sendbyemail>Uw nieuwe wachtwoord is per e-mail naar u verzonden</transl_sendbyemail>
+    <transl_createaccount>Maak account aan</transl_createaccount>
+    <transl_please_provide_valid>De door u opgegeven e-mail / wachtwoord combinatie komt niet voor in onze database. </transl_please_provide_valid>
+</translation>

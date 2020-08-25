@@ -1,0 +1,34 @@
+<translation>
+    <trans_based_on>Gebaseerd op</trans_based_on>
+    <trans_judgementssingular>beoordeling</trans_judgementssingular>
+    <trans_judgementsplural>beoordelingen</trans_judgementsplural>    
+    <trans_color>Kleur</trans_color>    
+    <trans_deliverytime>Levertijd</trans_deliverytime>
+    <trans_insportsbag>In sporttas</trans_insportsbag>
+    <trans_custservice>Klantenservice</trans_custservice>
+    <trans_dailyfrom>dagelijks van</trans_dailyfrom>
+    <trans_untill>tot</trans_untill>
+    <trans_oclock>uur</trans_oclock>    
+    <trans_sendus>Stuur ons een email</trans_sendus>
+    <trans_your_profit>Uw voordeel</trans_your_profit>
+    <trans_combinationdiscount>Combinatie korting</trans_combinationdiscount>
+    <trans_discount>korting</trans_discount> 
+    <trans_productinformation>Productinformatie</trans_productinformation>
+    <trans_reviews>Beoordelingen</trans_reviews>
+    <trans_video>Video</trans_video>
+    <trans_writereview>Schrijf een review</trans_writereview>
+    <trans_reviewby>Review door</trans_reviewby>
+    <trans_reviewon>geplaatst op</trans_reviewon>
+    <trans_reviewstore>Review opslaan</trans_reviewstore>
+    <trans_not_in_stock>Dit product is momenteel niet voorradig en kan daarom niet besteld worden.</trans_not_in_stock>  
+    <trans_instock>Voorradig</trans_instock>  
+    <trans_notinstock>Niet voorradig</trans_notinstock>  
+    <trans_availablecolorsinthesize>Beschikbare kleuren in de maat:</trans_availablecolorsinthesize>
+    <trans_callwith>Bellen met een</trans_callwith>
+    <trans_employee>medewerker</trans_employee>
+    <trans_hoemanystars>Hoeveel sterren geeft u dit product?</trans_hoemanystars>        
+    <trans_stars>sterren</trans_stars>
+    <lbl_sizetable>Maattabel</lbl_sizetable>
+    <trans_thisinother>Dit product in andere kleuren</trans_thisinother>
+    <trans_size>Maat</trans_size>
+</translation>

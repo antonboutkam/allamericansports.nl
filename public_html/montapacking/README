@@ -1,0 +1,107 @@
+=====
+Usage
+=====
+
+EXPORT ORDERS TO DOCDATA
+==============================
+
+1. php sales_order.php -f
+2. php upload_files.php
+
+
+EXPORT PRODUCTS TO DOCDATA
+==============================
+
+1. php article_info.php -f
+2. php upload_files.php
+
+
+IMPORTING RESULT FILES FROM DD
+==============================
+
+1. php download_files.php
+2. php process_pulled_files.php
+
+
+CLEANUP PROCESSED FILES
+==============================
+
+1. php cleanup_files.php
+
+
+=================
+Scripts explained
+=================
+
+The docdata scripts operate independent from the web application
+and cms. Actions are determined by the docdata_stat, docdata_action
+and docdata_sent columns in the database.
+
+Three tables have these columns, namely:
+* as_products
+* as_orders
+* as_order_products
+
+as_products is used by:
+- article_info.php
+- article_info_result.php
+- article_info_stock.php
+
+as_orders and as_order_products are used by:
+- sales_order.php
+- sales_order_result.php
+
+
+article_info.php
+================
+
+Takes all as_products with docdata_stat = 'unknown', creates xml-file
+with STATUS determined by docdata_action and updates as_products.docdata_stat
+to 'waiting' and docdata_sent to the current time. Then the xml-file can be
+uploaded to the docdata ftp-server.
+
+
+article_info_result.php (called by process_pulled_files.php)
+============================================================
+
+Updates all docdata_stat to 'accepted' or 'denied' depending on the STATUS value in the
+xml-file. If the docdata_action was 'delete' then deletes the article from the database.
+
+
+article_info_stock.php (called by process_pulled_files.php)
+===========================================================
+
+Updates all docdata_stat to 'accepted' or 'denied' depending on the STATUS value in the
+xml-file. Also updates as_products.stock to the value from the xml-file.
+
+
+sales_order.php
+===============
+
+Takes all as_orders with docdata_stat = 'unknown', creates xml-file
+with STATUS determined by docdata_action and updates as_orders.docdata_stat
+to 'waiting', docdata_sent to the current time and as_order_products.docdata_sequence_nr
+to an incrementing integer (starting at 1 for the first product in the order). Then the
+resulting xml-file can be uploaded to the docdata ftp-server.
+
+
+sales_order_result.php (called by process_pulled_files.php)
+===========================================================
+
+Updates all as_order.docdata_stat to 'accepted', 'denied' or 'shipped' depending on the
+STATUS value in the xml-file. Also updates as_order_products.docdata_quantity_shipped, 
+docdata_sequence_nr, docdata_shipping_date, docdata_tracktrace_nr, docdata_transported_by.
+
+
+notify_customer.php (called by process_pulled_files.php)
+========================================================
+
+Takes all as_orders with docdata_stat = 'shipping', mails the shop owner and the customer
+that the order is shipped and updates docdata_stat to 'notified'.
+
+
+process_pulled_files.php
+========================
+
+Processes incoming result xml-files from docdata by calling one of the earlier described
+scripts.

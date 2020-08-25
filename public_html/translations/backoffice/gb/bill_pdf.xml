@@ -1,0 +1,22 @@
+<translation>
+    <lbl_bill>BILL</lbl_bill>
+    <lbl_articlenumber>ARTICLENUMBER</lbl_articlenumber>
+    <lbl_description>DESCRIPTION</lbl_description>
+    <lbl_quantity>QUANTITY</lbl_quantity>
+    <lbl_price>PRICE</lbl_price>
+    <lbl_total>AMOUNT</lbl_total>
+    <lbl_paymethod>PAYMETHOD</lbl_paymethod>
+    <lbl_paybefore>PAY BEFORE</lbl_paybefore>
+    <lbl_vatnumber>VAT Number</lbl_vatnumber>
+    <lbl_helpedby>U have been helped by</lbl_helpedby>
+    <lbl_remarks>Remarks</lbl_remarks>
+    <lbl_date>DATE</lbl_date>
+    <lbl_customernumber>CUSTOMER ID</lbl_customernumber>
+    <lbl_type>TYPE</lbl_type>
+    <lbl_page>PAGE</lbl_page>
+    <lbl_vat>VAT</lbl_vat>
+    <lbl_amount>AMOUNT</lbl_amount>
+    <lbl_totals>TOTAL</lbl_totals>
+    <lbl_summation>This is a summation, the ultimate paydate was</lbl_summation>
+    <lbl_billcopy>Copy</lbl_billcopy>
+</translation>

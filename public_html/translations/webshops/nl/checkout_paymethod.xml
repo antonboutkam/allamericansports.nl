@@ -1,0 +1,9 @@
+<translation>
+	<trans_paymethod_payment>Betaalmethode</trans_paymethod_payment>
+    <trans_paymethod_paymenthow>Hoe wilt u uw bestelling betalen?</trans_paymethod_paymenthow>        
+	<trans_paymethod_back_two>Terug naar stap 2</trans_paymethod_back_two>
+	<trans_paymethod_skip>Verder naar stap 4</trans_paymethod_skip>
+	<trans_paymethod_step_three>Stap 3</trans_paymethod_step_three>
+    <trans_transactiekosten>Transactiekosten</trans_transactiekosten>
+    <trans_free>Gratis</trans_free>
+</translation>

@@ -1,0 +1,15 @@
+<translation>
+    <lbl_reports>Reports</lbl_reports>
+    <lbl_dataloading>Loading data!</lbl_dataloading>
+    <lbl_chooseaday>choose a day</lbl_chooseaday>
+    <lbl_turnover_brutoprofit>Turnover / bruto profit</lbl_turnover_brutoprofit>
+    <lbl_staff>Staff</lbl_staff>
+    <lbl_location>Location</lbl_location>
+    <lbl_year>Year</lbl_year>
+    <lbl_month>Month</lbl_month>
+    <lbl_day>Day</lbl_day>
+    <lbl_alllocations>All locations</lbl_alllocations>
+    <lbl_choosamonth>choose a month</lbl_choosamonth>
+    <lbl_loading>loading...</lbl_loading>
+    <lbl_grouping>Grouping</lbl_grouping>    
+</translation>

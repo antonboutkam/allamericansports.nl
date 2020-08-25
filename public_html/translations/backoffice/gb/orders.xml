@@ -1,0 +1,162 @@
+<translation>
+    <lbl_billinglanguage>Billing language</lbl_billinglanguage>
+    <lbl_orderpicker>Pick orders</lbl_orderpicker>
+    <lbl_orders>Orders</lbl_orders>
+    <lbl_actions>Actions</lbl_actions>
+    <lbl_add>Add</lbl_add>
+    <lbl_accept_order>Place order</lbl_accept_order>
+    <lbl_order_picker>Pick order</lbl_order_picker>
+    <lbl_find_order>Find order</lbl_find_order>
+    <lbl_overview>Overzicht</lbl_overview>
+    <lbl_paid>Paid</lbl_paid>
+    <lbl_yes>Yes</lbl_yes>
+    <lbl_no>No</lbl_no>
+    <lbl_salesemployee>Sales employee</lbl_salesemployee>
+    <lbl_deliveredsend>Delivered / send</lbl_deliveredsend>
+    <lbl_customer>Customer</lbl_customer>
+    <lbl_parked>Parked</lbl_parked>
+    <lbl_stock>Stock</lbl_stock>
+    <lbl_orderacceptationdate>Order acceptation date</lbl_orderacceptationdate>
+    <lbl_chooseayear>choose a year</lbl_chooseayear>
+    <lbl_choosamonth>choose a month</lbl_choosamonth>
+    <lbl_month_01>january</lbl_month_01>
+    <lbl_month_02>february</lbl_month_02>
+    <lbl_month_03>march</lbl_month_03>
+    <lbl_month_04>april</lbl_month_04>
+    <lbl_month_05>may</lbl_month_05>
+    <lbl_month_06>june</lbl_month_06>
+    <lbl_month_07>july</lbl_month_07>
+    <lbl_month_08>august</lbl_month_08>
+    <lbl_month_09>september</lbl_month_09>
+    <lbl_month_10>october</lbl_month_10>
+    <lbl_month_11>november</lbl_month_11>
+    <lbl_month_12>december</lbl_month_12>
+    <lbl_chooseaday>choose a day</lbl_chooseaday>
+    <lbl_no_orders_found>No orders found</lbl_no_orders_found>
+    <lbl_orders>Orders</lbl_orders>
+    <lbl_found_orders>found orders</lbl_found_orders>
+    <lbl_order>order</lbl_order>
+    <lbl_status>Status</lbl_status>
+    <lbl_sinds>Since</lbl_sinds>
+    <lbl_relation>Relation</lbl_relation>
+    <lbl_subtotal>Subtotal</lbl_subtotal>
+    <lbl_vat>Vat</lbl_vat>
+    <lbl_total>Total</lbl_total>
+
+
+
+    <lbl_take_order>Take order</lbl_take_order>
+    <lbl_sure_remove>Are you sure you wish to remove this product?</lbl_sure_remove>
+    <lbl_order_info>Order information</lbl_order_info>
+    <lbl_customer_info>Cusomer information</lbl_customer_info>
+    <lbl_customer_connect>Would you like to relate this order to a customer?</lbl_customer_connect>
+    <lbl_no_customer_connect>Don't relate order to a customer</lbl_no_customer_connect>
+    <lbl_find_customer>Find customer</lbl_find_customer>
+    <lbl_new_customer>New customer</lbl_new_customer>
+    <lbl_no_cust_connect>Don't relate to customer</lbl_no_cust_connect>
+    <lbl_products>Products</lbl_products>
+    <lbl_pay>Pay</lbl_pay>
+    <lbl_roundup>Round up</lbl_roundup>
+    <lbl_paymethod>Paymethod</lbl_paymethod>
+    <lbl_discount>Discount</lbl_discount>
+    <lbl_fixed_amount>Fixed discount</lbl_fixed_amount>
+    <lbl_perc_purchaseprice>Percentage of the purchase price</lbl_perc_purchaseprice>
+    <lbl_delivery>Delivery</lbl_delivery>
+    <lbl_direct_delivery>Cutomer directly takes the goods with him/her.</lbl_direct_delivery>
+    <lbl_send_later>We will send the goods to the customer.</lbl_send_later>
+    <lbl_working_from_stock>Working on the stock of: </lbl_working_from_stock>
+    <lbl_finalize>Finalize</lbl_finalize>
+    <lbl_park>Park</lbl_park>
+    <lbl_cancel>Cancel</lbl_cancel>
+    <lbl_outoforder>Out of order</lbl_outoforder>
+    
+    <lbl_err_no_products>This order has no products, you cannot complete an order without products.</lbl_err_no_products>
+    <lbl_err_no_stockselection>You have to specify wether the delivery takes place directly or at a later time.</lbl_err_no_stockselection>
+    <lbl_err_no_paymethod>You did not specify the paymethod.</lbl_err_no_paymethod>
+    <lbl_err_out_of_stock>There are only @@productcount@@ products of this type in stock.</lbl_err_out_of_stock>
+    <lbl_err_invalid_input>Invalid input, please try again</lbl_err_invalid_input>
+    <lbl_prompt_direct_payment><![CDATA[Did the payment take place?
+Type yes if the customer paid already, type no if the cutomer pays at a later time.]]></lbl_prompt_direct_payment>
+    <lbl_inf_yes>yes</lbl_inf_yes>
+    <lbl_inf_no>no</lbl_inf_no>
+    <lbl_general>General</lbl_general>
+    <lbl_address>Address</lbl_address>
+    <lbl_delivery_address>Delivery address</lbl_delivery_address>    
+    <lbl_firm>Firm</lbl_firm>
+    
+    <lbl_street>Street</lbl_street>
+    <lbl_phone>Phone</lbl_phone>
+    <lbl_zipcode>Zipcode</lbl_zipcode>
+    <lbl_mobile_phone>Mobile</lbl_mobile_phone>
+    <lbl_city>City</lbl_city>
+    <lbl_email>Email</lbl_email>
+    <lbl_country>Country</lbl_country>        
+    <lbl_articlenumber>Articlenumber</lbl_articlenumber>
+
+    <lbl_productname>Productname</lbl_productname>
+    <lbl_count>Quantity</lbl_count>
+    <lbl_pieceprice>Piece price</lbl_pieceprice>
+    <lbl_price>Price</lbl_price>    
+    <lbl_subtotal>Subtotal</lbl_subtotal>
+
+    <lbl_article_property>Article property</lbl_article_property>
+    <lbl_barcode>Barcode</lbl_barcode>
+    <lbl_add_product>Add product</lbl_add_product>
+    <lbl_view_product>View product</lbl_view_product>
+    <lbl_find_article>Find articlenumber</lbl_find_article>
+    <lbl_display_results>View results</lbl_display_results>
+    <lbl_results_found>Found results</lbl_results_found>    
+    <lbl_type>Type</lbl_type>
+    <lbl_firmname>Firmname</lbl_firmname>
+    <lbl_street>Street</lbl_street>
+    <lbl_city>City</lbl_city>
+    <lbl_take_order>Take order</lbl_take_order>
+
+
+
+   <lbl_orderinfo>Order information</lbl_orderinfo>
+    <lbl_ordercollect>Collect order</lbl_ordercollect>
+    <lbl_pickorder>Pick order</lbl_pickorder>
+    <lbl_soldby>Sold by</lbl_soldby>
+    <lbl_soldto>Sold to</lbl_soldto>
+    <lbl_selldate>Selling date</lbl_selldate>
+    <lbl_phoneseller>Seller phone number</lbl_phoneseller>
+    <lbl_custaddress>Customer address</lbl_custaddress>
+    <lbl_zipandcity>Postalcode + city</lbl_zipandcity>
+    <lbl_phone>Phone</lbl_phone>
+    <lbl_bill>Bill</lbl_bill>
+    <lbl_summate>Summation</lbl_summate>
+    <lbl_copy_bill>Copy bill</lbl_copy_bill>
+    <lbl_warehouseplan>Warehouseplan</lbl_warehouseplan>
+    <lbl_packageorder>Packing note</lbl_packageorder>
+    <lbl_paymentstatus>Payment status</lbl_paymentstatus>
+    <lbl_paid>Paid</lbl_paid>
+    <lbl_sendsummation>Send summation</lbl_sendsummation>
+    <lbl_wait>Wait</lbl_wait>
+    <lbl_location>Location</lbl_location>
+    <lbl_articlenumber>Articlenumber</lbl_articlenumber>
+    <lbl_productname>Productname</lbl_productname>
+    <lbl_path>Path</lbl_path>
+    <lbl_rack>Rack</lbl_rack>
+    <lbl_shelf>Shelf</lbl_shelf>
+    <lbl_quantity>Quantity</lbl_quantity>
+    <lbl_package>Package</lbl_package>
+    <lbl_pack_order>Pack order</lbl_pack_order>
+    <lbl_everythingfits>Everything fits in one box</lbl_everythingfits>
+    <lbl_roundup>Round up</lbl_roundup>
+    <lbl_park>Park</lbl_park>
+    <lbl_cancel>Wait</lbl_cancel>
+    <lbl_backtooverview>Back to overview</lbl_backtooverview>
+    <lbl_sureroundup>Are you sure you wish to finalize this order?</lbl_sureroundup>
+    <lbl_surecancel>Are you sure you wish to cancel this order?</lbl_surecancel>
+    <lbl_notallproductshavepackage>Not all ever have been placed in a box.</lbl_notallproductshavepackage>
+    <lbl_ordercompletedredirect>The order is completed, you will be redirected to the "orderpick" window.</lbl_ordercompletedredirect>
+    <lbl_neverpays><![CDATA[You are about to permanently change the paiment status of this order to unpaid. 
+Are you sure this customer is never going to pay?]]></lbl_neverpays>
+    <lbl_customerpaid><![CDATA[Hereby you declare that this customer paid for the order 
+Are you sure the customer paid?
+    ]]></lbl_customerpaid> 
+    
+    
+    <lbl_showdeleted>Show deleted orders</lbl_showdeleted>    
+</translation>

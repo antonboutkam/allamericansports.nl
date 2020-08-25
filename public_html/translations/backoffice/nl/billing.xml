@@ -1,0 +1,15 @@
+<translation>
+    <lbl_nobillsfound>Geen facturen gevonden die aan uw zoekcriteria voldoen.</lbl_nobillsfound>
+    <lbl_commercialpriv>(je hebt commerciële toegangsrechten, hierdoor kun je alleen facturen zien die door jou zijn aangemaakt)</lbl_commercialpriv>
+    <lbl_billing>Facturatie</lbl_billing>
+    <lbl_bill_browser>Factuur browser</lbl_bill_browser>
+    <lbl_paid>Betaald</lbl_paid>
+    <lbl_not_paid>Nog niet betaald</lbl_not_paid>
+    <lbl_found_bills>Gevonden facturen</lbl_found_bills>
+    <lbl_found_bills_lc>Gevonden facturen</lbl_found_bills_lc>
+    <lbl_companyname>Firmanaam</lbl_companyname>
+    <lbl_billno>Factuurnummer</lbl_billno>
+    <lbl_created>Invoerdatum</lbl_created>
+    <lbl_paidon>Betaald op</lbl_paidon>
+    <lbl_amount>Bedrag</lbl_amount>
+</translation>

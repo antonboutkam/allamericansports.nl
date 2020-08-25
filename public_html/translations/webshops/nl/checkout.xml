@@ -1,0 +1,38 @@
+<translation>
+  	<trans_definition>Omschrijving</trans_definition>
+	<trans_number>Aantal</trans_number>
+	<trans_price>Prijs</trans_price>
+	<trans_total>Totaal</trans_total>
+	<trans_subtotal>Subtotaal</trans_subtotal>
+	<trans_shipping>Verzendkosten</trans_shipping>
+	<trans_transaction>Transactiekosten</trans_transaction>
+	<trans_vat>Btw</trans_vat>
+	<trans_continue_shop>Verder winkelen</trans_continue_shop>
+	<trans_next_step>Volgende stap</trans_next_step>
+	
+	<trans_your_data>Uw gegevens</trans_your_data>
+	<trans_myaccount_name>Voornaam</trans_myaccount_name>
+	<trans_myaccount_surname>Achternaam</trans_myaccount_surname>
+	<trans_myaccount_companyame>Bedrijfsnaam</trans_myaccount_companyame>
+	<trans_myaccount_email>E-mailadres</trans_myaccount_email>
+	<trans_myaccount_phone>Telefoon</trans_myaccount_phone>
+	<trans_myaccount_street_no>Straat</trans_myaccount_street_no>
+	<trans_myaccount_postcode>Postcode + nummer</trans_myaccount_postcode>
+	<trans_myaccount_city>Stad</trans_myaccount_city>
+	<trans_myaccount_country>Land</trans_myaccount_country>
+	<trans_myaccount_create_account>Maak een account aan voor uw volgende bezoek</trans_myaccount_create_account>
+	<trans_myaccount_password>Wachtwoord</trans_myaccount_password>
+	<trans_myaccount_confirm_password>Wachtwoord bevestigen</trans_myaccount_confirm_password>
+	<trans_myaccount_send_same_address>Verzenden naar hetzelfde adres</trans_myaccount_send_same_address>
+	<trans_myaccount_have_account>Heeft u al een account</trans_myaccount_have_account>
+	<trans_myaccount_login>Inloggen</trans_myaccount_login>    
+	<trans_myaccount_forgot_password>Wachtwoord vergeten</trans_myaccount_forgot_password>
+	<trans_myaccount_skip_step_two>Verder naar stap 2</trans_myaccount_skip_step_two>
+	<trans_myaccount_password_reset>Wachtwoord resetten</trans_myaccount_password_reset>
+	<trans_myaccount_password_sent>Geef hieronder uw e-mailadres op en we sturen u een nieuw wachtwoord</trans_myaccount_password_sent>
+	<trans_myaccount_email_not_database>Het opgegeven e-mailadres komt niet voor in onze database</trans_myaccount_email_not_database>
+	<trans_myaccount_shoppingcart>Winkelwagen</trans_myaccount_shoppingcart>
+	<trans_whatonbill>Wat moet er op de factuur staan?</trans_whatonbill>
+	<trans_sendmethod_checkout>Afrekenen</trans_sendmethod_checkout>
+	<trans_step_one>Stap 1</trans_step_one>
+</translation>

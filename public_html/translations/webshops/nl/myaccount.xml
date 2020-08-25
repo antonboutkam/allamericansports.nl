@@ -1,0 +1,43 @@
+<translation>
+    <lbl_ship_to_billingaddress>Verzenden naar hetzelfde adres</lbl_ship_to_billingaddress>
+	<trans_aboutme>Mijn gegevens</trans_aboutme>
+	<trans_billingaddr>Factuuradres</trans_billingaddr>
+    <trans_deliveryaddress>Afleveradres</trans_deliveryaddress>
+	<trans_firstname>Voornaam</trans_firstname>
+	<trans_lastname>Achternaam</trans_lastname>
+	<trans_emailaddr>E-mailadres</trans_emailaddr>
+	<trans_phone>Telefoon</trans_phone>
+	<trans_pleaseprovideavalid>Geef alstublieft een geldig e-mailadres op</trans_pleaseprovideavalid>
+	<trans_addrhousenum>Adres + huisnummer</trans_addrhousenum>
+    <lbl_my_orders>Mijn orders</lbl_my_orders>
+	<lbl_postalcode>Postcode</lbl_postalcode>
+	<lbl_city>Stad</lbl_city>
+	<lbl_country>Land</lbl_country>
+	<lbl_company>Bedrijf</lbl_company>
+	<lbl_savechanges>Wijzigingen opslaan</lbl_savechanges>
+	<lbl_deliveryaddr>Afleveradres</lbl_deliveryaddr>
+	<lbl_pleaseschoose>Maak een keuze</lbl_pleaseschoose>
+	<lbl_changepassword>Wachtwoord wijzigen</lbl_changepassword>
+	<lbl_password>Wachtwoord</lbl_password>
+	<lbl_confirmpassword>Wachtwoord bevestigen</lbl_confirmpassword>
+	<lbl_newsletter>Nieuwsbrief</lbl_newsletter>
+	<lbl_subscribeme>Abonneer mij op de nieuwsbrief</lbl_subscribeme>
+	<lbl_youarenowsubscribed>U staat nu ingeschreven voor de nieuwsbrief</lbl_youarenowsubscribed>
+	<lbl_fromnowyouareunsubscribed>Vanaf nu ontvangt u onze nieuwsbrief niet meer</lbl_fromnowyouareunsubscribed>
+	<lbl_passwordsdonotmatch>De opgegeven wachtwoorden komen niet overeen</lbl_passwordsdonotmatch>
+	<lbl_bill>Factuur</lbl_bill>
+	<lbl_ordernum>Ordernummer</lbl_ordernum>
+	<lbl_createdon>Aangemaakt op</lbl_createdon>
+	<lbl_paid>Betaald</lbl_paid>
+	<lbl_send>Verzonden</lbl_send>
+	<lbl_tracktrace>Track &amp; trace</lbl_tracktrace>
+	<lbl_mybill>Mijn factuur</lbl_mybill>
+	<lbl_showbill>Factuur bekijken</lbl_showbill>
+	<lbl_sendmoneyto>Geld naar</lbl_sendmoneyto>
+	<lbl_bookover>overmaken</lbl_bookover>
+	<lbl_clickherefor>Nee, klik hier voor betalingsgegevens</lbl_clickherefor>
+	<lbl_noclickheretopay>Nee, klik hier om af te rekenen</lbl_noclickheretopay>
+	<lbl_no>nee</lbl_no>
+	<lbl_whenyouorderproducts>Zodra u onder dit account bestellingen plaatst worden deze hier weergegeven</lbl_whenyouorderproducts>	
+    <lbl_thanksforyourorder>Bedankt voor uw bestelling</lbl_thanksforyourorder> 
+</translation>    

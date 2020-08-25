@@ -1,0 +1,151 @@
+<translation>
+    <lbl_current_page>Huidige pagina</lbl_current_page>
+    <lbl_logfiles>Log bestanden</lbl_logfiles>
+    <lbl_settings>Instellingen</lbl_settings>
+    <lbl_users>Gebruikers</lbl_users>
+    <lbl_users_lc>gebruikers</lbl_users_lc>
+    <lbl_user_removed>Gebruiker verwijderd</lbl_user_removed>
+    <lbl_sure_remove>Weet je zeker dat je USERNAME wilt verwijderen?</lbl_sure_remove>
+    <lbl_paymethods>Betaalmethoden</lbl_paymethods>
+    <lbl_paymethods_lc>betaalmethoden</lbl_paymethods_lc>
+    <lbl_paymethod_removed>Betaalmethode verwijderd</lbl_paymethod_removed>
+    <lbl_sure_remove_paymethod>Weet je zeker dat deze betaalmethode wilt verwijderen?</lbl_sure_remove_paymethod>
+    <lbl_name>Naam</lbl_name>
+    <lbl_mail>Email</lbl_mail>
+    <lbl_phone>Telefoon</lbl_phone>
+    <lbl_mobile>Functie</lbl_mobile>
+    <lbl_job>Functie</lbl_job>
+    <lbl_access>Toegang</lbl_access>
+    <lbl_add_user>gebruiker toevoegen</lbl_add_user>
+    <lbl_paymethod>Betaalmethode</lbl_paymethod>
+    <lbl_price_type>Prijs type</lbl_price_type>
+    <lbl_price>Prijs</lbl_price>
+    <lbl_paymethod_inactive>Deze betaalmethode is niet actief</lbl_paymethod_inactive>
+    <lbl_paymethod_active>Deze betaalmethode is actief</lbl_paymethod_active>
+    <lbl_add_paymethod>betaalmethode toevoegen</lbl_add_paymethod>
+
+
+    <lbl_warehouseplan>Magazijnplan</lbl_warehouseplan>
+    <lbl_selectloation>Selecteer locatie</lbl_selectloation>
+    <lbl_actions>Acties</lbl_actions>
+    <lbl_edit>Bewerken</lbl_edit>
+    <lbl_warehouse_decoration>Magazijn inrichting</lbl_warehouse_decoration>
+    <lbl_move_product>Verleggen</lbl_move_product>
+    <lbl_move_product>Product verleggen</lbl_move_product>
+    <lbl_move_shelf>Plank verleggen</lbl_move_shelf>
+    <lbl_export>Exporteren</lbl_export>
+    <lbl_decoration>Inrichting exporteren</lbl_decoration>
+    <lbl_export_stock>Voorraad exporteren</lbl_export_stock>
+    <lbl_locations>Locaties</lbl_locations>
+    <lbl_product_count>Aantal producten</lbl_product_count>
+    <lbl_to_location>Naar locatie</lbl_to_location>
+    <lbl_others>Overig</lbl_others>
+    <lbl_locationfor>locatie voor</lbl_locationfor>
+    <lbl_path>Pad</lbl_path>
+    <lbl_rack>Rek</lbl_rack>
+    <lbl_shelf>Plank</lbl_shelf>
+    <lbl_products_groups_shelf>Product groepen/plank</lbl_products_groups_shelf>
+    <lbl_products_shelf>Producten/plank</lbl_products_shelf>
+    <lbl_stock>Voorraad</lbl_stock>
+    <lbl_choose>Locatie kiezen</lbl_choose>
+    <lbl_move_here>Hierheen verplaatsen</lbl_move_here>
+
+    <lbl_warehouse_routing>Magazijn inrichting</lbl_warehouse_routing>
+    <lbl_warehouselocations>Magazijn locaties</lbl_warehouselocations>
+    <lbl_cannotremove>Magazijn kan niet verwijderd worden, er staan nog stellingen in.</lbl_cannotremove>
+    <lbl_removed>Magazijn verwijderd</lbl_removed>
+    <lbl_locations>Locaties</lbl_locations>
+    <lbl_name>Naam</lbl_name>
+    <lbl_phone>Telefoon</lbl_phone>
+    <lbl_streetandnumber>Straat + nummer</lbl_streetandnumber>    
+    <lbl_email>Email</lbl_email>
+    <lbl_zipcode>Postcode</lbl_zipcode>
+    <lbl_city>Woonplaats</lbl_city>
+    <lbl_country>Land</lbl_country>
+    <lbl_save>Opslaan</lbl_save>
+    <lbl_cancel>Annuleren</lbl_cancel>
+    <lbl_routing>Inrichting</lbl_routing>
+    <lbl_path>Pad</lbl_path>
+    <lbl_rack>Stelling</lbl_rack>
+    <lbl_shelf>Plank</lbl_shelf>            
+    <lbl_product_groups># product groepen</lbl_product_groups>
+    <lbl_products># producten</lbl_products>
+    <lbl_cannot_remove_has_products>Stelling kan niet verwijderd worden, er staan nog producten in.</lbl_cannot_remove_has_products>
+    <lbl_rack_removed>Stelling verwijderd</lbl_rack_removed>      
+    <lbl_street>Straat</lbl_street>
+    <lbl_add_location>Locatie toevoegen</lbl_add_location>    
+    <lbl_maattabellen>Maat tabellen</lbl_maattabellen>
+    
+
+    <lbl_add_user>Gebruiker toevoegen</lbl_add_user>  
+    <lbl_edit_user>Gebruiker bewerken</lbl_edit_user>
+    <lbl_usernamepassord>Inloggegevens</lbl_usernamepassord>
+    <lbl_email_address>Email adres</lbl_email_address>
+    <lbl_password>Wachtwoord</lbl_password>
+    <lbl_access>Toegang</lbl_access>
+    <lbl_user_admin>administrator</lbl_user_admin>
+    <lbl_user_commercial>commercieel</lbl_user_commercial>
+    <lbl_user_warehouse>magazijn</lbl_user_warehouse>
+    <lbl_user_supplier>leverancier</lbl_user_supplier>
+    <lbl_status>Status</lbl_status>
+    <lbl_active>active</lbl_active>
+    <lbl_disabled>disabled</lbl_disabled>
+    <lbl_employee_information>Medewerker informatie</lbl_employee_information>
+    <lbl_full_name>Volledige naam</lbl_full_name>
+    <lbl_phone>Telefoon</lbl_phone>
+    <lbl_address>Adres</lbl_address>
+    <lbl_mobile>Mobiel</lbl_mobile>
+    <lbl_zipcode>Postcode</lbl_zipcode>
+    <lbl_job>Functie</lbl_job>
+    <lbl_city>Stad</lbl_city>
+    <lbl_birthdate>Geboortedatum</lbl_birthdate>
+    <lbl_country>Land</lbl_country>
+    <lbl_iso2countrycode>Iso2 landcode</lbl_iso2countrycode>
+    <lbl_create>Aanmaken</lbl_create>
+    <lbl_opslaan>Opslaan</lbl_opslaan>
+    <lbl_save_info>Informatie opgeslagen</lbl_save_info>  
+
+
+    <lbl_add_paymethod>Betaalmethode toevoegen</lbl_add_paymethod>
+    <lbl_edit_paymethod>Betaalmethode bewerken</lbl_edit_paymethod>
+    <lbl_paymethod_ucf>Betaalmethode</lbl_paymethod_ucf>
+    <lbl_active>Actief</lbl_active>
+    <lbl_paymethod>Betaalmethode</lbl_paymethod>
+    <lbl_free>Gratis</lbl_free>
+    <lbl_percentage>Percentage</lbl_percentage>
+    <lbl_fixed_amount>Vast bedrag</lbl_fixed_amount>
+    <lbl_save>Opslaan</lbl_save>
+    <lbl_information_stored>Informatie opgeslagen</lbl_information_stored>          
+	
+	<lbl_sizetable>Maat tabellen</lbl_sizetable>
+	<lbl_sizetable_lc>size tables</lbl_sizetable_lc>
+	<lbl_filename>Bestandsnaam</lbl_filename> 
+	<lbl_title>Titel</lbl_title> 
+	<lbl_add_size>Maattabel toevoegen</lbl_add_size>
+	<lbl_edit_size>Bewerken grootte</lbl_edit_size>
+	<lbl_size_details>Grootte Details</lbl_size_details>
+
+    <lbl_logfiles>Log bestanden</lbl_logfiles>
+    <lbl_system>Systeem</lbl_system>
+    <lbl_seo>Seo</lbl_seo>
+    <lbl_barcodes>Barcodes</lbl_barcodes>
+    <lbl_fielddefinitions>Veld definities</lbl_fielddefinitions>
+    <lbl_webshops>Webshops</lbl_webshops>
+    <lbl_billing>Facturatie</lbl_billing>
+    <lbl_paymethods>Betaalmethoden</lbl_paymethods>
+    <lbl_locationswarehouse>Lokaties &amp; Magazijnplan</lbl_locationswarehouse>
+    <lbl_usersprivileges>Gebruikers &amp; Rechten</lbl_usersprivileges>
+
+    <lbl_webshop_size_tables>Webshop maattabellen</lbl_webshop_size_tables>
+    <lbl_uploadsizetable>Maat tabel uploaden</lbl_uploadsizetable>  
+	<lbl_suredeletefiletable>Weet u zeker dat u deze maattabel wilt verwijderen?</lbl_suredeletefiletable>
+    <lbl_titlemandatory>Geef alstublieft een titel op voor de maattabel</lbl_titlemandatory>
+    
+    <lbl_about>Over</lbl_about>     
+    <lbl_none_defined>Er zijn nog geen pagina's gedefinieerd</lbl_none_defined>
+    <lbl_forwebshop>voor webshop</lbl_forwebshop>    
+    <lbl_addpage>Pagina toevoegen</lbl_addpage>
+    <lbl_find>Zoeken...</lbl_find>
+    <lbl_pageslc>pagina's</lbl_pageslc>
+    <lbl_pages_inshop>Pagina's</lbl_pages_inshop>    
+</translation>

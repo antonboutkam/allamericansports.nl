@@ -1,0 +1,19 @@
+<translation>
+  	<trans_definition>Description</trans_definition>
+	<trans_number>Quantity</trans_number>
+	<trans_price>Price</trans_price>
+	<trans_total>Total</trans_total>
+	<trans_subtotal>Subtotal</trans_subtotal>
+	<trans_shipping>Shipping cost</trans_shipping>
+	<trans_transaction>Transaction cost</trans_transaction>
+	<trans_vat>vat</trans_vat>
+    <trans_ofwhichisvat>vat</trans_ofwhichisvat>
+	<trans_continue_shop>Continue shopping</trans_continue_shop>
+	<trans_next_step>Next step</trans_next_step>
+    <trans_title>Your basket</trans_title>
+    <trans_description>Basket</trans_description>
+    <trans_keywords>Shoppingbasket,Basket</trans_keywords>
+    <trans_color>Color</trans_color>
+    <trans_size>Size</trans_size>
+    <trans_article>Article</trans_article>        
+</translation>

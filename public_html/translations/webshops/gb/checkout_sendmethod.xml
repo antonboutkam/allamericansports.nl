@@ -1,0 +1,12 @@
+<translation>
+	<trans_sendmethod_checkout>Shipping</trans_sendmethod_checkout>
+	<trans_sendmethod_step_two>Step 2</trans_sendmethod_step_two>
+	<trans_sendmethod_send>Shipping</trans_sendmethod_send>
+	<trans_sendmethod_back_one>Back to Step 1</trans_sendmethod_back_one>
+	<trans_sendmethod_skip>Move to Step 3</trans_sendmethod_skip>
+    <transl_send>Ship order</transl_send>  
+    <transl_international>international</transl_international>
+    <transl_pickup>Pickup order</transl_pickup>
+    <transl_free>free</transl_free>
+    <transl_sendhow>How would you like to recieve the goods?</transl_sendhow>    
+</translation>

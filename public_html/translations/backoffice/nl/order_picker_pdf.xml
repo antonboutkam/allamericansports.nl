@@ -1,0 +1,12 @@
+<translation>
+    <lbl_articlenumber>ARTIKELNUMMER</lbl_articlenumber>
+    <lbl_description>OMSCHRIJVING</lbl_description>
+    <lbl_color>COLOR</lbl_color>
+    <lbl_size>SIZE</lbl_size>
+    <lbl_box>DOOS</lbl_box>
+    <lbl_quantity>AANTAL</lbl_quantity>
+    <lbl_loc>PAKBON</lbl_loc>
+    <lbl_date>DATUM</lbl_date>
+    <lbl_page>PAGINA</lbl_page>
+    <lbl_customernumber>KLANTNUMMER</lbl_customernumber>
+</translation>

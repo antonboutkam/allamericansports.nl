@@ -1,0 +1,32 @@
+<translation>
+    <trans_based_on>Based on</trans_based_on>
+    <trans_judgementssingular>review</trans_judgementssingular>    
+    <trans_judgementsplural>reviews</trans_judgementsplural>    
+    <trans_color>Color</trans_color>
+    <trans_deliverytime>Delivery time</trans_deliverytime>
+    <trans_insportsbag>In sports bag</trans_insportsbag>
+    <trans_custservice>Customer service</trans_custservice>
+    <trans_dailyfrom>available from</trans_dailyfrom>
+    <trans_untill>untill</trans_untill>
+    <trans_sendus>Send us an email</trans_sendus>        
+    <trans_your_profit>Your profit</trans_your_profit>
+    <trans_combinationdiscount>Combination discount</trans_combinationdiscount>    
+    <trans_discount>discount</trans_discount>   
+    <trans_productinformation>Product information</trans_productinformation>
+    <trans_reviews>Reviews</trans_reviews>
+    <trans_video>Video</trans_video>
+    <trans_writereview>Write a review</trans_writereview>
+    <trans_reviewby>Review by</trans_reviewby>
+    <trans_reviewon>written on</trans_reviewon>
+    <trans_reviewstore>Save review</trans_reviewstore>        
+    <trans_not_in_stock>This product is currenly out of stock, it is not possible to place an order.</trans_not_in_stock>
+    <trans_instock>In stock</trans_instock>  
+    <trans_notinstock>Not in stock</trans_notinstock>      
+    <trans_availablecolorsinthesize>Colors available in the size:</trans_availablecolorsinthesize>
+    <trans_callwith>Call us</trans_callwith>    
+    <trans_hoemanystars>How many stars would you give this product?</trans_hoemanystars>
+    <trans_stars>stars</trans_stars>    
+    <lbl_sizetable>Size table</lbl_sizetable>
+    <trans_thisinother>This product in other colors</trans_thisinother>   
+    <trans_size>Size</trans_size>
+</translation>

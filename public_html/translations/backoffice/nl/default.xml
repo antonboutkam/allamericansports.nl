@@ -1,0 +1,20 @@
+<translation>
+    <nav_home>Home</nav_home>
+    <nav_relationmanagement>Relatiebeheer</nav_relationmanagement>
+    <nav_stock>Voorraad</nav_stock>
+    <nav_orders>Bestellingen</nav_orders>
+    <nav_productcatalogue>Productcatalogus</nav_productcatalogue>
+    <nav_billing>Facturatie</nav_billing>
+    <nav_reports>Rapportages</nav_reports>
+    <nav_settings>Instellingen</nav_settings>
+    <lbl_signout>Uitloggen</lbl_signout>
+    <lbl_path>Pad</lbl_path>
+    <lbl_rack>Rek</lbl_rack>
+    <lbl_shelf>Plank</lbl_shelf>
+    <nav_cms>CMS</nav_cms>
+    <lbl_productgroups>Product groepen</lbl_productgroups>
+    <lbl_discountgroups>Discount groups</lbl_discountgroups>
+    <lbl_addproduct>Product toevoegen</lbl_addproduct>
+    <lbl_spotlight>Spotlight / uitgelicht</lbl_spotlight>
+    <lbl_supportbutton>Ondersteuning</lbl_supportbutton>
+</translation>

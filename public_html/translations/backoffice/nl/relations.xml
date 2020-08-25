@@ -1,0 +1,103 @@
+<translation>
+    <relationmanagement>Relatiebeheer</relationmanagement>
+    <findrelation>Relatie zoeken</findrelation>
+    <lbl_relations>relaties</lbl_relations>
+    <lbl_add>Toevoegen</lbl_add>
+    <add_customer>Klant toevoegen</add_customer>
+    <add_supplier>Leverancier toevoegen</add_supplier>
+    <add_prospect>Prospect toevoegen</add_prospect>
+    <lbl_export>Exporteren</lbl_export>
+    <excel_export>Excel export</excel_export>
+    <phonelist>Telefoonlijst</phonelist>
+    <email_addresses>E-mailadressen</email_addresses>
+    <search_default_val>(firmanaam, klantnaam, postcode, woonplaats, voornaam, achternaam)</search_default_val>
+    <simple_search>eenvoudig zoeken</simple_search>
+    <adv_search>Geavanceerd zoeken</adv_search>
+    
+    <website>Website</website>
+    <postalcode>Postcode</postalcode>
+    <city>Woonplaats</city>
+    <type>Type</type>
+    <customers>klanten</customers>
+    <prospects>prospects</prospects>
+    <suppliers>leveranciers</suppliers>
+    <found_relations>Gevonden relaties</found_relations>    
+    <sort_type>Type</sort_type>
+    <sort_firm>Firmanaam</sort_firm>
+    <sort_phone>Telefoonnumer</sort_phone>
+    <sort_mail>Email-adres</sort_mail>
+    <sort_street>Straat</sort_street>
+    <sort_city>Woonplaats</sort_city>
+    <lbl_general>Algemeen</lbl_general>
+    <lbl_companyname>Bedrijfsnaam</lbl_companyname>
+    <lbl_phone>Telefoon</lbl_phone>
+    <lbl_website>Website</lbl_website>
+    <lbl_mobile>Mobiel</lbl_mobile>
+    <lbl_type>Type</lbl_type>
+    <lbl_fax>Fax</lbl_fax>
+    <lbl_email>Email</lbl_email>
+    <lbl_actions>Acties</lbl_actions>
+    <lbl_backtooverview>Terug naar het overzicht</lbl_backtooverview>
+    <lbl_customerinfo>Klantinformatie</lbl_customerinfo>
+    <lbl_contactperson>Contactpersoon</lbl_contactperson>
+    <lbl_customernumber>Klantnummer</lbl_customernumber>
+    <lbl_billingaddress>Factuuradres</lbl_billingaddress>
+    <lbl_deliveryaddress>Afleveradres</lbl_deliveryaddress>
+    <lbl_street>Straat</lbl_street>
+    <lbl_number>Nummer</lbl_number>
+    <lbl_kaartje>open kaartje</lbl_kaartje>
+    <lbl_omschrijving>Omschrijving</lbl_omschrijving>
+    <lbl_show_address>Toon adresgegevens</lbl_show_address>
+    <lbl_hide_address>Verberg adresgegevens</lbl_hide_address>
+    <lbl_accountmanager>Account manager</lbl_accountmanager>
+    <lbl_paymentlimit>Bestedingslimiet</lbl_paymentlimit>
+    <lbl_cust_segment>Klantsegment</lbl_cust_segment>
+    <lbl_latest_bills>Laatste facturen</lbl_latest_bills>
+    <lbl_total_bill_count>Totaal aantal facturen</lbl_total_bill_count>
+    <lbl_bill_no>Factuurnummer</lbl_bill_no>
+    <lbl_created_on>Invoerdatum</lbl_created_on>
+    <lbl_paid_on>Betaald op</lbl_paid_on>
+    <lbl_amount>Bedrag</lbl_amount>
+    <lbl_notes>Notities</lbl_notes>
+    <lbl_show_all_bills>Toon alle facturen</lbl_show_all_bills>
+    <lbl_by>Door</lbl_by>
+    <lbl_on>op</lbl_on>
+    <lbl_type>Type</lbl_type>
+    <lbl_cp_unknown>Contactpersoon onbekend</lbl_cp_unknown>
+    <lbl_add_relation>Klant toevoegen</lbl_add_relation>
+    <lbl_suppliers>Leveranciers</lbl_suppliers>
+    <lbl_relation>Relatie</lbl_relation>
+    <lbl_edit>bewerken</lbl_edit>
+    <lbl_general>Algemeen</lbl_general>
+    <lbl_companyname>Bedrijfsnaam</lbl_companyname>
+    <lbl_client>klant</lbl_client>
+    <lbl_prospect>prospect</lbl_prospect>
+    <lbl_supplier>leverancier</lbl_supplier>
+    <lbl_contactinformation>Contactinformatie</lbl_contactinformation>
+    <lbl_sallutation>Aanhef</lbl_sallutation>
+    <lbl_mr>dhr</lbl_mr>
+    <lbl_mrs>mw</lbl_mrs>
+    <lbl_phone>Telefoon</lbl_phone>
+    <lbl_firstname>Voornaam</lbl_firstname>
+    <lbl_mobile>Mobiel</lbl_mobile>
+    <lbl_lastname>Achternaam</lbl_lastname>
+    <lbl_email>Email</lbl_email>
+    <lbl_fax>Fax</lbl_fax>
+    <lbl_website>Website</lbl_website>
+    <lbl_billingaddress>Factuuradres</lbl_billingaddress>
+    <lbl_deliveryaddress>Afleveradres</lbl_deliveryaddress>
+    <lbl_streetnumber>Straat + nummer</lbl_streetnumber>
+    <lbl_postal>Postcode</lbl_postal>
+    <lbl_description>Omschrijving</lbl_description>
+    <lbl_same_as_billing>Gelijk aan factuuradres</lbl_same_as_billing>
+    <lbl_city>Woonplaats</lbl_city>
+    <lbl_country>Land</lbl_country>
+    <lbl_save>Opslaan</lbl_save>
+    <lbl_cancel>Annuleren</lbl_cancel>
+    <lbl_stored-ok>Klantinformatie opgeslagen</lbl_stored-ok> 
+    <lbl_rel_overview>Overzicht</lbl_rel_overview>   
+    <lbl_rel_add>Relatie toevoegen</lbl_rel_add>
+    <lbl_newsletter_brief>Nieuwsbrief abbonees</lbl_newsletter_brief>
+    <lbl_newsletter_send>Mailing versturen</lbl_newsletter_send>
+    
+</translation>

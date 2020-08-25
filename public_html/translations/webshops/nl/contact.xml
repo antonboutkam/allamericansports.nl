@@ -1,0 +1,11 @@
+<translation>
+    <transl_name>Naam</transl_name>
+    <transl_email>E-mail</transl_email>
+    <transl_phone>Telefoon</transl_phone>
+    <transl_subject>Onderwerp</transl_subject>
+    <transl_note>Bericht</transl_note>
+    <transl_send>Bericht versturen</transl_send>    
+    <trans_thanksmsg><![CDATA[Bedankt voor uw bericht, wij zullen uw bericht zo snel mogelijk lezen en nemen indien nodig zo snel mogelijk even contact met u op.<br />          
+          U wordt over <span id="seconds">10</span> seconden automatich doorgestuurd naar de voorpagina van onze shop.</trans_thanksmsg>]]></trans_thanksmsg>
+    <trans_thanksend><![CDATA[Met vriendelijke groet, <br/> Team Allamericansports.nl]]></trans_thanksend>
+</translation>

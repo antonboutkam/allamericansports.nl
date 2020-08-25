@@ -1,0 +1,15 @@
+<translation>    
+    <lbl_nobillsfound>No bills found that meet your criteria..</lbl_nobillsfound>    
+    <lbl_commercialpriv>(you have commercial privileges, you can only see bills created by you)</lbl_commercialpriv>
+    <lbl_billing>Billing</lbl_billing>
+    <lbl_bill_browser>Bill browser</lbl_bill_browser>
+    <lbl_paid>Paid</lbl_paid>
+    <lbl_not_paid>Not paid</lbl_not_paid>
+    <lbl_found_bills>Found bills</lbl_found_bills>
+    <lbl_found_bills_lc>Bills found</lbl_found_bills_lc>
+    <lbl_companyname>Firmname</lbl_companyname>
+    <lbl_billno>Bill number</lbl_billno>
+    <lbl_created>Entry date</lbl_created>
+    <lbl_paidon>Paid on</lbl_paidon>
+    <lbl_amount>Amount</lbl_amount>
+</translation>

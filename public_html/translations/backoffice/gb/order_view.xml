@@ -1,0 +1,32 @@
+<translation>
+    <lbl_order>Order</lbl_order>    
+    <lbl_sure_delete>Are you sure you with to delete this product?</lbl_sure_delete>
+    <lbl_helped_by>Helped by</lbl_helped_by>
+    <lbl_helped_on>Helped on</lbl_helped_on>
+    <lbl_created>Created</lbl_created>
+    <lbl_accepted>Accepted</lbl_accepted>
+    <lbl_picked>Picked</lbl_picked>
+    <lbl_send>Send</lbl_send>
+    <lbl_approved>Approved</lbl_approved>
+    <lbl_payment_approved>Payment approved</lbl_payment_approved>
+    <lbl_articlenumber>Articlenumber</lbl_articlenumber>
+    <lbl_productname>Productname</lbl_productname>
+    <lbl_quantity>Quantity</lbl_quantity>
+    <lbl_pieceprice>Piece price</lbl_pieceprice>
+    <lbl_price>Price</lbl_price>
+    <lbl_subtotal>Subtotal</lbl_subtotal>
+
+    <!-- ook in order_new.xml -->
+    <lbl_general>General</lbl_general>
+    <lbl_address>Address</lbl_address>
+    <lbl_delivery_address>Delivery address</lbl_delivery_address>    
+    <lbl_firm>Firm</lbl_firm>    
+    <lbl_street>Street</lbl_street>
+    <lbl_phone>Phone</lbl_phone>
+    <lbl_zipcode>Zipcode</lbl_zipcode>
+    <lbl_mobile_phone>Mobile</lbl_mobile_phone>
+    <lbl_city>City</lbl_city>
+    <lbl_email>Email</lbl_email>
+    <lbl_country>Country</lbl_country>        
+    
+</translation>

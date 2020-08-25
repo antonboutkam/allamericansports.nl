@@ -1,0 +1,19 @@
+<translation>
+  	<trans_definition>Omschrijving</trans_definition>
+	<trans_number>Aantal</trans_number>
+	<trans_price>Prijs</trans_price>
+	<trans_total>Totaal</trans_total>
+	<trans_subtotal>Subtotaal</trans_subtotal>
+	<trans_shipping>Verzendkosten</trans_shipping>
+	<trans_transaction>Transactiekosten</trans_transaction>
+	<trans_vat>Btw</trans_vat>
+    <trans_ofwhichisvat>Waarvan btw</trans_ofwhichisvat>
+	<trans_continue_shop>Verder winkelen</trans_continue_shop>
+	<trans_next_step>Volgende stap</trans_next_step>
+    <trans_title>Uw Winkelmandje</trans_title>
+    <trans_description>Winkelwagentje</trans_description>
+    <trans_keywords>Winkelwagentje,Winkelmandje,Cart</trans_keywords>
+    <trans_color>Kleur</trans_color>
+    <trans_size>Maat</trans_size>    
+    <trans_article>Product</trans_article>    
+</translation>
