@@ -1,0 +1,27 @@
+<form method="post" id="onestepform" action="%[root]%/checkout.html">
+	<h1>Afrekenen</h1>
+    <h4>Stap 2: Toevoegen netsnoer</h4>
+    <div class="content">
+    	<p class="p_line">
+            Onze adapters worden standaard geleverd zonder netsnoer.
+            Vaak past uw oude netsnoer maar u kunt eventueel een netsnoer bijbestellen.
+            Wilt u een netsnoer meebestellen?    
+        </p>
+        <div class="type_radio">
+        	<input id="add_yes" name="add_wire" type="radio" checked="checked" value="1" />
+            <label for="add_yes">Ja, voeg een netsnoer toe aan mijn bestelling (+ €3,50)</label>
+        </div>
+        <div class="type_radio">
+        	<input id="add_no" name="add_wire" type="radio" value="0" />
+            <label for="add_no">Nee, ik wil geen netsnoer bij mij bestelling</label>
+        </div>
+        <div class="tab">
+        	<div><a href="%[root]%/basket.html"><img src="%[root]%/img/vorige.png" alt="" /></a></div>
+            	<div class="verder padd_left">
+                	<div><img src="images/verder_left.png" alt="" /></div>
+                    <span><a class="submit" href="#">Verder naar Stap 3</a></span>
+                    <div><img src="%[root]%/img/verder_right.png" alt="" /></div>
+                </div>
+            </div>
+    </div>
+</form>                    

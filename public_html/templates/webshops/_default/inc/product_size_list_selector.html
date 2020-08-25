@@ -1,0 +1,37 @@
+                                        <!-- Als er maar een maat is dan tonen we het label van de maat -->
+                                        
+                                        <h2 style="display:%[product_sizes.0.size?'none':'block']%">%[trans_size]%: %[product.product_size_tag]%
+                                            <if:size_file> 
+                                                <span><a href="/img/sizetable/%[size_file.filename]%" class="iframe" target="_blank">%[lbl_sizetable]%</a></span>
+                                           </if:size_file>
+                                        </h2>
+                                        
+                                                 
+                                        <h2 style="display:%[product_sizes.0.size?'block':'none']%">%[trans_size]%: <if:has_sizes value="0">%[product_sizes.0.size]%</if:has_sizes>
+                                           <if:size_file> 
+                                            <span><a href="/img/sizetable/%[size_file.filename]%" class="iframe"  target="_blank">%[lbl_sizetable]%</a></span>
+                                           </if:size_file>
+                                        </h2>             
+                                                                                                                                                            
+                                        
+                                    <div style="display:%[has_sizes?'block':'none']%;">                                                                                                                                                               
+                                        <if:product_sizes.0.standard_sizes value="1">             
+                                            <ul id="size_ul">
+                                             <for:product_sizes>
+                                                <li class="%[active?'active':'']%" id="size_%[type]%"><a class="size_toggle" href="%[root]%/%[lang]%/product/%[title_encoded]%-%[gid]%-%[product_id]%.html">%[type]%</a></li>                                    
+                                             </for:product_sizes>
+                                            </ul>
+                                           <script type="text/javascript">                                        
+                                                el = document.getElementById('size_%[product.product_size_tag]%');
+                                                el.className = el.className + ' active';                                        
+                                            </script>                                            
+                                         </if:product_sizes.0.standard_sizes>
+                                         <if:product_sizes.0.standard_sizes condition="is_false">
+                                            <select id="redirect_size" val="%[request_uri]%">
+                                                <for:product_sizes>
+                                                    <option value="%[root]%/%[lang]%/product/%[title_encoded]%-%[gid]%-%[product_id]%.html">%[type]%</option>
+                                                </for:product_sizes>                                                    
+                                            </select>
+                                         </if:product_sizes.0.standard_sizes>                                    
+                                    </div>         
+                                    <div class="cl"></div>

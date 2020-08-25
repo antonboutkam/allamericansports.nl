@@ -1,0 +1,54 @@
+<script type="text/javascript">
+    $(document).ready(function(){
+       $('.xmlrow').live('mouseover',function(){
+           $('div#'+$(this).attr('data-id')).css('display','block');
+           
+       });
+              
+    });    
+</script>
+<div class="searchbox">    
+    <div class="searchresults">
+            <div class="searchtitle">
+                Exact communicatie (laatse 10 berichten)                                                
+            </div>
+            <div class="clear"></div>
+            <div style="display:block;" id="listview" class="perspective">                
+                <table style="margin:15px; width:95%;">
+                    <p>
+                    
+                        Hieronder treft u een overzicht van de laatste 10 berichten die tussen allamericansports en exact online over en weer zijn gegaan.
+                    </p>
+                    <if:data>
+                        <tr class="rowheader">
+                            <th style="width:18px;">&nbsp;</th>                             
+                            <td>Richting</td>
+                            <td>Datum</td>
+                            <td>User</td>                            
+                        </tr>                    
+                        <for:data>
+                            <tr class="xmlrow row%[oddeven]%" data-id="%[id]%">                                
+                                <td><a title="%[lbl_edit_product]%" href="%[root]%/products/groupedit.html?id=%[pgid]%"><img src="%[root]%/img/icons/edit-icon-16x16.png" width="16" height="16"/></a></td>
+                                <td>%[inout]%</td>
+                                <td>%[date]%</td>    
+                                <td>%[full_name]%</td>    
+                            </tr>
+                        </for:data>                                        
+                    </if:data>
+                    <if:data condition="is_false">
+                        <tr class="row%[oddeven]%">
+                            <td colspan="11" style="text-align:center;line-height:40px;font-weight:bold">Er zijn nog geen exact transacties geweest.</td>
+                        </tr>
+                    </if:data>
+                </table>
+                <div class="clear"></div>
+                <for:data>
+                    <div id="%[id]%" class="xmlmessages" style="background-color:white;color:#fff;width:900px;border:1px solid gray;margin:10px;color:black;">
+                        <div>%[inout]%, %[date]%, %[full_name]%</div>    
+                        <pre>%[xml_entities]%</pre>                        
+                    </div>
+                </for:data>
+            </div>            
+            <div class="clear"></div>         
+        </div>
+</div>

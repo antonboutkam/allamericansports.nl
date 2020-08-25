@@ -1,0 +1,124 @@
+<if:view value="picker"><h2>%[lbl_orderpicker]%</h2></if:view>
+<if:view not="picker"><h2>%[lbl_orders]%</h2></if:view>
+<script type="text/javascript">
+    var current_page = "%[current_page]%";
+    var sort         = "%[sort]%";
+</script>
+    <if:view not="picker">
+
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">%[lbl_find_order]%</div>
+            <div style="margin:10px;">        
+                <div id="advanced-search">
+                    <table>
+                        <tr>
+                            <td>%[lbl_paid]%</td>
+                            <td>
+                                <select class="filter" name="paid">
+                                    <option value="">-</option>
+                                    <option value="1">%[lbl_yes]%</option>
+                                    <option value="0">%[lbl_no]%</option>                                    
+                                </select>
+                            </td>
+                            <td>%[lbl_salesemployee]%</td>
+                            <td>
+                                <select class="filter" name="user_id">
+                                    <option value="">-</option>
+                                    <for:users>
+                                        <option value="%[id]%">%[full_name]%</option>
+                                    </for:users>                                    
+                                </select>
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <td>%[lbl_deliveredsend]%</td>
+                            <td>
+                                <select class="filter" name="picked" val="%[picked]%">
+                                    <option value="">-</option>
+                                    <option value="1">%[lbl_yes]%</option>
+                                    <option value="0">%[lbl_no]%</option>                                    
+                                </select>
+                            </td> 
+                            <td>%[lbl_customer]%</td>
+                            <td>
+                                <select class="filter" name="relation_id">
+                                    <option value="">-</option>                                    
+                                    <for:customers>
+                                        <option value="%[id]%">%[cp_firstname]% %[cp_lastname]%</option>
+                                    </for:customers>                                                                        
+                                </select>
+                            </td>                                                                                     
+                        </tr>
+                        <tr>
+                            <td>%[lbl_parked]%</td>
+                            <td>
+                                <select class="filter" name="accepted" val="%[accepted]%">
+                                    <option value="">-</option>
+                                    <option value="1">%[lbl_no]%</option>
+                                    <option value="0">%[lbl_yes]%</option>                                    
+                                </select>
+                            </td> 
+                            <td>%[lbl_showdeleted]%</td>
+                            <td><input class="filter checkbox" type="checkbox" name="show_deleted" value="1" /></td>
+                        </tr>                        
+                    </table>
+                    <hr />
+                    <h3>%[lbl_orderacceptationdate]%</h3>
+                    <table>
+                        <tr>
+                            <td><select class="filter" name="year" val="%[year]%">                                    
+                                    <option value="">%[lbl_chooseayear]%</option>
+                                    <for:years>
+                                        <option>%[value]%</option>
+                                    </for:years>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="filter" name="month">
+                                    <option value="">%[lbl_choosamonth]%</option>
+                                    <option value="01">%[lbl_month_01]%</option>
+                                    <option value="02">%[lbl_month_02]%</option>
+                                    <option value="03">%[lbl_month_03]%</option>
+                                    <option value="04">%[lbl_month_04]%</option>
+                                    <option value="05">%[lbl_month_05]%</option>
+                                    <option value="06">%[lbl_month_06]%</option>
+                                    <option value="07">%[lbl_month_07]%</option>
+                                    <option value="08">%[lbl_month_08]%</option>
+                                    <option value="09">%[lbl_month_09]%</option>
+                                    <option value="10">%[lbl_month_10]%</option>
+                                    <option value="11">%[lbl_month_11]%</option>
+                                    <option value="12">%[lbl_month_12]%</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="filter" name="day">
+                                    <option value="">%[lbl_chooseaday]%</option>
+                                    <for:days>
+                                        <option>%[value]%</option>
+                                    </for:days>                                    
+                                </select>
+                            </td>
+                        </tr>                    
+                    </table>                                     
+                </div>                
+            </div>
+        </div>
+    </div>
+    </if:view>  
+    <div class="searchbox" > 
+        <div id="orders_tbl">
+            %[orders_tbl]%        
+        </div>                
+        <div class="searchresults" id="no_orders" style="display:%[orders_tbl?'none':'block']%;">
+            <div style="margin:10px;">
+                <h2>%[lbl_no_orders_found]%</h2>                 
+            </div>
+        </div>                    
+    </div>
+        <div id="sure_delete" style="display:none">Weet u zeker dat u deze order wilt verwijderen?</div>
+        <div id="sure_undelete" style="display:none">Weet u zeker dat u deze order terug wilt zetten?</div>        
+	    <div id="suremarkaid" style="display:none">Weet u zeker dat u deze order als betaald wilt markeren? (uw gegevens worden hierbij geregistreerd)</div>
+        <div id="mailsent" style="display:none">Het e-mailbericht is verzonden</div>
+	
+</form>

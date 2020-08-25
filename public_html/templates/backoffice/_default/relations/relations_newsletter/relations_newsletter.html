@@ -1,0 +1,38 @@
+<h2>Nieuwsbrief abbonees</h2>
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="searchtitle">Zoeken</div>
+                <div style="margin:10px;">
+                    <div id="simple-search">
+                        <input type="text" id="fld_search" class="searchfield" title="%[search_eml_val]%" value="%[search_eml_val]%"/>                          
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="searchtitle">Abbonees</div>                                            
+                    <div style="margin:10px;width:600px;">
+                        <h3>Nieuwste abbonees</h3>
+                     
+                        <div id="subscribers" style="width:600px;">        
+                            %[subscribers]%
+                        </div>
+                    </div>             
+            </div>
+        </div>
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="searchtitle">%[actions]%</div>
+                                            
+                <div style="margin:10px; float:left; %[user_level=A?'':'display:none']%">
+                    <h3>%[lbl_export]%</h3>
+                    <ul style="font-size: 12px;">
+                        <li><a href="%[root]%/export.html?type=news-letter">Subscribers</a></li>    
+                    </ul>
+                </div>
+               
+                <div class="clear"></div>            
+            </div>
+        </div>
+    

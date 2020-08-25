@@ -1,0 +1,56 @@
+<div id="content">
+        <if:banner_image>
+            <div id="photo">
+            <img src="/img/navigation/%[subMenuId]%.jpg" width="768" height="266" alt="Photo_01" />
+            </div>			
+        </if:banner_image>
+        %[main]%        
+</div>      
+<div id="sidebar2">
+    <if:subMenuList.data>
+        <div class="sub-menu">
+            <ul class="menu">
+                <for:subMenuList.data.models>
+                    <li><a class="track_menu_item cms navtree %[active]%" data-menu-id="%[id]%" href="%[root]%/%[lang]%/shop/%[parent]%-%[model_lower_enc]%-%[id]%.html">%[model]%</a></li>
+                    <if:active>
+                        <for:subSubMenuList.data.models>
+                            <li class="level2"><a class="track_menu_item cms navtree %[active]%" data-menu-id="%[id]%" href="%[root]%/%[lang]%/shop/%[parent]%-%[model_lower_enc]%-%[id]%.html">&nbsp;&nbsp;&nbsp;%[model]%</a></li>
+                            <for:children.data.models>
+                                <li class="level3"><a class="track_menu_item cms navtree %[active]%" data-menu-id="%[id]%" href="%[root]%/%[lang]%/shop/%[parent]%-%[model_lower_enc]%-%[id]%.html">&nbsp;&nbsp;&nbsp;%[model]%</a></li>
+                            </for:children.data.models>
+                        </for:subSubMenuList.data.models>
+                    </if:active>
+                </for:subMenuList.data.models>
+            </ul>
+        </div>
+    </if:subMenuList.data>
+    <div id="clientService" class="sub-menu">
+        <p id='img'>
+            <img src="/img/phone.png" width="24" height="45" alt="phone icon" />
+        </p>
+        <p id="phone">
+            <a href="%[root]%/%[lang]%/%[trans_callusurl]%.html">%[trans_wouldyouliketocall]% <br />
+            <span style="font-size: 11px">%[trans_clickhereforthenumber]%</span>
+            </a>
+        </p>
+    </div>
+    <div class="cl"></div>
+    <div class="serviceblock hiddencms_nostyle sub-menu" style="display:%[section_desc?'block':'none']%">
+        <a class="cms navtreeitemtext hiddencms" id="submenu%[submenu_id]%">Tekst aanpassen</a>
+        <if:menu_item.leftmenu_img_ext>
+            <img style="border-top-left-radius: 3px!important;border-top-right-radius: 3px!important;overflow:hidden;" src="/img/leftmenu-img/%[menu_item.id]%.%[menu_item.leftmenu_img_ext]%" width="190" />
+            <div class="cl"></div><br />
+        </if:menu_item.leftmenu_img_ext>
+        <if:section_desc>
+            %[section_desc]%
+        </if:section_desc>
+    </div>
+    <div class="cl"></div>
+    <div class="banner sub-menu">
+        <a href="http://www.keurmerk.info/Leden-en-Partners/Lid-Details/12936" target="_blank"><img src="/img/banner/%[hostname]%/banner_thuiswinkel2.png" width="187" height="62" alt="banner Thuiswinkel"/></a>
+    </div>
+    <div class="banner">
+        <img src="/img/banner/%[hostname]%/banner_betaling.png" width="187" height="169" alt="banner Betaling" />
+    </div>
+</div>
+

@@ -1,0 +1,279 @@
+<?php
+class Template{
+    private static $vars = array();
+    private static $instances;
+    private static $templateDirs = array();
+    private static $fileName = null;    
+    private $template;
+    static function instance($fileName){
+        self::$fileName = $fileName;
+        // echo __FILE__.':'.__LINE__."<br>";
+        /// var_dump($fileName);
+        if(isset(self::$instances[$fileName]) && self::$instances[$fileName]){
+            return self::$instances[$fileName];
+        }
+        return self::$instances[$fileName] = new Template($fileName);
+    }
+    private function __construct($fileName=null){
+        $this->template = file_get_contents($fileName);
+        return null;
+    }
+
+    public function parse($vars){
+
+        if(is_array($vars) && is_array(self::$vars)){
+            self::$vars = array_merge(self::$vars, $vars);
+        }
+        if(is_array($vars) && !is_array(self::$vars)){
+            self::$vars = $vars;
+        }
+
+
+        return  self::parseStatic($this->template,self::$vars);
+    }
+	public static function buildTemplateDir($php__FILE__){
+		return str_replace($_SERVER['DOCUMENT_ROOT'].'/templates/'.Cfg::getSiteType().'/_default/','',dirname($php__FILE__).'/');
+	}
+    public static function addDir($dir){
+        if(!in_array($dir,self::$templateDirs)){
+            self::$templateDirs[] = $dir;
+        }
+    }
+    public static function addVars($vars){
+        self::$vars = $vars;
+    }
+    public static function parseStatic($template,$vars){
+        $template = self::parseFileTags($template);          
+        $template = self::parseLoops($template,$vars);
+        $template = self::parseConditions($template,$vars);        
+                
+        preg_match_all('/%\[([a-zA-Z0-9_.-]+)\]%/si',$template,$matches);
+        if(count($matches)<=0)
+            return $template;
+        foreach($matches[0] as $id=>$row){
+            $replaceVar = self::getVars($matches[1][$id],$vars);
+            if(is_array($replaceVar)&&isset($replaceVar[0])){
+                $template = str_replace($matches[0][$id],$replaceVar[0],$template);
+            }else{
+                $template = str_replace($matches[0][$id],$replaceVar,$template);
+            }
+        }
+        $template = self::parseDefaults($template,$vars);
+        $template = self::parseTernairy($template,$vars);
+        return $template;        
+    }
+    private static function parseFileTags($template){
+        if(empty(self::$templateDirs))
+            return $template;
+        while(preg_match('/%\[file:(.+)\]%/',$template,$matches)){                
+            if(empty($matches))
+                return $template;                    
+            foreach(self::$templateDirs as $dir)
+                if(file_exists($dir.$matches[1])){
+                    $inject     = file_get_contents($dir.$matches[1]);
+                    $template   = str_replace($matches[0],$inject,$template);
+                }                    
+        }            
+        return $template;
+    }
+    
+    
+    private static function parseLoops($template,$vars){
+        preg_match_all('/<for:([a-zA-Z0-9_.-]+)>/i',$template,$loops);
+        foreach($loops[1] as $loop){                    
+            preg_match_all('/<for:('.$loop.')>(.+?)<\/for:'.$loop.'>/si',$template,$matches);            
+            if(count($matches)<=0)
+                return $template;
+            $replace = array();            
+            foreach($matches[0] as $id => $data){                
+                $parsevars  = self::getVars($matches[1][$id],$vars);
+		if(is_array($parsevars) || is_countable($parsevars))
+		{	
+                	$lastItem   = count($parsevars);
+		}
+		else
+		{
+			$lastItem = false;
+		}
+                $html       = '';
+                if(is_array($parsevars) && count($parsevars)>0){
+                    $html = $replace = null;
+                    $iterator = 1;                    
+                    foreach($parsevars as $key=>$row){   
+                        if(is_object($row))
+                            $row = get_object_vars($row);                                                    
+                        if(!is_array($row)){
+                            $inj['val'] = $inj['value'] = $row;
+                            $inj['id']  = $inj['key']  = $key;
+                        }else
+                            $inj = $row;      
+                        $vars['key'] = $key;                       
+                        $vars['first_item']     = ($iterator==1)?true:false;
+                        $vars['last_item']      = ($iterator==$lastItem)?true:false;
+                        $vars['iterator']       = $iterator;
+                        $vars['oddeven']        = ($iterator & 1)?'odd':'even';
+                        $inj['child_only']      = $inj;
+                        $injvars                = array_merge($vars,$inj); 
+                        $injvars['array']       = &$injvars;
+                        $replace[]              = trim(self::parseStatic(trim($matches[2][$id]),$injvars));
+                        $iterator               = $iterator + 1;
+                    }
+                    $html = join('',$replace);
+                }                
+                $template = str_replace($matches[0][$id],$html,$template);                
+            }
+        }
+        return $template;
+    }
+    private static function parseConditions($template,$vars){
+        $matches = array();
+        preg_match_all('#<if:([!a-zA-Z0-9_.-]+)([\s]([a-zA-Z0-9_-]+)="([a-zA-Z0-9_-|]+)")?>#',$template,$matches);
+
+        foreach($matches[0] as $row=>$field){                  
+           $varname         = $matches[1][$row];                      
+           $condition       = (isset($matches[4][$row]) && $matches[4][$row]!='') ? $matches[4][$row] : 'is_true'; 
+           if(isset($matches[3][$row])&& in_array($matches[3][$row],array('value','not'))){
+            $condition      = $matches[3][$row];
+            $compare        = $matches[4][$row];  
+           }           
+           $closeTag        = sprintf("</if:%s>",$varname);
+           $openTag         = $matches[0][$row];                                               
+           $openTagPos      = strpos($template,$openTag);
+           $closeTagPos     = strpos($template,$closeTag);
+           $conPart         = '';        
+           $fromChar        = $openTagPos+strlen($openTag);
+           $toLength        = $closeTagPos-$openTagPos-strlen($openTag);   
+           $inject          = false;
+           $conPart         = substr($template,$fromChar,$toLength);                                 
+           $compareVar     = self::getVars($varname,$vars);
+           
+           if($condition=='is_true' && isset($compareVar) && $compareVar){
+                $inject = true;
+           }else if($condition=='is_false' && (!isset($compareVar) || !$compareVar)){            
+                $inject = true;
+           }else if($condition=='is_array' && isset($compareVar) && is_array($compareVar)){
+                $inject = true;
+           }else if($condition=='not_empty' && (!empty($compareVar) && trim($compareVar)!='')){   
+                $inject = true;
+           }else if($condition=='value' && strpos($compare,'|')){               
+                $options = explode('|',$compare);
+                if(is_array($options) && in_array($compareVar,$options))
+                    $inject = true;
+           }else if($condition=='value' && isset($compareVar) && $compare==$compareVar){
+                $inject = true;
+           }else if($condition=='not' && strpos($compare,'|')){
+                $options = explode('|',$compare);
+                if(is_array($options) && !in_array($compareVar,$options))
+                    $inject = true;
+           }else if($condition=='not' && $compare!=$compareVar)
+                $inject = true;           
+           if(!$inject)              
+                $conPart ='';
+           		   
+			$template = substr_replace($template,$conPart,$openTagPos,$toLength+strlen($closeTag)+strlen($openTag));                                       			                                                              
+        }        
+        return $template;
+    }
+    
+    /**
+     * Template::parseDefaults()
+     * Replaces %[array.field:'Default value']%
+     * 
+     * @param mixed $template
+     * @param mixed $vars
+     * @return
+     */
+    private static function parseDefaults($template,$vars){                
+        // Ternaire operators
+        while(preg_match('#%\[([a-zA-Z0-9=_.]+):(.+)\]%+?#',$template,$matches)){            
+            if($var = self::getVars($matches[1],$vars)){
+                $template = str_replace($matches[0],$var,$template);
+            }else{
+                $template = str_replace($matches[0],trim($matches[2],'"\''),$template);
+            }
+        }
+        return $template;    
+    }            
+    private static function parseTernairy($template,$vars){                
+        // Ternaire operators
+        while(preg_match('#(%\[[a-zA-Z0-9=_.|]+\?(.)+:(.)+\]%)+?#',$template,$matches)){
+    
+                
+            $parts      = substr($matches[0],0,strpos($matches[0],']%',1)+2);
+            
+            $stripped   = preg_replace(array('#^%\[#','#\]%$#'),'',trim($parts));
+            $var        = substr($stripped,0,strpos($stripped,'?'));
+             
+            $stripped   = str_replace($var.'?','',$stripped);
+            $options    = explode(':',$stripped);
+
+            $replace    = '';
+            /*                 
+            if(preg_match('/settings_components/',self::$fileName)){
+                echo "var is $var<br>";
+                echo self::$fileName."<br>";    
+            }
+            */     
+            if(strpos($var,'=')){
+                $varparts = explode('=',$var);            
+                if(strpos($varparts[1],'|')){
+                    $varpartoptions = explode('|',$varparts[1]);
+                    $replace = trim($options[1],"'");
+                    foreach($varpartoptions as $option)                    
+                        if(self::getVars($varparts[0],$vars)==$option)
+                            $replace = trim($options[0],"'");                                                                                                                                                    
+                    $template = str_replace($parts,$replace,$template);                                    
+                }else{      
+                    $add = '';
+                    if(self::getVars($varparts[0],$vars)==$varparts[1]){
+                        if(preg_match('/\'"$/',$options[0])){
+                            $add = "'";
+                        }else if(preg_match('/"\'$/',$options[0])){
+                            $add = '"';
+                        }
+                        $replace = trim($options[0],"'").$add;                        
+                    }else{
+                        if(preg_match('/\'"$/',$options[1])){
+                            $add = "'";
+                        }else if(preg_match('/"\'$/',$options[1])){
+                            $add = '"';
+                        }                        
+                        $replace = trim($options[1],"'").$add;
+                    }
+                    $template = str_replace($parts,$replace,$template);
+                }
+            }else{
+                #echo "getvars $var,$vars<br>";
+                #echo "options:";
+                #pre_r($options);
+                $add = '';
+                if(self::getVars($var,$vars)){
+                    if(preg_match('/\'"$/',$options[0])){
+                        $add = "'";
+                    }else if(preg_match('/"\'$/',$options[0])){
+                        $add = '"';
+                    }
+                    $replace = trim($options[0],'"\'').$add;                                        
+                }else{
+                    if(preg_match('/\'"$/',$options[1])){
+                        $add = "'";
+                    }else if(preg_match('/"\'$/',$options[1])){
+                        $add = '"';
+                    }
+                    $replace = trim($options[1],'"\'').$add;
+                }
+                #echo "<strong>$parts MET $replace</strong>";                
+                $template = str_replace($parts,$replace,$template);
+            }
+            
+        }
+        return $template;        
+    }
+    private static function getVars($dotedString,$vars){
+        if(!strpos($dotedString,'.'))
+            return isset($vars[$dotedString])?$vars[$dotedString]:null;
+        $data   = explode(".",$dotedString);
+        $dotedString =  str_replace($data[0].'.','',$dotedString);
+        return self::getVars($dotedString,$vars[$data[0]]);                
+    }
+}

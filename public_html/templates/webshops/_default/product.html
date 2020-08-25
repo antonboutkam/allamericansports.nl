@@ -1,0 +1,281 @@
+            <if:crumble_str>
+                <div id="breadcrumbs">
+                %[crumble_str]%
+                </div>
+            </if:crumble_str>    
+             <!-- CONTENT -->
+              <div id="content" itemscope itemtype="http://data-vocabulary.org/Product">	
+					<a class="cms hiddencms product" id="%[product.id]%" href="#">Product instellen</a>
+                    <div id="detail">
+                        <div>
+                            <if:prev_product><a style="float:left;" href="%[root]%/%[lang]%/product/%[prev_product]%">Vorig product</a></if:prev_product>
+                            <if:next_product><a style="float:right;" href="%[root]%/%[lang]%/product/%[next_product]%">Volgend product</a></if:next_product>
+                        </div>
+                        <div style="clear:both"></div>
+                        
+                        <br />
+                    
+                    	<div id="product">
+                        	 <div id="gallery_output">
+                                <a rel="prefetch" title="%[product.title]%" href="%[root]%/img/upload/854x616_%[product.id]%.jpg" class="fancy">
+                                    <if:product.is_offer><span class="%[lang=nl?'offer-nl':'offer-gb']%"></span></if:product.is_offer>
+                                    <img alt="%[product.title]%" id="img0" src="%[root]%/img/upload/377x308_%[product.id]%.jpg" width="377" height="308" />
+                                </a>
+                                <for:extra_images>
+                                    <a rel="prefetch" title="%[product.title]%" href="%[root]%/img/product/854x616_%[filename]%" class="fancy">
+                                        <if:product.is_offer><span class="%[lang=nl?'offer-nl':'offer-gb']%"></span></if:product.is_offer>
+                                        <img itemprop="image" alt="%[product.title]%" id="img%[id]%" src="%[root]%/img/product/377x308_%[filename]%" width="377" height="308" />
+                                   </a>
+                               </for:extra_images>    
+                           </div>
+                            <ul id="images">                            	
+                            	<for:extra_images>
+                        		  <li><a data-id="img%[id]%" href="#"><img src="%[root]%/img/product/70x70_%[filename]%" width="70" height="70" alt="helm_stippen" /></a></li>
+                                </for:extra_images>                            	
+                        	</ul>
+                        </div>
+                        
+                        <div id="info">                    
+                        	<h1 itemprop="name">%[product.article_name]%</h1>
+                            <if:avg_rating_array>
+                                <div class="sterren rating">                                                                
+                                    <for:avg_rating_array>                                
+                                     <img src="/img/star-%[starval]%.png" alt="sterren" height="10" width="10" />
+                                    </for:avg_rating_array> 
+    
+                                    <span itemprop="review" itemscope itemtype="http://data-vocabulary.org/Review-aggregate">
+                                        <span itemprop="rating">%[avg_review]%</span> sterren, op basis van <span itemprop="count">%[review_count]% </span> recensies
+                                    </span>                          
+                                </div>
+                            </if:avg_rating_array>
+                            <div id="maat_kleur">                            	
+                                <div id="maat">
+                                    %[product_size_list_selector]%
+                                    %[product_color_list_selector]%                                                                        
+                                    <div class="cl"></div>
+                                    <ul id="voorraad">                                        
+                                        <if:exact.stock value="0">                                    	
+                                            <li id="instock">%[trans_instock]%</li>                                    	   
+                                        </if:exact.stock>
+                                    </ul>                                    
+                                </div>
+                                
+                                <div id="levertijd">
+                                	%[trans_deliverytime]%: <span style="color:%[not_orderable=1?'red':'']%;">%[not_orderable=1?'<br />':'']%%[product.delivery_time_vis_frontend]%</span>
+                                    <if:exact.stock value="0">
+                                    <span style="color:red;"><br />%[trans_not_in_stock]%</span>
+                                    </if:exact.stock> 
+                                </div>
+                                
+                                <div id="prijs">
+                                    <if:delivery_time_id not="23">
+                                    <div style="display:%[not_orderable=1?'block':'none']%;">
+                                    	<div class="prijs">
+                                            <if:product.has_adviceprice>
+                                                <span>&euro; %[product.advice_price_vat]%,%[product.advice_price_vat_ct]%</span><br /><br />                                
+                                            </if:product.has_adviceprice>
+                                            
+                                    	   <a href="#" class="notrack" data-id="%[product.id]%">&euro; %[product.sale_price_vat_vis]%</a>                                
+                                        </div>
+                                    
+                                    	<div class="button">                  
+                                            <a href="#" class="notrack" data-id="%[product.id]%" style="background:#ccc;;" ><span style="background:#ccc;;">%[trans_insportsbag]%</span></a>                                    
+                                        </div>
+                                    </div>
+                                    <div style="display:%[not_orderable=1?'none':'block']%;">
+                                    	<div class="prijs">
+                                            <if:product.has_adviceprice>
+                                                <span>&euro; %[product.advice_price_vat]%,%[product.advice_price_vat_ct]%</span><br /><br />                                
+                                            </if:product.has_adviceprice>
+                                    	   <a href="#" class="add_basket notrack" data-id="%[product.id]%">&euro; %[product.sale_price_vat_vis]%</a>                                
+                                        </div>
+                                    
+                                    	<div class="button">                                                                                                        
+                                            <a href="#" class="add_basket notrack" data-id="%[product.id]%"><span>%[trans_insportsbag]%</span></a>                                    
+                                        </div>                                
+                                    </div>
+                                    </if:delivery_time_id>
+                                    <if:delivery_time_id value="23">                                
+                                        <div>
+                                        	<div class="prijs">                                            
+                                        	   <a href="#" class="add_basket notrack" data-id="%[product.id]%" style="line-height:20px;;">
+                                                Prijs op aanvraag
+                                               </a>                                
+                                            </div>
+                                        
+                                        	<div class="button">                                                                                                        
+                                                <a href="/%[lang]%/contact.html?subject=Offerte+aanvraag+artikel+%[product.`id]%" style="text-align: center;display: inline-block;width:150px;">
+                                                    <span>Contactformulier</span>
+                                                </a>                                    
+                                            </div>                                
+                                        </div>                                                                
+                                    </if:delivery_time_id>
+                               </div>
+                                                        
+                               <div id="klantenservice">
+                                   	<ul>
+                                   		<li>
+                                			<ul>
+                                                <li class="image"><a href="%[root]%/%[lang]%/%[trans_callusurl]%.html"><img src="/images/phone_small.png" width="18" height="34" alt="phone icon" /></a></li>
+            									<li class="klantenservice" style="font-size:13px;"><a href="%[root]%/%[lang]%/%[trans_callusurl]%.html">%[trans_callwith]%<br /> %[trans_employee]%</a><br /></li>
+                                            </ul>
+                                            
+                                        </li> 
+                                        <li>
+                                        	<ul>
+                                        		<li class="image"><img src="/images/email_small.png" width="30" height="20" alt="email icon" /></li>
+                                                <li><a href="%[root]%/%[lang]%/contact.html">%[trans_sendus]%</a></li>
+                                            </ul>
+                                        </li> 
+                                    </ul>
+                                </div>
+                            </div>
+
+                        
+                    <if:others_in_group>
+                        <div class="cl"></div>
+                        <div style="margin-top:20px;">                    
+                            <h2>%[trans_thisinother]%</h2>
+                            <for:others_in_group>
+                                <a 
+href="/%[lang]%/product/%[title_encoded]%-%[product_group_id]%-%[id]%.html" class="color" 
+style="border:1px solid #E0E0DF;display:block;width:70px;height:70px;float:left;margin:0 
+10px 10px 0;">
+                                    <img src="/img/upload/70x70_%[id]%.jpg" />
+                                </a>
+                            </for:others_in_group>
+                            <div class="cl"></div>
+                        </div>
+                    </if:others_in_group>
+                    </div>
+
+                </div>
+                    <script type="text/javascript">
+                        $(document).ready(function(){						
+                            $('ul.tabs li a').live('click',function(e){
+                                if($(this).hasClass('no-tab-functionality')){
+                                    return;
+                                }
+                                e.preventDefault();
+                                // Hide all tabs
+                                $('.tab').css('display','none');
+                                $('.tablinks').removeClass('active');
+                                // Create current tab selector #tabs1
+                                currentTab = '#'+$(this).attr('data-show');
+                                // Show tab                                
+                                $(currentTab).css('display','block');                                                        
+                                $(currentTab+'link').addClass('active');							
+                            });
+                            if($('.tablinks.active').length==0){
+                                $('.tablinks:first').addClass('active');
+                            }
+                            $('#save_review').live('click',function(e){
+                                e.preventDefault();
+                                $('#frmreview').trigger('submit'); 
+                            });
+                            
+                            if(%[_do=write_review?true:false]%)
+                                alert('Bedankt voor uw review! Om misbruik te voorkomen voeren wij moderatie uit, na controle zal uw review zichtbaar worden.');                                
+                            
+							$('.ratingstars').mouseover(function(){
+								current_start = $(this).attr('id').replace('ratingstar_','');
+								for(i=5;i>=1;i--){
+									if(i==current_start){
+										$('#starcount').html(current_start);
+										$('#fld_ratingstars').val(current_start);
+									}
+									if(i>current_start){
+										$('#ratingstar_'+i).attr('src','/img/star-empty.png');
+									}else{
+										$('#ratingstar_'+i).attr('src','/img/star-filled.png');										
+									}									
+								}								
+							});							
+                        });
+                    </script>
+					%[product_information]%
+                    <div id="productinformatie">
+                    	<ul id="tabs" class="tabs">
+                            <li><a href="#" id="tabs1link" data-id="%[product.id]%" class="tablinks cms product" data-show="tabs1">%[trans_productinformation]%</a></li>
+                            <li><a href="#" id="tabs2link" class="tablinks %[writereview=true?'active':'']%" data-show="tabs2">%[trans_reviews]% (%[productreview_count]%)</a></li>                                                        
+                            <if:product.video_link>
+                            <li><a href="#" id="tabs3link" class="tablinks" data-show="tabs3">%[trans_video]%</a></li>
+                            </if:product.video_link>
+                            
+                            <if:product.product_pdf>
+                                <li><a class="no-tab-functionality" href="%[root]%/img/product-pdf/%[product.id]%.pdf" target="_blank">Download pdf</a></li>   
+                            </if:product.product_pdf>
+                            
+                        </ul>
+                        <div itemprop="description" class="tab cms product" data-id="%[product.id]%" id="tabs1" style="display:%[write_review=1?'none':'block']%;">
+                        	%[product.translated.description]%
+                        </div>
+                        <div class="tab" id="tabs2" style="display:%[write_review=1?'block':'none']%;">                            
+                            <div class="review_door">
+                                <if:write_review value="1">
+                                    <label>%[trans_hoemanystars]%</label>
+                                    <div class="sterren">
+                                            <img class="ratingstars" id="ratingstar_1" src="/img/star-filled.png" alt="sterren" height="10" width="10" />
+                                            <img class="ratingstars" id="ratingstar_2" src="/img/star-filled.png" alt="sterren" height="10" width="10" />
+                                            <img class="ratingstars" id="ratingstar_3" src="/img/star-filled.png" alt="sterren" height="10" width="10" />
+                                            <img class="ratingstars" id="ratingstar_4" src="/img/star-empty.png" alt="sterren" height="10" width="10" />
+                                            <img class="ratingstars" id="ratingstar_5" src="/img/star-empty.png" alt="sterren" height="10" width="10" /> 
+                                            (<span id="starcount">3</span> %[trans_stars]%)
+                                    </div>								
+								
+                                    <br class="clearall" />
+                                    <form method="post" id="frmreview" action="%[request_uri]%">
+                                        <input type="hidden" name="_do" value="write_review" />
+                                        <p>Review</p>
+    									<input type="hidden" id="fld_ratingstars" name="review[rating_stars]" value="3" />
+                                        <input id="fld_bot_prevent" type="hidden" name="review[bot_prevent]" value="" />
+                                        <script>
+                                            document.getElementById('fld_bot_prevent').value = 21;
+                                        </script>
+                                        <input type="hidden" name="review[fk_relation]" value="%[relation_id]%" />
+                                        <input type="hidden" name="review[fk_catalogue]" value="%[product.id]%" />
+                                        <input type="hidden" name="review[fk_webshop]" value="%[webshop_id]%" />
+                                        <textarea style="width:670px;height:50px;" name="review[review]" id="cp_review"></textarea>
+                                        <a class="allbutton" id="save_review" href="#"  href="#">%[trans_reviewstore]%</a>                                         
+                                        
+                                    </form><br />
+                                 </if:write_review><br />
+                            </div>                            
+                            <for:productreview>
+                                <div class="review_door">
+                                    <p>
+                                        <strong>
+                                            <for:rating_stars_array>
+                                                <img src="/img/star-%[starval]%.png" alt="sterren" height="10" width="10" />
+                                            </for:rating_stars_array> 
+                                            %[trans_reviewby]%: %[cp_firstname]%,
+                                        </strong> 
+                                            %[trans_reviewon]% %[review_created]%<br />
+    									
+                                        %[review]% 
+                                    </p>
+                                </div>
+                            </for:productreview>
+                        	<div class="schrijf" style="margin-top:30px;;">
+                                <if:write_review not="1">
+                                    <if:is_signed_in condition="is_false">
+                                        <div style="margin-bottom:10px;font-weight:bolder;">
+                                            <div style="display:%[lang=nl?'block':'none']%">Om een Review te kunnen schrijven moet u zijn ingelogd.</div>
+                                            <div style="display:%[lang=nl?'none':'block']%">To write a review, you must sign in first.</div>
+                                        </div>
+                                    </if:is_signed_in>
+                                    <div><a class="allbutton" href="#" onclick="location.href='%[root]%%[request_uri]%?write_review=1'">%[trans_writereview]%</a></div>
+                               </if:write_review>                                
+                            </div>                               
+                        </div>
+                       <div class="tab" id="tabs3" style="display:none;">
+                            <div id="player"><br /><br />
+                                %[product.video_link]%
+                            </div>
+                       </div>
+                    </div>                 
+                </div>
+                %[simular_products]%
+                <!-- /CONTENT -->
+
+               

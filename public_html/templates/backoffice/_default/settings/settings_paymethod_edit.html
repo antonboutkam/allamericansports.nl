@@ -1,0 +1,41 @@
+<if:id value="new">%[lbl_add_paymethod]%</if:id>          
+<if:id not="new">%[lbl_edit_paymethod]%</if:id> 
+<form id="paymethods_form">
+    <input type="hidden" id="fld_id" name="id" value="%[id]%" />
+    <input type="hidden" name="paymethod[is_active]" value="0" />
+    <input type="hidden" name="paymethod[in_webshop]" value="0" />
+    <input type="hidden" name="paymethod[postorder_paymethod]" value="0" />
+    <input type="hidden" name="paymethod[pickup_paymethod]" value="0" />
+               
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">%[lbl_paymethod_ucf]%</div>
+            <div style="margin:10px;">
+                    <table>
+                        <tr><td>%[lbl_paymethod_ucf]%</td><td><input type="text" name="paymethod[name]" value="%[name]%" /></td></tr>
+                        <tr><td>%[lbl_active]%</td><td><input class="checkbox" type="checkbox" name="paymethod[is_active]" %[is_active?'checked="checked"':'']% value="1" /></td></tr>
+                        <tr><td>In webshop</td><td><input class="checkbox" type="checkbox" name="paymethod[in_webshop]" %[in_webshop?'checked="checked"':'']% value="1" /></td></tr>
+                        <tr><td>%[lbl_paymethod]%</td>
+                            <td>
+                                <select name="paymethod[price_type]" val="%[price_type]%">
+                                    <option value="free">%[lbl_free]%</option>
+                                    <option value="percentage">%[lbl_percentage]%</option>                                    
+                                    <option value="fixed_amount">%[lbl_fixed_amount]%</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr><td>Prijs (Ex btw)</td>
+                        <td><input type="text" name="paymethod[price_amount]" size="3" value="%[price_amount]%" /></td></tr>                                                                                                                           
+                        <tr><td>Beschikbaar bij postorder (PostNL = bijvoorbeeld geen contante betaling)</td>
+                        <td><input class="checkbox" type="checkbox" name="paymethod[postorder_paymethod]" %[postorder_paymethod?'checked="checked"':'']% value="1" /></td></tr>
+                        <tr><td>Beschikbaar bij afhalen (Rembours bijv kan niet bij afhalen)</td>
+                        <td><input class="checkbox" type="checkbox" name="paymethod[pickup_paymethod]" %[pickup_paymethod?'checked="checked"':'']% value="1" /></td></tr>                        
+                    </table>   
+            </div>
+            <div class="actions">
+                <input type="submit" id="fld_store" value="%[lbl_save]%" />
+                <span class="stored-ok" style="display:none;">%[lbl_information_stored]%</span>                                     
+            </div>                      
+        </div>
+    </div>
+</form>

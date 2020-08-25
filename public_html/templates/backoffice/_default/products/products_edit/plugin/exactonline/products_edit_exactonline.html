@@ -1,0 +1,58 @@
+    <script type="text/javascript">
+        $(document).ready(function(){            
+            if($('#fld_id').val()!='new'){ 
+                $.loaderInterval = setInterval(function(){                
+                    current = $('.exact_stock').html();
+                    current = current.replace('Loading','');
+                    if(current.length>5){
+                        current = 'Loading';
+                    }else{
+                        current = 'Loading'+current+'.';
+                    }
+
+                    $('.exact_stock').html(current);
+                },200);
+            
+            
+                send = {};   
+                send._do    = 'get_exact_stock';
+                send.ajax   = 1;
+                send.id     = $('#fld_id').val();
+                $.post(request_uri,send,function(data){
+                    clearInterval($.loaderInterval);
+                    console.log(data);
+                    $('.exact_stock').html(data.exact.stock+', laatst geüpdate: '+data.exact_lastcheck);
+                    
+                },'json')
+            }                                    
+        });
+    </script>
+
+
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="add_customer searchtitle">Exact online</div>
+                <div class="edit_content" style="line-height:28px;">                                                 
+                    <a href="/products/syncexact.html?id=%[id]%&" target="_blank"><img src="/img/icons/exact-export.png" /></a>
+                    <if:exact_synced value="0">
+                        <img src="/img/icons/delete-icon-32x32.png" width="28" height="28"  />                    
+                        Sync mislukt, klik op het Exact logo om de logs in te zien
+                    </if:exact_synced>
+                    <if:exact_synced value="1">
+                        <img src="/img/icons/ok-icon-32x32.png" width="28" height="28"  />
+                        Dit product is in sync, klik op het Exact logo om de logs in te zien                        
+                    </if:exact_synced>      
+                    <if:id value="new">                    
+                        <img src="/img/icons/pause-32x32.png" width="28" height="28"  />                        
+                        Het product is nog niet opgeslagen
+                    </if:id><br />
+                        Laatste melding van Exact: <strong>"%[exact_last_sync_desc]%"</strong>
+                    <hr />
+                    <div>
+                        Exact online voorraad: <span class="exact_stock">%[exact.stock]%</span><br />                        
+                    </div>
+                    <hr />
+                                                            
+                </div>
+            </div>
+        </div>

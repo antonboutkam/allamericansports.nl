@@ -1,0 +1,17 @@
+            <if:notes condition="is_true">
+                <for:notes>
+                    <div class="note">
+                        <div class="notetitle">%[created_on_vis]%, %[note_by]% <a href="%[root]%/users/view.html?id=%[created_by]%&iframe=1" class="iframe">%[created_u_user]%</a> <div style="float:right">
+                            <a href="#" class="delnote" rel="%[id]%"><img width="12" height="12" src="%[root]%/img/icons/delete.png" /></a></div><div class="clear"></div></div>
+                        <hr />
+                        <div class="notecontent">
+                           %[content]%
+                        </div>            
+                    </div>
+                </for:notes>
+            </if:notes>
+            <if:notes condition="is_false">
+                <div style="margin:10px;;">
+                    <center>%[no_notes]%</center>
+                </div>
+            </if:notes> 

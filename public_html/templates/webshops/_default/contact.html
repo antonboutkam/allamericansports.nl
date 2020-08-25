@@ -1,0 +1,93 @@
+<style type="text/css">
+    #frmcontact .field label{display:block;margin-bottom:3px;}    
+    #frmcontact .field input{background: none repeat scroll 0 0 #FFFFFF;border: 1px solid #D8D8D8;border-radius: 2px 2px 2px 2px;box-shadow: 0 1px 1px 0 rgba(180, 180, 180, 0.1);color: #888888;display: block;font: 12px Arial,sans-serif;margin: 0 0 20px;max-width: 100%;outline: medium none;
+                width:400px;padding: 9px;}    
+    #frmcontact .field textarea{width:900px;height:200px;}
+    #frmcontact .fields{float:left;width:450px;}
+    #frmcontact .clear{clear:both;}    
+    #frmcontact p{margin-top:10px;}
+</style>
+
+<div id="contactpage">
+    <h1>Contact</h1>
+    <if:mailsend not="true">
+        <form method="post" id="frmcontact">            
+            <div>
+                <input type="hidden" name="secret_code" id="fld_secret_code" />
+                <input type="hidden" id="lang" value="%[lang]%" />
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                         $('#fld_secret_code').val(75-10);
+                    });                    
+                </script>
+                <div class="fields">
+                    <div class="field">
+                        <label>%[transl_name]%:</label>
+                        <input type="text" id="fld_name" tabindex="1" name="name" value="%[relation.cp_firstname]%%[relation.cp_lastname?' %[relation.cp_lastname]%':'']%" />
+                    </div>
+                    <div class="field">
+                        <label>%[transl_email]%:</label>
+                        <input type="text" id="fld_eml"  tabindex="3" name="email" value="%[relation.email]%" />
+                    </div>
+                 </div> 
+                <div class="fields">
+                    <div class="field">
+                        <label>%[transl_phone]%:</label>
+                        <input type="text" id="fld_phone" tabindex="2" name="phone" value="%[relation.phone]%" /></td>
+                    </div>
+                    <div class="field">
+                        <label>%[transl_subject]%:</label>
+                        <input type="text" id="fld_subject"  tabindex="4" name="subject" value="%[subject]%" /></td>
+                    </div>    
+                </div>        
+                <div class="clear"></div>
+                <div class="field">
+                    <label>%[transl_note]%:</label>
+                    <textarea name="content" id="fld_content"  tabindex="5" style="font-size: 12px;">%[ordernumber?'Ik heb een vraag over ordernummer %[ordernumber]%':'']%</textarea>
+
+                        <input type="hidden" name="_do" value="sentmail" />
+                        <a class="button-account contact_btn"  tabindex="6" href="#" id="send">%[transl_send]%</a>
+                        
+                    
+                </div>
+
+            </div>
+          <div class="cl"></div>
+      </form>
+  </if:mailsend>    
+  
+  <if:mailsend>
+      <script type="text/javascript">
+          $(document).ready(function(){
+             setInterval(function(){
+                 next = parseInt($('#seconds').html())-1;
+                 if(next==0){
+                     window.location = '/';
+                 }
+                 $('#seconds').html(next)                 
+             },1000); 
+          });
+      </script>
+      <p> 
+        %[trans_thanksmsg]%
+      </p>
+      <p>
+        %[trans_thanksend]%
+      </p>      
+  </if:mailsend>    
+    <!--
+    <div>
+
+
+
+  
+  <div class="clearer"></div>
+  <div class="vr"></div>
+  <div id="contactinfo">
+    <h4>Bedrijfsinformatie</h4>
+    <p> %[webshop_companyname]%<br />
+      %[settings.billing_address]% </p>
+  </div>
+   -->
+
+</div>

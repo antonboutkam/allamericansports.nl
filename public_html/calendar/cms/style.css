@@ -1,0 +1,180 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	font-size:11px;	
+}
+
+#header {
+	width: 820px;
+	height: 70px;
+	margin: 0px auto;
+	background: url('images/logo.jpg') no-repeat center top;
+}
+
+#content {
+	margin: 0px auto;
+	border: 1px solid #CFCFCF;
+	width: 820px;
+}
+
+#menu {
+	background-color: #e9e9ea;
+	border-top: 1px solid #CFCFCF;
+	border-left: 1px solid #CFCFCF;
+	border-right: 1px solid #CFCFCF;
+	width: 820px;
+	margin: 0px auto;
+	font-size: 13px;
+}
+
+#map {
+	width: 820px;
+	margin: 0px auto;
+	padding-top: 20px;
+}
+
+table.menu {
+	width: 100%;	
+	border-collapse: collapse;
+}
+
+.table_two {
+	margin: 0px auto;
+	border-collapse: collapse;
+}
+
+.item {
+	background: #e9e9ea;
+	text-align: center;
+	width: 25%;
+}
+
+.item-done {
+	background: #b659a3;
+	text-align: center;
+	width: 25%;
+	color: white;
+}
+
+.item-on {
+	text-align: center;
+	color: white;
+	background: url('images/item-on.jpg') repeat-y;
+	width: 25%;
+}
+
+.text {
+	width: 100%;
+	padding: 10px;
+}
+
+.table {
+	width:350px;
+	margin: 0px auto;
+	border: 1px solid gray;
+	border-collapse: collapse;
+}
+
+.row {
+	height: 40px;
+	background-color: #F1F0FF;
+	padding: 10px;
+	font-weight: bold;
+	border: 1px solid gray;
+	text-align: center;
+}
+
+.rowh {
+	height: 30px;
+	background-color: #443266;
+	color: white;
+	font-weight: bold;
+	border: 1px solid gray;
+	text-align: center;
+}
+
+.tijden {
+	border-collapse: collapse;
+	margin: 0px auto;
+}
+
+.tijden td {
+	border: 1px solid silver;	
+	padding: 3px;
+}
+
+.rowsmall {
+	font-size: 11px;
+	border: 1px solid #CDCDCD;
+	background-color: #F5F5F5;
+}
+
+.tablesmall {
+	width: 760px;
+	margin: 0px auto;
+	border-collapse: collapse;
+}
+
+a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.item a {
+	color: #000;
+	text-decoration: none;
+}
+
+.item a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.rowsmall a {
+	color: blue;
+	text-decoration: none;
+}
+
+.rowsmall a:hover {
+	color: blue;
+	text-decoration: underline;
+}
+
+#dhtmltooltip{
+	position: absolute;
+	width: 150px;
+	border: 1px solid black;
+	padding: 2px;
+	background-color: white;
+	visibility: hidden;
+	z-index: 100;
+	/*Remove below line to remove shadow. Below line should always appear last within this CSS*/
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
+}
+
+.text a{
+	color: black;
+	text-decoration: none;
+}
+
+.text a:hover{
+	color: black;
+	text-decoration: underline;
+}
+
+.delete a{
+	color: red;
+	text-decoration: none;
+}
+
+.delete a:hover{
+	text-decoration: underline;	
+}

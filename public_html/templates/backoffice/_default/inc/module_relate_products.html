@@ -1,0 +1,20 @@
+            <div class="searchbox" id="module_relate_products">
+                <div class="searchresults">
+                    <div class="add_customer searchtitle">Gerelateerde producten</div>                    
+                    <div class="clear"></div>
+                    <div class="edit_content">
+                        <table>
+                        <for:related_products>
+                            <tr>
+                                <td class="iconcol"><a href="%[root]%/products/view.html?id=%[product_id]%&iframe=1&view=" class="iframe"><img src="%[root]%/img/icons/info-icon-16x16.png" width="16" height="16" /></a></td>
+                                <td class="iconcol"><a href="#" class="remove_relation" rel="%[related_product]%"><img src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16" /></a></td>                                                        
+                                <td>%[article_number]%</td>
+                            </tr>
+                        </for:related_products>
+                        </table>
+                        <a href="%[root]%/products/catalogue.html?iframe=1&view=picker&addtype=relate" class="iframe"><img src="%[root]%/img/icons/add-1-icon-16x16.png" /></a>
+                        <a href="%[root]%/products/catalogue.html?iframe=1&view=picker&addtype=relate" class="iframe">Product toevoegen</a>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>    

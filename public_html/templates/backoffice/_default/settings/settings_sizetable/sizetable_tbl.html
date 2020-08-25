@@ -1,0 +1,19 @@
+       <table style="margin:15px;">
+            <tr class="rowheader">
+                    <th style="width:16px;">&nbsp;</th>
+                    <th><a href="#" class="sort" rel="title DESC">%[lbl_title]%</a></th>
+                    <th><a href="#" class="sort" rel="filename">%[lbl_filename]%</a></th>                            
+            </tr>
+             <for:locations.data>
+                <tr class="row%[oddeven]%">
+                    <td>
+                        <a href="#" data-id="%[id]%" class="delete_item">
+                            <img src="/img/icons/delete-icon-16x16.png" />
+                        </a>
+                    </td>
+                    <td><a class="iframe" title="%[title]%" href="/img/sizetable/%[filename]%">%[title]%</a></td>
+                    <td><a class="iframe" title="%[title]%" href="/img/sizetable/%[filename]%">%[filename]%</a></td>
+                    
+                </tr>                
+            </for:locations.data>
+        </table>

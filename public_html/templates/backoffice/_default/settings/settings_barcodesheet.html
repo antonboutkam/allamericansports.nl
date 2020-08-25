@@ -1,0 +1,30 @@
+<h2>Barcode labels</h2>
+<form id="barcodesheet_form">
+    <input type="hidden" id="fld_id" name="id" value="%[id]%" />
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Labelconfiguratie</div>
+            <div style="padding:10px;">           
+                <table style="width:300px;">
+                    <tr class="rowheader"><td colspan="2">Nieuwe barcode sheet definieren</td></tr>
+                    <tr class="rowodd"><td>Label titel</td><td><input type="text" name="name" value="%[name]%" /></td></tr>
+                    <tr class="roweven"><td>Aantal kollomen</td><td><input type="text" name="cols" value="%[cols]%" /></td></tr>
+                    <tr class="rowodd"><td>Aantal rijen</td><td><input type="text" name="rows" value="%[rows]%" /></td></tr>
+                    <tr class="roweven"><td>Barcode hoogte mm</td><td><input type="text" name="barcode_height" value="%[barcode_height]%" /></td></tr>
+                    <tr class="rowodd"><td>Barcode breedte mm</td><td><input type="text" name="barcode_width" value="%[barcode_width]%"  /></td></tr>
+                    <tr class="roweven"><td>Top marge mm</td><td><input type="text" name="margin_top" value="%[margin_top]%" /></td></tr>
+                    <tr class="rowodd"><td>Linker marge mm</td><td><input type="text" name="margin_left" value="%[margin_left]%" /></td></tr>
+                    <tr class="roweven"><td>Kollom breedte mm</td><td><input type="text" name="col_width" value="%[col_width]%" /></td></tr>
+                    <tr class="rowodd"><td>Rij afstand mm</td><td><input type="text" name="row_dist" value="%[row_dist]%" /></td></tr>
+                    <tr class="roweven"><td><input type="submit" id="fld_save" value="Opslaan" /></td>
+                        <td>
+                            <span id="fld_sample" style="display:%[id?'inline':'none']%">
+                                <a href="%[root]%/barcodebuilder.php?id=%[randomproduct]%&barcodepaper=%[id]%" target="_blank">Toon voorbeeld</a>
+                            </span>
+                        </td>
+                   </tr>
+                </table>                
+            </div>
+        </div>
+    </div>    
+</form>

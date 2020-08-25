@@ -1,0 +1,33 @@
+       <script type="text/javascript">
+            var current_page    = '%[current_page]%';
+            var view            = '%[view]%';
+            var sort            = '%[sort]%';
+        </script>
+
+        <div class="searchresults">
+        <div class="searchtitle">Voorraad mutaties
+            <div style="float:right;color:#555;">%[rowcount]% gevonden mutaties  <a href="#" class="reload"><img width="20" class="middle" src="%[root]%/img/icons/reload.png" /></a></div>
+        </div>      
+            <table style="margin:15px;">
+                <tr class="rowheader">
+                    <th style="width:18px;">&nbsp;</th>                    
+                    <td><a class="sortmutations" href="article_number">Artikelnummer</a></td>
+                    <td><a class="sortmutations" href="d.type">Mutatie type</a></td>
+                    <td><a class="sortmutations" href="wl.name">Lokatie</a></td>                    
+                    <td><a class="sortmutations" href="location_stock">Voorraad %[location_name]%</a></td>                    
+                    <td><a class="sortmutations" href="mutations">Totaal bij/af (%[curr_location_name]%)</a></td>
+                </tr>
+                <for:mutations> 
+                    <tr>
+                        <td><a class="iframe" href="http://localhost/bleuturban/product_view.html?id=%[article_id]%&iframe=1&view="><img src="%[root]%/img/icons/info-icon-16x16.png" width="16" height="16"/></a></td>
+                        <td>%[article_number]%</td>
+                        <td>%[mutationtype]%</td>
+                        <td>%[location]%</td>
+                        <td>%[location_stock]%</td>
+                        <td>%[mutations]%</td>
+                    </tr>                 
+                </for:mutations>                                  
+            </table>            
+            <div class="clear"></div>          
+            <center>%[paginate]%</center>                     
+        </div>

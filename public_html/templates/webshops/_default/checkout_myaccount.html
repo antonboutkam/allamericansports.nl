@@ -1,0 +1,141 @@
+<script type="text/javascript">
+var login_failed = '%[login_failed]%';
+$.interval = null;
+$(document).ready(function(){        
+    $.blinkColor = function(){
+        $('a#reset-open').addClass('blinkcolor');
+        setTimeout(function(){
+            $('a#reset-open').removeClass('blinkcolor');        
+        },500)        
+    }    
+    if(login_failed){
+        $('a#reset-open').addClass('blinkcolor');
+        $.interval = setInterval(function(){$.blinkColor();},1000);
+        setTimeout(function(){
+            clearInterval($.interval)
+        },4000);
+        
+    }
+});
+</script>
+<if:login_failed>
+<script type="text/javascript">
+    alert('E-mailadres of wachtwoord incorrect');
+</script>
+</if:login_failed>                 
+  <!--############################################################################################################-->                                         
+<div class="checkOuts" style="margin-top:0px;padding-top:0px;">
+    <h1>%[trans_your_data]%</h1>
+    <h4 style="font-size:13px;color:black;font-weight:bold;">%[trans_step_one]% : %[trans_whatonbill]% </h4>
+
+                                        	<form method="post" id="onestepform" action="%[root]%/%[lang]%/checkout.html">
+                                            <input type="hidden" name="_do" value="create_account" />
+                                            <div class="personalInfo round-bg" >
+                                            	
+                                            	<p><label >%[trans_myaccount_name]%*</label>
+                                                <input name="client_new[cp_firstname]" id="cp_firstname" value="%[relation.cp_firstname]%" type="text" class="big txtfld" /></p>
+                                                
+                                               <p> <label >%[trans_myaccount_surname]%*</label>
+                                                <input name="client_new[cp_lastname]" id="cp_lastname" value="%[relation.cp_lastname]%" type="text" class="big txtfld" /></p>
+                                                
+                                               <p> <label >%[trans_myaccount_companyame]%</label>
+                                                <input name="client_new[company_name]" id="company_name" value="%[relation.company_name]%" type="text" class="big txtfld" /></p>
+                                                
+                                                <p><label >%[trans_myaccount_email]%*</label>
+                                                <input name="client_new[email]" id="email" value="%[relation.email]%" type="text" class="big txtfld" /></p>
+                                                
+                                                <p><label >%[trans_myaccount_phone]%*</label>
+                                                <input name="client_new[phone]" id="phone" value="%[relation.phone]%" type="text" class="big txtfld" /></p>
+                                                
+                                                
+                                                
+                                                                                              
+                                               <p> <label >%[trans_myaccount_postcode]%*</label>
+                                                <input name="client_new[billing_postal]" id="billing_postal" value="%[relation.billing_postal]%" placeholder="1421AW" type="text" class="big txtfld" style="width:150px!important;"  />
+                                                <input name="client_new[billing_number]" id="billing_number" value="%[relation.billing_number]%" type="text" class="" size="5"  />
+                                                </p>                                     
+                                                                                                         
+                                                <p><label >%[trans_myaccount_street_no]%*</label>
+                                                 <input name="client_new[billing_street]" id="billing_street" value="%[relation.billing_street]%" type="text" class="big txtfld" />
+                                                </p>
+                                                <p><label >%[trans_myaccount_city]%*</label>
+                                                <input name="client_new[billing_city]" id="billing_city" value="%[relation.billing_city]%" type="text" class="big txtfld" /></p>
+                                                
+                                             
+                                                <p><label >%[trans_myaccount_country]%*</label>
+                                               <select name="client_new[billing_country]" id="billing_country"  val="%[relation.billing_country]%" class="txtfld" >
+                                                    <option value="NL">%[lang=nl?'Nederland':'The Netherlands']%</option>
+                                                   <for:country_iso>
+                                                        <if:lang value="nl">
+                                                            <option value="%[iso2]%">%[name_nl]%</option>
+                                                        </if:lang>
+                                                        <if:lang not="nl">
+                                                            <option value="%[iso2]%">%[name]%</option>
+                                                        </if:lang>
+                                                   </for:country_iso>                                                                                                                                                                                      
+                                                  
+                                               </select>
+                                               </p>
+                                                
+                                             
+                                               <div  id="foreign_vat" style="display:none;">                            
+                                                    <label>Vat registration (optional)</label>
+                                                    <input name="client_new[foreign_vat]" type="text" value="%[relation.foreign_vat]%"  class="big txtfld"  />
+                                                </div>          
+                                                <br />&nbsp;<br />
+                                                <input id="create_account" name="client_new[create_account]" class="checkleft" type="checkbox" />
+                                                <label for="create_account"  style="display:inline;cursor:pointer">%[trans_myaccount_create_account]%.</label><br />&nbsp;<br />
+                                                <div class="type_input" id="set_password" style="display:none;">                            
+                                                    <label>Wachtwoord</label>
+                                                    <input id="password" name="client_new[foreign_vat]" type="password" value=""  class="big txtfld"  />
+                                                    <label>Wachtwoord bevestigen</label>
+                                                    <input id="password_confirm" name="client_new[foreign_vat]" type="password" value=""  class="big txtfld"  />
+                                                    <br />&nbsp;<br />
+                                                </div>   
+                                                
+                                                <input  name="checkbox" id="fldsameasbilling" type="checkbox" value="" checked="checked" />
+                                                <label for="fldsameasbilling" style="display:inline;cursor:pointer">%[trans_myaccount_send_same_address]%</label><br />&nbsp;<br />
+                                                 <div style="display:%[relation.shipping_street?'block':'none']%;padding-top:20px;" id="billing_addr">
+
+                                                %[shipping_form]%                                                      
+
+                                                </div>   
+       
+                                                
+                                                <a class="view prevnex button-account" style="float:left;margin-top:20px;" href="%[root]%/%[lang]%/basket.html">%[trans_myaccount_shoppingcart]%</a>
+                                                <a class="create_account prevnex button-account" style="float:right;margin-top:20px;" href="#">%[trans_myaccount_skip_step_two]%</a>
+                                            </div>
+                                            </form>
+                                            
+                                            <if:is_member condition="is_false">
+                                            <div class="checkPayment round-bg">
+                                                
+                                                <div id="login-screen" >                                                    
+                                                <form method="post" id="loginform">
+                                                	<input type="hidden"  name="_do" value="login" />
+                                                    <h4>%[trans_myaccount_have_account]%? </h4>   
+                                                    <label class="lvl">%[trans_myaccount_email]%:</label>
+                                                    <input id="fld-eml" type="text" name="emailaddr" value="%[emailaddr]%" class="big txtfld"  />
+                                                    <label class="lvl">%[trans_myaccount_password]%:</label>
+                       								<input id="fld-password" type="password" name="password" class="big txtfld" /><br /><br />
+                                                    <a href="#" id="fld_login" class="button-login">%[trans_myaccount_login]%</a> &nbsp;&nbsp;
+                                                    <p><a href="#" id="reset-open">%[trans_myaccount_forgot_password]%</a></p>
+                                                </form>
+                                                </div>
+                                                <div id="reset-screen" style="display:none;" class="personalInfo passReset">  
+                                                	<h4>%[trans_myaccount_password_reset]%</h4>
+                                                	<p style="margin-bottom:10px;">%[trans_myaccount_password_sent]%.</p>
+                                                    <label>%[trans_myaccount_email]%:</label>
+                        							<input id="fld_forgot_email" type="text" name="email" class="big" />
+                                                    <div class="tab">
+                                                        <a href="#" id="reset" class="button wide button-login">%[trans_myaccount_password_reset]%</a>
+                                                    </div>  
+                                                    <p>
+                                                        <span id="email-not-found" style="display:none;color:red;"><br />Het opgegeven e-mailadres komt niet voor in onze database.</span>
+                                                        <span id="succes" style="display:none;color:blue;"><br />Het nieuwe wachtwoord is per e-mail naar u verzonden.</span>                    
+                                                    </p>                                                    
+                                                </div>                                              	                                                
+                                            </div>
+                                            </if:is_member>
+                                           <div class="clearer"></div>
+                                  		</div>

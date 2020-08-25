@@ -1,0 +1,597 @@
+.cl{clear:both;}
+.error{border-style:dashed!important;border-color:red!important;border-width:1px!important;background-color:#FAEBE7!important}
+
+
+/*=========================== Login page ====================================*/
+#login h1{width:600px;display:block}
+#login h1.box{width:320px;margin-top:20px;margin-bottom:10px;font-size:17px;}
+#login h1.box.left,#accountbox{margin-right:10px;}
+
+#login a{display:block;color:#5C5C5C;text-decoration:underline;margin-top:5px;} 
+#accountbox{width:320px;float:left;}
+#loginbox{width:300px;float:left;}
+#login label{margin-top:20px;}
+#login-screen p{margin-bottom:10px;}
+#login input {
+    display:block;
+    background: none repeat scroll 0 0 #F6F6F6;
+    border: 1px solid #DFDFDF;
+    height: 28px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0 5px;
+    width: 232px;
+}
+/*=========================== End login page ====================================*/
+/*=========================== Create account page ====================================*/
+#createaccount label{margin-top:10px;margin-bottom:5px;display:block;}
+#createaccount{margin-top:40px;}
+#createaccount input,#createaccount select {
+    display:block;
+    background: none repeat scroll 0 0 #F6F6F6;
+	
+    border: 1px solid #333;
+    height: 28px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0 5px;
+    width: 232px;
+}
+#createaccount select{padding:0;}
+
+/*=========================== End page ====================================*/
+
+/*=========================== My account page ====================================*/
+#myaccount .blockaddress{float:left;width:280px;margin-right:10px;}
+#myaccount #fldsameasbilling,#myaccount #newsletteryn{width:20px;display:inline-block;margin-top:0px!important;}
+
+#myaccount label{margin-bottom:5px;display:block;margin-top:10px;}
+#myaccount .streetfld{width:186px;display:inline}
+#myaccount .addrfld{width:30px;display:inline}
+#myaccount{margin-top:40px;}
+#myaccount h2{font-size:17px;margin-top:20px;}
+#myaccount input,#myaccount select {
+    display:block;
+    background: none repeat scroll 0 0 #F6F6F6;
+    border: 1px solid #DFDFDF;
+    height: 28px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0 5px;
+    width: 232px;
+}
+#myaccount select{padding:0;}
+table#myaccount_orders{font-size:11px;line-height:20px;}
+table#myaccount_orders td{padding-right:4px;} 
+table#myaccount_orders a{color:#5C5C5C;text-decoration:underline;}
+/*=========================== End create account page ====================================*/
+
+/*============================winkelwagen_page_start_here============================================*/
+#content_part .quick_nav { width:673px; float:left; background:#f6f6f6; border:1px solid #e0e0e0; margin-top:5px;}
+
+#content_part .quick_nav ul { width:100%; float:left; list-style:none;}
+#content_part .quick_nav li { float:left; padding:0px 12px 0px 10px; background:url(../img/quick_bg.gif) no-repeat right top; line-height:32px; font-size:12px;}
+#content_part .quick_nav li a { color:#5c5c5c; text-decoration:underline; font-style:italic;}
+#content_part .quick_nav li a:hover, 
+#content_part .quick_nav li a.active { color:#333333; text-decoration:none; font-weight:bold; font-style:normal;}
+#content_part .quick_nav li.last { background:none;}
+#content_part .top_mar { margin-top:30px; width:958px;}
+
+.left_part .laptop_box1 {width:244px; float:right; border:1px solid #dfdfdf; background:#f6f6f6; margin-bottom:19px;}
+.laptop_box1 .laptop_main { width:205px; float:left; padding:15px 20px 7px 16px;}
+.left_part .laptop_box1 ul { width:100%; float:left; list-style:none; padding-top:5px;} 
+.left_part .laptop_box1 li { padding:12px 0px 0px 17px; background:url(../img/product_li_bg2.png) no-repeat left 13px; line-height:16px;}
+.left_part .laptop_box1 li a { color:#5c5c5c; font-size:12px;}
+.left_part .laptop_box1 li a:hover, 
+.left_part .laptop_box1 li a.active { color:#2280b2;}
+.left_part .laptop_box1 li.last { background:none;}
+.left_part .laptop_box1 h1 { color:#207baf;}
+
+.right_part .winkelwagen { width:100%; float:left; padding-top:12px; }
+.winkelwagen .Product_top { width:630px; padding:0 10px 0 10px; float:left; text-align:left;  overflow:hidden; background-color:#000;}
+.Product_top .productcode,.Product_bot {width:630px; padding:0 10px 0 10px; float:left; text-align:left;  overflow:hidden; background-color:#000; padding-right:0px;}
+.Product_top .productcode,.Product_bot .productcode { width:100px; float:left; text-align:left;  overflow:hidden; border-right:1px solid #333; }
+.Product_top .artikel,.Product_bot .artikel {  width:180px; padding-left:10px; float:left; text-align:left;  overflow:hidden; border-right:1px solid #333; }
+.Product_top .prijs_per,.Product_bot .prijs_per {width:150px; float:left; text-indent:5px; text-align:right;  overflow:hidden; border-right:1px solid #333;}
+.Product_top .aantal,.Product_bot .aantal { width:70px; float:left;  text-align:right; overflow:hidden; border-right:1px solid #333;  }
+.Product_top .prijs,.Product_bot .prijs { width:90px; float:left;  text-align:right;   }
+.Product_top .prijs_per1 {  width:159px; float:left; text-align:center; padding-right:10px; }
+.Product_top .prijs1 { width:55px; float:left; text-align:right; }
+.Product_top .prijs_per1 p,.Product_top .prijs1 p { font-weight:bold !important;}
+.winkelwagen .Product_top p { color:#fff; padding:8px 0px; margin-right:10px;}
+
+.winkelwagen .Product_bot { width:610px; padding:0 20px 0 20px; float:left; background:#484747;  border:1px solid #333;}
+.winkelwagen .Product_bot p { font-size:12px; color:#fff; padding:8px 0; margin-right:10px;}
+.winkelwagen .Product_bot .prijs p{ text-align:right;}
+.Product_bot .aantal input { width:18px; float:left; background:url(../img/input.png) no-repeat left top; border:none; line-height:18px; height:18px; text-align:center; margin-top:5px;}
+.Product_bot .aantal img { margin-top:5px;}
+.winkelwagen .Product_bot .tx_right { text-align:right; width:100%;}
+.winkelwagen .no_bg { background:none;}
+
+.winkelwagen .aftekenen { width:auto; float:left; clear:both; padding:0; padding-top:20px; margin:0;}
+
+#content_part .top_padd { padding-top:19px;}
+
+
+
+
+
+/*============================winkelwagen_page_and_here==============================================*/
+
+#cart-overzicht {
+	width:650px;
+	padding:10px;
+	margin:0;
+	background-color:#484747;
+	font-size:12px;
+	}
+	
+#cart-overzicht td {
+	padding:10px;
+	border-right:1px solid #333;
+	
+	}
+	
+#cart-overzicht tr {
+	border-bottom:1px solid #333;
+	
+	}
+
+#cart-overzicht thead{
+	background-color:#000;
+	color:#a3b137;
+	font-weight:bold;	
+	}
+
+#cart-overzicht tfoot{
+	background-color:#000;
+	color:#a3b137;
+	font-weight:bold;	
+	}
+
+#cart-overzicht .total{
+	color:#A3B137;
+	
+	}
+	
+	
+#buttons{
+	display:block;
+	width:700px;
+	height:40px;
+	margin:15px 0 15px 0;	
+	}
+
+.button_left{
+	float:left!IMPORTANT;
+	width: 160px;
+	margin:0 20px 0 0px;
+	padding: 5px;
+	 background-color: #a3b137!important;
+    border-radius: 5px 5px 5px 5px;
+    color: #333333 !important;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+	}
+
+.button_right{
+	float:left!IMPORTANT;
+	width: 160px;
+	margin:0;
+	padding: 5px;
+	background-color: #a3b137!important;
+    border-radius: 5px 5px 5px 5px;
+    color: #333333 !important;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+	}
+
+
+/*============================wstap1_page_start_here============================================*/
+#loginform a{text-decoration:underline;color:white;}
+#loginform a#reset-open{display:inline-block;padding:5px;border-radius:5px;}
+#loginform a#reset-open.blinkcolor{border:1px solid #1f79ae;color:white;background:#2281b3;}
+#loginform a:hover{text-decoration:none;}
+
+.content .left_form { width:610px; float:left; background-color:#484747; padding:20px;}
+.paymethod { width:610px; float:left; background-color:#484747; padding:20px;}
+.content .right_form { width:260px; float:right; background:f6f6f6; border:1px solid #e0e0e0; padding:12px 14px 15px 17px;}
+.content .right_form_contact { width:260px; float:right; background:f6f6f6; border:1px solid #e0e0e0; padding:12px 14px 15px 17px; margin-top:10px;}
+
+.content .type_input { width:100%; float:left; padding:10px 0px 0px 0px; padding:8px 0px 0px 0px; margin:0px;}
+.content .type_input label { width:91px; line-height:30px; font-size:13px; float:left; margin:0px;}
+.content .type_input input, .content .type_input select { width:232px; background:#f6f6f6; border:1px solid #dfdfdf; padding:0px 5px; height:28px; line-height:28px; margin:0px;}
+ .content .type_input select{padding:0px;line-height:28px;height:28px; width:245px;}
+ .content .type_input select option{line-height:28px;padding-top:3px;}
+.content .type_input .label_wi { width:154px;}
+.content .type_input .input_wi { width:142px;}
+.content .type_wi { width:50%; *width:49%;}
+.content .type_mar { margin-left:13px !important; *margin-left:16px;}
+.content .type_input P { line-height:30px; width:auto; float:left;}
+
+.content .type_checkbox  { width:100%; float:left; padding:26px 0px 0px 0px;}
+.content .type_checkbox input[type="checkbox"] { box-sizing: border-box; vertical-align:middle; padding:0px; margin:0px; }
+.content .type_checkbox label { width:auto; line-height:18px;}
+
+.content .tab { width:100%; float:left; padding-top:20px;}
+.content .tab img { float:left;}
+.tab .verder { width:auto; }
+.tab .verder span a { 
+float:right;
+
+	text-align:center;
+	padding:5px;
+	font-size:12px;
+	font-weight:bold;
+	border-radius:5px;
+	color:#333!IMPORTANT;
+	background-color:#a3b137;
+	text-decoration:none;	
+
+}
+ 
+.tab .padd_left { padding-left:198px;}
+.tab .padd_left1 { padding-left:186px;}
+
+.right_form .type_input input { width:60% !important;}
+.right_form .type_input label { width:35% !important;}
+.right_form h3 { font-size:13px;}
+/*============================stap1_page_and_here==============================================*/
+
+/*Checkout.html*/
+
+.left_form{
+	width:675px;
+	margin-bottom:20px;
+	
+	}
+	
+.submit_prev, .submit_bank, .submit, .create_account{
+	float:right;
+	width: 160px;
+	margin:0;
+	 padding: 5px;
+	 background-color: #a3b137!important;
+    border-radius: 5px 5px 5px 5px;
+    color: #333333 !important;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+	}
+	
+.submit_afronden{
+	float:right;
+	width: 160px;
+	margin:0;
+	 padding: 5px;
+	 background-color: #a3b137!important;
+    border-radius: 5px 5px 5px 5px;
+    color: #333333 !important;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+	}
+
+
+.content .type_radio{
+	width:100%;
+	height:30px;
+	background-color:#333;
+	border-radius:5px;
+	margin-bottom:10px;
+	padding:10px 0 10px 0!important;
+	vertical-align:center;
+	font-size:14px;
+	}
+	
+.content .type_radio{
+	width:100%;
+	height:30px;
+	background-color:#333;
+	border-radius:5px;
+	margin-bottom:10px;
+	padding:10px 0 10px 0!important;
+	vertical-align:center;
+	font-size:14px;
+	}
+
+
+/*============================stap2_page_start_here============================================*/
+.content .type_radio { width:100%; float:left; padding:20px 0px 0px 0px;}
+.content .type_radio input[type="radio"] { width:12px!important; height:12px; background:none; border:none; margin:7px 5px 0px 20px; padding:0px; vertical-align:middle;  }
+.content .type_radio label { width:auto;  font-size:13px; float:left; line-height:19px;  margin-top:4px;}
+.content .type_radio input { width:105px; float:left; border:1px solid #dddddd; background:#fff; line-height:30px; height:30px; padding:0px 10px; margin:-6px 0px 0px 18px; color:#333333;}
+.content .type_radio img { margin-top:-6px;}
+
+.right_part h4 { font-size:15px; color:#2280b3; font-family:'ArmataRegular'; letter-spacing: -1px; font-weight:normal; padding-top:8px; width:100%; float:left;}
+/*============================stap2_page_and_here==============================================*/
+
+/*============================stap5_page_start_here============================================*/
+
+.content .left_form h4 .span,.winkelwagen_slide .span,.content h4 .span a,
+.winkelwagen_slide h4 .span a { color:#a3b137!important; font:Arial, Helvetica, sans-serif; font-size:11px; text-decoration:underline; font-weight:normal;}
+.winkelwagen_slide h4 { color:#a3b137; padding-bottom:10px; text-decoration:none;}
+.winkelwagen .winkelwagen_slide { width:610px; float:left; border-top:1px solid #484747; padding:20px; background-color:#484747; margin-bottom:10px;}
+.winkelwagen .winkelwagen_slide p { padding-bottom:10px; width:100%; float:left;}
+.winkelwagen .bold { font-weight:bold;}
+
+.vorige_stop { float:left; width:auto; padding-top:20px;}
+/*============================stap5_page_and_here==============================================*/
+
+
+/*Winkelwagen
+*/
+/*checkout.html*/
+
+
+	
+a.button{
+	padding:5px;
+	font-size:12px;	
+	border-radius:5px;
+	color:#333!IMPORTANT;
+	background-color:#a3b137;
+	}
+	
+a.button:hover{
+	padding:5px;
+	font-size:12px;	
+	border-radius:5px;
+	color:#fff!IMPORTANT;
+	background-color:#333;
+	}
+	
+
+	
+.aboutcost{
+	width:700px;
+	}
+	
+.aboutcost .strong{
+	width:700px;
+	color:#a3b137;
+	}
+	
+/*login*/
+
+.right_form{
+	border-radius:5px;
+	color:#333!IMPORTANT;
+	background-color:#a3b137;
+	}
+	
+
+.right_form #fld_login{
+	padding:2px 10px 0 10px;
+	font-size:12px;	
+	border-radius:5px;
+	color:#fff!IMPORTANT;
+	background-color:#333;
+	text-decoration:none;
+	}
+
+	
+.type_input input{
+	color:#fff;
+	border:1px solid #323131!IMPORTANT;
+	background-color:#333!IMPORTANT;
+	font-size:12px;
+	height:18px;
+	
+	}
+	
+.type_input select{
+	color:#fff;
+	border:1px solid #323131!IMPORTANT;
+	background-color:#333!IMPORTANT;
+	font-size:12px;
+	height:18px;
+	padding:10px
+	}
+	
+.left_form .p_line{
+	margin-bottom:20px;	
+	}
+	
+.left_form h4{
+	
+	color:#a3b137;
+	}
+	
+
+	
+/*login.html*/
+
+#loginform{
+	
+	margin-top:5px;	
+}
+	
+#email-not-found{
+	position:absolute;
+	top:100px;
+	padding:20px 30px;
+	left:20px;
+	background-color:#333;
+	width:290px;
+	height:80px;
+	color:#fff;
+	
+	}
+
+#loginbox{
+	position:relative;
+	width:350px;
+	height:350px;
+	padding:20px;
+	background-color:#a3b137;
+	}
+	
+#loginbox .button-login{
+	width:100px;
+	text-align:center;
+	padding:5px;
+	margin:0;
+	font-size:12px;
+	font-weight:bold;
+	border-radius:5px;
+	color:#a3b137!IMPORTANT;
+	background-color:#333;
+	text-decoration:none;	
+	}
+	
+#loginbox .button-reset{
+	width:150px;
+	text-align:center;
+	padding:5px;
+	margin:0;
+	font-size:12px;
+	font-weight:bold;
+	border-radius:5px;
+	color:#a3b137!IMPORTANT;
+	background-color:#333;
+	text-decoration:none;	
+	}
+
+
+
+#accountbox{
+	width:350px;
+	height:350px;
+	padding:20px;
+	background-color:#484747;
+	}
+	
+#accountbox .button-account{
+	width:100px;
+	text-align:center;
+	padding:5px;
+	font-size:12px;
+	font-weight:bold;
+	border-radius:5px;
+	color:#333!IMPORTANT;
+	background-color:#a3b137;
+	text-decoration:none;	
+	}
+	
+	
+
+
+
+
+
+
+
+/*createaccount.html*/
+
+#createaccount{
+	width:800px;
+	height:280px;
+	background-color:#484747;
+	padding:5px 15px;
+	margin:0;
+	}
+
+#create_account_form{
+	padding:0;
+	margin:0;
+	
+	
+	}
+	
+a.create_account_btn{
+	width: 160px;
+	margin:0;
+	 padding: 5px;
+	 background-color: #a3b137!important;
+    border-radius: 5px 5px 5px 5px;
+    color: #333333 !important;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: right;
+    text-decoration: none;
+	
+	
+	}
+	
+	
+a.contact_btn{
+	width: 160px;
+	margin:0;
+	 padding: 5px;
+	 background-color: #a3b137!important;
+    border-radius: 5px 5px 5px 5px;
+    color: #333333 !important;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: right;
+    text-decoration: none;
+	
+	
+	}	
+
+.clearer{
+	height:1px;
+	clear:both;
+	
+	}
+	
+.radiobtn{
+	float:left;
+	width:20px;
+	height:20px;
+	vertical-align:middle;
+	margin-right:10px;
+	width:auto!IMPORTANT;
+	height:auto!IMPORTANT;
+		}
+
+
+
+#contactform{
+	text-align:left;
+	vertical-align:top;
+	
+	
+	}
+
+
+#contactform td{
+	padding:5px;
+	vertical-align:top;
+	
+	
+	}
+
+#frmcontact input, #frmcontact select {
+    background: none repeat scroll 0 0 #F6F6F6;
+    border: 1px solid #333333;
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0 5px;
+    width: 232px;
+}
+
+
+
+#frmcontact textarea {
+    background: none repeat scroll 0 0 #F6F6F6;
+    border: 1px solid #333333;
+    display: block;
+    height:200px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0 5px;
+    width: 400px;
+}
+
+
+

@@ -1,0 +1,31 @@
+    <if:pages.data>
+        <table style="width:95%" class="margin">
+        <tr class="rowheader">
+            <td class="iconcol">&nbsp</td>
+            <td class="iconcol">&nbsp</td>
+            <td class="iconcol">&nbsp</td>
+            <td class="iconcol">&nbsp</td>
+            <td>%[lbl_about]%</td>
+            <td>%[lbl_title]%</td>                                    
+        </tr>        
+        <for:pages.data>
+            <tr class="row%[oddeven]%">                
+                <td>
+                    <if:allow_delete value="1">
+                        <a title="Pagina verwijderen" class="delete" href="%[root]%/settings/webshop_cms.html?_do=delete&id=%[id]%&webshop_id=%[webshop_id]%"><img src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16"/></a>
+                    </if:allow_delete>
+                </td>                
+                <td><a href="%[root]%/settings/webshop_cms_edit.html?_do=edit&id=%[id]%&webshop_id=%[webshop_id]%&fk_locale=%[fk_locale]%"><img src="%[root]%/img/icons/edit-icon-16x16.png" width="16" height="16"/></a></td>                
+                <td><a href="#" title="%[lbl_moveup]%" class="move_up" data-id="%[id]%"><img src="%[root]%/img/icons/menuup-icon-16x16.png" width="16" height="16"/></a></td>                
+                <td><a href="#" title="%[lbl_movedown]%" class="move_down" data-id="%[id]%"><img src="%[root]%/img/icons/menudown-icon-16x16.png" width="16" height="16"/></a></td>                
+                <td>%[about_txt]%</td>
+                <td>%[title]%</td>                                                
+            </tr>
+        </for:pages.data>    
+        </table>    
+        <center class="paginateblock">%[pages.pages]%</center>
+            
+</if:pages.data>
+    <if:pages.data condition="is_false">
+        <div class="boldcenter">%[lbl_none_defined]%.</div>
+    </if:pages.data>

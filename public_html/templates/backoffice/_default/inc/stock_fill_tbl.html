@@ -1,0 +1,60 @@
+<if:delivery>
+    <form id="stock_fill"  onsubmit="return false">
+        <div class="searchresults">
+            <div class="searchtitle">%[lbl_product_to_be_added]%</div>
+            <div class="edit_content">
+                <table>
+                    <tr class="rowheader">
+                            <th style="width:18px;">&nbsp;</th>
+                            <th style="width:18px;">&nbsp;</th>                                                        
+                            <th><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_articlenumber]%</a></th>
+                            <th><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_articlename]%</a></th>
+                            <th><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_quantity]%</a></th>
+                            <th><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_location]%</a></th>
+                            <th><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_path]%</a></th>
+                            <th><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_rack]%</a></th>
+                            <th><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_shelf]%</a></th>                                                        
+                    </tr>
+                    <for:delivery>
+                        <tr class="row%[oddeven]%">
+                            %[configuration_id?'inline':'none']%
+                            <td><a class="iframe" title="%[lbl_viewproduct]%" href="%[root]%/products/view.html?id=%[product_id]%&iframe=1"><img src="%[root]%/img/icons/info-icon-16x16.png" height="16" width="16"/></a></td>
+                            <td><a class="delete-product" title="%[lbl_remove_product]%" rel="%[id]%" href="#"><img src="%[root]%/img/icons/delete-icon-16x16.png" height="16" width="16"/></a></td>                                                        
+                            <td>%[article_number]%</td>
+                            <td>%[article_name]%</td>
+                            <td class="center"><input style="width:30px; text-align:center;" type="text" class="quantity" name="quantity_%[id]%" value="%[quantity]%" /></td>
+                            <td class="center">
+                                <a style="display:%[configuration_id?'none':'inline']%" class="iframe unknown" title="%[lbl_select_location_for]% %[article_number]%" href="%[root]%/stock/warehouse.html?iframe=1&view=picker&addid=%[id]%&productId=%[product_id]%">%[lbl_unknown]%</a>
+                                <a style="display:%[configuration_id?'inline':'none']%" class="iframe known" title="%[lbl_select_location_for]% %[article_number]%" href="%[root]%/stock/warehouse.html?iframe=1&view=picker&addid=%[id]%&productId=%[product_id]%">%[name]%</a>
+                            </td>
+                            <td class="center">
+                                <a style="display:%[configuration_id?'none':'inline']%" class="iframe unknown" title="%[lbl_select_location_for]% %[article_number]%" href="%[root]%/stock/warehouse.html?iframe=1&view=picker&addid=%[id]%&productId=%[product_id]%">%[lbl_unknown]%</a>
+                                <a style="display:%[configuration_id?'inline':'none']%" class="iframe known" title="%[lbl_select_location_for]% %[article_number]%" href="%[root]%/stock/warehouse.html?iframe=1&view=picker&addid=%[id]%&productId=%[product_id]%">%[path]%</a>
+                            </td>
+                            <td class="center">                                
+                                <a style="display:%[configuration_id?'none':'inline']%" class="iframe unknown" title="%[lbl_select_location_for]% %[article_number]%" href="%[root]%/stock/warehouse.html?iframe=1&view=picker&addid=%[id]%&productId=%[product_id]%">%[lbl_unknown]%</a>
+                                <a style="display:%[configuration_id?'inline':'none']%" class="iframe known" title="%[lbl_select_location_for]% %[article_number]%" href="%[root]%/stock/warehouse.html?iframe=1&view=picker&addid=%[id]%&productId=%[product_id]%">%[rack]%</a>
+                            </td>                
+                            <td class="center">                                
+                                <a style="display:%[configuration_id?'none':'inline']%" class="iframe unknown" title="%[lbl_select_location_for]% %[article_number]%" href="%[root]%/stock/warehouse.html?iframe=1&view=picker&addid=%[id]%&productId=%[product_id]%">%[lbl_unknown]%</a>
+                                <a style="display:%[configuration_id?'inline':'none']%" class="iframe known" title="%[lbl_select_location_for]% %[article_number]%" href="%[root]%/stock/warehouse.html?iframe=1&view=picker&addid=%[id]%&productId=%[product_id]%">%[shelf]%</a>
+                            </td>                                                        
+                        </tr>                
+                    </for:delivery>
+                    <tr>
+                        <td><a href="%[root]%/warehouse_pdf.php?deliveryId=%[id]%&rand=%[rand]%" target="_blank"><img src="%[root]%/img/icons/logo-pdf-16x16.png" /></a></td><td colspan="9"><a href="%[root]%/warehouse_pdf.php?deliveryId=%[id]%&rand=%[rand]%" target="_blank">%[lbl_open_warehouseplan]%</a></td>
+                    </tr>
+                </table>
+                <div class="actions">
+                    <input id="fld_complete" value="%[lbl_save_delivery]%" type="submit"/>
+                    <input id="fld_delete_all" value="%[lbl_remove_all]%" type="submit" />
+                </div>
+                <div>                                    
+                    <span id="error-msg" style="display:none;">%[lbl_not_all_asigned]%</span>
+                    <span id="stored-ok" style="display:none;">%[lbl_delivery_added]%</span>
+                </div>               
+            </div>
+            <div class="clear"></div>            
+        </div>
+    </form>
+</if:delivery>            

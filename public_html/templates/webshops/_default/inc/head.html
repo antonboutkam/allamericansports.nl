@@ -1,0 +1,52 @@
+        <title>%[title_override?'%[title_override]% |':'']% All American Sports</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="%[keywords?'%[keywords]%':'baseball, softball, american football, basketball, gymnastics, sportswear, cycling, walking, running, outdoor']%">
+        <meta name="description" content="%[description?'%[description]%':'All American Sports: baseball softball american football basketball gymnastics sportswear cycling walking running outdoor']%">
+        <meta name="author" content="Aceview http://aceview.nl based on NuiCart http://nuicart.nl" />                              
+
+        <!-- 
+        <link type="text/css" rel="stylesheet" href="%[root]%/css/reset.css" /> 
+        <link type="text/css" rel="stylesheet" href="%[root]%/css/style.css" />        
+        <link type="text/css" rel="stylesheet" href="%[root]%/css/fancybox.css"/> 
+		<link type="text/css" rel="stylesheet" href="%[root]%/css/cms.css"/> 
+        -->
+        <script type="text/javascript">            
+            var host                 = "%[hostname]%";
+            var root                 = "%[root]%";
+            var lang                 = "%[lang]%";
+			
+            var request_uri          = "%[request_uri]%";
+			var current_webshop_id	 = "%[current_webshop_id]%";
+			var current_locale_id	 = "%[locale]%";
+			
+            var to_basket_on_order   = "%[webshop_settings.to_basket_on_order]%";            
+            var show_ribbon          = '%[webshop_settings.banner_show_ribbon]%';
+            var show_bullets         = '%[webshop_settings.banner_show_bullets]%';
+            var show_prevnext        = '%[webshop_settings.banner_show_prevnext]%';
+            var banner_effect        = "%[webshop_settings.banner_effect]%";
+			
+        </script>                                        
+        
+
+        <link rel="shortcut icon" type="image/x-icon" href="%[root]%/img/custom/%[hostname]%/favicon.ico" />
+        <link type="text/css" rel="stylesheet" href="%[root]%/css/allamericansports.nl/compressor.php" />
+
+		
+        <!-- <script type="text/javascript" src="%[root]%/js/jq/swfstore/swfstore.min.js"></script> -->
+        <script type="text/javascript" src="%[root]%/js/jq/libs.js"></script>             
+		<script type="text/javascript" src="%[root]%/js/webshops/cmsintegration.jquery.js"></script>    
+        <script type="text/javascript" src="%[root]%/js/webshops/main.jquery.js"></script>        
+        
+        <if:products.prev_next.next><link rel="next" href="%[products.prev_next.next]%" /></if:products.prev_next.next>
+        <if:products.prev_next.prev><link rel="prev" href="%[products.prev_next.prev]%" /></if:products.prev_next.prev>
+      
+        <if:extra_js_file>
+            <for:extra_js_file><script type="text/javascript" src="%[root]%/js/webshops/%[val]%"></script></for:extra_js_file>
+        </if:extra_js_file>
+        
+        <!--[if IE7]> <link href="%[root]%/css/allamericansports.nl/ie7.css" rel="stylesheet" type="text/css"> <![endif]-->
+        <!--[if lte IE 6]><script src="/js/ie6/warning.js"></script><script>window.onload=function(){e("js/ie6/")}</script><![endif]-->
+
+        %[webshop_settings.google_analytics]% 
+                

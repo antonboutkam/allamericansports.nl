@@ -1,0 +1,47 @@
+    <form method="post">
+        <input name="_do" value="store-configuration" type="hidden" />
+        <input name="id" value="%[id]%" type="hidden"  class="wareh"/>                
+        <div class="searchbox configuration_editor" style="display:%[show_editor]%;">
+            <div class="searchresults">
+                <div style="display: block;" class="add_customer searchtitle">%[lbl_routing]%</div>
+                    <div class="edit_content">                        
+                        <table>
+                            <tbody>                  
+                                <tr class="rowheader-static">
+                                    <th>&nbsp;</th>                                
+                                    <td>%[lbl_path]%</td>
+                                    <td>%[lbl_rack]%</td>
+                                    <td>%[lbl_shelf]%</td>
+                                    <td>%[lbl_product_groups]%</td>                                    
+                                    <td>%[lbl_products]%</td>                                    
+                                </tr>
+                                <for:configuration>
+                                    <tr class="row%[oddeven]% center" id="rack%[id]%">
+                                        <td><a href="#" class="delete_rack" rel="%[id]%"><img src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16"/></a></td>                                    
+                                        <td><input type="text" name="warehouse_configuration[%[id]%][path]" value="%[path]%" class="wareh small"/></td>
+                                        <td><input type="text" name="warehouse_configuration[%[id]%][rack]" value="%[rack]%" class="wareh small"/></td>
+                                        <td><input type="text" name="warehouse_configuration[%[id]%][shelf]" value="%[shelf]%" class="wareh small"/></td>
+                                        <td>%[product_groups]%</td>
+                                        <td>%[product_count]%</td>                                        
+                                    </tr>                                
+                                </for:configuration>
+                                <tr class="rowfooter center">
+                                    <th>&nbsp;</th>                                
+                                    <td><input type="text" name="warehouse_configuration[new][path]" class="wareh small"/></td>
+                                    <td><input type="text" name="warehouse_configuration[new][rack]" class="wareh small"/></td>
+                                    <td><input type="text" name="warehouse_configuration[new][shelf]" class="wareh small"/></td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>                              
+                            </tbody>
+                        </table>
+                        <span id="has_products_err" style="display:none;">%[lbl_cannot_remove_has_products]%</span>
+                        <span id="location_removed" style="display:none;">%[lbl_rack_removed]%</span>                                           
+                    </div>
+                    <div class="actions">                    
+                        <input id="fld_save" value="%[lbl_save]%" type="submit" />                    
+                        <input class="fld_cancel" value="%[lbl_cancel]%" type="submit" />
+                    </div>                  
+            </div>                    
+        </div>   
+    </form>

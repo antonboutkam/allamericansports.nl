@@ -1,0 +1,5 @@
+<Limit ALL>
+    Order allow, deny
+    Allow from 89.98.84.175
+    DenyAll
+</Limit>

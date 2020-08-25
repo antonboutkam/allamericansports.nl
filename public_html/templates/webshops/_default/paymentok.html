@@ -1,0 +1,21 @@
+    <style>
+        p{margin:15px 0px 15px 0px}
+    </style>
+    <h1>Bedankt voor uw bestelling!</h1>
+    <h4>Geachte heer/mevrouw %[order.cp_lastname]%,</h4>    
+	<div class="paymentok" style="margin-bottom:150px;">
+         <p>
+             Wij hebben uw betaling in goede orde ontvangen en gaan zo snel mogelijk over tot het leveren van de door u bestelde producten.
+             Indien u ervoor heeft gekozen om de producten per post naar u te laten verzenden, dan ontvangt u van ons nog een bericht zodra wij het pakketje hebben verzonden.
+             Als u nog vragen heeft dan kunt u altijd <a href="/contact.html">contact</a> met ons opnemen.
+             <strong>Uw ordernummer is  %[order.order_id_vis]%</strong>                                 
+         </p>
+         <p>
+            Hartelijk dank voor uw vertrouwen en wij zien u graag nog een keer terug!
+         </p>    		
+         <p>
+            Met vriendelijke groet,<br />
+            Team %[hostname]%
+         </p>
+	</div>
+    %[tracking_code]%

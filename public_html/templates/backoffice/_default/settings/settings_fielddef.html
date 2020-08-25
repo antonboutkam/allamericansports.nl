@@ -1,0 +1,39 @@
+    <h2>Veld defintite</h2>
+    
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="searchtitle">Product typen</div>
+                <div style="margin:10px;float:left;">
+                <form method="post">  
+                    <h2>Product type</h2>              
+                        <if:product_types>
+                            %[product_types]%<br />
+                        </if:product_types>              
+                        <input type="text" name="type" />
+                        <input type="submit" value="Gebruik toevoegen" />
+                </form>
+                </div>
+                <div style="margin:10px;float:left;">       
+                <form method="post">                       
+                    <h2>Kleuren</h2>        
+                        <if:colors>
+                            %[colors]%<br />
+                        </if:colors>                  
+                        <input type="text" name="color" />
+                        <input type="submit" value="Kleur toevoegen" />
+                </form>                        
+                </div>
+                <div style="margin:10px;float:left;">       
+                <form method="post">                       
+                    <h2>Gebruik</h2>        
+                        <if:usages>
+                            %[usages]%<br />
+                        </if:usages>                  
+                        <input type="text" name="usage" />
+                        <input type="submit" value="Gebruik toevoegen" />
+                </form>                        
+                </div>                                                                                                
+                <div class="clear"></div>                
+            </div>
+        </div>
+    

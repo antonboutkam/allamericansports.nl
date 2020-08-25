@@ -1,0 +1,26 @@
+            <div class="searchbox">
+                <div class="searchresults">
+                    <div class="add_customer searchtitle">Gebruiken</div>       
+                      <div class="edit_content">            
+                        <div style="display:%[id=new?'none':'block']%;" class="edit_content colorlist">
+                            <if:product_usages>
+                                <for:product_usages>
+                                    <span>%[type]%<a href="#" class="removeproductusage" data-usageid="%[fk_usage]%"><img src="/img/icons/delete-icon-16x16.png" width="10" height="10" /></a></span>
+                                </for:product_usages>
+                                <br /><br />
+                            </if:product_usages>
+                            <select id="usagefld">
+                                <option value="">Kies een gebruik</option>
+                                <for:usages>
+                                    <option value="%[id]%">%[type]%</option>
+                                </for:usages>                                                            
+                            </select>
+                            <a href="#" class="addusage"><img style="vertical-align:baseline!important;" src="/img/icons/add-1-icon-16x16.png" /></a>
+                            <a href="#" class="addusage">Gebruik toevoegen</a>
+                            <a href="/settings/fielddef.html" target="_blank">(Gebruiken instellen)</a>
+                        </div>                                                                
+                        <center style="display:%[id=new?'block':'none']%;" >U kunt pas gebruiken instellen als het product is opgeslagen</center>        
+                        </div>                               
+                </div>
+            </div>
+            

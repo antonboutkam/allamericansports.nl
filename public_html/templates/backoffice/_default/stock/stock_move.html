@@ -1,0 +1,77 @@
+<h2>%[lbl_move_stock]%</h2>
+<form>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">%[lbl_move_stock]%</div>
+            <div class="edit_content">
+                %[lbl_from_location]%:                
+                <select class="update" id="from_location" val="%[from_location]%">
+                    <for:locations>
+                        <option value="%[id]%">%[name]%</option>
+                    </for:locations>
+                </select>
+                %[lbl_to_location]%:                
+                <select class="update" id="to_location" val="%[to_location]%">
+                    %[locations_to]%
+                </select>
+                <hr>
+                Filter: <input type="text" class="update"  title="(artikelnummer, productnaam, omschrijving)" value="(artikelnummer, productnaam, omschrijving)" id="filter" style="width:400px;" />
+            </div>
+            <div class="clear"></div>            
+        </div>
+    </div>
+    <div class="searchbox">
+            <div class="searchresults" id="product_move_table">
+                %[product_move_table]%
+                </div>
+            <div class="clear"></div>
+    </div>
+    <div class="searchbox">
+            <div class="searchresults" id="product_move_table">
+                <div class="searchtitle">Boodschappenlijstje</div>
+                    <div  style="margin:15px;height:150px; overflow-y: scroll; overflow-x: hidden">
+                        <table style="width:800px; display:none;" id="shoppinglist">
+                            <tr class="rowheader">
+                                <th style="width:16px;">&nbsp;</th>
+                                <th style="width:16px;">&nbsp;</th>
+                                <th style="width:300px;"><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_articlenumber]%</a></th>
+                                <th style="width:20px;"><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">Pad</a></th>
+                                <th style="width:20px;"><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">Rek</a></th>
+                                <th style="width:20px;"><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">Plank</a></th>
+                                <th style="width:180px;"><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%"># %[from_location_name]%</a></th>
+                                <th style="width:180px;"><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%"># %[to_location_name]%</a></th>
+                                <th style="width:180px;" class="center"><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">Aantal verplaatsen</a></th>
+                            </tr>                            
+                       </table>
+                       <center id="empty_shoppinglist">Selecteer producten uit de lijst hierboven om te verplaatsen</center>
+                    </div>
+                </div>
+            <div class="clear"></div>
+    </div>
+    <div class="searchbox">
+        <div class="searchresults" style="padding: 2px;">
+            <div class="searchtitle" style="margin: 0pt;">%[lbl_roundup]%</div>
+                <div class="searchresults">
+                    <div style="padding: 30px;">
+                        <center>
+                            <input style="background-color: rgb(136, 210, 30); padding: 5px; color: white;" id="reserve" value="%[lbl_reserve_stock]%" type="submit">
+                            <input style="background-color: rgb(200, 42, 52); padding: 5px; color: white;" id="cancel" value="%[lbl_cancel]%" type="submit">
+                        </center>
+                    </div>
+
+                </div>
+                <div class="errors" style="display:none">
+
+                    <p style="display:none;" id="err_nan">%[lbl_non_numeric]%</p>
+                    <p style="display:none;" id="err_tomany">%[lbl_err_to_many]%</p>
+                    
+                    <p style="display:none;" id="err_fromisto">%[lbl_not_same_location]%.</p>
+
+                </div>
+                <div id="directly_pack" style="display:none">%[lbl_prepare_move]%</div>
+                <div id="ontheway_note" style="display:none">Internal delivery on the way, click <a href="%[root]%/stock/process.html">here</a> to process.</div>
+                <div id="reserved" style="display:none">%[lbl_stock_reserved]%</div>
+                <div id="ordernoitems" style="display:none">%[lbl_stock_no_items]%</div>
+        </div>
+    </div>
+</form>

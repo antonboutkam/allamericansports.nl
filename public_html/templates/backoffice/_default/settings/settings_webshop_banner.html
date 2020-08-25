@@ -1,0 +1,88 @@
+<form method="post" enctype="multipart/form-data">
+<input type="hidden" id="fld_webshop_id" name="webshop_id" value="%[webshop_id]%" />
+<input type="hidden"  name="banner[id]" value="%[banner.id]%" />
+<h2>Frontpage banner aanpassen</h2>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Slides</div>
+            <div style="margin:10px;">
+                <if:banner_items>
+                    <p>Gebruik drag & drop om de volgorde van de afbeeldingen te wijzigen.</p>
+                    <div class="bannerimgcont">
+                    <for:banner_items>                        
+                        <div class="banner_thumb" id="bitem%[id]%" style="background:url('%[root]%/img/banner/adapt.php?file=%[webshop]%/%[id]%.jpg&w=180&h=100') no-repeat;">
+                            <a title="Slide verwijderen" class="delete" href="%[root]%/settings/webshop_banner.html?webshop_id=%[webshop_id]%&_do=delete&id=%[id]%"></a>
+                            <a title="Slide aanpassen" class="edit" href="%[root]%/settings/webshop_banner.html?webshop_id=%[webshop_id]%&id=%[id]%"></a>                            
+                        </div>                                                                        
+                    </for:banner_items>    
+                    <div class="clear"></div>
+                    </div>
+                </if:banner_items>               
+                <if:banner_items condition="is_false">
+                    <center>Er is voor deze webshop nog geen sliding banner gedefinieerd.</center>
+                </if:banner_items>                                   
+            </div>
+        </div>
+    </div>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Slide toevoegen</div>
+            <div style="margin:10px;">
+                <table>
+                    <tr>
+                        <td>Afbeelding <strong style="color:blue">(U moet deze zelf bijknippen: 694x/266px, bij voorkeur *.png bestanden gebruiken)</strong></td>
+                        <td><input type="file" name="file" /></td>
+                    </tr>                    
+                    <tr>
+                        <td>Afbeelding alt titel (voor seo)</td>
+                        <td><input type="text" name="banner[image_alt]"  value="%[banner.image_alt]%"/></td>
+                    </tr>                    
+                    <tr>
+                        <td>Link titel (voor seo / tooltip)</td>
+                        <td><input type="text" name="banner[link_title]"  value="%[banner.link_title]%"/></td>
+                    </tr>                    
+                    <tr>
+                        <td>Url na aanklikken van de slide</td>
+                        <td><input type="text" name="banner[click_url]"  value="%[banner.click_url]%" /></td>
+                    </tr>
+                    <tr>
+                        <td>Link openen in</td>
+                        <td>
+                            <select name="banner[target]" val="%[banner.target]%">                                
+                                <option value="_self">Huidig venster</option>
+                                <option value="_blank">Nieuw venster</option>
+                            </select>                                
+                        </td>
+                    </tr>    
+                    <tr>                    
+                        <td colspan="2">Overlay tekst</td>
+                    </tr>
+                    <tr>                        
+                        <td colspan="2"><textarea style="width:100%;height:120px" name="banner[overlaytext]">%[banner.overlaytext]%</textarea></td>
+                    </tr>
+                    <tr>                    
+                        <td colspan="2">Overlay tekst engels</td>
+                    </tr>
+                    <tr>                        
+                        <td colspan="2"><textarea style="width:100%;height:120px" name="banner[overlaytext_en]">%[banner.overlaytext_en]%</textarea></td>
+                    </tr>                    
+                                                                                                                      
+                </table>
+                <input type="hidden" name="banner[order]" value="%[banner.order]%" />
+                <input type="hidden" name="banner[id]" value="%[banner.id]%" />
+                <input type="hidden" name="_do" value="store" />
+                <input type="hidden" id="fld_webshop_id" name="banner[webshop_id]" value="%[webshop_id]%" />
+                
+                <input type="submit" value="%[id?'Bewerken':'Toevoegen']%" />
+                <script type="text/javascript">
+                    function redirectNew(){
+                        window.location='/settings/webshop_banner.html?webshop_id=%[webshop_id]%';
+                    }
+                </script>
+                <input type="button" value="Cancel" onclick="redirectNew()" />                                
+                
+            </div>
+        </div>
+    </div>
+</form>
+<div id="delete-sure" style="display:none">Weet u zeker dat u dit item wilt verwijderen?</div>

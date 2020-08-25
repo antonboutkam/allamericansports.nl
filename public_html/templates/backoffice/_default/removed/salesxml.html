@@ -1,0 +1,17 @@
+<graph caption="Verkoop cijfers %[period]%" numdivlines="4" lineThickness="3" showValues="0" numVDivLines="10" formatNumberScale="1" rotateNames="0" decimalPrecision="1" anchorRadius="2" anchorBgAlpha="0" numberPrefix="Euro " divLineAlpha="30" showAlternateHGridColor="1" yAxisMinValue="800000" shadowAlpha="50">
+    <categories>
+        <for:data>
+                <category Name="%[period]%"/>
+        </for:data>
+    </categories>
+    <dataset seriesName="Omzet" color="A66EDD" anchorBorderColor="A66EDD" anchorRadius="4">
+        <for:data>
+                <set value="%[turnover]%"/>                
+        </for:data>    
+    </dataset>
+    <dataset seriesName="Bruto winst" color="F6BD0F" anchorBorderColor="F6BD0F" anchorRadius="4">
+        <for:data>
+                <set value="%[bruto_profit]%"/>                
+        </for:data>  
+    </dataset>
+</graph>

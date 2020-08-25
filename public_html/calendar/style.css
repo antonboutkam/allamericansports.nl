@@ -1,0 +1,188 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px;
+}
+
+#header {
+	width: 850px;
+	height: 70px;
+	margin: 0px auto;
+	background: url('images/logo.jpg') no-repeat center left;
+}
+
+#content {
+	margin: 0px auto;
+	width: 850px;
+	position: relative;
+	top: -30px;
+	background-color: white;
+	border: 1px solid black;
+}
+
+#canvas {
+	position: relative;
+	top: -1px;
+	left: -15px;
+}
+
+#menu {
+	background-color: white;
+	width: 850px;
+	margin: 0px auto;
+	font-size: 13px;
+	border: 1px solid black;
+	height: 60px;
+}
+
+#map {
+	width: 400px;
+	margin: 0px auto;
+}
+
+table.menu {
+	width: 100%;	
+	border-collapse: collapse;
+}
+
+.item {
+	text-align: center;
+	width: 225px;
+}
+
+.item-done {
+	background: #890889;
+	text-align: center;
+	width: 225px;
+	color: white;
+}
+
+.item-on {
+	text-align: center;
+	color: white;
+	width: 225px;
+}
+
+.text {
+	width: 360px;
+	padding: 10px;
+	font-size: 14px;
+	text-align: justify;
+}
+
+.table {
+	width:350px;
+	margin: 0px auto;
+	border: 1px solid gray;
+	border-collapse: collapse;
+	color: black;
+}
+
+.row {
+	height: 33px;
+	background-color: #F1F0FF;
+	padding: 10px;
+	font-weight: bold;
+	border: 1px solid gray;
+	text-align: center;
+}
+
+.rowh {
+	height: 30px;
+	background-color: #444;
+	color: white;
+	font-weight: bold;
+	border: 1px solid gray;
+	text-align: center;
+}
+
+.vragen {
+	width: 820px;
+	margin: 0px auto;
+	color: #727272;
+	font-size: 12px;
+	border: 0px;
+	text-align: right;
+}
+
+.vragen a{
+	color: #727272;
+	text-decoration: none;
+}
+
+.vragen a:hover{
+	color: #727272;
+	text-decoration: underline;
+}
+
+#split {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#left {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	width: 400px;	
+	background: white;
+	color: black;
+	padding: 10px;
+	height: 500px;
+}
+
+#right_1 {
+	background: url('images/UA_shoes.jpg') no-repeat center right;
+}
+
+#right_2 {
+	background: url('images/vest.jpg') no-repeat center right;	
+}
+
+#right_3 {
+	background: url('images/turnpak.jpg') no-repeat center right;	
+}
+
+#right_4 {
+	background: url('images/knuppels.jpg') no-repeat center right;	
+}
+
+#left a{
+	color: black;	
+}
+
+#left a:hover{
+	color: black;
+	text-decoration: underline;
+}
+
+#footer {
+	padding: 10px ;
+	background-color: rgba(136, 8, 136, 1);
+	width: 830px;
+	margin: 0px auto;
+	font-size: 18px;
+	height: 18px;
+	color: white;
+	font-weight: bold;
+}
+
+.footer_table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.footer_td {
+	vertical-align: top;
+	width: 20%;
+}
+
+#footer a{
+	color: black;
+	text-decoration: none;
+}
+
+#footer a:hover{
+	color: black;
+	text-decoration: underline;
+}

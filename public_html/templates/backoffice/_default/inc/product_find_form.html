@@ -1,0 +1,26 @@
+
+                <table>        
+                    <tr>
+                        <td>&nbsp;</td><td>%[lbl_article_property]%</td><td>%[lbl_barcode]%</td>
+                    </tr>
+                    <tr>
+                        <td></td>    
+                        <td>
+                            <input type="text" id="fld_article_property" name="article_property" />
+                            <a id="add_product" style="display:none;" title="%[lbl_add_product]%" rel="" href="#"><img src="%[root]%/img/icons/add-1-icon-16x16.png" alt="Add icon" height="16" width="16"/></a>
+                            <a id="show_product" style="display:none;" class="iframe" title="%[lbl_view_product]%" href="%[root]%/product_view.html?id=000&amp;iframe=1"><img src="%[root]%/img/icons/info-icon-16x16.png" alt="Add icon" height="16" width="16"/></a>
+                            <span style="display:none;" id="row-count-cnt">
+                                <a title="%[lbl_find_article]%" class="iframe" href="%[root]%/products/catalogue.html?iframe=1&amp;view=picker&amp;showwostock=%[showwostock?'true':'false]%"><img src="%[root]%/img/icons/find-icon-16x16.png" alt="Find icon" width="16" height="16"/></a>
+                                <a title="%[lbl_display_results]%" class="iframe" id="detail-search" href="%[root]%/products/catalogue.html?iframe=1&amp;view=picker&amp;showwostock=%[showwostock?'true':'false]%"><span id="row-count"></span> %[lbl_results_found]%</a>
+                            </span>
+                        </td> 
+                        <td><input type="text" name="barcode" id="fld_barcode" /></td> 
+                        <td></td>
+                    </tr>                                  
+                </table>
+                <p style="font-size:11px;">
+                    <a title="%[lbl_find_article]%" class="iframe" href="%[root]%/products/catalogue.html?iframe=1&amp;view=picker&amp;showwostock=%[showwostock?'true':'false]%"><img src="%[root]%/img/icons/find-icon-16x16.png" alt="Find icon" width="16" height="16"/></a>
+                    <a title="%[lbl_find_article]%" class="iframe" href="%[root]%/products/catalogue.html?iframe=1&amp;view=picker&amp;showwostock=%[showwostock?'true':'false]%">%[lbl_find_article]%</a>
+                    <a title="%[lbl_add_product]%" class="iframe" href="%[root]%/products/edit.html?id=new&amp;iframe=1&amp;view=stock_fill"><img src="%[root]%/img/icons/add-1-icon-16x16.png" alt="Add icon" width="16" height="16"/></a>
+                    <a title="%[lbl_add_product]%" class="iframe" href="%[root]%/products/edit.html?id=new&amp;iframe=1&amp;view=stock_fill">%[lbl_add_product]%</a>
+                </p>  

@@ -1,0 +1,53 @@
+<div class="hmddleProduct">           
+      <div id="login">
+        <h1>%[transl_signuporcreate]%</h1>
+        <if:login_failed>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    alert('%[transl_please_provide_valid]%');                        
+                });
+                
+            </script>        
+        </if:login_failed>       
+        <div id="loginbox" class="round-bg">
+          <h1>%[lbl_registeredclients]%</h1>
+          <form method="post" id="loginform">
+          <div id="login-screen">
+            <p>%[transl_alreadyhaveanaccount]%</p>
+            <input type="hidden" name="_do" value="login"/>
+            <input type="hidden" name="r" value="%[r]%" />
+            <label class="lvl">%[transl_email]%:<span>*</span></label>
+            <input tabindex="1" autocomplete="off" type="text" id="fld-eml" name="emailaddr" value="" class="txtfld" /><br/>
+            <label class="lvl">%[transl_password]%:<span>*</span></label>
+            <input tabindex="2" autocomplete="off" id="fld-password" type="password" name="password" class="txtfld" />
+            <br />              
+
+            <a tabindex="5" class="button-login" id="fld_login" href="#">%[transl_signin]%</a><br />
+            <span>* %[transl_mandatory]%</span><br />
+           <a href="#" id="reset-open" class="change-pwd">%[transl_forgotpass]%</a> 
+          </div>
+         	 </form>
+           <form method="post">  <div id="reset-screen" style="display:none;">%[transl_fillbelow]%<br />
+            <br />
+            <label class="lvl">%[transl_email]%:</label>
+            <input style="width:180px;" autocomplete="off" id="fld_forgot_email" type="text" name="email" class="txtfld" />
+            <br />
+            <a href="#" id="reset" class="button-reset button wide button-account">%[transl_resetpass]%</a><br /><br />            
+           
+            <div style="float:left;"><a id="login-open" href="#" class="change-pwd">%[transl_loginagain]%</a></div>
+            <div class="cl"></div>
+            <span id="email-not-found" style="display:none;">%[transl_oops]%<br />
+                %[transl_notinourdb]%</span> 
+            <span id="succes" style="display:none;">%[transl_sendbyemail]%</span> </div></form> 
+        </div>    
+         
+      </div>
+    <div id="accountbox" class="round-bg">
+      
+      <h1>%[transl_newclients]%</h1>
+      %[transl_bycreatinganaccount]%
+      <br />
+      <br />
+      <p><a class="button-account" href="%[root]%/%[lang]%/createaccount.html">%[transl_createaccount]%</a></p>      
+    </div>         
+</div>

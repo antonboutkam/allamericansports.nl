@@ -1,0 +1,36 @@
+
+<form method="post" id="onestepform" action="%[root]%/checkout.html">
+  <input type="hidden" id="pmethodfld" name="paymethod" value="%[paymethod]%" />
+  <h1>Afrekenen</h1>
+  <h4>Stap 3: Betaalmethode</h4>
+  <br />
+  <div class="content paymethod">
+    <for:paymethods>
+      <div class="type_radio">
+        <input type="radio" name="pmethod" id="paymethod%[id]%" %[paymethod=%[id]%?'checked="checked"':'']% class="radio paymethod checkbox" value="%[id]%" />
+        <label for="paymethod%[id]%">%[name]%
+          <if:price_type value="free">(gratis)</if:price_type>
+          <if:price_type value="percentage">(%[price_amount]%% transactiekosten)</if:price_type>
+          <if:price_type value="fixed_amount">(&euro; %[price_amount]% transactiekosten)</if:price_type>
+        </label>
+        &nbsp;
+        <if:id value="1">
+          <select id="paybank" name="payment[bank]" style="display:%[paymethod=1?'inline':'none']%; width:110px;">
+            <option value="">kies uw bank</option>
+            <for:ideal_banks>
+              <option value="%[id]%">%[value]%</option>
+            </for:ideal_banks>
+          </select>
+        </if:id>
+      </div>
+    </for:paymethods>
+    <div class="tab">
+      <div><a href="/checkout.html?clear=asked_add_wire"><img src="images/vorige.png" alt="" /></a></div>
+      <div class="verder padd_left">
+        <div><img src="images/verder_left.png" alt="" /></div>
+        <a class="submit_bank" href="#">Verder naar Stap 4</a>
+        <div><img src="images/verder_right.png" alt="" /></div>
+      </div>
+    </div>
+  </div>
+</form>

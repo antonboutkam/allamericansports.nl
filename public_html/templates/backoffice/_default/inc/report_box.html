@@ -1,0 +1,55 @@
+<form method="post" id="mutations_form">
+<div class="searchbox">
+    <div class="searchresults">
+        <div class="searchtitle">%[lbl_reports]%</div>
+        <div style="margin:10px;">             
+            <div style="width:400px; float:left;">
+                <table style="float:left; width:150px;">
+                    <tr><td colspan="2"><h2>%[lbl_grouping]%</h2></td></tr>
+                    <tr><td><input type="radio" name="type" class="checkbox mutations radio_type" value="turnover" checked="checked" /></td><td>%[lbl_turnover_brutoprofit]%</td></tr>
+                    <tr><td><input type="radio" name="type" class="checkbox mutations radio_type" value="staff" /></td><td>%[lbl_staff]%</td></tr>
+                    <tr><td><input type="radio" name="type" class="checkbox mutations radio_type" value="location" /></td><td>%[lbl_location]%</td></tr>
+                </table>
+   
+                <div class="clear"></div>
+                <table>
+                    <tr><!-- <td>%[lbl_location]%</td> --><td>%[lbl_year]%</td><td>%[lbl_month]%</td><td>%[lbl_day]%</td></tr>
+                    <tr>
+                        <!--                                 
+                        <td>
+                            <select id="fld_location" class="mutations">
+                                <option value="">%[lbl_alllocations]%</option>
+                                <for:locations>
+                                    <option "%[location=%[id]%?'selected="selected"':'']%" class="%[location=%[id]%?'selected="selected"':'']%" value="%[id]%">%[name]%</option>
+                                </for:locations>                                        
+                            </select>
+                        </td>
+                        -->
+                        <td>
+                            <select id="fld_year" val="%[year]%" class="mutations">
+                                <for:years>
+                                    <option>%[num]%</option>
+                                </for:years>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="fld_month" val="%[month]%" class="mutations">
+                                <option value="" selected="selected">%[lbl_choosamonth]%</option>
+                                <for:months>
+                                    <option value="%[num]%">%[desc]%</option>
+                                </for:months>
+                            </select>                                
+                        </td> 
+
+                        <td>                                    
+                            <select id="fld_day" class="mutations"><option>%[lbl_loading]%</option></select>                                    
+                        </td>
+                                                                                                                       
+                    </tr>
+                </table>  
+            </div>                      
+            <div class="clear"></div>                                              
+        </div>
+    </div>
+</div> 
+</form>

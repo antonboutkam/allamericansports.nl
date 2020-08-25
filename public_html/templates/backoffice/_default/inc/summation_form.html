@@ -1,0 +1,51 @@
+<div id="summationform" style="display:none">    
+    <div class="searchbox">    
+        <div class="searchresults" style="padding:2px;">
+            <div class="searchtitle" style="margin:0;">Aanmaning sturen</div>
+            <div style="padding: 30px;">
+                <input class="summation" type="hidden" name="orderid" value="%[orderid]%" />
+                <input class="summation" type="hidden" name="_do" value="sendsummation" />
+                <input class="summation" type="hidden" name="type" value="summate" />
+                <table>                
+                    <tr><td>Aan:</td><td><input class="summation" type="text" name="to" value="%[email]%" /></td></tr>
+                    <tr><td>Van:</td><td><input class="summation" type="text" name="from" value="info@blueturban.nl" /></td></tr>
+                    <tr><td>Onderwerp:</td><td><input class="summation" type="text" name="subject" value="Betalingsherinnering order %[order_id_vis]%" /></td></tr>
+                    <tr><td>Bijlage:</td><td><a target="_blank" href="%[root]%/bill_pdf.php?orderid=%[orderid]%&rand=%[rand]%&type=summate">Aanmaning</a></td></tr>
+                </table>
+                <hr />
+                <center>             
+                    <textarea style="width:95%; height:300px;" class="summation" name="content">
+Geachte %[sallutation=dhr?'heer':'mevrouw']% %[cp_lastname]%,
+
+Wij attenderen u erop dat de betalingstermijn van onze factuur met factuurnummer %[order_id_vis]% verstreken is. Helaas hebben wij nog geen betaling van u mogen ontvangen. Wellicht is de factuur aan uw aandacht ontsnapt.
+
+Wij willen u verzoeken het openstaande bedrag binnen 7 dagen na dagtekening van deze brief aan ons over te maken op rekeningnummer xxxx. Wij hebben een kopie van de betreffende factuur meegestuurd.
+
+Indien dit schrijven uw betaling heeft gekruist kunt u deze herinnering als niet verzonden beschouwen
+
+Met vriendelijke groet,
+The Blue Turban
+
+Rama Takshak
+Directeur
+
+Bijlage: Factuur     
+                    </textarea>                            
+                </center>
+            </div>                 
+        </div>
+    </div>
+    
+    <div class="searchbox">    
+        <div class="searchresults" style="padding:2px;">
+            <div class="searchtitle" style="margin:0;">Betaalstatus</div>
+            <div style="padding: 30px;">
+                <center>             
+                    <input style="background-color: rgb(136, 210, 30); padding: 5px; color: white;" id="sendsummation" value="Versturen" type="submit" />
+                    <input style="background-color: rgb(208, 88, 19); padding: 5px; color: white;" id="cancelsend" value="Annuleren" type="submit" />
+                    <!-- <input style="background-color: rgb(200, 42, 52); padding: 5px; color: white;" id="notpaid" value="Betaald niet" type="submit" /> -->
+                </center>
+            </div>                 
+        </div>
+    </div>    
+</div>        

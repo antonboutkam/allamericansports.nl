@@ -1,0 +1,168 @@
+<form method="post">
+<input type="hidden" name="webshop_id" value="%[webshop_id]%" />
+<input type="hidden" name="_do" value="save" />
+<h2>Webshop configuratie (voor webshop: %[shopname]%)</h2>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Instellingen</div>
+            <div style="margin:10px;">
+                <table id="webshop_settings_tbl">
+                    <tr>
+                        <td colspan="2">
+                            <a class="toggler close" data-section="bedrijfsinfo" href="#">Bedrijfsinformatie</a>
+                        </td>
+                    </tr>
+                    <tr class="bedrijfsinfo">
+                        <td>Webshop bedrijfsnaam</td>
+                        <td><input name="setting[company_name]" value="%[company_name]%" type="text" /></td>
+                    </tr>
+                    <tr class="bedrijfsinfo">
+                        <td>Factuurtitel</td>
+                        <td><input name="setting[bill_title]" value="%[bill_title]%" type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a class="toggler close" data-section="emailsettings" href="#">E-mail instellingen</a></td>
+                    </tr> 
+                                       
+                        <tr class="emailsettings">
+                            <td>Contact e-mail adres</td>
+                            <td><input name="setting[contact_email]" value="%[contact_email]%" type="text" /></td>
+                        </tr>
+                        <tr class="emailsettings">
+                            <td>Mailing afzender e-mail adres</td>
+                            <td><input name="setting[mailing_email]" value="%[mailing_email]%" type="text" /></td>
+                        </tr>
+                        <tr class="emailsettings">
+                            <td>Review moderatie e-mail adres</td>
+                            <td><input name="setting[moderation_email]" value="%[moderation_email]%" type="text" /></td>
+                        </tr>
+                        <tr class="emailsettings">
+                            <td>
+                                    <a href="#" class="tipsy" title="Indien aangevinkt ontvangt u een kopie van iedere e-mail die het systeem verzend bij het plaatsen van een order"><img src="/img/icons/help-icon-16x16.png" /></a> 
+                                    CC order e-mail berichten</td>
+                            <td>
+                                <input name="setting[cc_ordermail]" type="hidden" value="0" />
+                                <input name="setting[cc_ordermail]" type="checkbox" value="1" %[cc_ordermail?'checked="checked"':'']% />
+                            </td>
+                        </tr>                                             
+                        <tr class="emailsettings">
+                            <td>
+                                <a href="#" class="tipsy" title="Het e-mailadres waarop u een kopie van de order e-mail wenst te ontvangen"><img src="/img/icons/help-icon-16x16.png" /></a>
+                                CC order e-mail adres
+                            </td>
+                            <td><input name="setting[cc_ordermailaddress]" value="%[cc_ordermailaddress]%" type="text" /></td>
+                        </tr>                        
+                    <tr>
+                        <td colspan="2"><a class="toggler close" data-section="designsettings" href="#">Design instellingen</a></td>
+                    </tr>                       
+                    <tr class="designsettings">
+                        <td>Mailing footer kleur</td>
+                        <td><input name="setting[mailing_color]" value="%[mailing_color]%" type="text" /></td>
+                    </tr>       
+                    <tr class="designsettings">
+                        <td>Mailing footer tekst kleur</td>
+                        <td><input name="setting[mailing_txt_color]" value="%[mailing_txt_color]%" type="text" /></td>
+                    </tr>                                       
+                    <tr>
+                        <td colspan="2"><a class="toggler close" data-section="contactsetting" href="#">Contact instellingen</a></td>
+                    </tr>                                        
+                    <tr class="contactsetting">
+                        <td>Contact straat</td>
+                        <td><input name="setting[contact_street]" value="%[contact_street]%" type="text" /></td>
+                    </tr>
+                    <tr class="contactsetting">
+                        <td>Contact postbus / postcode</td>
+                        <td><input name="setting[contact_zip]" value="%[contact_zip]%" type="text" /></td>
+                    </tr>                       
+                    <tr class="contactsetting">
+                        <td>Contact telefoonnummer</td>
+                        <td><input name="setting[contact_phone]" value="%[contact_phone]%" type="text" /></td>
+                    </tr>   
+                    <tr class="contactsetting">
+                        <td>Stad / plaats</td>
+                        <td><input name="setting[contact_city]" value="%[contact_city]%" type="text" /></td>
+                    </tr>          
+                    <tr class="contactsetting">
+                        <td>Twitter link</td>
+                        <td><input name="setting[twitter_link]" value="%[twitter_link]%" type="text" /></td>
+                    </tr>  
+					<tr class="contactsetting">
+                        <td>Facebook link</td>
+                        <td><input name="setting[facebook_link]" value="%[facebook_link]%" type="text" /></td>
+                    </tr>
+                    
+                    <!-- Footer menu -->
+                    <tr>
+                        <td colspan="2"><a class="toggler close" data-section="footermenusetting" href="#">Footer menu (Merken)</a></td>
+                    </tr>                          
+                    <tr class="footermenusetting">
+                        <td>1e link</td>
+                        <td><input name="setting[footer_1_link]" value="%[footer_1_link]%" type="text" value="%[footer_1_link]%" /> &nbsp; <input name="setting[footer_1_label]" value="%[footer_1_label]%" type="text"  value="%[footer_1_label]%"  /></td>
+                    </tr>
+                    <tr class="footermenusetting">
+                        <td>2e link</td>
+                        <td><input name="setting[footer_2_link]" value="%[footer_2_link]%" type="text" value="%[footer_2_link]%" /> &nbsp; <input name="setting[footer_2_label]" value="%[footer_2_label]%" type="text"  value="%[footer_2_label]%"  /></td>
+                    </tr>
+                    <tr class="footermenusetting">
+                        <td>3e link</td>
+                        <td><input name="setting[footer_3_link]" value="%[footer_3_link]%" type="text" value="%[footer_3_link]%" /> &nbsp; <input name="setting[footer_3_label]" value="%[footer_3_label]%" type="text"  value="%[footer_3_label]%"  /></td>
+                    </tr>
+                    <tr class="footermenusetting">
+                        <td>4e link</td>
+                        <td><input name="setting[footer_4_link]" value="%[footer_4_link]%" type="text" value="%[footer_4_link]%" /> &nbsp; <input name="setting[footer_4_label]" value="%[footer_4_label]%" type="text"  value="%[footer_4_label]%"  /></td>
+                    </tr>
+                    <tr class="footermenusetting">
+                        <td>5e link</td>
+                        <td><input name="setting[footer_5_link]" value="%[footer_5_link]%" type="text" value="%[footer_5_link]%" /> &nbsp; <input name="setting[footer_5_label]" value="%[footer_5_label]%" type="text"  value="%[footer_5_label]%"  /></td>
+                    </tr>
+                    <tr class="footermenusetting">
+                        <td>6e link</td>
+                        <td><input name="setting[footer_6_link]" value="%[footer_6_link]%" type="text" value="%[footer_6_link]%" /> &nbsp; <input name="setting[footer_6_label]" value="%[footer_6_label]%" type="text"  value="%[footer_6_label]%"  /></td>
+                    </tr>                                                                                                    
+                    <!-- /Footer menu -->
+                     					
+                    <tr>
+                        <td colspan="2"><a class="toggler close" data-section="sendcostsetting" href="#">Verzendkosten</a></td>
+                    </tr>                                                                                                                              
+                    <tr class="sendcostsetting">
+                        <td>Berekening verzendkosten</td>
+                        <td>
+                            <select id="onchangeshowsendfields" name="setting[ship_cost_calc_method]" val="%[ship_cost_calc_method]%">
+                                <for:shipping_cost_calc_methods>
+                                    <option value="%[class]%">%[class]% (%[desc]%)</option>
+                                </for:shipping_cost_calc_methods>                                                                
+                            </select>                                                    
+                        </td>                        
+                    </tr>
+                    <for:shipping_cost_calc_methods>
+                        <for:fields>
+                            <tr class="disp%[class]% sendmethodfields sendcostsetting" style="display:none">
+                                <td>%[val]%</td>
+                                <td><input name="setting[%[key]%]" value="%[%[key]%]%" type="text" /></td>
+                            </tr>                               
+                        </for:fields>                     
+                    </for:shipping_cost_calc_methods>   
+                    <tr>
+                        <td colspan="2"><a class="toggler close" data-section="behaviorsetting" href="#">Webshop gedrag</a></td>
+                    </tr>                                                        
+                    <tr class="behaviorsetting">
+                        <td>Na klik op de bestelknop direct doorverwijzen naar Checkout pagina</td>
+                        <td>
+                            <input name="setting[to_basket_on_order]" value="0" type="hidden" />
+                            <input name="setting[to_basket_on_order]" %[to_basket_on_order?'checked="checked"':'']% value="1" type="checkbox" />
+                        </td>
+                    </tr>                    
+                </table>
+                <input type="submit" value="Opslaan" />
+            </div>
+        </div>
+    </div>    
+</form>
+<input type="hidden" id="fld_visible_section" value="%[visible_section]%" /> 
+<script type="text/javascript">
+    $(document).ready(function(){
+    <if:_do value="save">
+        alert('Wijzigingen opgeslagen');
+    </if:_do>
+    });
+</script>

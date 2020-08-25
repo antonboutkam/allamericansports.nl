@@ -1,0 +1,35 @@
+                <table>
+                    <tr class="rowheader">
+                        <td style="width:18px;">&nbsp;</td>
+                        <td style="width:18px;">&nbsp;</td>
+                        <td>Titel</td>
+                        <td># Kollomen</td>
+                        <td># Rijen</td>
+                        <td>Hoogte</td>
+                        <td>Breedte</td>
+                        <td>Marge top</td>
+                        <td>Marge links</td>
+                        <td>Kollom breedte</td>
+                        <td>Rij afstand</td>
+                    </tr>
+                    <for:barcodes>
+                        <tr class="row%[oddeven]%">
+                            <td><a class="iframe" href="%[root]%/settings/barcodesheet.html?iframe=1&amp;id=%[id]%"><img src="%[root]%/img/icons/edit2-icon-16x16.png" width="16" height="16" /></a></td>
+                            <td><a class="delete_item" rel="%[id]%"><img src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16" /></a></td>
+                            <td>%[name]%</td>
+                            <td>%[cols]%</td>
+                            <td>%[rows]%</td>
+                            <td>%[barcode_height]% mm</td>
+                            <td>%[barcode_width]% mm</td>
+                            <td>%[margin_top]% mm</td>
+                            <td>%[margin_left]% mm</td>
+                            <td>%[col_width]% mm</td>
+                            <td>%[row_dist]% mm</td>
+                        </tr>
+                    </for:barcodes>
+                    <tr>
+                        <td colspan="10">
+                        <a class="iframe" href="%[root]%/settings/barcodesheet.html?iframe=1"><img src="%[root]%/img/icons/add-2-icon-16x16.png"></a><a class="iframe" href="%[root]%/settings/barcodesheet.html?iframe=1">Nieuw label maken</a>
+                       </td>
+                    </tr>
+                </table>  

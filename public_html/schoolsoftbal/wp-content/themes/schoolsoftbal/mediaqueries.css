@@ -1,0 +1,141 @@
+
+
+@media only screen and (max-width: 1100px) {
+	
+	.block, .over-ons-content, .block-three, .homeimg {
+		position: relative;
+		float: none;
+		width: 68%;
+		margin: 2.5% auto;
+		padding: 0px;
+	}
+	
+	.split {
+		width: 100%;
+	}
+	
+	.facebook {
+		position: relative;
+		right:auto;
+		bottom: auto;
+		margin: auto;
+		width: 2em;
+		margin-top: .5em;
+	}
+	.facebook span {
+		display: none;
+	}
+	
+	.prod-image {
+		width: 100%;
+		margin: 1.5% auto;
+	}
+	
+	.prod-description {
+		position: relative;
+		top:0px;
+		left:0px;
+		width: 100%;
+		background: #951b7e; /* Old browsers */
+		background: -moz-linear-gradient(left,  #951b7e 0%, #791b7c 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  #951b7e 0%,#791b7c 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  #951b7e 0%,#791b7c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#951b7e', endColorstr='#791b7c',GradientType=1 ); /* IE6-9 */
+		margin:auto;
+		color: white;
+	}
+	
+	.activeClick {
+		padding: 1em;
+		border: 3px solid #951b7e;
+	}
+	
+	.footer-col {
+		width: 100%;
+	}
+	
+	.over-ons-content {
+		padding-bottom: 1em;
+	}
+
+}
+
+
+
+
+
+@media only screen and (max-width: 640px) {
+	
+	.block, .over-ons-content, .block-three, .homeimg {
+		width: 100%;
+		margin-left:0px !important;
+	}
+	
+	.over-ons-content {
+		padding: 1em;
+		box-sizing: border-box;
+	}
+	
+	.logo {
+		width: 90%;
+	}
+	
+	.producten-container, .footercontent {
+		width: 100%;
+	}
+	
+	.footercontent {
+		padding: 1em;
+		box-sizing: border-box;
+	}
+
+
+
+	.cta-container {
+		position: absolute;
+		top:9em; 
+		width: 1.7em;
+		right:0px;
+		overflow: hidden;
+	}
+/*
+	
+	.cta {
+		float: none;
+		position: absolute;
+		left:-1.7em;
+	}
+*/
+
+	.cta-container:hover {
+		right: 0px;
+	}
+
+	.cta-active .cta-content {
+		display: block;
+	}
+	
+		
+	.cta-active {
+		
+	}
+	
+	.cta-active {
+		right: 0em;
+		width: 100% !important;
+	}
+	
+	.cta-active:hover {
+		right: 0em !important;
+	}
+	.cta-active .cta {
+		display: none;
+	}
+	
+	.cta-content {
+		width: 100%;
+		display: none;
+	}
+
+	
+}

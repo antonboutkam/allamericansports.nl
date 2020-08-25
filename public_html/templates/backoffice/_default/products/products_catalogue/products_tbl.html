@@ -1,0 +1,98 @@
+        <script type="text/javascript">
+            var current_page    = '%[current_page]%';
+            var view            = '%[view]%';
+        </script>
+
+        <div class="searchresults">
+            <div class="searchtitle">
+                %[lbl_found_products]%                
+                <div style="float:right;color:#555;">%[rowcount]% %[lbl_products]% <a href="#" class="reload"><img width="20" class="middle" src="%[root]%/img/icons/reload.png" /></a></div>                
+                <div class="clear"></div>                 
+            </div>
+
+            <div class="clear"></div>
+            <div style="display:block;" id="listview" class="perspective">                
+                <table style="margin:15px; width:95%;">
+                    <tr class="rowheader">
+                            <if:view not="picker|orderpicker|barcodepicker">
+                                <th style="width:18px;">&nbsp;</th>
+                            </if:view>
+                            <th style="width:18px;">&nbsp;</th>
+                            <th style="width:18px;">&nbsp;</th>
+                            <th style="width:18px;">GID</th>
+                            <th style="width:78px;">Size</th>
+                            <th><a href="#" class="sort" rel="%[sort=article_number?'article_number DESC':'article_number']%">%[lbl_articlenumber]%</a></th>
+
+                            <th><a href="#" class="sort" rel="%[sort=article_name?'article_name DESC':'article_name']%">%[lbl_productname]%</a></th>
+                            <th><a href="#" class="sort" rel="%[sort=article_name?'article_name DESC':'article_name']%">Heeft foto</a></th>
+                            <if:user_level value="A">
+                                <th><a href="#" class="sort" rel="%[sort=purchase_price?'purchase_price DESC':'purchase_price']%">%[lbl_purchaseprice]%</a></th>
+                            </if:user_level>
+
+                            <th>
+                                <a href="#" class="sort" rel="%[sort=sale_price?'sale_price DESC':'sale_price']%">
+                                    <if:user_level value="A">%[lbl_saleprice]%</if:user_level>
+                                    <if:user_level not="A">%[lbl_price]%</if:user_level>
+                                </a>
+                            </th>
+                            <th><a href="#" class="sort" rel="%[sort=advice_price?'advice_price DESC':'advice_price']%">%[lbl_adviceprice]%</a></th>
+                            <if:user_level value="A">
+                                <th><a href="#" class="sort" rel="%[sort=margin?'margin DESC':'margin']%">%[lbl_margin]%</a></th>
+                            </if:user_level>
+                        
+                            <th style="display:%[modules.module_stockpile=1?'table-column':'none']%"><a href="#" class="sort" rel="%[sort=global_stock?'global_stock DESC':'global_stock']%">%[lbl_stock_global]%</a></th>
+                                                    
+                    </tr>
+                    <if:products>
+                        <for:products>
+                            <tr class="row%[oddeven]% %[photo?'previewimg':'']%" data-previewimg="/img/upload/180x180_%[id]%.jpg?unique=%[rand]%" >
+                                    <if:view not="picker|orderpicker|barcodepicker">
+                                        <td><a title="Product verwijderen" class="delete_product" rel="%[id]%" href="#"><img src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16"/></a></td>
+                                        <td><a title="%[lbl_edit_product]%" href="%[root]%/products/edit.html?id=%[id]%"><img src="%[root]%/img/icons/edit-icon-16x16.png" width="16" height="16"/></a></td>
+                                    </if:view>
+                                    <if:view value="picker">
+                                        <td><a class="add_product" title="%[lbl_product_add]%" rel="%[id]%" href="#"><img src="%[root]%/img/icons/add-1-icon-16x16.png" height="16" width="16"/></a></td>
+                                    </if:view>
+                                    <if:view value="orderpicker">
+                                        <td><a class="add_product" title="%[lbl_product_add]%" rel="%[id]%" href="#"><img src="%[root]%/img/icons/cart-icon16x16.png" height="16" width="16"/></a></td>
+                                    </if:view>
+                                    <if:view value="barcodepicker">
+                                        <td><a title="%[lbl_print_barcode]%" target="_blank" href="%[root]%/barcodebuilder.php?id=%[id]%"><img src="%[root]%/img/icons/barcode-icon-16x16.png" height="16" width="16"/></a></td>
+                                    </if:view>
+    
+                                    <td><a class="%[view=picker?'view-product':'iframe']%" title="%[lbl_view_product]%" href="%[root]%/products/view.html?id=%[id]%&iframe=1&view=%[view]%"><img src="%[root]%/img/icons/info-icon-16x16.png" height="16" width="16"/></a></td>
+                                    <td><a href="/products/groupedit.html?id=%[pgid]%">%[pgid]%</a></td>
+                                    <td title="%[size_name]%" class="tipsy">%[size_name_short]%</td>
+                                    <td>%[article_number]%</td>                                                                
+                                    <td>%[article_name_short]%</td>
+                                     <td>%[photo?'Ja':'Nee']%</td>
+                                        <if:user_level value="A">
+                                            <td style="text-align:right;">%[purchase_price]%</td>
+                                        </if:user_level>
+                                        <td style="text-align:right;">&euro; %[sale_price_vis]%</td>
+                                        <td style="text-align:right;">&euro; %[advice_price_vis]%</td>
+                                        <if:user_level value="A">
+                                            <td style="text-align:right;">%[margin]%</td>
+                                        </if:user_level>
+                                                                            
+                                        <if:global_stock>
+                                            <td style="text-align:right;display:%[modules.module_stockpile=1?'table-column':'none']%">%[global_stock]% </td>
+                                        </if:global_stock>
+                                        <if:global_stock condition="is_false">
+                                            <td style="text-align:right;display:%[modules.module_stockpile=1?'table-column':'none']%">0 x%[modules.module_stockpile]%x</td>
+                                        </if:global_stock>
+                                    </modules.module_stockpile>
+                            </tr>
+                        </for:products>                                        
+                    </if:products>
+
+                    <if:products condition="is_false">
+                        <tr class="row%[oddeven]%">
+                            <td colspan="11" style="text-align:center;line-height:40px;font-weight:bold">Er zijn geen resultaten gevonden die aan uw criteria voldoen.</td>
+                        </tr>
+                    </if:products>
+                </table>
+            </div>
+            <center class="paginateblock">%[paginate]%</center>
+            <div class="clear"></div>         
+        </div>

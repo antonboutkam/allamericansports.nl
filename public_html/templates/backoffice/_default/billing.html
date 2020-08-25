@@ -1,0 +1,18 @@
+<h2>%[lbl_billing]%</h2>
+<div class="searchbox">
+    <div class="searchresults">
+        <div class="searchtitle">%[lbl_bill_browser]%</div>
+        <div style="margin:15px;">
+            <input type="text" id="fld_search" name="query" class="searchfield focusblur" title="Zoek op factuurnummer" value="Zoek op factuurnummer"/>
+        </div>
+        
+        <table style="width:200px; margin:15px;">
+            <tr><td><input class="checkbox filters" type="checkbox" id="paid" value="1" %[paid=true?'checked="checked"':'']% /></td><td>%[lbl_paid]%</td></tr>
+            <tr><td><input class="checkbox filters" type="checkbox" id="unpaid" value="1" %[unpaid=true?'checked="checked"':'']%  /></td><td>%[lbl_not_paid]%</td></tr>            
+        </table>
+    </div>
+</div>
+<div id="billing_tbl">    
+ %[billing_tbl]%
+</div>
+<span style="display:none;" id="suremarkaid">Weet je zeker dat je deze order als betaald wilt markeren?</span>

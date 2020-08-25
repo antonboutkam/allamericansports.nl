@@ -1,0 +1,77 @@
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="add_customer searchtitle">%[lbl_prices]%</div>            
+                <div class="edit_content">                                                                                      
+                        <table>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>%[lbl_inc_vat]% (<a href="%[root]%/settings/billingaddress.html">%[btw]%%</a>)</td>
+                                <td>%[lbl_ex_vat]%</td>
+                            </tr>                                         
+                            <if:user_level value="admin|developer">                                                       
+                                <tr><td>%[lbl_purchase_price]%</td>
+                                    <td>
+                                        &euro;
+                                        <input type="text" class="currency incvat" tabindex="110" value="%[purchase_price_vat]%.%[purchase_price_vat_ct]%" />                                            
+                                    </td>
+                                    <td>
+                                        &euro;
+                                        <input type="text" id="purchase_price" class="currency exvat" tabindex="130" name="product[purchase_price]" value="%[purchase_price]%.%[purchase_price_ct]%" />                                            
+                                    </td>
+                                </tr>         
+                            </if:user_level>                   
+                            <tr>
+                                <td>
+                                    <if:user_level value="admin">%[lbl_saleprice]%</if:user_level>
+                                    <if:user_level not="admin">%[lbl_price]%</if:user_level>                            
+                                </td>
+                                <td>
+                                    &euro; 
+                                    <input type="text" id="sale_price_vat" class="currency incvat" tabindex="150"  value="%[sale_price_vat]%.%[sale_price_vat_ct]%"  />
+                                </td>
+                                <td>
+                                    &euro;
+                                    <input type="text" id="sale_price" class="currency exvat" tabindex="170" name="product[sale_price]" value="%[sale_price]%.%[sale_price_ct]%"  />
+                                </tr>
+                            <tr><td>%[lbl_adviceprice]%</td>
+                                    <td>
+                                        &euro;
+                                        <input type="text" id="advice_price_vat" class="currency incvat" tabindex="190" value="%[advice_price_vat]%.%[advice_price_vat_ct]%" />
+                                    </td>
+                                    <td>
+                                        &euro;
+                                        <input type="text" id="advice_price" class="currency exvat" tabindex="210" name="product[advice_price]" value="%[advice_price]%.%[advice_price_ct]%" />                                        
+                                    </td>
+                            </tr>
+                            <!--
+                            <tr><td>%[lbl_discount]%</td>
+                                    <td style="padding-left:4px;">
+                                        &nbsp;&nbsp;<input type="text" class="currency" tabindex="230" name="product[discount]" value="%[discount]%" />%
+                                    </td>
+                                    <td>&nbsp;</td>
+                            </tr>
+                            -->
+                            <if:module_webshops>
+                                <tr>
+                                    <td>%[lbl_isoffer]%</td>
+                                    <td style="padding-left:4px;">
+                                        <input type="hidden" name="product[is_offer]" value="0" />
+                                        &nbsp;&nbsp;<input type="checkbox" class="checkbox" tabindex="240" name="product[is_offer]" %[is_offer=1?'checked="checked"':'']% value="1" />
+                                    </td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>%[lbl_inwebshop]%</td>
+                                    <td style="padding-left:4px;">
+                                        <input type="hidden" name="product[in_webshop]" value="0" />
+                                        &nbsp;&nbsp;<input type="checkbox" class="checkbox" tabindex="250" name="product[in_webshop]" %[in_webshop=1?'checked="checked"':'']% value="1" />
+                                    </td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                
+                            </if:module_webshops>
+                        </table>
+                </div>
+            </div>
+        </div>

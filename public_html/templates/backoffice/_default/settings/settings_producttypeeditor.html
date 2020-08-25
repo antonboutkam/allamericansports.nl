@@ -1,0 +1,87 @@
+<style type="text/css">
+    .item_container{width:250px;float:left;}
+    .item_container .translations{line-height:24px;}
+    .item_container .translations img{vertical-align:middle;margin-left:5px;}
+    .translookupedit{position:relative;}
+    .translookupedit input[type=submit]{float:right;}        
+</style>    
+
+<script type="text/javascript">
+    $(document).ready(function(){        
+        function add(){
+            parent.$.updateDropdown('product_type','%[fk_product_type]%','%[add.product_type.type]%');
+            parent.$.fancybox.close();
+        }
+        if('%[_do]%' == 'add'){
+            add();
+        }        
+        $('.delete_trans_item').live('click',function(e){
+            e.preventDefault();
+            if(confirm('Weet u zeker dat u dit item wilt verwijderen?')){
+                item_id = $(this).attr('data-id');                
+                $('#item_'+item_id).fadeOut(200);                
+                $.fancybox.showActivity();
+                send = {_do:'delete',ajax:1,delete_id:item_id,table:$('#table_fld').val()};               
+                $.post(request_uri,send,function(data){
+                    $.fancybox.hideActivity();    
+                } ,'json');
+            }
+        });
+    }); 
+</script>
+<h2>Veld defintite</h2>
+    <div class="searchbox">
+        <div class="searchresults">            
+            <div class="searchtitle">Veld toevoegen</div>            
+
+            <div class="item_container" style="margin:13px;width:700px;">
+                <form method="post">
+                    <input type="hidden" name="table" id="table_fld" value="%[table]%" />
+                    <input type="hidden" name="_do" value="add" />
+                    <div class="translations">
+                    <input type="text" name="add[product_type][type]"/> Tag, dit is wat zichtbaar is in de backoffice en in externe systemen.
+                    <for:languages>
+                        <div>
+                        <input type="text" name="add[translations][%[fk_locale]%]" value="" /><img src="/img/flags/flags_iso/24/%[locale]%.png">
+                        </div>
+                    </for:languages>
+                    </div>    
+                    <div class="clear"></div>
+                    
+                    <input type="submit" value="Toevoegen" />    
+                </form>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="searchbox translookupedit" id="output_data">
+        <form method="post">
+            <input type="hidden" name="table" value="%[table]%" />
+            <input type="hidden" name="_do" value="store_changes" />
+            <div class="searchresults">
+                <div class="searchtitle">Huidige lookup waarden
+                    <div class="found_items" style="float:right" >%[items.rowcount]% Gevonden items <a href="#" class="reload">
+                            <a data-id="%[type_id]%" href="#" class="delete_item"><img width="20" class="middle" src="%[root]%/img/icons/reload.png" /></a></a>
+                    </div>                
+                    <div class="clear"></div>                             
+                </div>            
+                <div class="lookup_cols">                
+                    <for:product_types>
+                        <div class="item_container" id="item_%[type_id]%">
+                            <strong><a class="delete_trans_item" data-id="%[type_id]%" href="#" title="Item verwijderen" ><img src="/img/icons/delete-icon-16x16.png" alt="Item verwijderen" /></a> %[label]%</strong>
+                            <div>
+                                <for:items>
+                                    <div class="translations">
+                                        <input type="text" name="translated[%[type_id]%][%[locale_id]%]" value="%[translated_type]%" /><img src="/img/flags/flags_iso/24/%[locale]%.png">
+                                    </div>
+                                </for:items>
+                            </div>
+                        </div>
+                    </for:product_types>
+                    <div class="clear"></div>
+                    <input type="submit" value="Wijzigingen opslaan" />
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </form>
+    </div>

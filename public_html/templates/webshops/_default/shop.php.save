@@ -1,0 +1,284 @@
+lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllrtkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkki5555555555555555555555555555555555555555555555555555555555555555555jkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk<?php
+class Shop{
+    function  run($params){                      
+        preg_match('/-p[0-9]+/',$params['request_uri'],$matches);
+        if(!empty($matches[0])){
+            $params['request_uri'] = str_replace($matches[0],'',$params['request_uri']);
+            $params['current_page'] = str_replace('-p','',$matches[0]);
+        }   
+        
+        #preg_replace('/-p[0-9]+/','')
+        $filter = array();
+        
+        $filetag = preg_replace('#/[a-z]{2}/#','',$params['request_uri']); 
+        $filetag = preg_replace('#.html#','',$filetag); 
+        
+        $params['title_override']   = 'Ons assortiment';
+        if(preg_match('/([A-Za-z0-9]+)\-([0-9]+).html$/',$params['request_uri'],$matches)){ 	            
+            
+            ///////////////////////////////////////////////
+            //
+            // Alle submenu items
+            //
+            ///////////////////////////////////////////////
+            preg_match('#/[a-z]{2}/shop/(.+)-[0-9]+.html#',$params['request_uri'],$urlparts);
+            $urlParts = preg_replace('/[^a-zA-Z0-9 ]+/',' ',$urlparts[1]);        
+        
+            $subMenuId                  = $matches[2];                       
+            $parent                     = Webshop::getParentId($subMenuId);
+            $rootParent                 = Webshop::getParentId($parent);
+            #echo "rootparent is $rootParent<br>";            
+            #echo "Parent is $parent";
+            if($rootParent){
+                $directParent = $parent;
+                $parent       = $rootParent;    
+            }
+            $compare                    = ($parent)?$parent:$subMenuId;
+            $subMenu                    = Webshop::getMenuSegment('_default',$compare);            
+            $parentTitle                = Webshop::getTranslatedMenuItemNameById($parent,$params['locale']).' ';           
+            $childTitle                 = Webshop::getTranslatedMenuItemNameById($subMenuId,$params['locale']).' ';                                    
+            $params['title_override']   = ucfirst($urlParts);   
+                                             
+            $params['keywords']         = $params['title_override'].', '.str_replace(' ',', ',$params['title_override']);
+            $subMenu                    = self::markActiveItem($subMenu,$subMenuId);              
+            $params['subMenuId'] 	    = $subMenuId;
+            
+            $params['subMenuList']      = Webshop::getLeftMenuById($params['current_webshop_id'],$parent,$params['lang']); #pre_r($params['subMenuList']);
+            if(empty($params['subMenuList'])){
+             #   $params['subMenuId']
+                
+            }
+            
+            if(!empty($params['subMenuList']['data']['models'])){
+                foreach($params['subMenuList']['data']['models'] as $row){                                           
+                    if($row['id']==$params['subMenuId']){                        
+                        $smLabel = $row['model'];        
+                    }                        
+                }
+            }
+            
+            if(!empty($params['subMenuList']['data']['models'])){
+                foreach($params['subMenuList']['data']['models'] as $rowId=>$item){
+                    if($item['id']==$params['subMenuId'] || $item['id']==$directParent || $item['id']==$rootParent){                        
+                        $params['subMenuList']['data']['models'][$rowId]['active'] = 'active';                    
+                    }                
+                }
+
+                // /turnen.html
+                $linkL1 = '/'.$params['lang'].'/'.$params['subMenuList']['data']['brand_lower_enc'].'.html';
+                // /shop/turnen-turnpakjes-41.html                                
+                      
+                                
+
+                $params['crumble_group'][1]   = array('lbl'=>$params['subMenuList']['data']['brand'],'lnk'=>$linkL1);
+                $params['crumble_group'][2]   = array('lbl'=>$smLabel,'lnk'=>$params['request_uri']);
+                                          
+                
+            }
+                                  
+            if($rootParent){
+                $subsubMenuId = Webshop::getParentId($params['subMenuId']);                    
+            }else{
+                $subsubMenuId = $params['subMenuId'];                                                
+            }            
+            
+            $params['subSubMenuList']      = Webshop::getTopSubMenuById($params['current_webshop_id'],$subsubMenuId,$params['lang'],$params['subMenuId']); #pre_r($params['subMenuList']);
+            
+            if(isset($params['subSubMenuList']['data']['parent_item']) && !empty($params['subSubMenuList']['data']['parent_item'])){                
+                $params['title_override'] = $params['subSubMenuList']['data']['parent_item'].' '.strtolower($params['subSubMenuList']['data']['brand'].' - '.$params['subSubMenuList']['data']['model']);
+
+                // /turnen.html
+                $linkL1 = '/'.$params['lang'].'/'.$params['subSubMenuList']['data']['parent_item_enc'].'.html';
+                // /shop/turnen-turnpakjes-41.html                                
+                $linkL2 = '/'.$params['lang'].'/shop/'.$params['subSubMenuList']['data']['parent_item_enc'].'-'.$params['subSubMenuList']['data']['brand_lower_enc'].'-'.$params['subSubMenuList']['data']['crum_brand_id'].'.html';
+                // /shop/turnen-turnpakjes-gk-elite-63.html
+                $linkL3 = '/'.$params['lang'].'/shop/'.$params['subSubMenuList']['data']['parent_item_enc'].'-'.$params['subSubMenuList']['data']['brand_lower_enc'].'-'.$params['subSubMenuList']['data']['brand_lower_enc'].'-'.$params['subSubMenuList']['data']['crum_brand_id'].'.html';
+                
+                $params['crumble_group'][1]   = array('lbl'=>$params['subSubMenuList']['data']['parent_item'],'lnk'=>$linkL1);
+                $params['crumble_group'][2]   = array('lbl'=>$params['subSubMenuList']['data']['brand'],'lnk'=>$linkL2);
+                $params['crumble_group'][3]   = array('lbl'=>$params['subSubMenuList']['data']['model'],'lnk'=>$linkL3);                   
+            }
+                        
+            #pre_r($params['subSubMenuList']);
+            #pre_r($params['subMenuList']);
+            $params['current_selected_navitem'] = $parent;
+            $groupBy = 'IF(pcg.id IS NULL,c.id,pcg.id)';
+        }else if($brand_id=Lookup::getBrandIdByName($filetag)){
+            ///////////////////////////////////////////////
+            //
+            // Alle merk items
+            //
+            ///////////////////////////////////////////////            
+            $brand_id                   = Lookup::getBrandIdByName($filetag); 	            
+            $filter['c.brand']          = $brand_id;
+            $params['title_override']   = ucfirst(preg_replace('#[^A-Za-z0-9 ]+#',' ',$filetag));            
+            $params['keywords']         = $params['title_override'].', '.str_replace(' ',', ',$params['title_override']);       
+            $groupBy = 'pcg.fk_product_group';     
+        }else if(preg_match('/([A-Za-z-]+).html$/',$params['request_uri'],$matches)){  
+            ///////////////////////////////////////////////
+            //
+            // Alle hoofdmenu items
+            //
+            ///////////////////////////////////////////////            
+            if(preg_match('#/[a-z]{2}/(.+).html#',$params['request_uri'],$urlparts)){
+                unset($_SESSION['crumble_group']);
+                $params['crumble_group'][1]   = array('lbl'=>ucfirst($urlparts[1]),'lnk'=>$urlparts[0]);   
+                $params['title_override']       = ucfirst(preg_replace('/[^a-zA-Z0-9 ]+/',' ',$urlparts[1]));
+            }            
+            $menuname                   = str_replace("-"," ",$matches[1]);            
+            $subMenuId                  = Webshop::getMenuIdByTranslatedName($params['hostname'],$params['locale'],$menuname);                               
+            $parent                     = Webshop::getParentId($subMenuId);                                 
+            $compare                    = ($parent)?$parent:$subMenuId;            
+            $subMenu                    = Webshop::getMenuSegment('_default',$compare);
+            $params['keywords']         = $params['title_override'];
+            if(!isset($params['title_override'])){
+                $params['title_override']   = Webshop::getTranslatedMenuItemNameById($subMenuId,$params['locale']).' ';            
+            }
+            $subMenu                    = self::markActiveItem($subMenu,$subMenuId);              
+            $params['subMenuId'] 	= $subMenuId;  
+            $params['subMenuList']      = Webshop::getLeftMenuById($params['current_webshop_id'],$subMenuId,$params['lang']); #pre_r($params['subMenuList']);
+            $params['current_selected_navitem'] = $compare;            
+            $groupBy = 'IF(pcg.id IS NULL,c.id,pcg.id)';
+        }   
+         
+        if($subMenuId)
+            $filter['wm.id'] = $subMenuId;         
+            // Banner slide ophalen
+        if($subMenuId !=0){
+            $params['banner_image'] = Webshop::getMenuBannerImage($params['current_webshop_id'], $subMenuId);     
+            $params['menu_item']    = Webshop::getMenuItemById($subMenuId);   
+            
+            $params['section_desc'] = Webshop::getMenuDescription($params['locale'], $subMenuId);
+            
+            
+            
+            $params['submenu_id']	= $subMenuId;           
+        }
+        if($params['request_uri_no_lang']=='/sportkleding.html'){
+            $params['diverse_active']   = 'active';
+        }
+
+        if(strpos($params['request_uri_no_lang'], '/diverse-sportkleding')===0){
+			$params['diverse_active']   = 'active';
+            $tmp                        = Translate::getTranslation();            
+            $params['title_override']   = $tmp['transl_several'];
+            $groupBy = 'IF(pcg.fk_product_group IS NULL,c.id,pcg.fk_product_group)';            
+        }		
+        // Paginering
+        $params['current_page']         = ($params['current_page'])?$params['current_page']:1;       	                
+        $filter['has_exact_stock']      = true;
+        #pre_r($filter);
+        $filter['in_webshop']           = 1;
+        $params['products']             = ProductDao::find($filter,null,null,$params['current_page'],12,false,$groupBy);         				                               
+        #_d($params['products']);
+        
+ 
+        if(!empty($params['products']['data'])){
+            foreach($params['products']['data'] as &$row){ 
+                $prod_ids[$row['id']] = $row['title_encoded'].'-'.$row['pgid'].'-'.$row['id'].'.html';
+                $type_ids[] = $row['type_id'];
+                                
+                // Als er sterren zijn, sterren tonen.
+                // Als er geen sterren zijn en de titel > 18, geen sterren en titel over 2 regels.
+                // Als er geen sterren zijn en titel < 18, wel sterren het opvulblok te krijgen zodat de hoogtes blijven kloppen.
+                
+                if($row['average_rating']){                    
+                    $row['stars_html'] = makeRatingstartHtml($row['average_rating']); 
+                    if($row['spotlight_title']['has_more']){
+                        $row['webshop_product_title'] = $row['spotlight_title']['short'].'...';
+                    }else{
+                        $row['webshop_product_title'] = $row['spotlight_title']['short'];
+                    }
+                }elseif(strlen($row['spotlight_title']['full']) >= 22){                    
+                    $row['webshop_product_title'] = splitOverLines($row['spotlight_title']['full'],22);
+                    
+                    if(!strpos($row['webshop_product_title'],'<br>')){                        
+                        $row['webshop_product_title'] .= '<br><br>';
+                    }
+                }else{                    
+                    $row['stars_html'] = makeRatingstartHtml($row['average_rating']);  
+                    $row['webshop_product_title'] = $row['spotlight_title']['full'];
+                    $row['webshop_product_title'] .= '<br>';
+                }
+
+            }
+        }
+        
+        if(!empty($prod_ids)){
+            $_SESSION['prodids'] = $prod_ids;            
+        }
+        
+        // Prodyc typen ophalen
+        if(!empty($type_ids)){
+            $tpl = 'SELECT * FROM product_type_translation WHERE fk_locale=%d AND fk_product_type IN(%s)';
+            $sql = sprintf($tpl,$params['locale'],join(',',$type_ids));
+            #echo $sql;
+            $tmpTypes = fetchArray($sql,__METHOD__);
+            if($tmpTypes){
+                foreach($tmpTypes as $type){
+                    $types[$type['fk_product_type']] = $type['type'];
+                }
+            }
+        }
+        if(!empty($params['products']['data'])){
+            foreach($params['products']['data'] as &$row){
+                $row['type_vis'] = $types[$row['type_id']]; 
+            }
+        }
+  
+        $params['body_class']           = "overzichtspagina";
+        $params['products']['data']     = self::chunks($params['products']['data']);                                        
+        $params                         = Webshop::doFirst($params);    
+        //From Webshop::doFirst
+        if(!empty($params['main_menu'])){
+            foreach($params['main_menu'] as $id => $item){
+                if($item['fk_webshop_menu'] == $params['current_selected_navitem']){
+                    $params['main_menu'][$id]['active'] = 'active';
+                }
+            }
+        }
+                
+        $params['article']              = Webshopcms::getPageByTag(3,'home',true);                
+        $params['currentpage']          = str_replace('.htm','',substr($params['request_uri'],1, strpos($params['request_uri'],"-")-1));		
+        $params['phone']                = Webshop::getWebshopSetting($params['hostname'],'contact_phone');		
+        #pre_r($params['products']['data']);        
+        
+        if(!empty($params['crumble_group'])){
+            foreach($params['crumble_group'] as $row){                                  
+                $params['crumble_str'][] = '<a href="'.str_replace('+','-',$row['lnk']).'" class="h1">'.$row['lbl'].'</a>';
+            } 
+            $params['crumble_str'] = join(' <h1 class="inline">&raquo;</h1> ',$params['crumble_str']);
+            $_SESSION['last_crumble'] = $params['crumble_group'];
+        }
+        
+        #_d($params['crumble_str']);
+                        
+        $params['main']                 = parse('inc/products',$params);        
+        $params['content']              = parse('shop',$params); 
+        
+        return $params;
+    }    
+    private static function chunks($data){
+        if(empty($data)||!is_array($data))   
+            return;
+        $c = $i = 1;            
+        foreach($data as $row){
+            
+            $row['last'] = ($c==4)?'last':'';            
+            $out[$i]['items'][] = $row;
+            $c = $c + 1;
+            if($c==5){
+                $c = 1;
+                $i = $i + 1;                
+            }                        
+        }
+        return $out;
+    }
+    private function markActiveItem($subMenu,$subMenuId){
+        foreach($subMenu as $id=>$row){
+            if($row['id']==$subMenuId)
+                $subMenu[$id]['active'] = true;
+        }
+        return $subMenu;
+    }       
+}

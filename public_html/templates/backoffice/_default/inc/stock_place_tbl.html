@@ -1,0 +1,63 @@
+<if:delivery>
+    <form>
+        <div class="searchresults">
+            <div class="searchtitle">%[lbl_product_to_be_added]%</div>
+            <div class="edit_content">
+                <table>
+                    <tr class="rowheader">
+                            <th style="width:18px;">&nbsp;</th>                                           
+                            <th><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_articlenumber]%</a></th>
+                            <th><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_articlename]%</a></th>
+                            <th><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_quantity]%</a></th>
+                            
+                            <th><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_path]%</a></th>
+                            <th><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_rack]%</a></th>
+                            <th><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_shelf]%</a></th>                                                        
+                    </tr>
+                    <for:delivery>
+                        <tr class="row%[oddeven]%">                    
+                            <td><a class="iframe" title="%[lbl_viewproduct]%" href="%[root]%/products/view.html?id=%[product_id]%&iframe=1"><img src="%[root]%/img/icons/info-icon-16x16.png" height="16" width="16"/></a></td>
+                            <td>%[article_number]%</td>
+                            <td>%[article_name]%</td>
+                            <td class="center">%[quantity]%</td>
+
+                            <td class="center">
+                                <if:path condition="is_false">
+                                    <a class="iframe unknown" title="%[lbl_select_location_for]% %[article_number]%" href="%[root]%/stock/warehouse.html?iframe=1&view=picker&addid=%[id]%&productId=%[product_id]%">%[lbl_unknown]%</a>
+                                </if:path>
+                                <if:path condition="is_true">
+                                    <a class="iframe known" title="%[lbl_select_location_for]% %[article_number]%" href="%[root]%/stock/warehouse.html?iframe=1&view=picker&addid=%[id]%&productId=%[product_id]%">%[path]%</a>
+                                </if:path>
+                            </td>
+                            <td class="center">
+                                <if:path condition="is_false">
+                                    <a class="iframe unknown" title="%[lbl_select_location_for]% %[article_number]%" href="%[root]%/stock/warehouse.html?iframe=1&view=picker&addid=%[id]%&productId=%[product_id]%">%[lbl_unknown]%</a>
+                                </if:path>
+                                <if:path condition="is_true">
+                                    <a class="iframe known" title="%[lbl_select_location_for]% %[article_number]%" href="%[root]%/stock/warehouse.html?iframe=1&view=picker&addid=%[id]%&productId=%[product_id]%">%[rack]%</a>
+                                </if:path>                        
+                            </td>                
+                            <td class="center">
+                                <if:path condition="is_false">
+                                    <a class="iframe unknown" title="%[lbl_select_location_for]% %[article_number]%" href="%[root]%/stock/warehouse.html?iframe=1&view=picker&addid=%[id]%&productId=%[product_id]%">%[lbl_unknown]%</a>
+                                </if:path>
+                                <if:path condition="is_true">
+                                    <a class="iframe known" title="%[lbl_select_location_for]% %[article_number]%" href="%[root]%/stock/warehouse.html?iframe=1&view=picker&addid=%[id]%&productId=%[product_id]%">%[shelf]%</a>
+                                </if:path>                        
+                            </td>                                                        
+                        </tr>                
+                    </for:delivery>
+
+                </table>
+                <div class="actions">
+                    <input id="fld_complete" value="Wijzigingen opslaan" type="submit" />
+                </div>
+                <div>                                    
+                    <span id="error-msg" style="display:none;">%[lbl_not_all_asigned]%</span>
+                    <span id="stored-ok" style="display:none;">%[lbl_delivery_added]%</span>
+                </div>               
+            </div>
+            <div class="clear"></div>            
+        </div>
+    </form>
+</if:delivery>            

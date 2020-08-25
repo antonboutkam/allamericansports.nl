@@ -1,0 +1,153 @@
+<form id="customer_edit">
+    <input type="hidden" name="iframe" value="%[iframe]%" />
+    
+    <if:view value="picker">
+    <div class="searchresults">
+        <div class="searchtitle">%[lbl_actions]%</div>        
+         <div class="edit_content"> 
+            <center><input type="submit" id="back" value="%[lbl_backtooverview]%" /></center>
+        </div>
+    </div>                                                
+    </if:view>
+    <input type="hidden" name="id" id="fld_id" value="%[id]%" />
+    
+    <div class="searchbox">
+        <div class="searchresults">
+            <div style="display:%[id?'block':'none']%" class="edit_customer searchtitle">%[lbl_customerinfo]%</div>
+            <div class="edit_content">                
+                    <h2>%[lbl_general]%</h2> 
+                    <table>
+                        <tr>
+                            <td>%[lbl_contactperson]%</td><td colspan="3">%[sallutation]% %[cp_firstname]% %[cp_lastname]%</td>
+                        </tr>
+                        <tr>
+                            <td>%[lbl_companyname]%</td>
+                            <td>%[company_name]%</td>
+                            <td>%[lbl_phone]%</td>
+                            <td>%[phone]%<td>
+                        </tr>
+                        <tr>
+                            <td>%[lbl_website]%</td>
+                            <if:website condition="is_true">
+                                <td><a href="%[website]%" target="_blank">%[website]%</a></td>
+                            </if:website>
+                            <if:website condition="is_false">
+                                <td>&nbsp;</td>
+                            </if:website>                            
+                            <td>%[lbl_mobile]%</td>
+                            <td>%[phone_mobile]%<td>                          
+                        </tr>
+                        <tr>
+                            <td>%[lbl_type]%</td>
+                            <td>
+                                %[type]%
+                            </td>
+                            <td>%[lbl_fax]%</td>
+                            <td>%[fax]%<td>                           
+                        </tr> 
+                        <tr>
+                            <td>%[lbl_customernumber]%</td>
+                            <td>%[id]%</td>
+                            <td>%[lbl_email]%</td>
+                             <if:email condition="is_true">
+                                    <td><a href="%[root]%/send_mail.html?client=%[id]%&mail=%[email]%">%[email]%</a></td>     
+                             </if:email>
+                            <if:email condition="is_false">  
+                                    <td>&nbsp;</td>
+                            </if:email>                  
+                        </tr>
+                        <tr>
+                            <td>Mag op rekening kopen</td>
+                            <td>%[buyoncredit?'Ja':'Nee']%</td>
+                            <td>Afkomstig uit webshop</td>
+                            <td>%[webshop_vis]%</td>
+                        </tr>
+                    </table>
+                    <a href="#" id="show_address">%[lbl_show_address]%</a>
+                    <a href="#" id="hide_address" style="display:none">%[lbl_hide_address]%</a>
+
+                    <div id="address" style="display:none">
+                        <table>
+                            <tr><td><a href="http://maps.google.nl/maps?q=%[billing_street]%,+%[billing_city]%,+%[billing_country]%" target="_blank">%[lbl_kaartje]%</a></td></tr>
+                            <tr><td colspan="2"><h2>%[lbl_billingaddress]%</h2></td><td colspan="2"><h2>%[lbl_deliveryaddress]%</h2></td></tr>
+                            <tr>
+                                <tr><td>%[lbl_street]%</td><td>%[billing_street]%</td>      <td>%[lbl_street]%</td><td>%[shipping_street]%</td></tr>
+                                <tr><td>%[lbl_number]%</td><td>%[billing_number]%</td>      <td>%[lbl_number]%</td><td>%[shipping_number]%</td></tr>
+                                <tr><td>%[lbl_postal]%</td><td>%[billing_postal]%</td>      <td>%[lbl_postal]%</td><td>%[shipping_postal]%</td></tr>
+                                <tr><td>%[lbl_city]%</td><td>%[billing_city]%</td>          <td>%[lbl_city]%</td><td>%[shipping_city]%</td></tr>
+                                <tr><td>%[lbl_country]%</td><td>%[billing_country]%</td>    <td>%[lbl_country]%</td><td>%[shipping_country]%</td></tr>
+                                <tr><td>&nbsp;</td><td>&nbsp;</td>                 <td>&nbsp;</td></tr>
+                             </tr>
+                             <tr><td colspan="2"><h2>Relation</h2></td><td colspan="2"><h2>Socialmedia</h2></td></tr>
+                            <tr>
+                                <tr><td>%[lbl_accountmanager]%</td><td>%[accountmanager_name]%</td>      <td>Twitter</td><td>%[twitter]%</td></tr>
+                                <tr><td>%[lbl_paymentlimit]%</td><td>%[maxcredit]%</td>      <td>LinkedIn</td><td>%[linkedin]%</td></tr>
+                                <tr><td>%[lbl_cust_segment]%</td><td>%[segment]%</td>      <td>Facebook</td><td>%[facebook]%</td></tr>
+                             </tr>
+                        </table>
+                    </div>
+                <if:description condition="not_empty">
+                    <h2>%[lbl_omschrijving]%</h2>
+                    <p>
+                    %[description]%
+                    </p>   
+                </if:description>
+            </div>                    
+        </div>
+    </div>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">
+                %[lbl_latest_bills]%
+                <div style="float:right;color:#555;">%[lbl_total_bill_count]%: %[ordercount]%</div>
+                <div class="clear"></div>
+            </div>
+             <div class="edit_content">
+                 <table>
+                    <tr class="rowheader">
+                            <th style="width: 18px;">&nbsp;</th>
+                            <th style="width: 18px;">&nbsp;</th>
+                            <th style="width: 18px;">&nbsp;</th>
+                            <th><a href="#" class="sort" rel="o.id">%[lbl_bill_no]%</a></th>
+                            <th><a href="#" class="sort" rel="o.accepted">%[lbl_created_on]%</a></th>
+                            <th><a href="#" class="sort" rel="o.paid">%[lbl_paid_on]%</a></th>
+                            <th><a href="#" class="sort" rel="total">%[lbl_amount]%</a></th>
+                    </tr>
+                    <for:orders>
+                        <tr class="row%[oddeven]%">                            
+                            <td><a href="%[root]%/bill_pdf.php?orderid=%[id]%&amp;iframe=1&amp;view=1" target="_blank"><img src="%[root]%/img/icons/logo-pdf-16x16.png" height="16" width="16"></a></td>
+                            <td><a href="%[root]%/orders/new.html?orderid=%[id]%" title="Bestelling bewerken"><img width="16" height="16" src="%[root]%/img/icons/edit2-icon-16x16.png"></a></td>
+                            <td><a href="%[root]%/orders/collect.html?orderid=%[id]%" title="Orderpicken"><img width="16" height="16" src="%[root]%/img/icons/ordering-icon-16x16.png"></a></a></td>                                                        
+                            <td>%[ordernumber]%</td>
+                            <td>%[accepted_date]%</td>
+                            <td>%[paid_date]%</td>
+                            <td>%[total]%</td>
+                        </tr>
+                    </for:orders>
+                    </table>
+                 <if:has_more_bills>
+                    <center><a href="">%[lbl_show_all_bills]%</a></center>
+                 </if:has_more_bills>
+            </div>
+        </div>
+    </div>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">
+                %[lbl_notes]%:
+                <div style="float:right;color:#555;">%[lbl_notes]%</div>
+                <div class="clear"></div>
+            </div>
+             <div class="edit_content" style="padding:4px; margin:0px;">
+                <div id="customer_notes">
+                     %[customer_notes]%
+                     <center id="hasnonotes" style="font-weight:bolder; padding:10px; display:%[nonotes]%">Er zijn nog geen notes voor deze klant.</center>
+                </div>
+                <div style=" text-align: center">
+                    <textarea style="width:80%; height:60px;" id="notecnt"></textarea><br />
+                    <input style="margin-top:10px;" type="submit" id="addnote" value="Note toevoegen" />
+                </div>                
+            </div>
+        </div>
+    </div>
+</form>

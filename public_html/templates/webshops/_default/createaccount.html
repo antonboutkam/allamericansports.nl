@@ -1,0 +1,51 @@
+     <h1>%[transl_createyouraccount]%</h1>
+    <div id="createaccount" class="round-bg">
+    
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#fld_check_code').val('abcdefg');
+        }); 
+    </script>
+                
+    <form method="post" id="create_account_form">
+        <input type="hidden" name="check_code" id="fld_check_code" value="" />
+        <input type="hidden" name="_do" value="create_account" />
+       <!-- <label>Bedrijfsnaam</label>
+        <input type="text" name="relation[company_name]" /> -->
+        <div class="cl"></div>            
+       <!-- <label>Aanhef <span>*</span></label>-->
+        <label style="float:left; margin:10px 10px 10px 0px;"><input name="relation[sallution]" type="radio" value="Dhr." checked class="radiobtn" />&nbsp;%[transl_mr]%.</label>
+        <label style="float:left; margin:10px 10px 10px 0px;"><input name="relation[sallution]" type="radio" value="Mevr." class="radiobtn" />&nbsp;%[transl_mrs]%.</label>
+    
+        <div class="clearer"></div>
+        <div class="cl"></div>
+        
+            <label class="lvl">%[transl_firstname]% <span>*</span></label>
+            <input type="text" id="cp_firstname" name="relation[cp_firstname]" tabindex="1" title="%[transl_pleaseprovideyourfirstname]%" class="txtfld" />
+                                    
+            <label class="lvl">%[transl_lastname]% <span>*</span></label>
+            <input type="text" id="cp_lastname" name="relation[cp_lastname]" tabindex="2" title="%[transl_pleaseprovideyourlastname]%" class="txtfld" />        
+        
+        <div class="cl"></div>
+        <label class="lvl">%[transl_emailaddr]% <span>*</span></label>
+        <input type="text" id="email" autocomplete="off" name="relation[email]" tabindex="3" title="%[transl_pleaseprovideemail]%" data-valid="%[transl_pleaseprovidevalidemail]%" class="txtfld" />           
+        <div class="cl"></div>
+        
+            <label class="lvl">%[transl_password]% <span>*</span></label>
+            <input type="password" autocomplete="off" id="fldpassword" name="relation[password]" tabindex="4" title="%[transl_choosepassfor]%" data-nomatch="%[transl_passnotsame]%" class="txtfld" />                             
+        
+            <label class="lvl">%[transl_passwordconfirm]% <span>*</span></label>
+            <input type="password" autocomplete="off" id="fldpassword_confirm" class="txtfld" tabindex="5" style="width:21%" />             
+        
+        <div class="cl" ></div>
+        <div class="clearer">&nbsp;</div>
+        
+        <a href="#" id="create_account" class="create_account_btn button-account" >%[transl_register]%</a><br /><br />
+        <span>* %[transl_mandatory]%</span>
+        <div style="display:none">
+            <span id="accountcreatedmsg">%[transl_youraccounthasbeencreated]%</span>
+        </div>    
+    </form>
+    </div>
+

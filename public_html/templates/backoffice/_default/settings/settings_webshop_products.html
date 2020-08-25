@@ -1,0 +1,28 @@
+<form method="post">
+<input type="hidden" name="webshop_id" value="%[webshop_id]%" />
+<h2>Assortiment beheren (voor webshop: %[shopname]%)</h2>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Assortiment</div>
+            <div style="margin:10px;">
+                <table>
+                    <for:product_types>
+                        <tr>
+                            <td>%[type]%</td>
+                            <td>
+                                <select name="type_visibility[%[id]%]">
+                                    <if:shopname not="_default">
+                                        <option %[visibility=_default?'selected="selected"':'']%  value="_default">Als _default</option>
+                                    </if:shopname>
+                                    <option %[visibility=1?'selected="selected"':'']% value="1">Zichtbaar</option>
+                                    <option %[visibility=0?'selected="selected"':'']%  value="0">Onzichtbaar</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </for:product_types>
+                </table>
+                <input type="submit" value="Opslaan" />
+            </div>
+        </div>
+    </div>
+</form>

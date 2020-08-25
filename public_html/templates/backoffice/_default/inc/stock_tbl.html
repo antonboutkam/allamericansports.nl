@@ -1,0 +1,57 @@
+        <script type="text/javascript">
+            var current_page    = '%[current_page]%';
+            var view            = '%[view]%';
+        </script>
+        <div class="searchresults">
+            <div class="searchtitle">
+                %[lbl_stocks]%                
+                <div style="float:right;color:#555;">%[rowcount]% %[lbl_products]% <a href="#" class="reload"><img width="20" class="middle" src="%[root]%/img/icons/reload.png" /></a></div>                
+                <div class="clear"></div>                 
+            </div>          
+            <table style="margin:15px;">            
+                <tr class="rowheader">    
+                        <th>&nbsp;</th>
+                        <th>&nbsp;</th>                                                                    
+                        <th><a href="#" class="sort" rel="%[sort=article_number?'article_number DESC':'article_number']%">%[lbl_articlenumber]%</a></th>
+                        <th><a href="#" class="sort" rel="%[sort=article_name?'article_name DESC':'article_name']%">%[lbl_productname]%</a></th>                     
+                        <th><a href="#" class="sort" rel="%[sort=location?'location DESC':'location']%">%[lbl_location]%</a></th>
+                        <th><a href="#" class="sort" rel="%[sort=position?'position DESC':'position']%">Positie <!--%[lbl_path]% %[lbl_rack]% %[lbl_shelf]%--></a></th>
+                        <th><a href="#" class="sort" rel="%[sort=quantity?'quantity DESC':'quantity']%">%[lbl_quantity]%</a></th>
+                        <th>&nbsp;</th>                        
+                        <th style="width:60px;"><a href="#" class="sort" rel="%[sort=purchase_price?'purchase_price DESC':'purchase_price']%">%[lbl_purchase]%</a></th>
+                        <th style="width:90px;"><a href="#" class="sort" rel="%[sort=sale_price?'sale_price DESC':'sale_price']%">%[lbl_sale]%</a></th>
+                </tr>
+                <for:products>                
+                    <tr class="row%[oddeven]%">                    
+                            <td><a class="iframe" title="%[lbl_view_product]%" href="%[root]%/products/view.html?id=%[id]%&iframe=1"><img src="%[root]%/img/icons/info-icon-16x16.png" height="16" width="16"/></a></td>
+                            <td><a class="iframe" title="%[lbl_products_of_type]% %[article_number]% %[lbl_move]%" href="%[root]%/stock/warehouse.html?iframe=1&view=mover&locationId=%[configuration_id]%&location=%[wlocid]%&productId=%[id]%"><img src="%[root]%/img/icons/export-icon-16x16.png" height="16" width="16"/></a></td>
+                            <td>%[article_number]%</td>
+                            <td>%[article_name]%</td>
+                            <td>%[location]%</td>
+                            <td>%[pathrackshelfstock]%</td>
+                            <td style="text-align:right;" id="quantity%[stock_id]%">%[quantity]%</td>
+                            <td><a class="remove-products" title="%[lbl_remove_from_stock]%" id="product%[id]%" rel="%[stock_id]%" href="#"><img src="%[root]%/img/icons/down-icon-16x16.png" height="16" width="16"/></a></td>                            
+                            <td style="text-align: right;">%[purchase_price]%</td>
+                            <td style="text-align: right;">%[sale_price]%</td>
+                    </tr>
+                </for:products>
+                <tr class="rowfooter">
+                    <td colspan="7" style="text-align: right; font-weight:bolder;">%[lbl_totals]%: </td>
+                    
+                    <td style="text-align:right;">%[total_products]%</td>
+                    <td style="text-align:right;">&euro; %[sum_purchase_price]%</td>
+                    <td style="text-align:right;">&euro; %[sum_sale_price]%</td>
+                </tr>                           
+            </table>
+            <center>%[paginate]%</center>
+            <div class="clear"></div>         
+        </div>
+        <div id="dd-reason" style="display:none;">
+            <select id="fillin" style="width:70px;">
+                <option value="">%[lbl_reason]%</option>
+                <option value="theft">%[lbl_theft]%</option>
+                <option value="broken">%[lbl_broken]%</option>
+                <option value="giveaway">%[lbl_giveaway]%</option>            
+            </select>
+        </div>
+        <div id="err-reason" style="display:none;">%[lbl_mustspecifyreason]%</div>

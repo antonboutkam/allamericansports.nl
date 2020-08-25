@@ -1,0 +1,13 @@
+<for:sitemap>    
+    <div class="catagory">
+        <ul>
+            <li><b><a class="cms navtree" href="%[root]%/%[lang]%/%[url]%.html">%[label]%</a></b>
+            <for:data>    
+                <li><a class="cms navtree" href="%[root]%/%[lang]%/shop/%[url]%.html">%[child]%</a></li>
+            </for:data>
+        </ul>
+    </div>
+    <if:section_id value="6|12|18">
+        <div class="cl"></div>            
+    </if:section_id>    
+</for:sitemap>

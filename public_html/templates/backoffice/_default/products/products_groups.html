@@ -1,0 +1,45 @@
+    <script type="text/javascript">
+        var group_exists = '%[group_exists]%';
+        var group_saved = '%[group_saved]%';
+        var new_group_id = '%[new_group_id]%';
+        var current_page = '%[current_page]%';
+    </script>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="add_customer searchtitle">Groep aanmaken</div>      
+            <div class="edit_content">
+                <form id="product_form" enctype="multipart/form-data" method="post">
+                    <input type="hidden" name="_do" value="add_group" />
+                    <table>
+                        <tr>
+                            <td style="width:80px;">Groep titel</td>
+                            <td style="width:110px;"><input type="text" id="fld_group_name" name="product_group[group_name]" /></td>
+                            <td><input type="submit" value="Groep aanmaken" id="create_group" /></td>
+                        </tr>                
+                    </table>       
+                </form>                  
+            </div>
+        </div>
+    </div>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="add_customer searchtitle">Groep zoeken</div>      
+            <div class="edit_content">
+                <form id="product_form" enctype="multipart/form-data" method="post">
+                    <input type="text" class="widefld focusblur" id="fld_searchfield" style="width:300px;;" value="Groep zoeken" title="Groep zoeken" />       
+                </form>                  
+            </div>
+        </div>
+    </div>
+        
+    
+    <div class="searchbox" id="product_groups_tbl">
+        %[product_groups_tbl]%
+    </div>
+    
+    <div id="errors" style="display:none;">
+        <span id="group_savedmsg">De groep is aangemaakt en u kunt nu producten aan de groep koppelen, wilt u nu producten koppelen?</span>
+        <span id="suredelete">Weet u zeker dat u deze productgroep wilt verwijderen? De producten die binnen de productgroep valen blijven wel gewoon in het systeem aanwezig</span>
+        <span id="nameemptyerror">U moet verplicht een naam geven aan de nieuwe productgroep</span>
+        <span id="group_existserror">De titel van deze productgroep komt al voor in de database. De naam van een productgroep moet uniek zijn. Het kan zijn dat er in het verleden een groep is geweest met dezelfde naam die inmiddels is verwijderd.Dan nog moet de groepnaam uniek zijn.</span>
+    </div>

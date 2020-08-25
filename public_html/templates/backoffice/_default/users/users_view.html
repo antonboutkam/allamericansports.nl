@@ -1,0 +1,28 @@
+<form enctype="multipart/form-data" method="post">
+    <div class="searchbox">
+        <div class="searchresults" id="mysettings">                        
+            <div class="searchtitle">Over %[full_name]%:<div class="clear"></div></div>
+                <div style="float:left; width:70%; padding:20px;">
+                        <table>
+                            <tr><td>Adres</td><td>%[address]%</td></tr>
+                            <tr><td>Postcode +  woonplaats</td><td>%[postal]% %[city]%</td></tr>
+                            <tr><td>Land</td><td>%[country]%</td></tr>
+                            <tr><td>Verjaardag</td><td>%[birthdate]%</td></tr>
+                            <tr><td>E-mailadres</td><td>%[email]%</td></tr>
+                            <tr><td>Telefoon</td><td>%[phone]%</td></tr>
+                            <tr><td>Mobiel</td><td>%[mobile]%</td></tr>
+                            <tr><td>Functie</td><td>%[job]%</td></tr>
+                        </table>
+                </div>
+                <div style="float:right; margin:20px; border:1px #ccc dashed;" >
+                <if:image value="1">
+                    <img src="%[root]%/img/staff/thumb/%[id]%.jpg" width="150" height="200" />
+                </if:image>
+                <if:image value="0">
+                    <img src="%[root]%/img/staff/no-photo.jpg" width="150" height="200" />
+                </if:image>
+                </div>
+                <div class="clear"></div>
+        </div>
+    </div>    
+</form>

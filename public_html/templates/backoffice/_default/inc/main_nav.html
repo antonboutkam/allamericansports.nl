@@ -1,0 +1,22 @@
+                <div id="menu">
+                    <if:user_level not="S">
+                        
+                        <div class="item"><a class="%[section=home?'selected':'unselected']%" href="%[root]%/home.html">%[nav_home]%</a></div>
+                        <div class="item"><a class="%[section=orders?'selected':'unselected']%" href="%[root]%/orders/overview.html">%[nav_orders]%</a></div>
+                        <div class="item"><a class="%[section=products?'selected':'unselected']%" href="%[root]%/products/catalogue.html?showwostock=true">%[nav_productcatalogue]%</a></div>   
+                        <div class="item"><a class="%[page=webshop_cms?'selected':'unselected']%" href="%[root]%/settings/webshop_cms.html">%[nav_cms]%</a></div>                                
+                                                
+                        <if:page not="mailing">
+                            <div class="item"><a class="%[section=relations?'selected':'unselected']%" href="%[root]%/relations/overview.html">%[nav_relationmanagement]%</a></div>
+                        </if:page>
+                        <if:page value="mailing">
+                            <div class="item"><a class="unselected" href="%[root]%/relations/overview.html">%[nav_relationmanagement]%</a></div>
+                        </if:page>
+                        <div class="item"><a class="%[page=mailing?'selected':'unselected']%" href="%[root]%/relations/mailing.html">Mailings</a></div>
+                        <if:module_stockpile>
+                        <div class="item"><a class="%[section=stock?'selected':'unselected']%" href="%[root]%/stock/current.html">%[nav_stock]%</a></div>
+                        </if:module_stockpile>             
+                    </if:user_level>                    
+                    <div class="item"><a class="%[section=billing?'selected':'unselected']%" href="%[root]%/billing.html">%[nav_billing]%</a></div>                                                            
+                    <!-- <div class="item"><a class="%[section=reports?'selected':'unselected']%" href="%[root]%/reports.html">%[nav_reports]%</a></div> -->                                                                                                                                                                   
+                </div>                

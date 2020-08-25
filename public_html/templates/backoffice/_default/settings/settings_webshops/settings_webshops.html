@@ -1,0 +1,26 @@
+<h2>Webshops</h2>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Geconfigureerde webshops</div>
+            <div style="margin:10px;">
+                <table style="width:680px;">
+                    <for:webshops>
+                        <tr class="row%[oddeven]%">                            
+                            <td>%[hostname]%</td>
+                            <td><a href="%[root]%/settings/webshop_products.html?webshop_id=%[id]%">assortiment</a></td>
+                            <td><a href="%[root]%/settings/webshop_config.html?webshop_id=%[id]%">instellingen</a></td>
+                            <td><a href="%[root]%/settings/webshop_navigation.html?webshop_id=%[id]%">navigatie</a></td>
+                            <td><a href="%[root]%/settings/webshop_cms.html?webshop_id=%[id]%">cms</a></td>
+                            <td><a href="%[root]%/settings/webshop_design.html?webshop_id=%[id]%">design</a></td>
+                            <td><a href="%[root]%/settings/webshop_banner.html?webshop_id=%[id]%">banner</a></td>
+                            <td><a href="%[root]%/settings/webshop_brandbox.html?webshop_id=%[id]%">brand boxes</a></td>
+                            <td><a href="%[root]%/settings/translations.html?webshop_id=%[id]%">talen</a></td>
+                            <td><a href="%[root]%/settings/webshop_uniquesellingpoints.html?webshop_id=%[id]%">usp's</a></td>
+                            <td><a href="%[root]%/settings/analytics_code.html?webshop_id=%[id]%">analytics code</a></td>
+                        </tr>   
+                    </for:webshops>
+                </table>
+            </div>
+        </div>
+    </div>
+ 

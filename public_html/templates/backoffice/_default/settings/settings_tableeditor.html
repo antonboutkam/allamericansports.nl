@@ -1,0 +1,87 @@
+
+<h2>Veld defintite</h2>
+    <div class="searchbox">
+        <div class="searchresults">
+            
+            <div style="display:%[table=colors:'block':'none']%" class="searchtitle">Dropdown lookups bewerken</div>            
+            
+            <div style="margin:13px;">
+                <form method="post">
+                    <input type="hidden" name="_do" value="add" />
+                    <input type="text" id="value_field" name="value"/>
+                    <input type="submit" value="Toevoegen">    
+                </form>
+            </div>            
+        </div>
+    </div>
+<script type="text/javascript">
+    var group   = '%[group]%';
+    var _do     = '%[_do]%'; 
+</script>
+	
+    <div class="searchbox" id="output_data">
+        <div class="searchresults">
+            <div class="searchtitle">Huidige lookup waarden
+                <div class="found_items" style="float:right">%[items.rowcount]% Gevonden items <a href="#" class="reload">
+                        <a href="#" class="reload"><img width="20" class="middle" src="%[root]%/img/icons/reload.png" /></a></a>
+                </div>                
+                <div class="clear"></div>                             
+            </div>            
+            <div class="lookup_cols">                
+                    <if:table value="colors">
+                        <strong>%[lbl_prod_colors]%</strong><br />
+                    </if:table>
+                    
+                    <if:items.data>
+                        <div class="lookup_col" style="width:%[table=delivery_time?'700px;':'']%">
+                        <for:items.data.1.data>
+                            <a href="#" class="delete_item" data-id="%[id]%"><img width="16" height="16" src="/img/icons/delete-icon-16x16.png" /></a>
+                            <a href="#" class="toggle_editmode" data-id="%[id]%"><img width="16" height="16" src="/img/icons/edit-icon-16x16.png" /></a>
+                            <span id="view_%[id]%">%[edit_field]%</span>
+                            <span class="edit_panel" id="edit_%[id]%">
+                                <input type="text" id="fld_%[id]%" value="%[edit_field]%" />
+                                <a href="#" class="update_fld" data-id="%[id]%"><img src="/img/icons/save-icon-16x16.png" /></a>                            
+                            </span>
+                            <br />                                
+                        </for:items.data.1.data>
+                        </div>
+                        <div class="lookup_col">
+                        <for:items.data.2.data>
+                            <a href="#" class="delete_item" data-id="%[id]%"><img width="16" height="16" src="/img/icons/delete-icon-16x16.png" /></a>
+                            <a href="#" class="toggle_editmode" data-id="%[id]%"><img width="16" height="16" src="/img/icons/edit-icon-16x16.png" /></a>
+                            <span id="view_%[id]%">%[edit_field]%</span>
+                            <span class="edit_panel" id="edit_%[id]%">
+                                <input type="text" id="fld_%[id]%" value="%[edit_field]%" />
+                                <a href="#" class="update_fld" data-id="%[id]%"><img src="/img/icons/save-icon-16x16.png" /></a>                            
+                            </span>
+                            <br />                                
+                        </for:items.data.2.data>
+                        </div>
+                        <div class="lookup_col">
+                        <for:items.data.3.data>
+                            <a href="#" class="delete_item" data-id="%[id]%"><img width="16" height="16" src="/img/icons/delete-icon-16x16.png" /></a>
+                            <a href="#" class="toggle_editmode" data-id="%[id]%"><img width="16" height="16" src="/img/icons/edit-icon-16x16.png" /></a>
+                            <span id="view_%[id]%">%[edit_field]%</span>
+                            <span class="edit_panel" id="edit_%[id]%">
+                                <input type="text" id="fld_%[id]%" value="%[edit_field]%" />
+                                <a href="#" class="update_fld" data-id="%[id]%"><img src="/img/icons/save-icon-16x16.png" /></a>                            
+                            </span>
+                            <br />                                  
+                        </for:items.data.3.data>
+                        </div>                        
+                        <div class="clear"></div>        
+                        <if:items.pages>
+                        <p style="text-align:left;">%[lbl_current_page]%: %[items.pages]%</p>    
+                        </if:items.pages>
+                    </if:items.data>
+                    <if:items.rowcount value="0">
+                        <p style="padding:10px;">Er zijn nog geen lookups van het type "%[table]%" gedefinieerd.</p>
+                    </if:items.rowcount>
+            </div>
+        </div>
+    </div>
+<div style="display:none">
+    <span id="sure_delete">Weet u zeker dat u deze lookup wilt verwijderen?</span>    
+    <span id="added_msg">Lookup toegevoegd</span>    
+    <span id="saved_msg">Lookup opgeslagen</span>    
+</div>

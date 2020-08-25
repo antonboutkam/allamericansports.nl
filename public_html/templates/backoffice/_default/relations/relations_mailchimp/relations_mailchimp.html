@@ -1,0 +1,23 @@
+
+    <h2>MailChimp</h2>
+
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">MailChimp synchronisatie</div>
+            <div style="margin:10px;">
+                <if:unsynced_relationcount>
+                    Bezig met syncen relatiegegevens, nog <span id="unsynced_relationcount">%[unsynced_relationcount]%</span> relaties te gaan. <img src="/img/icons/loading.gif" />
+                </if:unsynced_relationcount>
+                <if:unsynced_relationcount condistion="is_false">
+                    <div style="line-height:128px;;">
+                    <img src="/img/icons/check-icon-128x128.png" />Uw relaties zijn gesynchroniseerd met <a href="http://mailchimp.com" target="_blank">MailChimp</a>.<br />                    
+                    </div>                      
+                </if:unsynced_relationcount>
+            </div>
+            <div style="float:right;margin:3px;">
+                <a href="%[request_uro]%?_do=mailchimp_reconfigure">Mailchimp opnieuw instellen</a>
+            </div>
+            <div class="cl"></div>
+        </div>
+    </div>
+

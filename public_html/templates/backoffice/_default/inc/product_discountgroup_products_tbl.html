@@ -1,0 +1,44 @@
+        <script type="text/javascript">
+            var current_page    = '%[current_page]%';
+            var view            = '%[view]%';
+        </script>
+        <div class="searchresults">
+            <div class="searchtitle">
+                Gekoppelde producten               
+                <div style="float:right;color:#555;">%[products_groups_items.rowcount]% producten in deze groep <a href="#" class="reload"><img width="20" class="middle" src="%[root]%/img/icons/reload.png" /></a></div>                
+                <div class="clear"></div>                 
+            </div>
+            <div class="clear"></div>
+            <div style="display:block;" id="listview" class="perspective">                
+                <table style="margin:15px; width:95%;">
+                    <if:products_groups_items.data>
+                        <tr class="rowheader">
+                            <th style="width:18px;">&nbsp;</th>                             
+                            <td><a href="#">Artikelnummer</a></td>
+                            <td><a href="#">Artikelnaam</a></td>
+                            <td><a href="#">Kleuren</a></td>
+                            <td><a href="#">Systeem voorraad</a></td>
+                            <td><a href="#">Stukprijs</a></td>
+                        </tr>                    
+                        <for:products_groups_items.data>
+                            <tr class="row%[oddeven]%">                                                        
+                                <td><a href="#" class="unlink_item" data-id="%[cpgid]%"><img src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16"/></a></td>
+                                <td>%[article_number]%</td>
+                                <td>%[article_name]%</td>
+                                <td>%[colors]%</td>
+                                <td>%[global_stock]%</td>
+                                <td>%[sale_price_vat]%</td>                                                                    
+                            </tr>
+                        </for:products_groups_items.data>                                        
+                    </if:products_groups_items.data>
+                    <if:products_groups_items.data condition="is_false">
+                        <tr class="row%[oddeven]%">
+                            <td colspan="11" style="text-align:center;line-height:40px;font-weight:bold">Er zijn nog geen producten toegevoegd aan deze groep.</td>
+                        </tr>
+                    </if:products_groups_items.data>
+                </table>
+                <div class="clear"></div>
+            </div>
+            <center>%[products_groups_items.paginate]%</center>
+            <div class="clear"></div>         
+        </div>

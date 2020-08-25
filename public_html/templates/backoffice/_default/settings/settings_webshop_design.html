@@ -1,0 +1,102 @@
+<link rel="stylesheet" media="screen" type="text/css" href="%[root]%/js/colorpicker/css/colorpicker.css" />
+<script type="text/javascript" src="%[root]%/js/colorpicker/js/colorpicker.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(e){
+        $('input[type=color]').each(function(i,e){
+            $(e).css({'background-color':$(e).val()});            
+            $(e).ColorPicker({color:$(e).val(),livePreview:true,
+                onSubmit: function(hsb, hex, rgb, el) {
+                    $(el).val('#'+hex);
+                    $(e).css({'background-color':'#'+hex});  
+                    $(el).ColorPickerHide();
+                },onBeforeShow: function () {
+		$(this).ColorPickerSetColor(this.value);
+            }});     
+        });
+    });
+
+ </script>
+<form method="post">
+    <h2>Webshops</h2>
+    <div class="searchbox">
+        <div class="searchresults">
+            <input type="hidden" name="_do" value="save" />
+            <input type="hidden" name="webshop_id" value="%[webshop_id]%" />
+            <div class="searchtitle">%[webshop]% design</div>
+            <div style="margin:10px;">
+                <table style="width:600px;">
+                    <tr><td colspan="2"><h2>Banner instellingen</h2></td></tr>                
+                    <tr>
+                        <td>Effect</td>
+                        <td>
+                            <select name="setting[banner_effect]" val="%[settings.banner_effect]%">
+                                <option value="random">Willekeurig</option>
+                                <option value="sliceDown">Naar beneden slicen</option>
+                                <option value="sliceDownLeft">Schuin naar beneden slicen (van rechts naar links)</option>
+                                <option value="sliceUp">Omhoog slicen</option>
+                                <option value="sliceUpLeft">Schuin omhoog slicen (van rechts naar links)</option>
+                                <option value="sliceUpDown">Van boven naar beneden slicen</option>
+                                <option value="sliceUpDownLeft">Schuin van boven naar beneden slicen (van links naar rechts)</option>
+                                <option value="fold">Vouwen</option>
+                                <option value="fade">Langzaam laten verdwijnen</option>                                
+                                <option value="slideInRight">slideInRight</option>
+                                <option value="slideInLeft">slideInLeft</option>
+                                <option value="boxRandom">Blok willekeurig</option>
+                                <option value="boxRain">Regen</option>
+                                <option value="boxRainReverse">Regen (achterstevoren)</option>
+                                <option value="boxRainGrow">Groeien</option>
+                                <option value="boxRainGrowReverse">Groeien (achterstevoren)</option>                                                                
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Overlay (ribbon) weergeven</td>
+                        <td>
+                            <input type="hidden" name="setting[banner_show_ribbon]" value="0" />
+                            <input type="checkbox" class="checkbox" name="setting[banner_show_ribbon]" %[settings.banner_show_ribbon=1?'checked="checked"':'']% value="1" /></td>
+                    </tr>
+                    <tr>
+                        <td>Bullets weergeven</td>
+                        <td>
+                            <input type="hidden" name="setting[banner_show_bullets]" value="0" />
+                            <input type="checkbox" class="checkbox" name="setting[banner_show_bullets]" %[settings.banner_show_bullets=1?'checked="checked"':'']% value="1"  /></td>
+                    </tr>
+                    <tr>
+                        <td>Volgende / vorige weergeven</td>
+                        <td>
+                            <input type="hidden" name="setting[banner_show_prevnext]" value="0" />
+                            <input type="checkbox" class="checkbox" name="setting[banner_show_prevnext]" %[settings.banner_show_prevnext=1?'checked="checked"':'']% value="1"   /></td>
+                    </tr>                    
+                    <tr>
+                        <td colspan="2"><h2>Kleuren</h2></td>                        
+                    </tr>                                  
+                    <tr>
+                        <td>Hoofd navigatiebalk achtergrond</td>
+                        <td><input type="color" name="setting[nav_bg]" value="%[settings.nav_bg]%" /></td>
+                    </tr>                                       
+                    <tr>
+                        <td>Menubalk achtergrond</td>
+                        <td><input type="color" name="setting[nav_menubar_bg]" value="%[settings.nav_menubar_bg]%" /></td>
+                    </tr>   
+                    <tr>
+                        <td>Menubalk tekst</td>
+                        <td><input type="color" name="setting[nav_menubar_txt]" value="%[settings.nav_menubar_txt]%" /></td>
+                    </tr>
+                    <tr>
+                        <td>Linkjes</td>
+                        <td><input type="color" name="setting[link_color]" value="%[settings.link_color]%" /></td>
+                    </tr> 
+                    <tr>
+                        <td>Footer balk achtergrond</td>
+                        <td><input type="color" name="setting[nav_footerbar_bg]" value="%[settings.nav_footerbar_bg]%" /></td>
+                    </tr>    
+                    <tr>
+                        <td>Footer balk tekst</td>
+                        <td><input type="color" name="setting[nav_footerbar_txt]" value="%[settings.nav_footerbar_txt]%" /></td>
+                    </tr>                                
+                </table>
+                <input type="submit" name="save" value="Opslaan" />
+            </div>
+        </div>
+    </div>
+</form>            

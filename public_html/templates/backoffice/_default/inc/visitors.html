@@ -1,0 +1,18 @@
+                <table style="margin:15px;">
+                    <tr class="rowheader">      
+                            <th>Ip</th>
+                            <th>Referer</th>
+                            <th>Landingspagina</th>
+                            <th>Exitpagina</th>                                                                                          
+                            <th>Conversie</th>
+                    </tr>
+                    <for:data>
+                        <tr class="row%[oddeven]%">                                         
+                            <td>%[ip]%</td>
+                            <td><a href="%[referer_url]%">%[referer_url]%</a></td>
+                            <td><a href="%[langingpage]%">%[langingpage]%</a></td>
+                            <td><a href="%[exitpage]%">%[exitpage]%</a></td>
+                            <td>%[order_id?'<a class="iframe" href="%[root]%/orders/collect.html?orderid=%[order_id]%&iframe=1">Ja</a>':'Nee']%</td>                    
+                        </tr>                        
+                    </for:data>                                            
+                </table>

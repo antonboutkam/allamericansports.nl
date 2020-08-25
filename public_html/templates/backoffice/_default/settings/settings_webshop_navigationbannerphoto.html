@@ -1,0 +1,39 @@
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" id="fld_webshop_id" name="img_for_webshop_id" value="%[webshop_id]%" />        
+    <input type="hidden" id="fld_menu_id" name="img_for_menu_id" value="%[menu_id]%" />    
+    
+    <input type="hidden" name="_do" value="save" />
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Banner op het menu-item toevoegen / wijzigen </div>      
+        
+            <p style="padding:10px;font-size:12px;">
+                Op deze pagina kunt u een banner om een menu-item pagina. 
+                De afbeelding moet in het juiste formaat worden gemaakt (694 x 266 pixels) voordat u hem gaat uploaden.
+                <span style="text-decoration:underline;">Alleen jpg bestanden worden ondersteund.</span>                                                
+            </p>
+            <p style="padding:10px;font-size:12px;">
+                <a href="%[root]%/settings/webshop_navigation.html?webshop_id=%[webshop_id]%">Terug naar het overzicht</a>
+            </p>
+            <if:errors>
+            <p style="padding:10px;font-size:12px;color:red;">
+                <for:errors>
+                    %[val]%
+                </for:errors>                                
+            </p>            
+            </if:errors>            
+            <div style="margin:10px;" id="treesegment">
+                <input type="file" name="image" /><br /><br />
+                <div class="cl"></div>                
+                <input type="submit" id="btn_add_item" value="Opslaan" />
+            </div>
+            <p style="padding:10px;font-size:12px;">
+            Hieronder tref u een voorbeeld van de afbeelding<br />
+            <if:current_image>
+                <img src="%[current_image]%"/><br />
+                <a href="/settings/webshop_navigationbannerphoto.html?&parent=%[parent]%&menu_id=%[menu_id]%&webshop_id=%[webshop_id]%&_do=delete">Klik hier om de afbeelding te verwijderen</a>
+            </if:current_image>
+            </p>                              
+        </div>
+    </div>
+</form>

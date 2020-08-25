@@ -1,0 +1,22 @@
+                        <table style="margin:10px;" >
+                            <tr class="roweven" style="font-weight:bold;" >
+                                <th>&nbsp;</th>
+                                <th><a rel="type" class="sort" href="#">E-mailaddress</a></th>
+                                <th><a rel="type" class="sort" href="#">Subscriber Name</a></th>
+                                <th><a rel="type" class="sort" href="#">Coming from</a></th>
+                            </tr>
+                            <for:items.data>
+                                <tr class="row%[oddeven]%" >
+                                    <td class="iconcol">
+                                        <a class="deleml" href="?del=%[id]%">
+                                        <img src="/img/icons/delete-icon-16x16.png"/>
+                                        </a>
+                                    </td>
+                                    <td>%[email]%</td>
+                                     <td>%[name]%</td>
+                                    <td>%[custom]%</td>
+                                </tr>
+                            </for:items.data>                        
+                        </table> 
+                        <div class="clear"></div>  
+                        <div style="text-align: center;">%[items.pages]%</div>

@@ -1,0 +1,57 @@
+<h2>%[lbl_warehouse_routing]%</h2>
+<div class="searchbox">
+    <div class="searchresults">
+        <div class="searchtitle">%[lbl_warehouselocations]%<div class="clear"></div></div>
+        <div id="warehouses_tbl">
+            %[warehouses_tbl]%
+        </div>
+        <span id="has_locations_err" style="display:none;">%[lbl_cannotremove]%</span>
+        <span id="warehouse_removed" style="display:none;">%[lbl_removed]%</span>                      
+    </div>
+</div>    
+
+<div class="searchbox location_editor" style="display:%[show_editor]%;">
+    <div class="searchresults">
+        <div style="display: block;" class="add_customer searchtitle">%[lbl_locations]%</div>
+        <div class="edit_content">
+            <form method="post">
+                <input type="hidden" name="_do" value="store-location" />                
+                <input type="hidden" name="id" id="fld_id" value="%[id]%" class="wareh"/>
+                <table>
+                    <tbody>                  
+                        <tr>
+                            <td>%[lbl_name]%</td><td><input tabindex="1" id="fld_name" name="location[name]" value="%[location.name]%" type="text" class="wareh"/></td>                                                                                                                                                                                 
+                            <td>%[lbl_phone]%</td><td><input tabindex="6" id="fld_phone" name="location[phone]" value="%[location.phone]%" type="text" class="wareh"/></td>
+                        </tr>
+                        <tr>
+                            <td>%[lbl_streetandnumber]%</td><td><input tabindex="2" id="fld_street" name="location[street]" value="%[location.street]%" type="text" class="wareh"/> <input tabindex="3" style="width:30px;" name="location[number]" value="%[location.number]%" type="text" class="wareh"/></td>                                                        
+                            <td>%[lbl_email]%</td><td><input tabindex="6" id="fld_email" name="location[email]" value="%[location.email]%" type="text" class="wareh"/></td>
+                        <tr>
+                            <td>%[lbl_zipcode]%</td><td><input tabindex="4" id="fld_postal" name="location[postal]" value="%[location.postal]%" type="text" class="wareh"/></td>
+                            <td>&nbsp;</td>
+                        </tr>                            
+                        <tr>
+                            <td>%[lbl_city]%</td><td><input tabindex="5" id="fld_city" name="location[city]" value="%[location.city]%" type="text" class="wareh"/></td>
+                            <td>&nbsp;</td>
+                        </tr>                            
+                        <tr>
+                            <td>%[lbl_country]%</td><td>
+                                <div id="countries"></div>
+                                <input tabindex="6" name="location[country]" value="%[location.country]%" type="text" class="wareh"/></td>                            
+                            <td>&nbsp;</td>
+                        </tr>                            
+                                                               
+                    </tbody>
+                </table>
+                <div class="actions">                    
+                    <input value="%[lbl_save]%" type="submit" />                    
+                    <input class="fld_cancel" value="%[lbl_cancel]%" type="submit" />
+                </div>                
+            </form>   
+        </div>                    
+    </div>
+</div>
+<div id="warehouse_config_tbl">
+    %[warehouse_config_tbl]%
+</div> 
+              

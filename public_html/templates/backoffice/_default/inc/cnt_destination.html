@@ -1,0 +1,98 @@
+        <div class="%[dialog]%" style="display: none;" title="Bericht verzonden">
+            Je bericht is verzonden.
+        </div>
+        <div id="cnt_main" class="round">
+            <div id="top_cnt_main" class="round">
+            <div style="width:600px; float:left;">
+                <h2>%[offer_txt]% %[city_from]% %[offer_txt_2]% %[city_to]%</h2>
+                <p>                     
+                    %[departure_date_txt]%: %[departure]% <br />    
+                    %[price_txt]%: %[price]% %[currency]% <br />
+                    %[driver_txt]%: <a href="%[base]%/profiles/%[profile_name]%.html">%[first_name]% %[last_name]%</a> <br />
+                    %[distance_txt]%: <span class="distance_container">%[dist]%</span> %[educated_guess]%<br />                    
+                </p>
+                <p>
+                    %[trip_description]%
+                </p>
+                <table>
+                    <tr>
+                        <td>%[from_location]%:</td><td><a href="http://en.wikipedia.org/wiki/%[city_from]%" title="Link to wikipedia" target="_blank">%[country_from]%, %[city_from]%</a></td>
+                    </tr>
+                    <tr>
+                        <td>%[to_location]%:</td><td><a href="http://en.wikipedia.org/wiki/%[city_to]%" title="Link to wikipedia" target="_blank">%[country_to]%, %[city_to]%</a></td>  
+                    </tr>                
+                </table> 
+                <p>
+                    Wij schatten de afstand in op ongeveer <span class="distance_container">%[dist]%</span>.
+                    Meestal is deze berekening redelijk accuraat. (tot op 100km)
+                    Maar we kunnen er ook een flink stuk naast zitten.
+                 </p>
+                 <div style="display:%[hasfacts]%">
+                    <h2>%[city_title]%</h2>
+                    <p>
+                        %[city_text]%
+                    </p>
+                    <script type="text/javascript"><!--
+                    google_ad_client = "ca-pub-5693808042894653";
+                    /* Backseatsurf small */
+                    google_ad_slot = "1282950231";
+                    google_ad_width = 468;
+                    google_ad_height = 60;
+                    //-->
+                    </script>
+                    <script type="text/javascript"
+                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>                      
+                </div>              
+                <table>
+                    <tr>
+                        <td>
+                        <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.carpool-afspraak.nl/%[curr_url]%" data-text="Wie rijd er op %[departure]% mee naar %[city_to]%?" data-count="horizontal" data-via="backseatsurfing">Tweet</a>
+                        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                        </td>
+                        <td>
+                        <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+                        <fb:like href="http://www.carpool-afspraak.nl/%[curr_url]%" layout="button_count" show_faces="true" width="450" font="arial"></fb:like>
+                        </td>
+                    </tr>
+                </table>
+
+                 <h3><a href="%[base]%/create/profile.html">%[create_profile]%</a></h3>
+                 <h3><a href="%[base]%/login.html">%[login_link]%</a></h3>
+
+
+
+
+                <div style="margin-top:25px;">
+                    <form method="post">
+                            <!-- nodig voor map! -->
+                            <input type="hidden" id="city_from" value="%[city_from]%"/>
+                            <input type="hidden" id="city_to" value="%[city_to]%"/>
+                            <input type="hidden" id="country_from" value="%[country_from]%"/>
+                            <input type="hidden" id="country_to" value="%[country_to]%"/>
+                            <!-- / nodig voor map! -->
+                            <input type="hidden" name="action" value="send_message" />
+                            <input type="hidden" name="driver" value="%[profile_name]%"/> 
+                            
+                            <div style="display:%[member_block]%;">
+                                <input type="text" name="title" id="fld_title" value="%[title_here]%" title="%[title_here]%" size="40" />                                               
+                                <textarea name="message" id="fld_message" cols="30" rows="10" title="%[message_here]%">%[message_here]%</textarea>     
+                                <input type="submit" name="react" value="%[send_a_message]%" />                       
+                            </div>
+                            <div style="display:%[no_member_block]%;">
+                            	<h2>%[must_be_member]%</h2>	
+								<p>
+				<textarea name="message" id="fld_message" readonly="readonly" disabled="disabled" cols="30" rows="10" title="%[message_here]%" >You must be signed in to be able to use this feature. </textarea>
+                           	<input type="submit" name="react" readonly="readonly" disabled="disabled" value="%[send_a_message]%" />
+                	           </p>
+                            </div>
+                    </form> 
+                </div>  
+                <div id="map_holder" style="width:400px; height:400px;"></div>                
+                 <h3><a href="http://www.hostelbookers.com" id="hostelbookers" title="%[accomodation_title]%">%[accomodation]% %[city_to]%</a></h3>
+                 <h3><a href="http://www.couchsurfing.com" title="%[free_accomodation_title]%">%[free_accomodation]% %[city_to]%</a></h3>                                    
+            </div>
+
+            <div class="clear"></div>  
+        </div>                      
+    </div> 

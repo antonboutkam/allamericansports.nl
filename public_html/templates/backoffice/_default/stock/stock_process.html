@@ -1,0 +1,24 @@
+<h2>%[curr_location_name]% %[lbl_stock]%</h2>
+<form>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">%[lbl_put_in_racks]%</div>
+            <input type="hidden" id="fld_did" />
+            <div class="edit_content" id="product_find_form">
+                %[product_find_form]%                      
+            </div>
+            <div class="clear"></div>            
+        
+            <div id="stock_process_open">
+                %[stock_process_open]%
+            </div>
+        </div>
+    </div>
+    <div class="searchbox">
+        <div id="stock_place_tbl">
+            %[stock_place_tbl]%
+        </div>
+    </div>
+    <div id="err-set-location" style="display:none">%[lbl_not_all_assigned]%.</div>
+    <div id="msg-complete" style="display:none">%[lbl_processed]%.</div>
+</form>

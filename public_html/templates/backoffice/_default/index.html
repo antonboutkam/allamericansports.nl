@@ -1,0 +1,79 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <!-- NuiCart webshop system -->
+    <!-- %[page]% -->  
+    <title>Backoffice %[system]%</title>
+    <script type="text/javascript">
+        var root = "%[root]%";
+        var request_uri = "%[request_uri]%";
+    </script> 
+    <script type="text/javascript" src="%[root]%/js/jq/libs.js%[js_anti_cache_str]%"></script>  
+    <script type="text/javascript" src="%[root]%/js/main.jquery.js%[js_anti_cache_str]%"></script>            
+    <script type="text/javascript" src="%[root]%/js/%[file]%.jquery.js%[js_anti_cache_str]%"></script>     
+    <link rel="shortcut icon" type="image/x-icon" href="%[root]%/img/favicon.ico" />    
+    <link type="text/css" rel="stylesheet" href="%[root]%/css/common.css" />  
+    <link type="text/css" rel="stylesheet" href="%[root]%/css/styles.css" />        
+</head>
+<body>    
+
+    <input type="text" name="barcode" id="fldbarcode" value="" />
+    <div class="clear"></div>        
+    <a href="" id="barcodelink"></a>
+    <div id="canvas">                
+        <a href="%[root]%/" style="display:block;width:180px;position:absolute;top:0px;left:0px;height:40px;background-image:url('%[root]%/img/sprite.png')"></a>
+        <if:is_member>
+            <div id="settings">   
+                
+                <div style="display:%[module_stockpile?'block':'none']%;width:480px;line-height:20px;">            
+                    <a href="" id="toggle_alt_locations">Voorraad: %[location_name]% <img id="mnu_ico" src="%[root]%/img/icons/menuup-icon-16x16.png" alt="Currently working on stock" /> </a>&nbsp;&nbsp;
+                    <div id="alt_locations" style="display:none">
+                        <for:locations>
+                            <div class="loc"><a class="set_location" href="%[querystring]%&set_location=%[id]%">%[name]% </a></div>
+                        </for:locations>                        
+                    </div>               
+                </div>
+               <!--
+                <a class="%[page=settings.html?'selected':'unselected']%" href="%[root]%/myaccount.html">Mijn account</a>
+                <img src="%[root]%/img/icons/config-icon-16x16.png" />
+                -->
+                <div>
+                <a class="%[page=settings.html?'selected':'unselected']%" href="%[root]%/settings/webshops.html">%[nav_settings]%</a>
+                <img src="%[root]%/img/icons/config-icon-16x16.png" alt="Settings" style="margin-right:10px;"  />
+                <a class="%[page=bugsfeatures.html?'selected':'unselected']% target="blank" href="http://nuicart.zendesk.com/">Bugs &amp features</a>
+                <img src="%[root]%/img/icons/bug-icon-16x16.png" alt="Bugs &amp; features" style="margin-right:10px;" />                                                                     
+                <a href="%[root]%/login.html?_do=logout">%[lbl_signout]%</a>
+                <img src="%[root]%/img/icons/lock-icon-16x16.png" alt="Signout"/>                         
+                
+                <a class="%[page=settings.html?'selected':'unselected']%" href="http://handleiding.nuicart.nl" target="_blank">Help</a>
+                <img src="%[root]%/img/icons/help-icon-16x16.png" />
+                </div> 
+            </div>
+        </if:is_member>
+        <div id="flags">                                                                                
+            <a href="%[querystring]%&lang=nl"><img src="%[root]%/img/flags/flags_iso/24/nl.png" alt="Switch language to Dutch" /></a>
+            <a href="%[querystring]%&lang=gb"><img src="%[root]%/img/flags/flags_iso/24/gb.png" alt="Switch language to English"  /></a>                       
+        </div>                                     
+        <div class="clear"></div>    
+        <div id="header_bg_small">
+            <div id="menu_bg">                                                          
+                %[main_nav]%
+            </div>            
+        </div>         
+        <div class="vertshadow"></div>
+        <div id="content_outside">
+            %[sub_nav]%                           
+            <div id="content_cnt">                                                
+                <div id="content" class="content_%[page]%">        
+                    %[content]%                        
+                </div>          
+                <div id="fld_testononff" style="display:%[testmsg]%">You are working on the test system</div>            
+            </div>  
+            <div class="vertshadow"></div>   
+        </div>                  
+    </div>    
+    <div id="preview_img"><img src="/img/no-img-available.jpg" /></div>             
+</body>
+</html>

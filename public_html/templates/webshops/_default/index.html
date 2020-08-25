@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- %[page]% -->
+       %[head]%
+    </head>
+    <body class="%[body_class]%">    
+	<!-- CONTAINER -->
+    <div id="container">
+    	<!-- HEADER -->
+        <div id="header">        
+        	<!-- HEADERTOP -->
+        	<div id="headertop">            
+            	<div id="talen">
+                	<ul>
+                        <li class="%[lang=nl?'current-menu-item':'']%"><a href="%[root]%/nl%[request_uri_no_lang]%">NL</a></li>
+                        <li class="%[lang=gb?'current-menu-item':'']%"><a href="%[root]%/gb%[request_uri_no_lang]%">EN</a></li>
+                    </ul>
+                </div>
+                <div class="extra-menu">
+                    <ul class="menu">
+                        <li><a href="%[root]%/%[lang]%/%[trans_link_custservice]%.html">%[trans_custservice]%</a></li>
+                        <li><a href="%[root]%/%[lang]%/%[trans_link_faq]%.html">%[trans_faq]%</a></li>
+                    </ul>
+                </div>
+                
+                <div class="service-menu">
+                    <ul class="menu">
+                        <li><a href="%[root]%/%[lang]%/contact.html">%[trans_contact]%</a></li>
+                    
+                        <if:is_logged_in>                            
+                            <li><a href="%[root]%/%[lang]%/myaccount.html">%[trans_myaccount]%</a></li>
+                            <li><a href="%[root]%/%[lang]%/login.html?logout=1">%[trans_logout]%</a></li>                            
+                        </if:is_logged_in>
+                        <if:is_logged_in condition="is_false">                            
+                            <li><a href="%[root]%/%[lang]%/createaccount.html">%[trans_register]%</a></li>
+                            <li><a href="%[root]%/%[lang]%/login.html">%[trans_login]%</a></li>                            
+                        </if:is_logged_in>                                                
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- /HEADERTOP -->
+            
+            <!-- HEADERINNER -->
+            <div id="headerinner">
+            
+                <div id="logo">
+                    <a href="%[root]%/%[lang]%/" ><img src="/img/logo.png" width="315" height="42" alt="All American Sports" /></a>
+                </div>                
+                <div id="zoeken">
+                	<span><input type="text" class="focusblur" value="%[query]%" placeholder="%[trans_search]%"  title="%[trans_search]%" id="fldsearch"></span>
+                </div>                
+                <div id="sporttas" style="cursor:pointer" onclick="window.location='%[root]%/%[lang]%/basket.html'">
+                	<span>%[trans_mybag]%</span><br />
+                        <a href="%[root]%/%[lang]%/basket.html">&euro; </a>
+                        <a href="%[root]%/%[lang]%/basket.html" id="totalprice">%[total_price_in_cart]%</a><br />
+                        <a href="%[root]%/%[lang]%/basket.html" id="itemcount">%[products_in_cart]%</a> <a href="%[root]%/%[lang]%/basket.html">%[trans_products]%</a>
+                </div>
+                
+            </div>
+            <!-- /HEADERINNER -->
+            
+            <div class="main-menu">
+            	<ul class="menu">
+                	<li><a href="%[root]%/%[lang]%/" class="%[currentpage=index?'active':'']%" >Home</a></li>
+                    <for:main_menu>
+                        <li class="%[last_item?'af':'']%"><a href="%[root]%/%[lang]%/%[menu_item_lower_enc]%.html" data-menu-id="%[id]%" class="%[active]% track_menu_item cms navtree">%[menu_item]%</a></li>    
+                    </for:main_menu>
+                    <li class="last"><a href="%[root]%/%[lang]%/%[lang=nl?'sportkleding':'sportswear']%.html" class="%[currentpage=diverse?'active':'']% %[diverse_active]%">%[trans_severalsportswear]%</a></li>
+                </ul>
+                
+                
+            </div>
+            <div id="slogans">
+            	<ul>
+                    <for:unique_selling_points>                        
+        		          <li style="display:%[usp?'block':'none']%"><span>%[usp]%</span></li>                           
+                    </for:unique_selling_points>
+                </ul>
+            </div>
+        </div>
+         <!-- /HEADER -->
+         
+         <!-- MAIN -->
+         <div id="main">
+                
+                <!-- CONTENT -->
+         		%[content]%
+                <!-- /CONTENT -->
+                
+                
+                <!-- SIDEBAR -->
+                %[sidebar]% 
+                <!-- /SIDEBAR -->
+                
+                 <!--Popular Products-->
+                <if:page value="home">
+
+
+                    <if:article_2.content>
+                        <div class="cms spotlight uitgelicht_hor">
+                            <h2>%[article_2.title]%</h2>
+                            <ul>
+                                <li style="width: 950px;">
+                                    %[article_2.content]%
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cl"></div>
+                    </if:article_2.content>
+
+                    <div class="cms spotlight" id="uitgelicht">
+                        <h2>%[transl_popupulararticles]%</h2>
+                        
+                        <ul>
+                        	 <for:spotlight.data>
+                                <li class="%[last?'last':'']% cms product" id="%[id]%">
+                                    <a href="%[root]%/%[lang]%/product/%[title_encoded]%%[group_id]%-%[id]%.html"><if:is_offer><span class="%[lang=nl?'offer-nl':'offer-gb']%"></span></if:is_offer><img src="/img/upload/160x124_%[id]%.jpg" width="160" height="124" alt=""  /></a>
+                                    <h2 title="%[spotlight_title.full]%"><if:spotlight_title.has_more>%[spotlight_title.short]%...</if:spotlight_title.has_more>
+									<if:spotlight_title.has_more condition="is_false">%[spotlight_title.full]%</if:spotlight_title.has_more><br /></h2>
+                                    <p>%[type_vis]%</p>
+                                    <div class="sterren"><img src="/img/sterren.png" width="53" height="10" alt="sterren" /></div>
+                                    <span class="prijs">&euro;%[sale_price_vat_vis]%</span>
+                                    <div class="button">
+                                        <a href="%[root]%/%[lang]%/product/%[title_encoded]%%[group_id]%-%[id]%.html"><span>%[tansl_moreinformation]%</span></a>
+                                    </div>
+                                </li>
+                            </for:spotlight.data>
+              			</ul>
+                        
+                    </div>
+                </if:page>
+               <!--/Popular Products-->
+                
+              
+        </div>
+        
+        <!-- /MAIN -->
+         
+    </div>
+    <div id="beforefooter">
+       <div id="logos">
+            	<ul>                    
+                    <li><a title="Spalding true to the Game, Bring the arena to your driveway" href="%[root]%/%[lang]%/spalding.html"><img src="/img/logos/spalding-grayscale.png" width="88" height="65" alt="logo Spalding" /></a></li>
+                    <li><a title="Dreamlight Activewear, gymnastics Leotards, Apparel, Elegance, Pure &amp; Simple" href="%[root]%/%[lang]%/dreamlight.html"><img src="/img/logos/dreamlight-grayscale.png" width="88" height="65" alt="logo Dreamlight" /></a></li>                    
+                    <li><a title="Canterbury of New Zealand, rugby Clothing, footwear and accessories" href="%[root]%/%[lang]%/canterbury.html"><img src="/img/logos/logo_canterbury.jpg" width="80" height="65" alt="logo Canterbury" /></a></li>
+					<li><a title="Nokona America's pastime. American made.™ World-class baseball and softball gloves made in America since 1934." href="%[root]%/%[lang]%/nokona.html"><img src="/img/logos/nokona.png" width="150" height="65" alt="logo Nokona" /></a></li>
+					<li><a title="Sklz, Athletic Training, Performance Sports Training, Athlete Sports Training" href="%[root]%/%[lang]%/sklz.html"><img src="/img/logos/sklz.png" width="114" height="65" alt="logo sklz" /></a></li>
+					<li><a title="Verdero Professional Grade Baseball Products." href="%[root]%/%[lang]%/verdero.html"><img src="/img/logos/verdero.png" width="133" height="65" alt="logo verdero" /></a></li>
+                </ul>                
+            </div>
+             <div id="sitemap">
+          		%[sitemap_data]%	  
+          </div>
+        <if:article_3.content>
+            <div class="cms spotlight uitgelicht_hor" id="article">
+                <h2>%[article_3.title]%</h2>
+                <ul>
+
+                    <li style="width: 950px;">
+                        %[article_3.content]%
+                    </li>
+
+                </ul>
+            </div>
+            <div class="cl"></div>
+        </if:article_3.content>
+    </div>
+
+    <!-- /CONTAINER -->
+    
+    <!-- FOOTER -->
+    <div id="footer">
+    	
+        <div id="footertop">
+        	
+        	
+       	 
+            <div class="aanmelden_nieuwsbrief"><form method="post" id="subscribe_newsletter" action="/">
+            		<input type="hidden" name="_do" value="subscribe" />
+                    <input type="hidden" name="r" value="%[request_uri]%" />
+            	  <h2>%[trans_newsletter]%</h2>
+                  <div class="field"><input type="text" name="emailaddr" id="email" title="%[trans_fillin]%" value="%[trans_fillin]%"  class="fldnewsletter focusblur" /></div>
+                  <div class="button"><a href="javascript:void(0)" id="newsletter">%[trans_signup]%</a></div> 
+               </form>
+            </div>
+        </div>    
+        <div id="footerinner">
+            
+            <div class="footer-menu">
+                <ul class="menu">
+                    <li><a href="%[root]%/%[lang]%/%[footer.col_one.0.url]%.html">%[trans_moreinfo]%</a>
+                    	<ul>                        
+                            <for:footer.col_one>
+                                <li><a class="cms article" data-cmsid="%[id]%" href="%[root]%/%[lang]%/%[url]%.html">%[title]%</a></li>
+                            </for:footer.col_one>
+                            <li><a target="_blank" href="/formulier_voor_herroeping.pdf">Formulier retourzenden</a></li>
+                            <li><a target="_blank" href="http://www.allamericansports.nl/calendar/index.php">%[trans_visitourshowroom]%</a></li>
+                            <li><a href="%[root]%/%[lang]%/contact.html">%[trans_contact]%</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="%[root]%/%[lang]%/%[footer.col_two.0.url]%.html">%[trans_faq]%</a>
+                    	<ul>
+                            <for:footer.col_two>
+                                <li><a class="cms article" data-cmsid="%[id]%" href="%[root]%/%[lang]%/%[url]%.html">%[title]%</a></li>
+                            </for:footer.col_two>                
+                        </ul>
+                    </li>
+                    <li><a href="%[root]%/%[lang]%/%[footer.col_three.0.url]%.html">%[trans_tips]%</a>
+                    	<ul>
+                            <for:footer.col_three>
+                                <li><a class="cms article" data-cmsid="%[id]%" href="%[root]%/%[lang]%/%[url]%.html">%[title]%</a></li>
+                            </for:footer.col_three>
+                        </ul>
+                    </li>
+                    <li><a href="#">%[trans_brands]%</a>
+                    	<ul>
+                            <li><a href="%[webshop_settings.footer_1_link]%">%[webshop_settings.footer_1_label]%</a></li>
+                            <li><a href="%[webshop_settings.footer_2_link]%">%[webshop_settings.footer_2_label]%</a></li>
+                            <li><a href="%[webshop_settings.footer_3_link]%">%[webshop_settings.footer_3_label]%</a></li>
+                            <li><a href="%[webshop_settings.footer_4_link]%">%[webshop_settings.footer_4_label]%</a></li>
+                            <li><a href="%[webshop_settings.footer_5_link]%">%[webshop_settings.footer_5_label]%</a></li>
+                            <li><a href="%[webshop_settings.footer_6_link]%">%[webshop_settings.footer_6_label]%</a></li>
+                        </ul>
+                    </li>
+                    <li class="social_media"><a href="#">%[trans_follow]%</a>
+                    	<ul class="social_media">
+                            <li class="twitter webshop_setting cms"><a target="blank" href="%[webshop_settings.twitter_link]%">Twitter</a></li>
+                            <li class="facebook webshop_setting cms"><a target="blank" href="%[webshop_settings.facebook_link]%">Facebook</a></li>
+                        </ul>
+                    </li>
+                </ul>        
+            </div>
+        </div>
+        <div id="footerbottom">
+        	<div id="aceview">
+                <a href="http://www.aceview.nl" target="blank">Webdesign: Aceview Internet</a>        
+            </div>
+            <div class="extra-menu_1">
+            	<ul>
+                   <li><a href="%[root]%/%[lang]%/%[trans_link_aboutalla]%.html">%[trans_about]% <span>%[hostname]%</span></a></li>
+                    <li><a href="http://www.allamericangymnastics.nl/calendar/" target="blank">Showroom</a></li>
+                </ul>
+            </div>
+            <div id="copyright">                
+                &copy; 2012 %[hostname]%
+            </div>
+        </div>
+	</div>
+    <div id="preview_img"><img src="/img/no-img-available.jpg" alt="Place holder for preview images" /></div>
+    <!-- /FOOTER -->
+<!-- begin olark code -->
+<script data-cfasync="false" type='text/javascript'>/*{literal}<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+f[z]=function(){
+(a.s=a.s||[]).push(arguments)};var a=f[z]._={
+},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+0:+new Date};a.P=function(u){
+a.p[u]=new Date-a.p[0]};function s(){
+a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+b.contentWindow[g].open()}catch(w){
+c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('9849-284-10-3859');/*]]>{/literal}*/</script>
+<!-- end olark code -->
+
+<script>
+// Google analytics tracking.
+// Added this to the footer so the sales can be tracked anywhere on the page.
+ga('send', 'pageview');
+</script>
+
+
+</body>
+
+<!-- Needs to be here always -->
+%[debug_info]%
+
+</html>        
+
+
+

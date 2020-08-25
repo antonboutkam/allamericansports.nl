@@ -1,0 +1,67 @@
+                <!-- %[section]%  -->               
+                <if:section value="relations">
+                    <div class="submenu"><div class="m  %[page=overview?'acc':'']%"><a href="%[root]%/relations/overview.html">%[lbl_rel_overview]%</a></div></div>
+                    <div class="submenu"><div class="m submenu_trigger" id="sub_relations"><a href="#">%[lbl_rel_add]%</a></div></div>
+                    <div class="submenu"><div class="m submenu_trigger"><a href="%[root]%/relations/newsletter.html">%[lbl_newsletter_brief]%</a></div></div>					
+                    <div class="submenu"><div class="m %[page=mailing?'acc':'']%"><a href="%[root]%/relations/mailing.html">%[lbl_newsletter_send]%</a></div></div>                                        
+                    <div class="submenu"><div class="m %[page=mailchimp?'acc':'']%"><a href="%[root]%/relations/mailchimp.html"><img src="/img/icons/mailchimp.png" width="20" height="20" style="vertical-align: middle;margin-top:-3px;margin-right:5px" /> MailChimp</a></div></div>
+                    <div class="clear"></div>
+                    <div class="submenu_sect" id="t_sub_relations" style="display:none;">
+                        <div class="submenu"><div class="m"><a class="iframe" href="%[root]%/relations/edit.html?type=client&iframe=1">%[add_customer]%</a></div></div>
+                        <div class="submenu"><div class="m"><a class="iframe" href="%[root]%/relations/edit.html?type=prospect&iframe=1">%[add_prospect]%</a></div></div>
+                        <div class="submenu"><div class="m"><a class="iframe" href="%[root]%/relations/edit.html?type=supplier&iframe=1">%[add_supplier]%</a></div></div>                        
+                    </div>
+                    <div class="clear"></div>
+                </if:section>
+                 <if:section value="stock">
+                    <div class="submenu"><div class="m %[page=current?'acc':'']%"><a href="%[root]%/stock/current.html">%[lbl_current]%</a></div></div>
+                    <div class="submenu"><div class="m %[page=mutations?'acc':'']%"><a href="%[root]%/stock/mutations.html">%[lbl_mutations]%</a></div></div>
+                    <div class="submenu"><div class="m %[page=fill?'acc':'']%"><a href="%[root]%/stock/fill.html">%[lbl_fill]%</a></div></div>
+                    <div class="submenu"><div class="m submenu_trigger %[page=move?'acc':'']%%[page=proccess?'acc':'']%" id="sub_move"><a href="#">%[lbl_movestock]%</a></div></div>
+                    <div class="submenu"><div class="m %[page=serialnumbers?'acc':'']%"><a href="%[root]%/stock/serialnumbers.html">Serienummers registreren</a></div></div>
+                    <div class="clear"></div>
+                    <div class="submenu_sect" id="t_sub_move" style="display:none;">
+                        <div class="submenu"><div class="m"><a href="%[root]%/stock/move.html">%[prepare_to_send]%</a></div></div>
+                        <div class="submenu"><div class="m"><a href="%[root]%/stock/process.html">%[process_send]%</a></div></div>
+                    </div>
+                    <div class="clear"></div>
+                </if:section>               
+                 <if:section value="orders">                 
+                    <div class="submenu"><div class="m %[page=overview?'acc':'']%%[view=picker?'0':'']%"><a href="%[root]%/orders/overview.html">%[lbl_overview]%</a></div></div>
+                    <div class="submenu"><div class="m %[page=new?'acc':'']%"><a href="%[root]%/orders/new.html">%[lbl_accept_order]%</a></div></div>
+                    <div class="submenu"><div class="m %[page=overview?'acc':'']%%[view=picker?'':'0']% "><a href="%[root]%/orders/overview.html?view=picker">%[lbl_order_picker]%</a></div></div>
+                    <div class="clear"></div>                                    
+                </if:section>
+                 <if:section value="products">
+                    <div class="submenu"><div class="m %[page=catalogue?'acc':'']%"><a href="%[root]%/products/catalogue.html">%[lbl_overview]%</a></div></div>                                   
+                    <div class="submenu"><div class="m %[extrafields=none?'acc':'']%"><a href="%[root]%/products/edit.html?extrafields=none">%[lbl_addproduct]%</a></div></div>                    
+                    <div style="display:%[module_product_groups?'block':'none]%"  class="submenu"><div class="m %[page=groups?'acc':'']%"><a href="%[root]%/products/groups.html">%[lbl_productgroups]%</a></div></div>
+                    <div style="display:%[module_product_groups?'block':'none]%"  class="submenu"><div class="m %[page=discountgroups?'acc':'']%"><a href="%[root]%/products/discountgroups.html">%[lbl_discountgroups]%</a></div></div>                                        
+                    <div style="display:%[module_product_spotlight?'block':'none]%"  class="submenu"><div class="m %[page=spotlight?'acc':'']%"><a href="%[root]%/products/spotlight.html">%[lbl_spotlight]%</a></div></div>                    
+                    
+                    <!--
+                    <div class="submenu"><div class="m %[extrafields=notebook?'acc':'']%"><a href="%[root]%/products/edit.html?extrafields=notebook">Computer toevoegen</a></div></div>
+                    <div class="submenu"><div class="m %[page=adwords_export?'acc':'']%"><a href="%[root]%/products/adwords_export.html">Adwords beheer</a></div></div>
+                    -->
+                    <div class="clear"></div>                                                        
+                </if:section>            
+                 <if:section value="settings">                                                            
+                        <div class="submenu"><div class="m %[page=users?'acc':'']%"><a href="%[root]%/settings/users.html">%[lbl_usersprivileges]%</a></div></div>                                                
+                        <div style="display:%[module_stockpile?'block':'none']%;" class="submenu"><div class="m %[page=locations?'acc':'']%"><a href="%[root]%/settings/locations.html">%[lbl_locationswarehouse]%</a></div></div>                        
+                        <div class="submenu"><div class="m %[page=paymethods?'acc':'']%"><a href="%[root]%/settings/paymethods.html">%[lbl_paymethods]%</a></div></div><div class="submenu"><div class="m %[page=billingaddress?'acc':'']%"><a href="%[root]%/settings/billingaddress.html">%[lbl_billing]%</a></div></div>                        
+                        <div style="display:%[module_webshops=1?'inline':'none']%" class="submenu"><div class="m %[page=webshops?'acc':'']%"><a href="%[root]%/settings/webshops.html">%[lbl_webshops]%</a></div></div>
+                        <div class="submenu"><div class="m %[page=fielddef?'acc':'']%"><a href="%[root]%/settings/fielddef.html">%[lbl_fielddefinitions]%</a></div></div>
+                        <div class="submenu"><div class="m %[page=modules?'acc':'']%" id="sub_modules"><a href="%[root]%/settings/barcodelabels.html">%[lbl_barcodes]%</a></div></div>                        
+                        <div style="display:%[module_seo_article_generator=1?'inline':'none']%" class="submenu"><div class="m %[page=seo?'acc':'']%"><a href="%[root]%/settings/seo.html">%[lbl_seo]%</a></div></div>
+                        <div class="submenu"><div class="m %[page=authlog?'acc':'']%"><a href="%[root]%/logs/authlog.html">%[lbl_logfiles]%</a></div></div> 
+                        <div class="submenu"><div class="m %[page=components?'acc':'']%"><a href="%[root]%/settings/components.html">%[lbl_system]%</a></div></div>	
+                        <div class="submenu"><div class="m %[page=sizetable?'acc':'']%"><a href="%[root]%/settings/sizetable.html">%[lbl_sizetable]%</a></div></div>									                                                                        
+                    <div class="clear"></div>
+                </if:section>                 
+                 <if:section value="logs">
+                        <div class="submenu"><div class="m %[page=authlog?'acc':'']%"><a href="%[root]%/logs/authlog.html">Authenticatie log</a></div></div>
+                        <div class="submenu"><div class="m %[page=visitors?'acc':'']%"><a href="%[root]%/logs/visitors.html">Bezoekers log</a></div></div>
+                        <div class="submenu"><div class="m %[page=mail?'acc':'']%"><a href="%[root]%/logs/mail.html">Mail log</a></div></div>                    
+                    <div class="clear"></div>
+                </if:section>                    
+                

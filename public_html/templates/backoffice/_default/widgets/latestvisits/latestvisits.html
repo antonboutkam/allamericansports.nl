@@ -1,0 +1,43 @@
+<style type="text/css">
+    
+.browser_sprite{width:16px;height:16px;background:url('/img/icons/browser-sprite-16.png') no-repeat;}
+.browser_sprite.firefox{background-position:0px 0px;}
+.browser_sprite.ie{background-position:-16px 0px;}
+.browser_sprite.chrome{background-position:-32px -32px;}
+
+</style>   
+
+
+<table style="margin:10px;margin-bottom:0px;display:%[current_view=half?'block':'none']%" class="views half_view">                
+    <tr class="roweven">
+        <td style="font-weight: bold">&nbsp;</td>
+        <td style="font-weight: bold">IP</td>
+        <td style="font-weight: bold">Landingpage</td>
+        <td style="font-weight: bold">Tijd</td>
+    </tr>
+    <for:latest_visits>
+        <tr class="row%[oddeven]%">
+            <td><div class="browser_sprite %[browser_lc]% tipsy" title="%[browser]%"></div></td>
+            <td>%[ip]%</td>
+            <td><a href="%[landingpage]%" target="blank" title="%[landingpage]%">%[landingpage_short]%</a></td>
+            <td>%[start_time]%</td>
+        </tr>
+    </for:latest_visits>  
+</table>
+<table style="margin:10px;width:940px; margin-bottom:0px;display:%[current_view=full?'block':'none']%;" class="views full_view">                
+    <tr class="roweven">
+        <td style="font-weight: bold">&nbsp;</td>
+        <td style="font-weight: bold">IP</td>
+        <td style="width:700px;  font-weight: bold">Landingpage</td>
+        <td style="font-weight: bold">Tijd</td>
+    </tr>
+    <for:latest_visits>
+        <tr class="row%[oddeven]%">
+            <td><div class="browser_sprite %[browser_lc]% tipsy" title="%[browser]%"></div></td>
+            <td>%[ip]%</td>
+            <td><a href="%[landingpage]%" target="blank" title="%[landingpage]%">%[landingpage]%</a></td>
+            <td>%[start_time]%</td>
+        </tr>
+    </for:latest_visits>     
+</table>
+<div class="clear"></div>         

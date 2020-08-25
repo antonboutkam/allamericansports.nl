@@ -1,0 +1,84 @@
+<h2>Adwords export</h2>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Waarschuwing</div>
+            <div style="margin:10px;">                
+                <div style="color:red;font-weight:bold;text-align:center;">Waarschuwing: Deze tool is experimenteel, gebruiken op eigen risico!</div>                                
+            </div>
+        </div>
+    </div>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Nieuwe campagne aanmaken</div>
+            <div style="margin:10px;">                
+                <form method="post">
+                    <input type="hidden" name="_do" value="create" />
+                    <input type="text" name="name" class="focusblur" value="Campagne naam" title="Campagne naam"  />
+                    <input type="submit" name="export" value="Aanmaken" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Mijn campagnes</div>
+            <div style="margin:10px;">           
+                <for:campains>
+                    <a href="%[root]%/products/adwords_export.html?id=%[id]%&campainname=%[name]%">%[name]%</a>                    
+                </for:campains>
+            </div>
+        </div>
+    </div>
+    <if:id>
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="searchtitle">Advertentiegroepen in de "%[campainname]%" campagne</div>
+                <div style="margin:10px;">           
+                    <table>
+                        <if::add_groups>
+                            <tr>
+                                <td></td>
+                                <td>Group name</td>
+                                <td>Start</td>
+                                <td>Eind</td>
+                                <td>Conversies</td>
+                                <td>Clicks</td>
+                                <td>Impressies</td>
+                                <td>Ctr</td>
+                                <td>Cpm</td>
+                                <td>Cpc</td>
+                            </tr>                                                    
+                            <for:add_groups>
+                                <tr>
+                                    <td class="iconcol"><img src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16" /></a></td>
+                                    <td><a href="%[root]%/products/adwords_export.html?id=%[id]%&addgroupid=%[addgroupid]%&groupname=%[name]%&campainname=%[campainname]%">%[name]%</a></td>                   
+                                    <td>%[stats.startDate]%</td>                                
+                                    <td>%[stats.endDate]%</td>
+                                    <td>%[stats.conversions]%</td>
+                                    <td>%[stats.clicks]%</td>
+                                    <td>%[stats.impressions]%</td>
+                                    <td>%[stats.ctr]%</td>
+                                    <td>%[stats.averageCpm]%</td>
+                                    <td>%[stats.averageCpc]%</td>
+                                </tr>                             
+                            </for:add_groups>
+                        </if::add_groups>                        
+                        <tr style="display:%[add_groups?'none':'table-row']%"><td colspan="10"><a href="%[root]%/products/adwords_export.html?id=%[id]%&_do=autocreate_addgroups&campainname=%[campainname]%">Automatisch add groups aanmaken</a></td></tr>                                                
+                    </table>
+                </div>
+            </div>
+        </div>
+    </if:id>
+    <if:addgroupid>
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="searchtitle">Advertenties in de groep "%[groupname]%"</div>
+                <div style="margin:10px;">           
+                    <tr style="display:%[add_groups?'none':'table-row']%"><td colspan="10"><a href="%[root]%/products/adwords_export.html?id=%[id]%&_do=autocreate_adds&campainname=%[campainname]%&groupname=Accu">Automatisch adds aanmaken</a></td></tr>                                                
+                </div>
+            </div>
+        </div>
+    </if:addgroupid>
+
+
+

@@ -1,0 +1,34 @@
+                        <table>                        
+                             <tr>
+                                <td colspan="2"><h2>%[lbl_general]%</h2></td>       
+                                <td colspan="2"><h2>%[lbl_address]%</h2></td>                           
+                                <if:shipping_street><td colspan="2"><h2>%[lbl_delivery_address]%</h2></td></if:shipping_street></tr>
+                                
+                             <tr>
+                                <td>%[lbl_firm]%</td><td>%[company_name]%</td>       
+                                <td>%[lbl_street]%</td><td>%[billing_street]% %[billing_number]%</td> 
+                                <if:shipping_street><td>%[lbl_street]%</td><td>%[shipping_street]% %[shipping_number]%</td></if:shipping_street></tr>
+                             
+                             <tr>
+                                <td>%[lbl_phone]%</td><td>%[phone]%</td>           
+                                <td>%[lbl_zipcode]%</td><td>%[billing_postal]%</td>                  
+                                <if:shipping_street><td>%[lbl_zipcode]%</td><td>%[shipping_postal]%</td></if:shipping_street></tr>
+                                
+                             <tr>
+                                <td>%[lbl_mobile_phone]%</td><td>%[phone_mobile]%</td>      
+                                <td>%[lbl_city]%</td><td>%[billing_city]%</td>                  
+                                <if:shipping_street><td>%[lbl_city]%</td><td>%[shipping_city]%</td></if:shipping_street></tr>
+                                                                           
+                             <tr>
+                                <td>%[lbl_email]%</td><td>%[email]%</td>              
+                                <td>%[lbl_country]%Land</td><td>%[billing_country]%</td>                     
+                                <if:shipping_street><td>%[lbl_country]%</td><td>%[shipping_country]%</td></if:shipping_street></tr>
+                            <tr>                                                                                                
+                                <td colspan="5" style="text-align:left">
+                                    <a class="iframe" href="%[root]%/relations/edit.html?type=customer&id=%[id]%&iframe=1&view=picker"><img width="16" height="16" src="%[root]%/img/icons/edit-icon-16x16.png" /></a>
+                                    <a class="iframe" href="%[root]%/relations/edit.html?type=customer&id=%[id]%&iframe=1&view=picker">Klant bewerken</a>
+                                </td>
+                            </tr>
+                        </table>
+
+

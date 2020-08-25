@@ -1,0 +1,13 @@
+<if:sitemap>
+    <for:sitemap>
+        <ul>
+            <li><b><a href="%[root]%/%[category_name_url]%-%[brand_id]%.html">%[category_name]%</a></b>
+                <ul>
+                    <for:data>
+                       <li><a href="%[root]%/%[category_name_url]%-%[category_child_url]%-%[model_id]%.html">%[category_name_child]%</a></li> 
+                    </for:data>
+                 </ul>   
+            </li>	
+        </ul>	
+    </for:sitemap>
+</if:sitemap>

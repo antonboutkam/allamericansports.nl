@@ -1,0 +1,44 @@
+    <script type="text/javascript">
+        var group_exists = '%[group_exists]%';
+        var name_changed = '%[name_changed]%';
+    </script>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="add_customer searchtitle">Productgroep instellingen</div>      
+            <div class="edit_content">
+                <form id="product_form" enctype="multipart/form-data" method="post">
+                    <input type="hidden" name="_do" value="store" />
+                    <input type="hidden" name="id" id="fld_id" value="%[products_group.id]%" />
+                    <table>
+                        <tr>
+                            <td style="width:80px;">Groepsnaam</td>
+                            <td style="width:110px;"><input type="text" id="fld_group_name" name="product_group[group_name]" value="%[products_group.group_name]%" /></td>
+                            <td><input type="submit" value="Wijzigingen opslaan" id="create_group" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><a href="/products/discountgroups.html">Terug naar het overizcht</a></td>
+                        </tr>                
+                    </table>       
+                </form>                  
+            </div>
+        </div>
+    </div>       
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="add_customer searchtitle">Producten linken</div>      
+            <div class="edit_content">
+                <a class="customiframe" data-ih="300" data-iw="1200" href="/products/catalogue.html?view=picker&amp;iframe=1&amp;showwostock=true"><img src="/img/icons/add-1-icon-16x16.png" height="16" width="16"></a>
+                <a class="customiframe" data-ih="300" data-iw="1200" href="/products/catalogue.html?view=picker&amp;iframe=1&amp;showwostock=true">Product toevoegen</a>         
+            </div>
+        </div>
+    </div>     
+     
+    <div class="searchbox" id="product_group_products_tbl">
+        %[product_group_products_tbl]%
+    </div>    
+    <div id="errors" style="display:none;">
+        <span id="nameemptyerror">Iedere productgroep moet verplicht een naam hebben.</span>
+        <span id="group_existserror">Het is niet mogelijk om de productgroep zo te noemen want er is al een productgroep met die naam.</span>
+        <span id="group_namechanged">Wijzigingen opgeslagen.</span>
+        <span id="sureunlink">Weet u zeker dat u dit product uit de groep wilt halen? Het product wordt hiermee niet uit het systeem verwijderd.</span>        
+    </div>

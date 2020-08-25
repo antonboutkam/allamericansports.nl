@@ -1,0 +1,57 @@
+<form method="post">    
+    <input type="hidden" name="_do" value="store" />
+<h2>CMS (voor webshop: %[shopname]%)</h2>
+
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Webshops</div>
+            <div>
+                <div style="margin:10px;">
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $('#fld_webshop_id').change(function(){
+                               window.location = $(this).val(); 
+                            });
+                        });
+                        
+                    </script>
+                    <select id="fld_webshop_id" val="/settings/webshop_uniquesellingpoints.html?webshop_id=%[webshop_id]%">
+                        <for:webshops>
+                            <option value="/settings/webshop_uniquesellingpoints.html?webshop_id=%[id]%">%[hostname]%</option>
+                        </for:webshops>
+                    </select>                    
+                    <a href="%[root]%/settings/webshop_cms.html?_do=edit&id=new&webshop_id=%[webshop_id]%">Pagina toevoegen</a> 
+                </div>    
+            </div>    
+        </div>
+    </div>
+
+
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Pagina's %[shopname]%
+            <div style="float:right;color:#555;">
+                %[pages.rowcount]% pagina's
+                <a class="reload" href="#">
+                    <img width="20" src="%[root]%/img/icons/reload.png" class="middle">
+                </a>
+                </div>                
+                <div class="clear"></div>                
+            </div>
+            <div id="webshop_cms_pages" style="padding:40px;">
+                <for:usps.data>
+                    <div style="width:400px;float:left">
+                    <h2>%[description]%</h2>                    
+                        <for:usps>
+                            <label style="display:inline-block;margin-left:50px;margin-right:20px;">%[val]%</label> 
+                            <input style="width:300px;" type="text" name="usp[%[fk_webshop]%][%[fk_locale]%][%[sort]%]" value="%[usp]%" /><Br />
+                        </for:usps>
+                    </div>
+                </for:usps.data>                
+                <div class="clear" style="margin-bottom:30px;"></div>                
+                <input type="submit" value="Wijzigingen opslaan" />
+            </div>              
+        </div>
+    </div>
+</form>
+<div style="display:none;" id="sure-delete">Weet u zeker dat u deze pagina wilt verwijderen?</div>

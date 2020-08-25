@@ -1,0 +1,64 @@
+<!-- image prefetching -->
+<for:basket>
+    <img style="display:none;" style="/img/upload/180x180_%[id]%.jpg" />
+</for:basket>
+
+<div id="basket" class="round-bg">
+    <!--<div id="cart_table">-->
+    <table width="100%" id="cart-overzicht" class="basket-box">
+        <thead>
+            <tr class="basket-heading">
+                <td width="20">&nbsp;</td>                      
+                <td align="left">%[trans_article]%</td>
+                <td align="left">%[trans_definition]%</td>
+                <td align="left">%[trans_color]%</td>
+                <td align="left">%[trans_size]%</td>
+                <td align="left">%[trans_number]%</td>
+                <td align="right">%[trans_price]%</td>
+                <td align="right">%[trans_total]%</td>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <for:basket>
+                <tr class="basket-details previewimg" data-previewimg="/img/upload/180x180_%[id]%.jpg">
+                    <td valign="top"><input type="hidden" class="cart_products" name="cart[%[id]%]" value="%[order_quantity]%"  /></td>
+                    <td align="left" valign="top"><a href="/%[lang]%/product/%[title_encoded]%-%[id]%.html">%[ean]%</a></td>
+                    <td align="left" valign="top"><a href="/%[lang]%/product/%[title_encoded]%-%[id]%.html">%[article_name]%</a></td>
+                    <td align="left" valign="top"><a href="/%[lang]%/product/%[title_encoded]%-%[id]%.html">%[colors]%</a></td>
+                    <td align="left" valign="top"><a href="/%[lang]%/product/%[title_encoded]%-%[id]%.html">%[size_label]%</a></td>
+                    <td align="right" valign="top">%[order_quantity]% &nbsp;<a href="#" class="add_product">[+]</a> <a href="" class="remove_product">[-]</a></td>
+                    <td align="right" valign="top">&euro; %[sale_price_vat_vis]%</td>
+                    <td align="right" valign="top">&euro; %[subtotal_vis_vat]%</td>
+                </tr>
+            </for:basket>	          
+            <if:has_delivery>
+                <tr>
+                    <td align="right" colspan="7"><strong>%[trans_shipping]%</strong></td>
+                    <td align="right">&euro; %[delivery_vat]%</td>
+                </tr>
+            </if:has_delivery>
+            <if:has_transaction>
+                <tr>
+                    <td align="right" colspan="7"><strong>%[trans_transaction]%</strong></td>
+                    <td align="right">&euro; %[transaction_vat]%</td>
+                </tr>
+            </if:has_transaction> 
+        </tbody>
+        <tfoot class="basket-footer">
+            <tr>
+                <td align="right" colspan="7"><strong>%[trans_total]% (incl. %[trans_vat]%)</strong></td>
+                <td align="right"><strong>&euro; %[total]%</strong></td>
+            </tr>
+            <tr>
+                <td align="right" colspan="7"><strong>%[trans_ofwhichisvat]%</strong></td>
+                <td align="right">&euro; %[vat]%</td>
+            </tr>                    
+        </tfoot>
+    </table>
+    <div id="buttons" style="text-align:left;">
+        <a class="button_left button-account" href="%[root]%/%[lang]%/">%[trans_continue_shop]%</a> 
+        <a class="button_right button-account" href="%[root]%/%[lang]%/checkout.html">%[trans_next_step]%</a>
+    </div>
+    <div class="clearer"></div>                
+</div>

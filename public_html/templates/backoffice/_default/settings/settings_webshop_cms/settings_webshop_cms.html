@@ -1,0 +1,53 @@
+<form method="post">    
+<h2>CMS (%[lbl_forwebshop]%: %[shopname]%)</h2>
+
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Webshops</div>
+            <div>
+                <div style="margin:10px;">
+                    <select id="fld_webshop_id" val="%[webshop_id]%">
+                        <for:webshops>
+                            <option value="%[id]%">%[hostname]%</option>
+                        </for:webshops>
+                    </select> 
+                    <select id="fk_locale" val="%[fk_locale]%">
+                        <for:languages>
+                            <option value="%[fk_locale]%">%[description]%</option>
+                        </for:languages>
+                    </select>                   
+                    <a href="%[root]%/settings/webshop_cms_edit.html?_do=edit&id=new&webshop_id=%[webshop_id]%">%[lbl_addpage]%</a> 
+                </div>    
+            </div>    
+        </div>
+    </div>
+
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Filter</div>
+            <div>
+                <div style="margin:10px;">
+                    <input type="text" id="filteritems" style="width:800px;" class="focusblur" value="%[query]%" placeholder="%[lbl_find]%" /> 
+                </div>    
+            </div>    
+        </div>
+    </div>
+
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">%[lbl_pages_inshop]% %[shopname]%
+            <div style="float:right;color:#555;">
+                %[pages.rowcount]% %[lbl_pageslc]%
+                <a class="reload" href="#">
+                    <img width="20" src="%[root]%/img/icons/reload.png" class="middle">
+                </a>
+                </div>                
+                <div class="clear"></div>                
+            </div>
+            <div id="webshop_cms_pages">
+                %[webshop_cms_pages]%
+            </div>   
+        </div>
+    </div>
+</form>
+<div style="display:none;" id="sure-delete">Weet u zeker dat u deze pagina wilt verwijderen?</div>

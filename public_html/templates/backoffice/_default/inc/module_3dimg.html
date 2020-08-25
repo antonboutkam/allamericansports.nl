@@ -1,0 +1,30 @@
+            <div class="searchbox">
+                <div class="searchresults">
+                    <div class="add_customer searchtitle">3D afbeeldingen</div>                    
+                     <div class="clear"></div>
+                    <div class="edit_content">
+                        <div class="img3dbox">
+                            <p>Zip eerst de map met 3d afbeeldingen, laad deze vervolgens op.
+                                <if:low_max_filesize>
+                                    <br><span style="color:red;">(Uw webserver is zo ingesteld dat deze uploads van maximaal %[max_filesize]%MB toelaat, dit is mogelijk onvoldoende voor deze functionaliteit.)</span>
+                                </if:low_max_filesize>
+                            </p>
+                            <div><input type="file" name="3dimage" /></div>
+                            <input type="submit" class="fld_store"  tabindex="70" style="margin-top:10px;" value="Uploaden" />
+                        </div>
+                        <div class="img3dbox" id="img3dactions">
+                            <if:image_3d>
+                                <div>                                    
+                                    <a href="%[root]%%[image_3d]%" class="swf"><img src="%[root]%/img/icons/find-icon-16x16.png" width="16" height="16" /></a>
+                                    <a href="%[root]%%[image_3d]%" class="swf">Bekijk de 3d afbeelding</a>
+                                </div>
+                                <div>
+                                    <a href="#" class="delete_3dimage"><img src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16" /></a>
+                                    <a href="#" class="delete_3dimage">Verwijder de 3d afbeelding</a>
+                                </div>
+                            </if:image_3d>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>    

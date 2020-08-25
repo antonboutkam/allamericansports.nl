@@ -1,0 +1,161 @@
+<form method="post" id="onestepform" action="%[root]%/checkout.html">                	                    
+    <h1>Afrekenen</h1>
+    
+    <div class="content">
+    <h4>Stap 5: Controleer uw bestelling</h4><br />
+    	<div class="left_form">
+        	<h4>Factuuradres <span class="span">[<a href="%[root]%/myaccount.html?return=checkout.html">Wijzig gegevens</a>]</span></h4>
+            <div class="type_input">
+            	<label>Voornaam:</label>
+                <p>%[relation.cp_firstname]%</p>
+            </div>
+            <div class="type_input">
+            	<label>Achternaam:</label>
+                <p>%[relation.cp_lastname]%</p>
+            </div>
+            <div class="type_input">
+            	<label>Bedrijfsnaam:</label>
+                <p>%[relation.company_name]%</p>
+            </div>
+            <div class="type_input">
+            	<label>E-mailadres:</label>
+                <p>%[relation.email]%</p>
+            </div>
+            <div class="type_input">
+            	<label>Telefoon:</label>
+                <p>%[relation.phone]%</p>
+            </div>
+            <div class="type_input">
+            	<label>Adres:</label>
+                <p>%[relation.billing_street]% %[relation.billing_number]%</p>
+            </div>
+            <div class="type_input">
+            	<label>Postcode:</label>
+                <p>%[relation.billing_postal]%</p>
+            </div>
+            <div class="type_input">
+            	<label>Stad:</label>
+                <p>%[relation.billing_city]%</p>
+            </div>
+            <div class="type_input">
+            	<label>Land:</label>
+                <p>%[relation.billing_country]%</p>
+            </div>
+        </div>
+        <if:relation.shipping_street>
+    	<div class="left_form">
+        	<h4>Afleveradres [<span class="span"><a href="%[root]%/myaccount.html?return=checkout.html">Wijzig gegevens</a></span>]</h4>
+            <div class="type_input">
+            	<label>Adres:</label>
+                <p>%[relation.shipping_street]% %[relation.shipping_number]%</p>
+            </div>
+            <div class="type_input">
+            	<label>Postcode:</label>
+                <p>%[relation.shipping_postal]%</p>
+            </div>
+            <div class="type_input">
+            	<label>Stad:</label>
+                <p>%[relation.shipping_city]%</p>
+            </div>
+            <div class="type_input">
+            	<label>Land:</label>
+                <p>%[relation.shipping_country]%</p>
+            </div>
+        </div><strong></strong>
+        </if:relation.shipping_street>
+    </div>
+    <div class="winkelwagen">
+    	<div class="winkelwagen_slide">
+        	<h4>Betaalmethode <span class="span"><a href="%[root]%/checkout.html?clear=paymethod_only">Wijzig betaalmethode</a></span></h4>
+            <p>%[cart.paymethod_vis.name]%%[cart.bank.value?'&nbsp;met %[cart.bank.value]%':'']%</p>
+        </div>
+        <div class="winkelwagen_slide">
+        	<h4>Verzendwijze <span class="span"><a href="%[root]%/checkout.html?clear=delivery">Wijzig verzendwijze</a></span></h4>            
+            <p>
+                <if:cart.has_delivery>Bestelling verzenden (&euro; %[cart.delivery]%)</if:cart.has_delivery>
+                <if:cart.has_delivery condition="is_false">U komt de bestelling afhalen (€ 0,00)</if:cart.has_delivery>
+            </p>
+        </div>
+        <div class="winkelwagen_slide">
+        	<h4 class="bold">Orderdetails <span class="span"><a href="%[root]%/basket.html">Wijzig order</a></span></h4>                            
+        </div>                                                                        
+    	</div>
+        
+        <table id="cart-overzicht" width="100%" border="0">
+<thead>
+  <tr>
+    <td>Productcode</td>
+    <td>
+      Artikel
+    </td>
+    <td><div>
+      Prijs per stuk
+    </div></td>
+    <td><div>
+      Aantal
+    </td>
+    <td>
+      Prijs
+    </td>
+  </tr>
+  </thead>
+  <tbody>
+   <for:cart.basket>
+  <tr>
+    <td>%[article_number]%</td>
+    <td>
+     %[brand]% %[product_type]% %[watt]%W</td>
+    <td>
+     &euro; %[sale_price_vis]%</td>
+    <td>
+     %[order_quantity]%
+    </td>
+    <td>
+     &euro; %[subtotal_vis]%
+    </td>
+  </tr>
+  
+  </for:cart.basket>                        
+        <if:cart.delivery>  
+  <tr>
+    <td colspan="4" align="right"><strong>Verzendkosten (ex btw)</strong></td>
+    <td>€ %[cart.delivery]%</td>
+  </tr>
+   </if:cart.delivery>
+        <if:cart.has_transaction_cost>
+  <tr>
+    <td colspan="4" align="right"><strong>Transactie (<a title="Voor betalingen via %[cart.paymethod_vis.name]% maken wij extra kosten. 
+Deze kosten berekenen wij aan u door. 
+klik hier om de betaalmethode aan te passen"  href="%[root]%/checkout.html?clear=paymethod_only">%[cart.paymethod_vis.name]%</a>)</strong></td>
+    <td>&euro; %[cart.transaction_fee]%</td>
+  </tr>
+   </if:cart.has_transaction_cost>    
+  <tr>
+    <td colspan="4" align="right">
+      <p><strong>Totaal ex btw </strong></p></td>
+    <td>&euro; %[cart.subtotal]%</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="right"><strong>BTW</strong></td>
+    <td>&euro; %[cart.vat]%</td>
+  </tr>
+   </tbody>
+   <tfoot>
+  <tr>
+    <td colspan="4" align="right" class="total"><strong>Totaal</strong></td>
+    <td>&euro; %[cart.total]%</td>
+  </tr>
+   </tfoot>
+  </table>
+        
+        
+        <div class="winkelwagen">                        
+        <div class="vorige_stop">
+        	<div><a href="%[root]%/checkout.html?clear=delivery"><img src="images/vorige.png" alt="" /></a></div>
+        </div>
+        <div class="aftekenen">                            
+        	   <div><a class="submit_afronden" href="/checkout.html?_do=complete">%[cart.paymethod_vis.name=Overboeking|Rembours|Contant?'Afronden':'Afrekenen']%</a></div>            
+        </div>
+        </div>
+    </div>
+</form>                    

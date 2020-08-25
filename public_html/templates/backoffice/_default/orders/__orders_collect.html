@@ -1,0 +1,304 @@
+<if:completed value="1"><h2>%[lbl_orderinfo]%</h2></if:completed>
+<if:completed value="0"><h2>%[lbl_ordercollect]%</h2></if:completed>
+
+    <input type="hidden" id="orderid" value="%[orderid]%" />
+    <div class="searchbox">
+        <div class="searchresults" id="infobox" style="padding:2px;">
+            <div class="searchtitle" style="margin:0;">%[lbl_pickorder]%</div>
+            <div class="searchresults"> 
+                <div style="margin:10px;">
+                <table>
+                    <tr>
+                        <td>%[lbl_soldby]%</td>
+                        <td><a href="%[root]%/users/view.html?id=%[user_id]%&iframe=1" class="iframe">%[full_name]%</a></td>        
+                        <td>%[lbl_soldto]%</td>
+                        <td>
+                            <img src="%[root]%/img/icons/%[client_type=C?'company':'customer']%-icon-16x16.png" width="16" height="16"/>
+                            <span style="display:%[view=1?'none':'inline']%;"><a href="%[root]%/relations/view.html?id=%[relation_id]%&iframe=1" class="iframe">%[company_or_person]%</a></span>
+                            <span style="display:%[view=1?'inline':'none']%;"><a href="%[root]%/relations/view.html?id=%[relation_id]%&iframe=1&view=picker">%[company_or_person]%</a></span>
+                            <a href="%[root]%/relations/edit.html?id=%[relation_id]%"><img src="/img/icons/edit-icon-16x16.png" /></a>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td>%[lbl_selldate]%</td>
+                        <td>%[print_date]%</td>        
+                        <td>%[lbl_custaddress]%</td>
+                        <td>%[billing_street]% %[billing_number]%</td>
+                    </tr>
+                    <tr>
+                        <td>%[lbl_phoneseller]%</td>
+                        <td>%[mobile]%</td>       
+                        <td>%[lbl_zipandcity]%</td>
+                        <td>%[billing_postal]% %[billing_city]%</td>
+                    </tr>
+                    <tr>
+                        <td>Ophalen/verzenden</td><td>%[delivery_pickup=delivery?'Verzenden':'Ophalen']%</td>                      
+                        <td>%[lbl_phone]%</td><td>%[phone_mobile]%</td>
+                    </tr>
+                    <tr>
+                        <td>Totaal ex btw</td>
+                        <td>%[totals_exvat]%</td>       
+                        <td>Totaal inc btw</td>
+                        <td>%[totals_incvat]%</td>
+                    </tr>                    
+                    <tr style="border:1px solid red;">
+                        <td>Exact ordernummer</td>
+                        <td>%[exact_salesorder]%</td>                                                
+                        <td>Exact datum</td>
+                        <td>%[exact_salesregisterd]% <a title="Exact online log van order %[orderid]%" href="%[root]%/exactonline/orderlog.html?iframe=1&orderid=%[orderid]%" class="iframe">(log)</a></td>
+                    </tr>   
+					<tr>
+                        <td>Betaald</td><td style="font-weight:bold;color:%[paid?'green':'red']%">%[paid?'Order is betaald':'Order is niet betaald']%</td>        								
+                        <td>Factuur taal</td>
+                        <td><img id="flag_img" src="/img/flags/flags_iso/24/%[language_code]%.png" /> 
+                            <select id="change_locale" val="%[fk_locale]%">
+                                <for:languages>
+                                <option data-value="%[locale]%" value="%[id]%">%[description]%</option>
+                                </for:languages>
+                            </select>
+                            <script type="text/javascript">
+                                $(document).ready(function(){
+                                    $('#change_locale').live('change',function(){
+                                        langCode = $('option:selected',$(this)).attr('data-value');
+                                        //console.log($(this).attr('data-value'),$(this).val());
+                                        $('#flag_img').attr('src','/img/flags/flags_iso/24/'+langCode+'.png');
+                                        send = {_do:'change_locale',ajax:1,id:$('#orderid').val(),fk_locale:$('#change_locale').val()};
+                                        $.fancybox.showActivity();
+                                        $.post(request_uri,send,function(data){
+                                            $.fancybox.hideActivity();                                            
+                                        },'json');
+                                    })    
+                                });                              
+                                
+                            </script>
+                        
+                        </td>												
+					</tr>                                                                                        
+                </table>
+                <if:has_delivery_address>
+                    <center style="margin-top:5px;">
+                        <img src="%[root]%/img/icons/alert-icon-16x16.png" width="16" height="16" />
+                        <span style="text-decoration:underline;">Let op: Het afleveradres wijkt af van het factuuradres!</span>
+                    </center>
+                </if:has_delivery_address>  
+                
+                <if:note>
+                    <br /><strong>Opmerking van de klant:</strong>
+                    <p style="margin-top:5px;padding-top:0px;">%[note]%</p>
+                </if:note>
+              
+                <div>
+                <div id="order_collect">
+                    <div class="pakbon_btn">
+                        <a href="%[root]%/bill_pdf.php?orderid=%[orderid]%&rand=%[rand]%" target="_blank"><img src="%[root]%/img/icons/logo-pdf-16x16.png" /></a>
+                        <a href="%[root]%/bill_pdf.php?orderid=%[orderid]%&rand=%[rand]%" target="_blank">%[lbl_bill]%</a> 
+                    </div>
+                    <div class="pakbon_btn">
+                        <a href="%[root]%/bill_pdf.php?orderid=%[orderid]%&rand=%[rand]%&type=summate" target="_blank"><img src="%[root]%/img/icons/logo-pdf-16x16.png" /></a>
+                        <a href="%[root]%/bill_pdf.php?orderid=%[orderid]%&rand=%[rand]%&type=summate" target="_blank">%[lbl_summate]%</a> 
+                    </div>    
+                    <div class="pakbon_btn">
+                        <a href="%[root]%/bill_pdf.php?orderid=%[orderid]%&rand=%[rand]%&type=copy" target="_blank"><img src="%[root]%/img/icons/logo-pdf-16x16.png" /></a>
+                        <a href="%[root]%/bill_pdf.php?orderid=%[orderid]%&rand=%[rand]%&type=copy" target="_blank">%[lbl_copy_bill]%</a> 
+                    </div>
+                    <if:modules.stockpile>                                         
+                    <div class="pakbon_btn">
+                        <a href="%[root]%/warehouse_pdf.php?orderid=%[orderid]%&rand=%[rand]%" target="_blank"><img src="%[root]%/img/icons/logo-pdf-16x16.png" /></a>
+                        <a href="%[root]%/warehouse_pdf.php?orderid=%[orderid]%&rand=%[rand]%" target="_blank">%[lbl_warehouseplan]%</a>
+                    </div>
+                    </if:modules.stockpile>
+                    <div class="pakbon_btn" id="fld_pakbon" style="display:%[completed?'inline-block':'none']%;">
+                        <a href="%[root]%/order_picker_pdf.php?orderid=%[orderid]%&rand=%[rand]%" target="_blank"><img src="%[root]%/img/icons/logo-pdf-16x16.png" /></a>
+                        <a href="%[root]%/order_picker_pdf.php?orderid=%[orderid]%&rand=%[rand]%" target="_blank">%[lbl_packageorder]%</a>
+                    </div>
+                    
+                    <div class="pakbon_btn" id="fld_gls" style="%[modules.exact_online=1?'block':'none']%">
+                        <a href="#" class="addexact" rel="%[orderid]%"></a><img src="%[root]%/img/icons/logo-exact.png" /></a>
+                        <a href="#" class="addexact" rel="%[orderid]%">Invoeren in Exact</a>
+                    </div>    
+                     <!--
+                    <div class="pakbon_btn" id="fld_gls" style="%[modules.exact_online=1?'block':'none']%">
+                        <a href="#" rel="%[orderid]%"></a><img src="%[root]%/img/icons/logo-monta.png" /></a>
+                        <a href="#" rel="%[orderid]%">Montapacking log</a>
+                    </div>                                         
+                   
+                    <if:delivery_pickup value="delivery">
+                    <div class="pakbon_btn" id="fld_gls">
+                        <a href="#" class="addgls" rel="%[orderid]%"></a><img src="%[root]%/img/icons/logo-gls.png" /></a>
+                        <a href="#" class="addgls" rel="%[orderid]%">GLS aanmelden</a>
+                    </div>                               
+                    </if:delivery_pickup>
+                    -->                             
+                </div>                
+                </div>
+            </div>                        
+        </div>
+    </div>    
+    <if:paid condition="is_false">
+        <div class="searchbox" id="actionbox" style="display:%[view=1?'block':'none']%;">    
+            <div class="searchresults" style="padding:2px;">
+                <div class="searchtitle" style="margin:0;">%[lbl_paymentstatus]%</div>
+                <div style="padding: 30px;">
+                    <center>             
+                        <input style="background-color: rgb(136, 210, 30); padding: 5px; color: white;" id="paid" value="%[lbl_paid]%" type="submit" />
+                        <input style="background-color: rgb(1, 64, 143); padding: 5px; color: white;" id="show_summation_form" value="%[lbl_sendsummation]%" type="submit" />
+                        <input style="background-color: rgb(208, 88, 19); padding: 5px; color: white;" id="wait" value="%[lbl_wait]%" type="submit" />
+                        <!-- <input style="background-color: rgb(200, 42, 52); padding: 5px; color: white;" id="notpaid" value="Betaald niet" type="submit" /> -->
+                    </center>
+                </div>                 
+            </div>
+        </div>
+    </if:paid>
+    %[summationform]%
+
+
+
+<div style="display:%[view=1?'none':'block']%;">
+    <div class="searchbox">
+        <div class="searchresults" style="padding:2px;">
+            <div class="searchtitle" style="margin:0;">%[lbl_pack_order]%</div>
+            <div class="searchresults"> 
+                <div style="margin:10px;">
+                <table style="width:150px;margin-bottom:10px;;">
+                    <tr>
+                    <td style="width:16px;"><a href="%[root]%/orders/new.html?orderid=%[orderid]%"><img src="/img/icons/edit2-icon-16x16.png" /></a></td>
+                    <td><a href="%[root]%/orders/new.html?orderid=%[orderid]%">Bestelling bewerken</a></td>                                                 
+                    </tr>
+                </table>                
+                <table>
+                    <tr class="rowheader"><td>%[lbl_location]%</td><td>%[lbl_articlenumber]%</td><td>%[lbl_productname]%</td><td>%[lbl_path]%</td><td>%[lbl_rack]%</td><td>%[lbl_shelf]%</td><td>%[lbl_quantity]%</td><td>%[lbl_package]%</td></tr>
+                    <for:delivery>
+                        <tr class="row%[oddeven]%"> 
+                            <td>%[name]%</td>
+                            <td><a href="%[root]%/products/view.html?id=%[article_id]%&iframe=1&view=" class="iframe">%[article_number]%</a></td>
+                            <td>%[article_name]%</td>
+                            <if:stock_reserved value="1">
+                            <td>%[path]%</td>
+                            <td>%[rack]%</td>
+                            <td>%[shelf]%</td>
+                            </if:stock_reserved>
+                            <if:stock_reserved value="0">
+                                    <td colspan="3" style="color:red;">%[insufficient_stock=1?'onvoldoende items voorradig':'product niet voorradig']%</td>
+                            </if:stock_reserved>
+                            <td>%[quantity]%</td>
+                            
+                            <td>
+                                <span class="productbox_edit" style="display:%[completed?'none':'inline']%;">
+                                    <input type="text" class="productbox" name="box[%[article_id]%]" style="width:30px; text-align: center;" />
+                                </span>
+                                <span class="productbox_view" style="display:%[completed?'inline':'none']%;">
+                                    %[package_box]%
+                                </span>
+                            </td>                                               
+                        </tr>
+                    </for:delivery>            
+                </table>
+                <if:completed value="0">
+                    <table>
+                        <tr valign="middle">
+                            <td style="width:32px;"><a href="#" class="singlebox"><img src="%[root]%/img/icons/package-icon-32x32.png" /></a></td>
+                            <td><a href="#" class="singlebox">%[lbl_everythingfits]%</a></td>                
+                        </tr>
+                    </table>
+                </if:completed>            
+                </div>
+            </div>                        
+        </div>
+    </div>
+
+    <div class="searchbox">    
+        <div class="searchresults" style="padding:2px;">
+            <div class="searchtitle" style="margin:0;">Track &amp; trace url</div>
+            <div style="padding: 30px;">
+                <input id="track_trace_url" style="width:650px;" placeholder="Voer hier de volledige track en trace url in" type="text" value="%[tt_url]%" />
+                <input id="fld_store_tt" type="submit" value="Opslaan" />
+            </div>                 
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#fld_store_tt').click(function(){
+                send = {};
+                send.ajax       = 1;
+                send._do        = 'store_tracktrace';
+                send.tt_url     = $('#track_trace_url').val();
+                send.orderid    = $('#orderid').val();
+                
+                $.fancybox.showActivity(); 
+                $.post(request_uri,send,function(data){                    
+                    $.fancybox.hideActivity();
+                    alert('Track en trace code opgeslagen');    
+                },'json');                
+            });
+            
+            $('#outoforderbtn').click(function(){
+                url = 'http://'+window.location.hostname+'/mail/outoforder.html?iframe=1&fk_locale='+$('#change_locale').val()+'&orderid=%[order_id]%';    
+                $('#outoforderbtn_link').attr('href',url);
+		        $('#outoforderbtn_link').click();		  
+            });
+            
+            
+                        
+            
+        });
+    </script>
+               
+    <div style="display:%[completed?'none':'block']%">
+        <div style="display:%[needs_backorder?'none':'block']%">
+            <div class="searchbox">
+                <div class="searchresults" style="padding: 2px;">
+                    <div class="searchtitle" style="margin: 0pt;">%[lbl_roundup]%</div>
+                        <div class="searchresults">
+                            <div style="padding: 30px;">
+                                <center>
+                                    <input style="background-color: rgb(136, 210, 30); padding: 5px; color: white;" id="finalize" value="%[lbl_roundup]%" type="submit" />
+                                    <input style="background-color: rgb(208, 88, 19); padding: 5px; color: white;" id="park" value="%[lbl_park]%" type="submit" />
+                                    <input style="background-color: rgb(200, 42, 52); padding: 5px; color: white;" id="cancel" value="%[lbl_cancel]%" type="submit" />
+                                    <button id="outoforderbtn" style="cursor:pointer;background-color: rgb(200, 42, 52); padding: 5px; color: white;width:180px;border:0;border: 1px solid #ABC3D7" type="button">%[lbl_outoforder]%
+                                    </button>
+                                    <a class="iframe" href="#" id="outoforderbtn_link" style="display:none"></a>
+                                </center>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display:%[needs_backorder?'block':'none']%">
+            <div class="searchbox">
+                <div class="searchresults" style="padding: 2px;">
+                    <div class="searchtitle" style="margin: 0pt;">%[lbl_roundup]%</div>
+                        <div class="searchresults">
+                            <div style="padding: 30px;">
+                                <center>
+                                    <input style="background-color: rgb(136, 210, 30); padding: 5px; color: white;" id="finalize" value="Order opsplitsen" type="submit" />
+                                </center>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display:%[completed?'block':'none']%">
+        <div class="searchbox">
+            <div class="searchresults" style="padding: 2px;">
+                <div class="searchtitle" style="margin: 0pt;">%[lbl_roundup]%</div>
+                    <div class="searchresults">      
+                        <div style="padding: 30px;">
+                            <center>             
+                                <input style="background-color: rgb(136, 210, 30); padding: 5px; color: white;" id="park" value="%[lbl_backtooverview]%" type="submit" />
+                            </center>
+                        </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display:none;">
+<span id="msg-sure">%[lbl_sureroundup]%</span>
+<span id="msg-cancel">%[lbl_surecancel]%</span>
+<span id="msg-suregls">Weet u zeker dat u deze zending aan de GLS database wilt toevoegen?</span>
+<span id="msg-incompl">%[lbl_notallproductshavepackage]%</span>
+<span id="msg-done">%[lbl_ordercompletedredirect]%</span>
+<span id="msg-surenotpaid">%[lbl_neverpays]%</span>
+<span id="msg-surepaid">%[lbl_customerpaid]%</span>        
+    </div>
+</div>

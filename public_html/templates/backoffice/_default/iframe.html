@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>%[system]%</title>
+    <script type="text/javascript">
+        var root = "%[root]%";
+        var request_uri = "%[request_uri]%";
+    </script>
+    <script type="text/javascript" src="%[root]%/js/jq/libs.js%[js_anti_cache_str]%"></script>     
+        
+    <script type="text/javascript" src="%[root]%/js/main.jquery.js%[js_anti_cache_str]%"></script>            
+    <script type="text/javascript" src="%[root]%/js/%[file]%.jquery.js%[js_anti_cache_str]%"></script> 
+
+    <link type="text/css" rel="stylesheet" href="%[root]%/css/common.css" />  
+    <link type="text/css" rel="stylesheet" href="%[root]%/css/iframe.css" />    
+</head>
+<body>    
+    <div id="canvas">      
+        <div id="content_cnt">
+            <div id="content">%[content]%</div>
+        </div>     
+    </div>
+    <div id="preview_img"><img src="/img/no-img-available.jpg" /></div>
+</body>
+</html>

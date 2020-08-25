@@ -1,0 +1,100 @@
+<form id="frm_brandbox_form" method="post" enctype="multipart/form-data">
+    
+    <input id="fld_do" type="hidden" name="_do" value="store" />
+    <input type="hidden" name="id" value="%[brandbox.id]%" />
+    
+    <h2>Brandboxes webshop frontpage</h2>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Taal</div>
+            <div style="padding:10px;">                 
+                <select id="fld_locale" name="brandbox[fk_locale]" val="%[brandbox.fk_locale]%">
+                    <for:languages>
+                        <option value="%[fk_locale]%">%[description]%</option>
+                    </for:languages>
+                </select>
+            </div>        
+        </div>
+    </div>
+    
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Brandboxen</div>     
+            <if:brandboxes condtion="is_false">
+                <div style="text-align:center;margin:10px 0px;">Er zijn geen brandboxes.</div>
+            </if:brandboxes>        
+            <for:brandboxes>
+                <div class="brandbox_%[position]%" style="border:1px solid #ccc;width:328px;height:232px;margin:5px;position:relative;float:%[position]%">
+                    <img style="position:absolute;" src="%[brandbox_img_path]%" />
+                    <a href="/settings/webshop_brandbox.html?webshop_id=%[webshop_id]%&id=%[id]%&_do=edit"><img style="position:absolute;top:5px;left:5px;" src="/img/icons/edit-icon-16x16.png" /></a>
+                    <a class="delete_lnk" href="/settings/webshop_brandbox.html?webshop_id=%[webshop_id]%&id=%[id]%&_do=delete"><img style="position:absolute;top:5px;left:26px;" src="/img/icons/delete-icon-16x16.png" /></a>
+                    <h1 style="font-size:13px;margin:0;padding:0;position:absolute;right:5px;top:5px;">%[position=right?'Rechter box':'Linker box']%</h1>
+                </div>            
+            </for:brandboxes>     
+            <div class="clear"></div>       
+        </div>
+    </div>
+
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Nieuwe brandbox uploaden</div>
+            <div style="padding:10px;">                            
+                <div style="margin-bottom:20px;">
+                    <div style="float:left;width:740px;">
+                        <div style="float:left;width:370px;">            
+                            <div style="margin-bottom:5px;">
+                                <label style="display:block;">Brandbox titel (onzichtbaar, voor seo)</label>
+                                <input type="text" name="brandbox[title]" value="%[brandbox.title]%" />
+                            </div>                
+                            <div style="margin-bottom:5px;">
+                                <label style="display:block;">Image alt tag (onzichtbaar, voor seo)</label>
+                                <input type="text" name="brandbox[alt_tag]" value="%[brandbox.alt_tag]%" />            
+                            </div>                    
+                        </div>
+        
+                        <div style="float:left;width:370px;">
+                            <div style="margin-bottom:5px;">
+                                <label style="display:block;">Klik url</label>
+                                <input type="text" name="brandbox[click_url]" value="%[brandbox.click_url]%"  />
+                            </div>                
+                            <div style="margin-bottom:5px;">
+                                <label style="display:block;">Url openen in</label>
+                                <select name="brandbox[target]" val="%[brandbox.target]%"  >
+                                    <option value="self">Zelfde venster</option>
+                                    <option value="blank">Nieuw venster</option>
+                                </select>                    
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div style="color:blue;margin-top:16px;">
+                            * De brandbox is een jpg of png afdbeelding van 328 bij 232 pixels, u moet zelf voor het juiste formaat zorgen.
+                        </div>
+                    </div>
+                     <div style="float:left;width:180px;">                   
+                        <div style="margin-bottom:5px;">
+                        
+                            <label style="display:block;">Positie</label>
+                            
+                            <select id="fld_leftright" %[_do=edit?'disabled="disabled"':'']%  name="brandbox[position]" val="%[brandbox.position]%"  >
+                                <option value="left">Links</option>
+                                <option value="right">Rechts</option>
+                            </select>
+                                                                            
+                        </div>
+                        <div style="margin-bottom:15px;">
+                            <label style="display:block;">Bestandsnaam</label>
+                            <input type="file" name="file" />
+                        </div>
+                        <div style="margin-bottom:5px;">
+                            <input id="fld_save_brandbox" type="submit" value="Brandbox uploaden" />
+                        </div>                                    
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="clear"></div>         
+        </div>
+    </div>
+
+</form>

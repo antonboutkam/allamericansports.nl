@@ -1,0 +1,79 @@
+<if:view not="picker|orderpicker|barcodepicker"><h2>%[lbl_productcatalogue]%</h2></if:view>
+<if:view value="picker|orderpicker"><h2>%[lbl_searchproduct]%</h2></if:view>
+<if:view value="barcodepicker"><h2>%[lbl_print_barcodes]%</h2></if:view>
+<input type="hidden" id="addtype" value="%[addtype]%" />
+<form>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">%[lbl_search_product]%</div>
+            <div style="margin:10px;">
+                <div id="simple-search">
+                    <div style="margin:10px;">
+                        <input type="text" id="fld_search" name="query" class="searchfield" title="%[lbl_searchfield]%" value="%[query]%"/>
+                        <if:view not="orderpicker|barcodepicker">
+                            <div style="float:right;"><a href="#" id="toggle-advanced">%[lbl_advsearch]%</a></div>
+                        </if:view>       
+                    </div>
+                </div>
+
+                <if:view not="orderpicker|barcodepicker">
+                    <div id="advanced-search" style="display:none;">
+                        <div style="float:right;"><a id="toggle-simple" href="">%[lbl_simplesearch]%</a></div>
+                        <table>
+                            <tr><td>Article id</td><td><input class="advsrc" type="text" name="c.id" /></td></tr>
+                            <tr><td>Article number</td><td><input class="advsrc" type="text" name="c.article_number" /></td></tr>
+                            <tr><td>Article name</td><td><input class="advsrc" type="text" name="c.article_name" /></td></tr>
+                            <tr>
+                                <td>Type</td>
+                                <td>
+                                    <select class="advsrc" name="c.type">
+                                        <option value="">Maak een keuze</option>
+                                        <for:product_types>
+                                            <option value="%[id]%">%[type]%</option>
+                                        </for:product_types>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>                                     
+                    </div>
+                </if:view>
+                    <div id="viewcontainer">
+                        <a href="#" class="toggleview" rel="list"><img src="%[root]%/img/icons/list_view.jpg" /> %[lbl_listview]%</a>
+                        <a href="#" class="toggleview" rel="thumb"><img src="%[root]%/img/icons/thumbs_view.jpg" /> %[lbl_thumbview]%</a>
+                    </div>
+                    <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="searchbox" id="searchresult">
+        %[products_tbl]%
+    </div>
+    
+    <if:view not="picker|orderpicker|barcodepicker">
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="searchtitle">%[lbl_actions]%</div>                
+                <div style="margin:10px; float:left">
+                    <h3>%[lbl_export]%</h3>
+                    <ul style="font-size: 12px;">
+                        <li><a href="%[root]%/export.html?type=catalog-full&rand=%[rand]%" title="%[lbl_addproduct]%" >%[lbl_exceexport]%</a></li>       
+                        <if:modules.webshop_menu_editor>
+                            <li><a href="%[root]%/export.html?type=not-in-webshop&rand=%[rand]%" title="%[lbl_addproduct]%" >Niet gekoppelde producten</a></li>
+                            <li><a href="%[root]%/export.html?type=empty-menu-item&rand=%[rand]%" title="%[lbl_addproduct]%" >Menu items zonder product</a></li>
+                        </if:modules.webshop_menu_editor>                        
+                        <li><a href="%[root]%/export.html?type=no-alt-partnumber&rand=%[rand]%" title="%[lbl_addproduct]%" >Zonder alt. partnummers</a></li>
+                        <li><a href="%[root]%/export/adwords_export.php" title="Een export maken om in de Adwords Editor te importeren" >Adwords export</a></li>
+                    </ul>
+                </div>  
+                <div style="margin:10px; float:left">
+                    <h3>Importeren</h3>
+                    <ul style="font-size: 12px;">
+                        <li><a href="%[root]%/products/import.html" title="%[lbl_addproduct]%" >Import csv bestand</a></li>       
+                    </ul>
+                </div>                                           
+                <div class="clear"></div>            
+            </div>
+        </div>
+    </if:view>    
+</form>
+<div id="fld_sure_remove" style="display:none">Weet je zeker dat je dit product wilt verwijderen?</div>

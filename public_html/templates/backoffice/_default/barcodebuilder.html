@@ -1,0 +1,62 @@
+<h2>Barcode builder</h2>
+<div class="searchbox">
+    <div class="searchresults" style="padding:2px;">
+        <div class="searchtitle" style="margin:0;">Barcode Builder</div>
+        <div class="searchresults">    
+            <div style="padding:10px;">
+                <form action="%[root]%/barcode_pdf.php" method="get" target="_blank">
+                    <input type="hidden" value="%[id]%" name="id" />
+                    <input type="hidden" value="%[rand]%" name="rand" />
+                          
+                    <table style="width:500px;">
+                        <tr>
+                            <td>Papertype:</td>
+                            <td colspan="4">
+                                <select name="barcodepaper" val="%[barcodepaper]%">
+                                    <for:barcode_paper>
+                                        <option value="%[id]%">%[name]%</option>
+                                    </for:barcode_paper>
+                                </select>                              
+                            </td>
+                        </tr>
+                        <for:rows>
+                        <tr>
+                            <td>Rij %[value]%</td>
+                            <td><input type="checkbox" class="checkbox col1 row%[value]%" name="barcode[%[value]%][1]" value="1" /></td>
+                            <td><input type="checkbox" class="checkbox col2 row%[value]%" name="barcode[%[value]%][2]" value="1"  /></td>
+                            <td><input type="checkbox" class="checkbox col3 row%[value]%" name="barcode[%[value]%][3]" value="1"  /></td>
+                            <td><input type="checkbox" class="checkbox col4 row%[value]%" name="barcode[%[value]%][4]" value="1"  /></td>
+                            <td><input type="checkbox" class="checkbox col5 row%[value]%" name="barcode[%[value]%][5]" value="1"  /></td>
+                            <td><a href="#" rel="row%[value]%" class="select"><img src="%[root]%/img/icons/backward-icon-16x16.png"/></a></tr>
+                        </tr>
+                        </for:rows>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><a href="#" rel="col1" class="select"><img src="%[root]%/img/icons/menuup-icon-16x16.png"/></a></td>
+                            <td><a href="#" rel="col2" class="select"><img src="%[root]%/img/icons/menuup-icon-16x16.png"/></a></td>
+                            <td><a href="#" rel="col3" class="select"><img src="%[root]%/img/icons/menuup-icon-16x16.png"/></a></td>
+                            <td><a href="#" rel="col4" class="select"><img src="%[root]%/img/icons/menuup-icon-16x16.png"/></a></td>
+                            <td><a href="#" rel="col5" class="select"><img src="%[root]%/img/icons/menuup-icon-16x16.png"/></a></td>
+                            <td>&nbsp;</tr>                                        
+                        </tr> 
+                        <tr>
+                            <td colspan="5">Aantal barcodes: <span id="quantity">0</span></td>
+                        </tr>                                           
+                    </table> 
+
+                    <div style="margin:5px;">
+                    <input type="submit" id="all" value="Selecteer Alles" />
+                    <input type="submit" id="none" value="Selecteer Niets" />
+                    </div>
+                    <div style="margin:5px;">
+                    <input type="submit" id="half1" value="Eerste helft" />
+                    <input type="submit" id="half2"  value="Tweede helft" />
+                    </div>             
+                    <div style="margin:5px;">
+                        <input type="submit" id="half1" value="Genereer barcodes" />
+                    </div>                      
+                </div>   
+            </form>                                                                     
+        </div>
+    </div>
+</div>             

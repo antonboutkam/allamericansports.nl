@@ -1,0 +1,45 @@
+<h2>Authenticatielog</h2>
+
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Filter</div>
+            <div style="margin:10px;">                
+                <form method="get" id="filterform">   
+                    <input type="hidden" name="current_page" id="fld_curr_page" value="%[current_page]%" />                           
+                    <select name="user" id="filteruser">
+                        <option value="">-- maak een keuze -- </option>
+                        <for:users>
+                            <option %[user=%[id]%?'selected="selected":'']% value="%[id]%">%[full_name]%</option>
+                        </for:users>
+                    </select>
+                </form>      
+            </div>
+        </div>
+    </div>
+    <div class="searchbox">
+      <div class="searchresults">
+        <div class="searchtitle">            
+            <div style="float:right;color:#555;">%[rowcount]% authenticaties</div>
+            <div class="clear"></div>                 
+        </div>
+        <table style="margin:15px;">
+            <tr class="rowheader">      
+                    <th>Gebruiker</th>
+                    <th>Datum</th>
+                    <th>Ip</th>
+                    <th>Account status</th>                                                                                          
+            </tr>
+            <for:data>
+                <tr class="row%[oddeven]%">                                         
+                    <td style="text-align:center;"><a href="%[root]%/users/view.html?id=%[user_id]%&iframe=1" class="iframe">%[full_name]%</a></td>
+                    <td style="text-align:center;">%[loggedin]%</td>
+                    <td style="text-align:center;"><a href="http://www.db.ripe.net/whois?searchtext=82.157.27.68&searchSubmit=search" target="_blank">%[ip]%</a></td>
+                    <td style="text-align:center;">%[is_deleted=1?'disabled':'active']%</td>
+                    
+                </tr>                        
+            </for:data>                                            
+        </table>
+        <div class="clear"></div>
+        <center>%[paginate]%</center>         
+    </div>
+   </div>    

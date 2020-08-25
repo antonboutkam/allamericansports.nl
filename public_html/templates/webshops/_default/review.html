@@ -1,0 +1,18 @@
+
+    <div id="contactpage">                
+        <form method="post" id="frmcontact">
+            <h1>%[action]%</h1><br />
+			<p>
+             %[review_msg]%
+            </p>	
+            <if:mailsend not="true">
+                
+            </if:mailsend>
+            <if:mailsend value="true">
+                
+            </if:mailsend>
+        </form>
+        <div class="cl"></div>
+    </div>
+
+

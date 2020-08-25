@@ -1,0 +1,46 @@
+        <div id="overzicht" class="%[full_width?'wide':'']%">
+            <if:crumble_str condition="is_false">
+                <h1>%[title_override]%</h1>          
+            </if:crumble_str>
+            
+            
+                <if:crumble_str>
+                    <div id="breadcrumbs">
+                    %[crumble_str]%
+                    </div>
+                </if:crumble_str>                      
+                                                                                    
+                <for:products.data>
+                        <ul>
+                            <for:items> 
+                                <li class="%[last]% cms product" id="%[id]%">
+                                    <a href="%[root]%/%[lang]%/product/%[title_encoded]%-%[group_id]%-%[id]%.html">
+                                       <if:is_offer><span class="%[lang=nl?'offer-nl':'offer-gb']%"></span></if:is_offer><img src="/img/upload/160x124_%[id]%.jpg" width="160" height="124" alt="%[title_encoded]%" />
+                                    </a>
+                                    <h2 title="%[spotlight_title.full]%">%[webshop_product_title]%</h2>
+                                    <p>%[type_vis]%</p>
+                                    <if:stars_html>
+                                    <div class="sterren">
+                                        %[stars_html]%
+                                    </div>
+                                    </if:stars_html>
+                                    <span class="prijs">&euro;%[sale_price_vat_vis]%</span>
+                                    <div class="button">
+                                        <a href="%[root]%/%[lang]%/product/%[title_encoded]%-%[group_id]%-%[id]%.html"><span>%[transl_moreinfo]%</span></a>
+                                    </div>
+                                </li>
+                            </for:items>
+                        </ul>
+                </for:products.data>                                 
+                <div style="clear:both;text-align:center;"></div>
+                <if:products.pages>
+                <div id="pagination" style="width:%[full_width?'960':'774']%px;">%[products.pages]%</div>
+                </if:products.pages>
+            
+        
+             <if:products.data condition="is_false">
+           		<h1 style="clear:both;text-align:center;margin:10px 0px 10px 0px">%[transl_nothingfound]%</h1> 
+        	 </if:products.data> 
+     
+        </div>
+        

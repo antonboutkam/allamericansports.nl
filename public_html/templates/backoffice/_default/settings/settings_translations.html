@@ -1,0 +1,31 @@
+<form method="post">
+<input type="hidden" name="_do" value="set_translations" />
+<input type="hidden" name="webshop_id" value="%[webshop_id]%" />
+<h2>Assortiment beheren (voor webshop: %[shopname]%)</h2>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Beschikbare talen</div>
+            <div style="margin:10px;">
+                <h2>Standaard taal</h2>
+                <select style="margin-bottom:;" name="default_language" val="%[default_language]%">
+                    <for:locales>
+                        <option value="%[id]%">%[description]%</option>
+                    </for:locales>
+                </select>
+                <h2>Beschikbare talen</h2>
+                <div class="clear"></div>
+                <for:columns>
+                <div style="float:left;width:250px;">
+                <for:data>
+                    <input id="fld_%[locale]%" class="checkbox" type="checkbox" %[available?'checked="checked"':'']%" name="translation[%[id]%]" value="1" />
+                    <label for="fld_%[locale]%">%[description]%</label><br />
+                </for:data>                    
+                </div>
+                </for:columns>
+                <div class="clear"></div>
+                
+                <input style="margin-top:20px;" type="submit" value="Wijzigingen opslaan" />
+            </div>
+        </div>
+    </div>
+</form>

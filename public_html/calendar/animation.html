@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Canvas Test</title>
+  </head>
+<body>
+  <section>
+    <div>
+        <canvas id="canvas" width="205" height="50">
+         This text is displayed if your browser 
+         does not support HTML5 Canvas.
+        </canvas>
+    </div>
+
+<script type="text/javascript">
+var canvas;  
+var ctx;
+var x = 0;
+var y = 0;
+var WIDTH = 205;
+var HEIGHT = 50; 
+
+function rect(x,y,w,h) {
+  ctx.beginPath();
+  ctx.rect(x,y,w,h);
+  ctx.closePath();
+  ctx.fill();
+}
+
+
+function init() {
+  canvas = document.getElementById("canvas");
+  ctx = canvas.getContext("2d");
+  return setInterval(draw, 10);
+}
+
+function draw() {
+  ctx.fillStyle = "white";
+  rect(0,0,WIDTH,HEIGHT);
+  ctx.fillStyle = "#890889";
+  ctx.fillRect(0, 0, x, HEIGHT);
+
+  if (x + 2 <= WIDTH)
+    x += 2;
+	else
+	;
+}
+
+init();
+</script>
+
+  </section>
+</body>
+</html>

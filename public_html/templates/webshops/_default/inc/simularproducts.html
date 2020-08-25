@@ -1,0 +1,29 @@
+                 <!-- SIDEBAR -->
+                <div id="sidebar">
+                	<if:similar_products>
+                    	<div class="producten">
+                    	<h2>Bijpassende producten</h2>
+                        <ul>
+                        	<for:similar_products>
+                            <li>
+                                <a href="%[title_encoded]%-%[pgid_lnk]%%[product_id]%.html">
+                                <img style="cursor:pointer;" src="/img/upload/161x76_%[id]%.jpg" width="161" height="76" alt="product 01" />
+                                </a>
+                                <h2 style="cursor:pointer;" onclick="window.location='%[title_encoded]%-%[pgid_lnk]%%[product_id]%.html'">%[article_name]%<br /></h2>	
+                                <span class="prijs" style="cursor:pointer;" onclick="window.location='%[title_encoded]%-%[pgid_lnk]%%[product_id]%.html'">&euro; %[sale_price_vat_vis]%</span>
+                        	</li>
+                           </for:similar_products> 
+                          
+                        </ul>
+                    </div>
+                   	</if:similar_products>
+                    <div class="banner">
+                        <a target="_blank" href="http://www.keurmerk.info/Leden-en-Partners/Lid-Details/12936">
+                    	   <img src="/img/banner/%[hostname]%/banner_thuiswinkel_detail.png" width="199" height="62" alt="banner Thuiswinkel" />
+                        </a>
+                    </div>
+                    <div class="banner">                        
+                    	<img src="/img/banner/%[hostname]%/banner_betaling_detail.png" width="198" height="167" alt="banner Betaling" />
+                    </div> 
+                </div>
+                <!-- /SIDEBAR -->

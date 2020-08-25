@@ -1,0 +1,130 @@
+<h2>Snelmenu</h2>
+<div id="snelmenu_outside">
+    <div class="snelmenu_cnt round">
+        <div class="snelmenu_icon"><a href="%[root]%/relations/overview.html"><img src="%[root]%/img/icons/phone.png" /></a></div>
+        <div class="snelmenu_item"><a href="%[root]%/relations/overview.html">%[find_customer]%</a></div>
+    </div>
+    <div class="snelmenu_cnt round">
+        <div class="snelmenu_icon"><a href="%[root]%/orders/new.html"><img src="%[root]%/img/icons/pencil.png" /></a></div>
+        <div class="snelmenu_item"><a href="%[root]%/orders/new.html">%[take_order]%</a></div>
+    </div>
+    <div class="snelmenu_cnt round">
+        <div class="snelmenu_icon"><a href="%[root]%/billing.html"><img src="%[root]%/img/icons/bill.png" /></a></div>
+        <div class="snelmenu_item"><a href="%[root]%/billing.html">%[find_bill]%</a></div>
+    </div>
+    <div class="snelmenu_cnt round">
+        <div class="snelmenu_icon"><a href="%[root]%/orders/overview.html?view=picker" ><img src="%[root]%/img/icons/basket.png" /></a></div>
+        <div class="snelmenu_item"><a href="%[root]%/orders/overview.html?view=picker" >%[pick_order]% (%[pick_count]%)</a></div>
+    </div>
+    <if:module_stockpile>
+    <div class="snelmenu_cnt round">
+        <div class="snelmenu_icon"><a href="%[root]%/stock/current.html?iframe=1" class="iframe" ><img src="%[root]%/img/icons/address-icon-64x64.png" /></a></div>
+        <div class="snelmenu_item"><a href="%[root]%/stock/current.html?iframe=1" class="iframe" >%[stock]%</a></div>
+    </div>
+    </if:module_stockpile>
+    <div class="snelmenu_cnt round">
+        <div class="snelmenu_icon"><a href="%[root]%/products/catalogue.html?showwostock=true&view=barcodepicker"><img src="%[root]%/img/icons/barcode.png" /></a></div>
+        <div class="snelmenu_item"><a href="%%[root]%/products/catalogue.html?showwostock=true&view=barcodepicker">%[print_barcodes]%</a></div>
+    </div>
+</div>
+<div class="clear"></div>
+    <div class="searchbox" style="width:470px;float:left;">
+        <div class="searchresults" style="height:267px;">
+            <div class="searchtitle">Laatste orders</div>
+            <table style="margin:10px;;">
+                <for:latest_orders.data>
+                    <tr class="row%[oddeven]%">
+                        <td style="width:16px;"><a title="Bestelling bewerken" href="%[root]%/orders/new.html?orderid=%[id]%"><img src="%[root]%/img/icons/edit2-icon-16x16.png" width="16" height="16"/></a></td>						                    
+                        <td style="width:16px;"><a title="Orderpicken" href="%[root]%/orders/collect.html?orderid=%[id]%"><img src="%[root]%/img/icons/ordering-icon-16x16.png" width="16" height="16"/></a></td>                       
+                        <td style="text-align:center;">%[ordernumber]%</td>
+                        <td>%[paymethod]%</td>
+                        <td>%[status]%</td>
+                        <td>%[last_status_short]%</td>                        
+                        <td>                        
+                            <a href="%[root]%/customer_view.html?id=%[relation_id]%&iframe=1" style="color:#2C251F" class="iframe"><img src="%[root]%/img/icons/%[client_type=C?'company':'customer']%-icon-16x16.png" width="16" height="16"/></a>                         
+                            <a href="%[root]%/customer_view.html?id=%[relation_id]%&iframe=1" style="color:#2C251F" class="iframe">%[company_or_person_short]%</a>
+                        </td>
+                    </tr>                        
+                </for:latest_orders.data>                  
+            </table>   
+            <div class="clear"></div>            
+        </div>
+    </div>
+    <div class="searchbox" style="width:470px;float:left;">
+        <div class="searchresults" style="height:267px;">
+            <div class="searchtitle">Verkoop laatste 20 dagen</div>
+            <script type="text/javascript" src="./fc/JS/jquery.fusioncharts.debug.js"></script>
+            <div id="sales_chart"></div>                               
+        </div>
+    </div>
+    <div class="searchbox" style="width:470px;float:left;">
+        <div class="searchresults" style="height:167px;">
+            <div class="searchtitle">Hosting verbruik</div>
+            <table style="margin:10px;margin-bottom:0px;;">                
+                <tr class="roweven"><td>Afbeeldingen</td><td class="right">%[hosting.photo_total]%</td></tr>
+                <tr class="rowodd"><td>Prullenbak</td><td class="right">%[hosting.product_deleted]%</td></tr>
+                <tr class="roweven"><td>Database grootte</td><td class="right">%[hosting.db_size]%</td></tr>
+                <tr class="rowodd bold" style="color:%[hosting.color]%;"><td>Uw verbruik</td><td class="right">%[hosting.total]%</td></tr>
+                <tr class="roweven bold" style="color:%[hosting.color]%;"><td>Hosting pakket</td><td class="right">%[hosting.hosting_package]%</td></tr>
+            </table> 
+	<a style="display:inline-block;margin-left:12px;" href="/products/recyclebin.html">Prullenbak openen</a>
+            <div class="clear"></div>            
+        </div>
+    </div>     
+	<div class="searchbox" style="width:470px;float:left;">
+        <div class="searchresults" style="height:167px;">
+            <div class="searchtitle">Laatste bezoekers uit Google</div>
+            <table style="margin:10px;margin-bottom:0px;;">                      
+                <for:latest_google_queries>
+                <tr class="row%[oddeven]%">
+                    <td>%[start]%</td>
+                    <td><a href="http://www.google.com/search?q=%[query]%" target="_blank">%[query]%</a></td>
+                    <td>%[ip]%</td>
+                </tr>
+                </for:latest_google_queries>                
+            </table>
+            <a href="%[root]%/statistics/googlevisitors.html" style="display:inline-block;margin-left:12px;" >Meer Google bezoekers</a>
+            <div class="clear"></div>            
+        </div>
+    </div>             
+    <div class="searchbox" style="width:470px;float:left;">
+        <div class="searchresults" style="height:267px;">
+            <div class="searchtitle">Laatste zoekopdrachten</div>
+            <table style="margin:10px;;">
+                <for:latest_searches>
+                    <tr class="row%[oddeven]%">                       
+                        <td>%[search_query]%</td>
+                        <td>%[hits]%</td>
+                    </tr>                        
+                </for:latest_searches>                  
+            </table>   
+            <div class="clear"></div>            
+        </div>
+    </div>     
+    <div class="searchbox" style="width:470px;float:left;">
+        <div class="searchresults" style="height:267px;">
+            <div class="searchtitle">Populairste zoekopdrachten</div>
+            <table style="margin:10px;;">
+                <for:most_popular>
+                    <tr class="row%[oddeven]%">                       
+                        <td>%[search_query]%</td>
+                        <td>%[hits]%</td>
+                    </tr>                        
+                </for:most_popular>                  
+            </table>   
+            <div class="clear"></div>            
+        </div>
+    </div>        
+
+    <div class="clear"></div>          
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">%[notes_lbl]%</div>
+            <div id="notes">
+                %[notes]%
+            </div>        
+            <div class="clear"></div> 
+            <div class="add"><a href="%[root]%/edit_note.html?iframe=1" class="iframe"><img src="%[root]%/img/icons/add.png" width="25" height="25"/></a><a href="%[root]%/edit_note.html?iframe=1" class="iframe">%[add_note]%</a></div>
+            <div class="clear"></div>            
+        </div>
+    </div>

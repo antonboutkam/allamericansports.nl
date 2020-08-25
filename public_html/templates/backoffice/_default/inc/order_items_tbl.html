@@ -1,0 +1,36 @@
+<table style="margin:15px; width:100%;">
+    <tr class="rowheader">
+            <th style="width:18px;">&nbsp;</th>
+            <th style="width:18px;">&nbsp;</th>            
+            <th><a href="">%[lbl_articlenumber]%</a></th>                                    
+            <th><a href="">%[lbl_productname]%</a></th>                                    
+            <th><a href="">%[lbl_count]%</a></th>                             
+            <th><a href="">%[lbl_pieceprice]%</a></th>
+            <th><a href="">%[lbl_discount]%</a></th>
+            <th><a href="">%[lbl_price]%</a></th>                 
+    </tr>
+    <for:order_items>
+        <tr class="row%[oddeven]% pricerow">
+            <td><a href="%[root]%/products/view.html?id=%[p_id]%&iframe=1" class="iframe"><img src="%[root]%/img/icons/info-icon-16x16.png" width="16" height="16"/></a></td>
+            <td><a class="del_item" rel="%[oi_id]%" href="#"><img src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16"/></a></td>            
+            <td>%[article_number]%</td>
+            <td>%[article_name]%</td>
+            <td class="tdcenter"><input type="text" class="update_quantity" id="order_item_%[oi_id]%" value="%[quantity]%" style="width:30px;" /></td>
+            <td class="tdright price" id="sale_price_%[oi_id]%">%[sale_price]%</td>
+            <td class="tdright discount">%[discount]%%</td>
+            <td class="tdright subprice" id="price_%[oi_id]%">%[price]%</td>
+        </tr>
+    </for:order_items>
+    <tr class="rowfooter">
+        <td colspan="7" class="tdright" style="font-weight:bolder;">%[lbl_subtotal]%:</td>
+        <td id="subtotal" class="tdright"></td>
+    </tr>
+    <tr class="rowfooter">
+        <td colspan="7" class="tdright" style="font-weight:bolder;">%[lbl_vat]%:</td>
+        <td id="subtotal" class="tdright vat"></td>
+    </tr>
+    <tr class="rowfooter">
+        <td colspan="7" class="tdright" style="font-weight:bolder;">%[lbl_total]%:</td>
+        <td id="subtotal" class="tdright incvat"></td>
+    </tr>                          
+</table>

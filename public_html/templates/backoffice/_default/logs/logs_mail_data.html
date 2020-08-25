@@ -1,0 +1,18 @@
+            <table style="margin:15px; width:95%;">
+                <tr style="font-weight:bold;">
+                    <td>&nbsp;</td><td>Van</td><td>Aan</td><td>Onderwerp</td>
+                </tr>
+                <for:data>
+                    <tr class="row%[oddeven=odd?'even':'odd']%">
+                        <td><a href="/logs/viewmail.html?id=%[id]%&iframe=1" class="iframe"><img src="/img/icons/mail-16x16.png" /></a></td>
+                        <td>%[frommail]%</td>
+                        <td>%[tomail]%</td>
+                        <td>%[subject]%</td>
+                        <td>%[mailtime]%</td>
+                    </tr>                                
+                </for:data>
+            </table>
+            <div class="clear"></div>
+                <center>%[paginate]%</center>         
+            </div>            
+        

@@ -1,0 +1,44 @@
+<h2>Import customers</h2>
+<form enctype="multipart/form-data" method="post">
+    <if:state value="start">
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Step1, upload a csv file</div>
+            <div style="margin:10px;">
+                <div style="margin-bottom:3px;"><input type="file" name="file" /></div>
+                <div><input type="submit" value="Upload" /></div>
+            </div>
+        </div>
+    </div>
+    </if:state>
+     <if:state value="assign">
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="searchtitle">Step2, assign columns</div>
+                <div style="margin:10px;">
+                    <div><input type="checkbox" name="stripfirstcol" /> Strip first column</div>
+                    <div><input type="submit" name="assign" value="Assign" /></div>
+
+                    <table>
+                        <tr>                        
+                            <for:dropdowns>
+                                <td><select name="col[%[col]%]">%[dropdown]%</select></td>
+                            </for:dropdowns>
+                        </tr>
+                        %[table]%
+                    </table>
+                </div>
+            </div>
+        </div>
+    </if:state>
+    <if:state value="assign">
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="searchtitle">Import done</div>
+                <div style="margin:10px;">
+                    Klaar met importeren
+                </div>
+            </div>
+        </div>
+    </if:state>
+</form>

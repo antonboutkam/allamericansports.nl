@@ -1,0 +1,54 @@
+<h2>&nbsp; </h2>
+
+
+
+
+<script type="text/javascript">
+    var current_page    = '%[current_page]%';
+    var view            = '%[view]%';
+</script>
+<form>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">
+                %[lbl_found_bills]%
+                <div style="float:right;color:#555;">%[rowcount]% %[lbl_found_bills_lc]% <a href="#" class="reload"><img width="20" class="middle" src="%[root]%/img/icons/reload.png" /></a></div>
+                <div class="clear"></div>                 
+            </div>            
+                <if:bills>
+                    <table style="margin:15px;">
+                    <tr class="rowheader">
+                            <th style="width:18px;">&nbsp;</th>
+                            <th style="width:18px;">&nbsp;</th>
+                            <th style="width:18px;">&nbsp;</th>
+                            <th><a href="#" class="sort" rel="%[sort=r.company_name?'r.company_name DESC':'r.company_name']%">%[lbl_companyname]%</a></th>  
+                            <th><a href="#" class="sort" rel="%[sort=o.id?'o.id DESC':'o.id']%">%[lbl_billno]%</a></th>                                                                      
+                            <th><a href="#" class="sort" rel="%[sort=o.accepted?'o.accepted DESC':'o.accepted']%">%[lbl_created]%</a></th>
+                            <th><a href="#" class="sort" rel="%[sort=o.paid?'o.paid DESC':'o.paid']%">%[lbl_paidon]%</a></th>
+                            <th><a href="#" class="sort" rel="%[sort=total?'total DESC':'total']%">%[lbl_amount]%</a></th>
+                    </tr>                
+                    <for:bills>
+                        <tr class="roweven">                       
+                            <td><a href="%[root]%/relations/view.html?id=%[relation_id]%&iframe=1" class="iframe"><img src="%[root]%/img/icons/info-icon-16x16.png" width="16" height="16"/></a></td>
+                            <td><a href="%[root]%/bill_pdf.php?orderid=%[id]%&rand=%[rand]%"><img src="%[root]%/img/icons/logo-pdf-16x16.png" width="16" height="16"/></a></td>
+                            <td><a title="Als betaald markeren" href="#" rel="%[id]%" class="mark_paid"><img src="%[root]%/img/icons/dollar-icon-16x16.png" width="16" height="16"/></a></td>
+                            <td>%[company_or_person]%</td>
+                            <td>%[ordernumber]%</td>                    
+                            <td>%[accepted_date]%</td>
+                            <td>%[paid_date]%</td>
+                            <td>%[total]%</td>
+                        </tr>
+                    </for:bills>    
+                    </table>   
+                </if:bills>   
+                <if:bills condition="is_false">
+                    <div style="padding: 20px;">
+                    <center>%[lbl_nobillsfound]%</center><br />
+                    <if:user_level value="C"><center>%[lbl_commercialpriv]%</center></if:user_level>
+                    </div>                    
+                </if:bills>                              
+            <center>%[paginate]%</center>
+            <div class="clear"></div>         
+        </div>
+    </div>
+</form>

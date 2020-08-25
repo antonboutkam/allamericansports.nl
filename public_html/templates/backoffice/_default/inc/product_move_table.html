@@ -1,0 +1,32 @@
+                <div class="searchtitle">Vanaf lokatie <span style="text-transform:capitalize;">%[from_location_name]%</span></div>                
+                    <div  style="margin:15px;height:150px; overflow-y: scroll; overflow-x: hidden">
+                        <table style="width:800px;">
+                            <tr class="rowheader">
+                                <th style="width:16px;">&nbsp;</th>
+                                <th style="width:16px;">&nbsp;</th>
+                                <th style="width:300px;"><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[lbl_articlenumber]%</a></th>
+                                <th style="width:20px;"><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">Pad</a></th>
+                                <th style="width:20px;"><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">Rek</a></th>
+                                <th style="width:20px;"><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">Plank</a></th>
+                                <th style="width:180px;"><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%"># %[from_location_name]%</a></th>
+                                <th style="width:180px;"><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%"># %[to_location_name]%</a></th>
+                                <th style="display:none; width:180px;" class="center"><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">Aantal verplaatsen</a></th>
+                            </tr>
+                            <for:products>
+                                <tr class="row%[product_id]%">
+                                    <td style="width:16px;"><a href="#" class="add_basked" rel="%[product_id]%" ><img class="basketimg" src="%[root]%/img/icons/add-1-icon-16x16.png" width="16" height="16"/></a></td>
+                                    <td style="width:16px;"><a class="iframe" href="%[root]%/products/view.html?id=%[product_id]%&iframe=1"><img src="%[root]%/img/icons/info-icon-16x16.png" width="16" height="16"/></a></td>
+                                    <td style="width:300px;">%[article_number]%</td>
+                                    <td style="width:32px;">%[path]%</td>
+                                    <td style="width:32px;">%[rack]%</td>
+                                    <td style="width:32px;">%[shelf]%</td>
+                                    <td style="width:100px; text-align:right" id="max_move_%[product_id]%">%[quantity_from]%</td>
+                                    <td style="width:100px; text-align:right">%[quantity_to]%</td>
+                                    <td style="display:none; width:100px;" class="center">
+                                        <input type="text" tabindex="4" style="width:40px; text-align:center;" class="move" id="move_%[product_id]%" name="move[%[product_id]%]" value="">
+                                    </td>
+                                </tr>
+                            </for:products>
+                       </table>
+                    </div>
+                    

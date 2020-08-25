@@ -1,0 +1,44 @@
+<tr>
+    <td>
+        <table>
+            <tr>
+                <td>Reviewer naam</td>
+                <td>%[name]%</td>
+            </tr>
+            <tr>
+                <td>E-mailadres</td>
+                <td>%[email]%</td>
+            </tr>
+            <tr>
+                <td>Review gaat over product</td>
+                <td>%[product.article_name]%</td>
+            </tr>
+            <tr>
+                <td>Review inhoud</td>
+                <td>%[review.review]%</td>
+            </tr>
+            <tr>
+                <td>Tijdstip</td>
+                <td>%[time]%</td>
+            </tr>
+            <tr>
+                <td>Ip adres</td>
+                <td>%[ip]%</td>
+            </tr>
+             <tr>
+                <td colspan="2">Review Approval Url:<br /></td>
+             </tr>
+             <tr>
+             <td colspan="2">
+                <a href="http://%[hostname]%%[root]%/review.html?approve=%[review_id]%&amp;password=%[password]%">Review goedkeuren</a>
+                <a href="http://%[hostname]%%[root]%/review.html?decline=%[review_id]%&amp;password=%[password]%">Review afkeuren</a>
+             </td>
+            </tr>
+             
+        </table>
+        <p>
+            Het volgende bericht is afkomstig van de webshop %[hostname]%.<br />
+            -------------------------------------------------------------<br />
+        </p>
+    </td>
+</tr>

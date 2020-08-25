@@ -1,0 +1,137 @@
+    <if:view value="picker">
+        <div class="searchbox">
+            <div class="searchresults">
+            <table>
+                <tr>
+                    <td>                                    
+                        <a href="%[root]%/products/catalogue.html?iframe=%[iframe]%&view=picker&query=%[query]%"><img src="%[root]%/img/icons/import-icon-32x32.png" /></a>
+                        <a href="%[root]%/products/catalogue.html?iframe=%[iframe]%&view=picker&query=%[query]%">%[lbl_back_to_overview]%</a>
+                    </td>
+                    <td><a href="#"  class="add_product" rel="%[id]%"><img src="%[root]%/img/icons/add-1-icon-32x32.png" /></a><a href="#" class="add_product" rel="%[id]%">%[lbl_add_product]%</a></td>
+                </tr>
+            </table>
+            </div>
+        </div>
+    </if:view>
+
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="add_customer searchtitle">%[lbl_general]%</div>      
+            <div class="edit_content">      
+                    <div style="width:50%; float:left;">                             
+                        <table>
+                            <tr><td>%[lbl_articlenumber]%</td><td>%[article_number]% (<a href="%[root]%/barcodebuilder.php?id=%[id]%&iframe=1">%[lbl_barcodes]%</a>)</td></tr>
+                            <tr><td>%[lbl_productname]%</td><td>%[article_name]%</td></tr>
+                            <tr>
+                                <td>%[lbl_type]%</td>
+                                <td>%[product_type]%</td>
+                            </tr>
+                            <tr>
+                                <td>%[lbl_size]%</td>
+                                <td>%[size]%</td>                        
+                            </tr>
+                            <tr>
+                                <td>%[lbl_weight]%</td>
+                                <td>%[weight]% gram</td>
+                            </tr>
+                            <tr>
+                                <td>Levertijd</td>
+                                <td>%[delivery_time_vis]%</td>
+                            </tr>							
+                            <tr>
+                                <td><a href="%[root]%/products/edit.html?id=%[id]%&iframe=%[iframe]%&view=%[view]%">product bewerken</a></td>
+                            </tr>
+                        </table>
+                    </div>  
+                    <div style="width:50%; float:left;">
+                        <div style="float: right;">
+
+                        <if:photo value="1">                    
+                            <a id="upload-btn" href="#"><img style="width:200px; height:150px;" src="%[root]%/img/upload/200x150_%[id]%.jpg?unique=%[rand]%" /></a>
+                        </if:photo>
+                        <if:photo condition="is_false">
+                            <a id="upload-btn" href="#"><img style="width:200px; height:150px;" src="%[root]%/img/icons/no-picture-available.png" /></a>
+                        </if:photo>                        
+                        </div>
+                        <div class="clear"></div>                                               
+                    </div> 
+                    <div class="clear"></div>                     
+                </div>
+            </div>
+        </div>        
+
+        <div class="searchbox" style="display:%[modules.module_stockpile=1?'block':none]%">
+            <div class="searchresults">
+                <div class="add_customer searchtitle">%[lbl_stock]%</div>            
+                <div class="edit_content">
+                    <if:stock>                                                                                      
+                        <table style="width:50%;">                                                        
+                            <tr class="rowheader" style="font-weight:bolder;"><td>%[lbl_location]%</td><td>%[lbl_path]%</td><td>%[lbl_rack]%</td><td>%[lbl_shelf]%</td><td>%[lbl_quantity]%</td></tr>
+                            <for:stock>
+                                <tr><td>%[name]%</td><td>%[path]%</td><td>%[rack]%</td><td>%[shelf]%</td><td>%[quantity]%</td></tr>
+                            </for:stock>                                                    
+                        </table>
+                    </if:stock>
+                    <if:stock condition="is_false">
+                        <h2><center>%[lbl_unavailable]%</center></h2>
+                    </if:stock>
+                </div>
+            </div>
+        </div> 
+           
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="add_customer searchtitle">%[lbl_prices]%</div>            
+                <div class="edit_content">                                                                                      
+                    <table style="width:50%;">          
+                        <if:user_level value="A">                                                                       
+                            <tr><td>%[lbl_purchase_price]%</td><td style="text-align: right;">&euro; %[purchase_price]%,%[purchase_price_ct]%</td></tr>
+                        </if:user_level>
+                        <tr><td>
+                            <if:user_level value="A">%[lbl_saleprice]%</if:user_level>
+                            <if:user_level not="A">%[lbl_price]%</if:user_level>                              
+                        </td><td style="text-align: right;"> &euro; %[sale_price]%,%[sale_price_ct]%</td></tr>
+                        <tr><td>%[lbl_adviceprice]%</td><td style="text-align: right;">&euro; %[advice_price]%,%[advice_price_ct]%</td></tr>
+                        <tr><td>%[lbl_discount]%</td><td style="text-align: right;">%[discount]%%</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="add_customer searchtitle">%[lbl_productname]%</div>  
+                <div class="edit_content">                                                             
+                        <table>
+                            <tr><td colspan="2"><h2>%[lbl_productname]%</h2></td></tr>               
+                            <tr><td>%[lbl_barcode]% 1</td><td>%[barcode_1]%</td></tr>
+                            <tr><td>%[lbl_barcode]% 2</td><td>%[barcode_2]%</td></tr>
+                        </table>
+                     </div>
+            </div>
+        </div>
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="add_customer searchtitle">%[lbl_extrainfo]%</div>  
+                <div class="edit_content">                                                                      
+                        <h2>%[lbl_description]%</h2>
+                        %[description]%                          
+                    <div class="clear"></div> 
+                </div>   
+            </div>
+        </div>
+        <if:multi_img>
+            <if:extra_images>
+            <div class="searchbox">
+                <div class="searchresults">
+                    <div class="add_customer searchtitle">Afbeeldingen</div>
+                    <div style="text-align:center;" id="multi_image_edit">
+                        <for:extra_images>
+                            <div style="float:left;margin:5px;width:155px; height:155px; background-image:url(%[root]%/img/product/155x155_%[filename]%) "></div>
+                        </for:extra_images>
+                    </div>
+                     <div class="clear"></div>
+                </div>
+            </div>
+            </if:extra_images>
+        </if:multi_img>
+</form>

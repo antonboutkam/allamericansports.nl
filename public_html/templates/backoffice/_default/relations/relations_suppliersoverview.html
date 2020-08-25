@@ -1,0 +1,80 @@
+<if:view not="picker"><h2>%[relationmanagement]%</h2></if:view>
+<if:view value="picker"><h2>%[findrelation]%</h2></if:view>
+    <div class="searchbox">
+		<input type="hidden" id="current_page" value="%[current_page]%" />
+        <div class="searchresults">
+            <div class="searchtitle">%[findrelation]%</div>
+            <div style="margin:10px;">
+                <div id="simple-search">
+                    <input type="text" id="fld_search" class="searchfield" title="%[search_default_val]%" value="%[search_default_val]%"/>  
+                    <div style="float:right;"><a id="toggle-advanced" href="">%[adv_search]%</a></div>
+					<div class="clear"></div>
+					<div style="float:right;">
+						Items per pagina: 
+						<select id="items_pp" val="%[items_pp]%">
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+							<option>25</option>
+							<option>50</option>
+							<option>75</option>
+							<option>100</option>
+							<option>150</option>
+							<option>250</option>
+						</select>
+					</div>
+					<div class="clear"></div>
+                </div>  
+                <div id="advanced-search" style="display:none;">
+                    <div style="float:right;"><a id="toggle-simple" href="">%[simple_search]%</a></div>
+                    <table>
+                        <tr><td>Klantnummer</td><td><input class="advsrc" type="text" name="id" /></td></tr>
+                        <tr><td>%[company_name]%</td><td><input class="advsrc" type="text" name="company_name" /></td></tr>
+                        <tr><td>%[website]%</td><td><input class="advsrc" type="text" name="website" /></td></tr>
+                        <tr><td>%[postalcode]%</td><td><input class="advsrc" type="text" name="billing_postal" /></td></tr>
+                        <tr><td>%[city]%</td><td><input class="advsrc" type="text" name="billing_city" /></td></tr>
+                        <tr><td>%[type]%</td>
+							<td>
+								<select class="advsrc" name="type">
+									<option value="">alle</option>
+									<option value="customer">%[customers]%</option>
+									<option value="prospect">%[prospects]%</option>
+									<option value="supplier">%[suppliers]%</option>
+								</select>
+							</td>
+                        </tr>
+                    </table>                   
+                </div>     
+            </div>
+        </div>
+    </div>
+    <div id="relations_tbl" class="searchbox">
+        %[relations_tbl]%
+    </div>
+    <if:view not="picker|selector">
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="searchtitle">%[actions]%</div>
+                                            
+                <div style="margin:10px; float:left; %[user_level=A?'':'display:none']%">
+                    <h3>%[lbl_export]%</h3>
+                    <ul style="font-size: 12px;">
+                        <li><a href="%[root]%/export.html?type=cust-full">%[excel_export]%</a></li>
+                        <li><a href="%[root]%/export.html?type=phone">%[phonelist]%</a></li>       
+                        <li><a href="%[root]%/export.html?type=mail">%[email_addresses]%</a></li>        
+                    </ul>
+                </div>
+                <div style="margin:10px; float:left; %[user_level=A?'':'display:none']%">
+                    <h3>Import</h3>
+                    <ul style="font-size: 12px;">
+                        <li><a href="%[root]%/import/customers.html">Import csv file</a></li>
+                        <!-- <li><a href="%[root]%/export.html?type=phone">Google contacts</a></li> -->
+                    </ul>
+                </div>
+                <div class="clear"></div>            
+            </div>
+        </div>
+    </if:view>

@@ -1,0 +1,69 @@
+<script type="text/javascript">
+    var module_stockpile = "%[module_stockpile]%";
+ </script>
+<div id="login_window">
+    <h1 style="">Inloggen</h1>
+    <img id="lock_icon" src="%[root]%/img/lock-icon.png" width="256" height="256" />
+    <div id="login-screen">
+        <form method="post" id="loginform" action="/login.html">
+            <input type="hidden" name="_do" value="login" />
+            <h2>%[welcome_txt]% %[system_name]%</h2>
+            <p>%[welcome_txt_sub]%</p>                
+            <table>
+                <tr>
+                    <td>%[lbl_email]%</td>
+                    <td><input tabindex="1" style="width:180px;" type="text" id="fld-eml" name="email" /></td>
+                </tr>    
+                <tr>
+                    <td>%[lbl_password]%</td>
+                    <td><input tabindex="2" style="width:180px;" type="password" name="pass" /></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <input type="hidden" name="remember_id" value="0" />
+                        <input tabindex="3" class="checkbox" type="checkbox" name="remember_id" value="1" /> Ingelogd blijven                                        
+                    </td>
+                </tr>                    
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <input type="hidden" name="testmode" value="0" />
+                        <input tabindex="3" class="checkbox" id="fld_testmode" type="checkbox" name="testmode" value="1" /> Test mode                                        
+                    </td>
+                </tr>
+                <if:module_stockpile>                
+                <tr>
+                    <td>%[current_location]%</td>
+                    <td>
+                        <select tabindex="4" id="fld_location" name="location" val="%[country_warehouse_id]%">
+                            <option value="">--%[your_location]%--</option>
+                            <for:locations>
+                                <option value="%[id]%">%[name]%</option>
+                            </for:locations>
+                        </select>
+                    </td>
+                </tr>
+                </if:module_stockpile>                                                
+                <tr><td>&nbsp;</td><td><input tabindex="5" id="fld_login" type="submit" value="%[signin]%" /></td></tr>
+            </table>
+            <div style="float:right;"><a href="#"><img src="%[root]%/img/icons/arrow_down.gif" /></a> <a id="reset-open" href="#">%[forgot_pass]%</a></div>
+        </form>
+        <span style="display:%[login_error?'block':'none']%;color:red;">%[invalid_pass]%</span>
+    </div>
+    <div id="reset-screen" style="display:none;">
+        <h2>%[reset_pass]%</h2>
+        <p>%[provide_email]%</p>
+            
+        <table>
+            <tr><td>%[email]%</td><td><input style="width:180px;" id="fld_forgot_email" type="text" name="email" /></td></tr>    
+            <tr><td>&nbsp;</td><td><input type="submit" id="reset" value="%[reset]%" /></td></tr>
+        </table>
+        <div style="float:right;"><a href="#"><img src="%[root]%/img/icons/arrow_down.gif" /></a> <a id="login-open" href="#">%[signin]%</a></div>
+        <div class="clear"></div>
+        <span id="email-not-found" style="display:none;color:blue">%[not_in_db]%</span> 
+        <span id="specify_location" style="display:none;color:blue">%[specify_location]%</span> 
+        <span id="succes" style="display:none;color:blue">%[new_send]%</span>      
+    </div>    
+    <div class="clear"></div>
+</div>

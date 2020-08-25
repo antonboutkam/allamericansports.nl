@@ -1,0 +1,40 @@
+        <script type="text/javascript">
+            var current_page    = '%[current_page]%';
+            var view            = '%[view]%';
+        </script>
+        <div class="searchresults">
+            <div class="searchtitle">
+                %[lbl_found_products]%                
+                <div style="float:right;color:#555;">%[products_groups.rowcount]% product groepen <a href="#" class="reload"><img width="20" class="middle" src="%[root]%/img/icons/reload.png" /></a></div>                
+                <div class="clear"></div>                 
+            </div>
+            <div class="clear"></div>
+            <div style="display:block;" id="listview" class="perspective">                
+                <table style="margin:15px; width:95%;">
+                    <if:products_groups.data>
+                        <tr class="rowheader">
+                            <th style="width:18px;">&nbsp;</th> 
+                            <th style="width:18px;">&nbsp;</th>
+                            <td><a class="sort" style="text-align:center;" rel="%[sort=width?'width DESC':'width']%" href="">Groep titel</a></td>
+                            <td><a class="sort" style="text-align:center;" rel="%[sort=width?'width DESC':'width']%" href="">#Producten</a></td>
+                        </tr>                    
+                        <for:products_groups.data>
+                            <tr class="row%[oddeven]%">
+                                <td><a title="Product verwijderen" class="delete_group" data-id="%[pgid]%" href="#"><img src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16"/></a></td>
+                                <td><a title="%[lbl_edit_product]%" href="%[root]%/products/groupedit.html?id=%[pgid]%"><img src="%[root]%/img/icons/edit-icon-16x16.png" width="16" height="16"/></a></td>
+                                <td>%[group_name]%</td>
+                                <td>%[products_in_group]%</td>    
+                            </tr>
+                        </for:products_groups.data>                                        
+                    </if:products_groups.data>
+                    <if:products_groups.data condition="is_false">
+                        <tr class="row%[oddeven]%">
+                            <td colspan="11" style="text-align:center;line-height:40px;font-weight:bold">Er zijn nog geen productgroepen aangemaakt.</td>
+                        </tr>
+                    </if:products_groups.data>
+                </table>
+                <div class="clear"></div>
+            </div>
+            <center>%[products_groups.paginate]%</center>
+            <div class="clear"></div>         
+        </div>

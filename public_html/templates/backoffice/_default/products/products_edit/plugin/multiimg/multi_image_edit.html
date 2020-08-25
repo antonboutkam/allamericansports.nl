@@ -1,0 +1,14 @@
+                    <for:extra_images>
+                        <div style="float:left;margin:5px;width:155px; height:155px; background-image:url('%[root]%/img/product/155x155_%[filename]%')">
+                            <div style="text-align:center;margin-top:135px; width:155px;">
+                            <if:order not="1">
+                                <a href="#" rel="%[id]%" class="move_img_left" title="Naar links verplaatsen"><img src="%[root]%/img/icons/backward-icon-16x16.png" /></a>
+                            </if:order>
+                            <a href="#" rel="%[id]%" class="editimg altimage" data-img="%[root]%/img/product/%[filename]%" title="Bewerken"><img src="%[root]%/img/icons/paint-16x16.png" /></a>
+							<a href="#" rel="%[id]%" class="delete_img" title="Verwijderen"><img src="%[root]%/img/icons/delete-icon-16x16.png" /></a>							
+							<if:order not="5">                                
+                                <a style="display:%[is_last=1?'none':'inline']%" href="#" rel="%[id]%" class="move_img_right" title="Naar rechts verplaatsen"><img src="%[root]%/img/icons/forward-icon-16x16.png" /></a>
+                            </if:order>
+                            </div>
+                        </div>
+                    </for:extra_images>

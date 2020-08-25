@@ -1,0 +1,29 @@
+            <table style="margin:15px;">
+                <tr class="rowheader">
+                        <th>&nbsp;</th>
+                        <th>&nbsp;</th>
+                        <th><a href="#" rel="%[sort=full_name?'full_name DESC':'full_name']%" class="sort">%[lbl_name]%</a></th>    
+                        <th><a href="#" rel="%[sort=email?'email DESC':'email']%" class="sort">%[lbl_mail]%</a></th>                                                 
+                        <th><a href="#" rel="%[sort=phone?'phone DESC':'phone']%" class="sort">%[lbl_phone]%</a></th>
+                        <th><a href="#" rel="%[sort=mobile?'mobile DESC':'mobile']%" class="sort">%[lbl_mobile]%</a></th>
+                        <th><a href="#" rel="%[sort=job?'job DESC':'job']%" class="sort">%[lbl_job]%</a></th>
+                        <th><a href="#" rel="%[sort=level?'level DESC':'level']%" class="sort">%[lbl_access]%</a></th>
+                </tr>
+                <for:users>
+                    <tr class="row%[oddeven]%">
+                        <td><a class="iframe" href="%[root]%/settings/user_edit.html?id=%[id]%&iframe=1"><img src="%[root]%/img/icons/edit-icon-16x16.png" width="16" height="16" /></a></td>
+                        <td><a class="delete" title="%[full_name]%" href="#" rel="%[id]%"><img src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16" /></a></td>
+                        <td>%[full_name]%</td>
+                        <td>%[email]%</td>
+                        <td>%[phone]%</td>
+                        <td>%[mobile]%</td>
+                        <td>%[job]%</td>
+                        <td>%[level]%</td>
+                    </tr>
+                </for:users>                 
+                <tr>
+                    <td colspan="5"><a class="iframe" href="/settings/edit_user.html?iframe=1&id=new">
+                        <img src="%[root]%/img/icons/add-2-icon-16x16.png" /></a>
+                    <a class="iframe" href="%[root]%/settings/user_edit.html?iframe=1&id=new">%[lbl_add_user]%</a></td>
+                </tr>                           
+            </table>

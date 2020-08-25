@@ -1,0 +1,91 @@
+          <div class="searchresults">
+            <div class="searchtitle">
+                %[lbl_orders]%
+                <div style="float:right;color:#555;">%[rowcount]% %[lbl_found_orders]%</div>
+                <div class="clear"></div>                 
+            </div>
+            <table style="margin:15px;">
+                <tr class="rowheader">
+						<th style="width:18px;">&nbsp;</th>
+                                         
+						<th style="width:18px;">&nbsp;</th>         
+						<th style="width:18px;">&nbsp;</th>         
+                        <th><a href="" class="sort" rel="o.id">%[lbl_order]%#</a></th>
+                        <th><a href="" class="sort" rel="o.id">Verzenden</a></th>                        
+                        <th><a href="" class="sort" rel="o.paid">Betaling</a></th>                         	                        
+                        <th><a href="" class="sort" rel="status">%[lbl_status]%</a></th>                        
+                                                                     
+                        <th><a href="" class="sort" rel="company_name">%[lbl_relation]%</a></th>
+                        <!--
+                        <th><a href="" class="sort" rel="sub_total">%[lbl_subtotal]%</a></th>
+                        <th><a href="" class="sort" rel="vat">%[lbl_vat]%</a></th>
+                        -->                                                                      
+                        <!-- <th><a href="" class="sort" rel="montapacking_stat">Montapacking</a></th> -->                                              
+						<th><a href="" class="sort" rel="montapacking_stat">Exact online</a></th>
+                        <th><a href="" class="sort" rel="total">%[lbl_total]%</a></th>
+                </tr>
+                <for:orders>
+                    <tr class="row%[oddeven]%">
+                        <if:is_deleted value="1">
+                            <td><a title="Verwijderde bestelling terugzetten" data-id="%[id]%" class="undelete_order" href="#"><img src="%[root]%/img/icons/undo-icon-16x16.png" width="16" height="16"/></a></td>
+						</if:is_deleted>
+                        <if:is_deleted value="0">
+                            <td><a title="Bestelling verwijderen" rel="%[id]%" class="delete_order" href="#"><img src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16"/></a></td>
+                        </if:is_deleted>
+                        <td>		
+							<a title="Bestelling bewerken" href="%[root]%/orders/new.html?orderid=%[id]%"><img src="%[root]%/img/icons/edit2-icon-16x16.png" width="16" height="16"/></a><br />
+							<a title="Orderpicken" href="%[root]%/orders/collect.html?orderid=%[id]%"><img src="%[root]%/img/icons/ordering-icon-16x16.png" width="16" height="16"/></a><br />
+							<a title="Als betaald markeren" href="#" rel="%[id]%" class="mark_paid"><img src="%[root]%/img/icons/dollar-icon-16x16.png" width="16" height="16"/></a>
+						</td>                        
+                        <td>
+                            <a title="Bedankt voor uw bestelling e-maibericht opnieuw versturen" href="#" rel="%[id]%" class="resend_orderemail"><img src="%[root]%/img/icons/mail.png" width="16" height="16"/></a><br />
+                            <a title="Bestelling betaald e-mailbericht opnieuw versturen" href="#" rel="%[id]%" class="resend_paymentemail"><img src="%[root]%/img/icons/mail.png" width="16" height="16"/></a><br />
+                            <a title="Order verzameld e-mailbericht opnieuw versturen" href="#" rel="%[id]%" class="order_pickupemail"><img src="%[root]%/img/icons/mail.png" width="16" height="16"/></a>
+                        </td>                        
+                        <td style="text-align:center;">%[ordernumber]%</td>
+                        <td>%[send_order?'Verzenden':'Ophalen']%</td>
+                        <td>                        
+							<div>
+                            Op rekening: %[buyoncredit?'Ja':'Nee']%<br />
+                            Betaald:%[paid?'Ja':'Nee']%<br />
+                            Methode:%[paymethod]%
+							</div>
+                        </td>
+                        <td>
+                            %[lbl_status]%: %[status]%<br />
+                            %[lbl_sinds]%: %[last_status_short]%<br />
+							From: <a href="http://%[shopname]%" style="color:black" target="blank" title="%[shopname]%" class="tipsy">%[shopname_short]%</a>
+                        </td>         
+                        
+                        <td>                        
+                            <a href="%[root]%/relations/edit.html?id=%[relation_id]%" style="color:#2C251F"><img src="%[root]%/img/icons/%[client_type=C?'company':'customer']%-icon-16x16.png" width="16" height="16"/></a>                         
+                            <a href="%[root]%/relations/edit.html?id=%[relation_id]%" style="color:#2C251F">%[company_or_person]%</a><br />		
+							%[billing_street]%<br />
+							%[billing_city]%
+                        </td>						
+                        <!-- 
+                        <td style="text-align:right;">&euro;%[sub_total]%</td>
+                        <td style="text-align:right;">&euro;%[vat]%</td>
+                        -->
+						<td>
+							Stat: %[exact_stat]%<br />						
+							Order: %[exact_salesorder_vis]%<br />
+							Sent: %[exact_salesregisterd_short]%<br />							
+						</td>                        
+                        <td style="text-align:right;">&euro;%[total_vis]%</td>
+                        <!--
+                        <td>
+							<table>
+                            Stat: %[montapacking_stat]%<br />
+                            Action: %[montapacking_action]%<br />
+                            Sent: %[montapacking_sent_short]%
+							</table>
+                        </td>
+                        -->
+
+                    </tr>                        
+                </for:orders>                                            
+            </table>
+<div class="clear"></div>
+            <center>%[paginate]%</center>         
+        </div>

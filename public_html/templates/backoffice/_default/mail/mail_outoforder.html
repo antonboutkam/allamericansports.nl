@@ -1,0 +1,26 @@
+ <link rel="stylesheet" href="/js/jwysiwyg/jquery.wysiwyg.css" type="text/css" />
+<script type="text/javascript" src="/js/jwysiwyg/jquery.wysiwyg.js"></script>
+<script type="text/javascript">                    
+    $(document).ready(function(){
+        $('.wysiwyg').wysiwyg();
+    });
+</script>
+
+<form method="POST">
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="add_customer searchtitle">Out of order</div>      
+            <div class="edit_content">      
+                    <input type="hidden" name="_do" value="sendmail" />
+                    <input type="hidden" name="mail[email]" value="%[relation.email]%" />
+                    
+                    <label>Onderwerp</label>
+                    <input type="text" class="widefld" value="%[page.title]%" name="mail[subject]" /><br />
+
+                    <label>Inhoud bericht</label>
+                    <textarea class="wysiwyg" style="width:88%; height:100%;" name="mail[content]">%[page.content]%</textarea>
+                    <input type="submit" value="Verstuur email" />
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,37 @@
+<if:view not="picker|mover"><h2>%[lbl_warehouseplan]%</h2></if:view>
+<if:view value="picker|mover"><h2>%[lbl_selectloation]%</h2></if:view>
+
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">%[lbl_locations]%</div>
+            <div style="margin:10px;">
+                <form method="get" id="location-frm">
+                        <input type="hidden" class="mover" name="locationId" value="%[locationId]%" />        
+                        <input type="hidden" name="addid" id="fld_addid" value="%[addid]%" />
+                        <input type="hidden" class="mover" name="productId" value="%[productId]%" />       
+                        <input type="hidden" name="iframe" value="%[iframe]%" />
+                        <input type="hidden" name="view" value="%[view]%" />
+                    <if:view value="mover">
+                        %[lbl_product_count]%:                                                                              
+                        <select class="mover" name="quantity" val="%[quantity]%">
+                            <for:range>
+                                <option>%[item]%</option>
+                            </for:range>
+                        </select>
+                        %[lbl_to_location]%: 
+                    </if:view>                
+                    <select name="location" id="change-location">                    
+                        <for:locations>
+                            <option %[location=%[id]%?'selected="selected":'']% value="%[id]%">%[name]%</option>
+                        </for:locations>
+                    </select>
+                </form>      
+            </div>
+        </div>
+    </div>
+    <div id="warehouse_standard_locations">
+        %[warehouse_standard_locations]%
+    </div>    
+    <div id="warehouse_view_tbl">
+        %[warehouse_view_tbl]%
+    </div>

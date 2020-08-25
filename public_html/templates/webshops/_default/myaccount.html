@@ -1,0 +1,228 @@
+<input type="hidden" name="relation_id" id="fld_id" value="%[relation.id]%" />
+<input type="hidden" name="contact[webshop]" value="4" />
+
+<input type="hidden" id="redirect" value="%[r]%" />
+
+<div id="myaccount"> 
+    <div id="myaccount_inner">
+    <h2>%[trans_aboutme]%</h2>  
+    <div id="form" class="round-bg" style="width:919px;">     
+        <form method="post" id="accountform">        
+            <input type="hidden" name="_do" value="updateaccount" />
+            <div class="blockaddress">
+                <div class="btn" id="btn1"></div>
+                <h2 class="lbl">%[trans_billingaddr]%</h2>
+                <div class="cl"></div>
+
+                <div class="first frmblock">
+                    <div class="double">
+                        <label class="lvl">%[trans_firstname]% *</label>
+                        <input class="doublefld txtfld" name="contact[cp_firstname]" id="cp_firstname" type="text" value="%[relation.cp_firstname]%" />
+                    </div>
+                    <div class="double"> 
+                        <label class="lvl">%[trans_lastname]% *</label>
+                        <input class="doublefld txtfld" name="contact[cp_lastname]" id="cp_lastname"  type="text" value="%[relation.cp_lastname]%" />
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="frmblock">
+                    <div class="double">
+                        <label class="lvl">%[trans_emailaddr]% *</label><span style="display:none;color:red;font-size:0.8em;" id="validemailmsg"><br />%[trans_pleaseprovideavalid]%</span>
+                        <input class="doublefld txtfld" name="contact[email]" id="email" type="text" value="%[relation.email]%"/>
+                    </div>
+                    <div class="double">
+                        <label class="lvl">%[trans_phone]% *</label>
+                        <input class="doublefld txtfld" name="contact[phone]" id="phone" type="text" value="%[relation.phone]%" />
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="frmblock">
+                    <label class="lvl">%[trans_addrhousenum]%</label>
+                    <input class="singlefld streetfld txtfld" name="contact[billing_street]" id="billing_street" type="text" value="%[relation.billing_street]%" /> 
+                    <input class="singlefld addrfld txtfld" style="width:50px"  name="contact[billing_number]" id="billing_number" type="text" value="%[relation.billing_number]%" />
+                </div>
+                <div class="frmblock">
+                    <label class="lvl">%[lbl_postalcode]% *</label>
+                    <input name="contact[billing_postal]" id="billing_postal" type="text" value="%[relation.billing_postal]%" class="txtfld" />
+                </div>                               
+                <div class="frmblock">              
+                    <label class="lvl">%[lbl_city]% *</label>
+                    <input class="singlefld txtfld" name="contact[billing_city]" id="billing_city" type="text" value="%[relation.billing_city]%" />
+                </div>
+                <div class="frmblock">                            
+                    <label class="lvl">%[lbl_country]% *</label>
+                    <select name="contact[billing_country]" id="billing_country" class="singlefld txtfld" val="%[relation.billing_country]%">
+                        <optgroup label="Top 10">
+                            <option value="The Netherlands">%[lang=nl?'Nederland':'The Netherlands']%</option>
+                            <option value="Belgium">%[lang=nl?'België':'Belgium']%</option>
+                            <option value="Germany">%[lang=nl?'Duitsland':'Germany']% </option>
+                            <option value="France">%[lang=nl?'Frankrijk':'France']% </option>
+                            <option value="English UK">%[lang=nl?'Engeland':'English UK']%</option>
+                            <option value="Poland">%[lang=nl?'Polen':'Poland']%</option>
+                            <option value="Spain">%[lang=nl?'Spanje':'Spain']%</option>
+                            <option value="Italy">%[lang=nl?'Italië':'Italy']%</option>
+                            <option value="Denmark">%[lang=nl?'Denemarken':'Denmark']%</option>
+                        </optgroup>
+                        <optgroup label="Overig">
+                            <for:country_iso>
+                                <if:lang value="nl">
+                                    <option value="%[name]%">%[name_nl]%</option>
+                                </if:lang>
+                                <if:lang not="nl">
+                                    <option value="%[name]%">%[name]%</option>
+                                </if:lang>  
+                            </for:country_iso>
+                        </optgroup>
+                    </select>
+                </div>                
+                <div class="frmblock">                            
+                    <label class="lvl">%[lbl_company]%</label>
+                    <input name="contact[company_name]" id="company_name" type="text" value="%[relation.company_name]%"  class="txtfld" />
+                </div>   
+                 
+                <div style="margin:20px 0px 20px 0px; height:50px;">
+                <a class="submit button-account updateaccount" href="" style="float:left;">%[lbl_savechanges]%</a>
+                </div>
+                
+            </div>
+            
+            <div class="clearer"></div>
+            <div class="blockaddress">
+                <div class="btn" id="btn2"></div>
+                <h2 class="lbl">%[lbl_deliveryaddr]%</h2>
+                <div class="cl"></div>
+                <div id="billing_addr" style="display:%[relation.shipping_street?'block':'none']%">
+                    <div class="frmblock first">                        
+                        <label class="lvl">%[trans_addrhousenum]% *</label>
+                        <input class="singlefld streetfld txtfld" name="contact[shipping_street]" id="shipping_street" type="text" value="%[relation.shipping_street]%" />                                                
+                        <input class="singlefld addrfld txtfld" style="width:50px" name="contact[shipping_number]" id="shipping_number" type="text" value="%[relation.shipping_number]%" />                                                
+                    </div>
+                    <div class="frmblock">
+                        <label class="lvl">%[lbl_postalcode]% *</label>
+                        <input name="contact[shipping_postal]" class="ship txtfld" id="shipping_postal" type="text" value="%[relation.shipping_postal]%" />
+                    </div>
+                    <div class="frmblock">
+                        <label class="lvl">%[lbl_city]% *</label>
+                        <input name="contact[shipping_city]" class="ship txtfld" id="shipping_city" type="text" value="%[relation.shipping_city]%" />
+                    </div>
+                    <div class="frmblock">
+                        <label class="lvl">%[lbl_country]%</label>
+                    <select name="contact[shipping_country]" id="shipping_country" class="ship singlefld txtfld" val="%[relation.shipping_country]%">
+                        <option value="">%[lbl_pleaseschoose]%</option>
+                        <optgroup label="Top 10">
+                            <option value="The Netherlands">%[lang=nl?'Nederland':'The Netherlands']%</option>
+                            <option value="Belgium">%[lang=nl?'België':'Belgium']%</option>
+                            <option value="Germany">%[lang=nl?'Duitsland':'Germany']% </option>
+                            <option value="France">%[lang=nl?'Frankrijk':'France']% </option>
+                            <option value="English UK">%[lang=nl?'Engeland':'English UK']%</option>
+                            <option value="Poland">%[lang=nl?'Polen':'Poland']%</option>
+                            <option value="Spain">%[lang=nl?'Spanje':'Spain']%</option>
+                            <option value="Italy">%[lang=nl?'Italië':'Italy']%</option>
+                            <option value="Denmark">%[lang=nl?'Denemarken':'Denmark']%</option>
+                        </optgroup>
+                        <optgroup label="Overig">
+                            <for:country_iso>
+                                <if:lang value="nl">
+                                    <option value="%[name]%">%[name_nl]%</option>
+                                </if:lang>
+                                <if:lang not="nl">
+                                    <option value="%[name]%">%[name]%</option>
+                                </if:lang>  
+                            </for:country_iso>
+                        </optgroup>
+                    </select>
+                        
+                    </div>
+                </div>
+                <input style="margin-top: 30px;" name="contact[same_as_billing]" id="fldsameasbilling" type="checkbox" class="checkbox" %[relation.shipping_street?'':'checked="checked"']% value="1" /><label style="display:inline;">%[lang=gb?'Ship to billing address':'Verzenden naar hetzelfde adres']%</label><br />
+            </div>            
+        </form>
+    
+    <div id= "changepassword" >
+        <div class="btn btnv"></div>
+        <h2 class="lbl" style="margin-top:10px;">%[lbl_changepassword]%</h2>    
+        
+        <div class="cl"></div>
+        <form method="post">
+            <div class="frmblock first" id="set_password">
+                
+                <label class="lvl">%[lbl_password]%</label>
+                <span style="display:none;color:red;font-size:0.8em;" id="validpassword"><br />%[lbl_passwordsdonotmatch]%.<br /></span>
+                <input type="password" autocomplete="off" id="password" name="contact[password]" class="txtfld"/>
+                
+                <div class="clearer"></div>
+                <label class="lvl">%[lbl_confirmpassword]%</label>
+                <input type="password" autocomplete="off" id="password_confirm" name="contact[password_confirm]" value="%[relation.password_confirm]%" class="txtfld" />
+                <div style="margin-top:20px;;">
+                    <a href="#" class="submit updatepass button-account" style="float:left;">%[lbl_changepassword]%</a>
+                    <div class="cl"></div>
+                </div>                
+            </div>
+        </form>
+        <div class="btn btnv" style="margin:20px 0px 20px 0px; height:50px;"></div>
+        <h2 class="lbl">%[lbl_newsletter]%</h2>          
+        <div>
+            <input id="newsletteryn" name="newsletter" type="checkbox" class="checkbox" checked="checked" value="1"  /> %[lbl_subscribeme]%
+            <span style="color:blue;display:none" id="signed_in">%[lbl_youarenowsubscribed]%.</span>
+            <span style="color:red;display:none" id="signed_out">%[lbl_fromnowyouareunsubscribed]%.</span>
+        </div>
+    </div>  
+     <div class="clearer"></div>      
+    <div class="cl"></div>
+    <div class="hr"></div>
+    <h2 style="margin-top:10px;">%[lbl_my_orders]% (%[orders.rowcount]%)</h2>
+    <if:hasbills>
+    
+        <table style="width:919px">
+            <tr class="thead" style="font-weight:bolder;">
+                <td>&nbsp;</td>            
+                <td>%[lbl_bill]%</td>
+                <td>%[lbl_ordernum]%</td>
+                <td>%[lbl_createdon]%</td>
+                <td>%[lbl_paid]%</td>
+                <td>%[lbl_send]%</td>
+                <td>%[lbl_tracktrace]%</td>                        
+            </tr>
+            <for:orders.data>
+                <tr>
+                    <td><a href="%[root]%/bill_pdf.php?orderid=%[id]%" target="_blank" title="%[lbl_showbill]%"><img src="%[root]%/img/icons/logo-pdf-16x16.png" width="16" height="16" /></a></td>
+                    <td><a href="%[root]%/bill_pdf.php?orderid=%[id]%" target="_blank" title="%[lbl_showbill]%">%[lbl_mybill]%</a></td>
+                    <td>%[ordernumber]%</td>
+                    <td>%[order_date_vis]%</td>
+                    <td>
+                        <div style="display:%[paymethod=Rembours?'block':'none']%;">U betaald bij bezorging</div>
+                        <div style="display:%[paymethod=Overboeking?'block':'none']%;"><a title="%[lbl_sendmoneyto]% %[hostname]% %[lbl_bookover]%" href="%[root]%/paymentinfo.html?ordernumber=%[ordernumber]%&price=%[total]%&id=%[id]%" class="iframe iframe-small">%[lbl_clickherefor]%</a></div>                                                        
+                        <div style="display:%[paymethod=Rembours|Overboeking?'none':'block']%;">                                                                                                                                                        
+                            <if:paid>ja op %[paid_date]%</if:paid>
+                            <if:paid condition="is_false"><a href="/paypage.php?payorder=%[id]%">%[lbl_noclickheretopay]%</a></if:paid>                        
+                        </div>                    
+                    </td>
+                    <td>
+                        <if:send condition="is_false">%[lbl_no]%</if:send>
+                        <if:send>%[send]%</if:send>                    
+                    </td>
+                    <td>
+                        <if:tt_url>
+                        <a href="%[tt_url]%" target="_blank">%[lbl_tracktrace]%</a>
+                        </if:tt_url>
+                        <if:tt_url condition="false">
+                            nog niet beschikbaar
+                        </if:tt_url>
+                    </td>                
+                </tr>                          
+            </for:orders.data>                
+        </table>           
+    </if:hasbills>
+    <if:hasbills condition="is_false"><p>%[lbl_whenyouorderproducts]%.</p></if:hasbills>
+    </div>
+    <script type="text/javascript">
+        if(%[paylater?1:0]%){
+            if("%[paymethod]%"=="overboeking"){
+                alert('%[lbl_thanksforyourorder]%\n');
+            }else{
+                alert('%[lbl_thanksforyourorder]%');
+            }
+        }
+    </script>
+    </div>
+</div>

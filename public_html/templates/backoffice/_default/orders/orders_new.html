@@ -1,0 +1,107 @@
+<if:offer><h2>Offerte maken</h2></if:offer>
+<if:offer condition="is_false"><h2>%[lbl_take_order]%</h2></if:offer>
+
+<input type="hidden" id="fldbtw" value="%[btw]%" />
+<input type="hidden" id="orderid" value="%[orderid]%" />
+<input type="hidden" id="relation_id" value="%[relation_id]%" />
+<span id="confirm_sure" style="display:none;">%[lbl_sure_remove]%</span>
+<div class="searchbox">
+    <div class="searchresults" style="padding:2px;">
+        <div class="searchtitle" style="margin:0;">%[lbl_order_info]%</div>
+            <div class="searchresults" style="padding:20px;">
+                <div> 
+                <h3>Stappen:
+                        <a href="#" id="show_customer_info" class="steps active">1. %[lbl_customer_info]%</a> <span style="color:#ccc">&gt;&gt;</span>
+                        <a href="#" id="show_products" class="steps">2. %[lbl_products]%</a> <span style="color:#ccc">&gt;&gt;</span>
+                        <a href="#" id="show_pay" class="steps">3. %[lbl_pay]%</a></h3>
+                
+                    <div id="block_customer_info" class="block_step">
+                        <p id="add_customer_yn">%[lbl_customer_connect]%</p>
+                        <p id="add_customer_n" style="display:none;">%[lbl_no_customer_connect]%</p>                        
+                        <div id="customer_info" style="display:none;">%[customer_info]%</div>
+                        <hr />
+                        <table>
+                            <tr>                    
+                                <td><a href="%[root]%/relations/overview.html?iframe=1&amp;view=selector" class="iframe"><img src="%[root]%/img/icons/address-icon-32x32.png" alt="Find customer" /></a></td>
+                                <td><a href="%[root]%/relations/overview.html?iframe=1&amp;view=selector" class="iframe">%[lbl_find_customer]%</a></td>
+
+                                <td><a href="%[root]%/relations/edit.html?type=client&amp;iframe=1&amp;type=customer&amp;view=picker" class="iframe"><img src="%[root]%/img/icons/add-1-icon-32x32.png" alt="Create new customer" /></a></td>
+                                <td><a href="%[root]%/relations/edit.html?type=client&amp;iframe=1&amp;type=customer&amp;view=picker" class="iframe">%[lbl_new_customer]%</a></td>
+
+                                <td><a href="#" class="no_client"><img src="%[root]%/img/icons/delete-icon-32x32.png" alt="Place order without customer"  /></a></td>
+                                <td><a href="#" class="no_client">%[lbl_no_cust_connect]%</a></td>
+                            </tr>
+                        </table>
+                    </div>                                    
+                    <div id="block_products" style="display:none" class="block_step">                        
+                        %[product_find_form]%
+                        <div id="order_items_tbl">
+                            %[order_items_tbl]%
+                        </div>
+                    </div>                    
+                    <div id="block_pay" style="display:none" class="block_step">
+                        <input class="orderdetail" type="hidden" name="discount[fixed_on]" value="0" />
+                        <input class="orderdetail" type="hidden" name="discount[perc_on]" value="0" />                    
+                        <table style="width:500px;">
+                            <tr>
+                                <td>%[lbl_billinglanguage]%</td>
+                                <td>
+                                    <select name="fk_locale" class="orderdetail" val="%[fk_locale]%">                            
+                                    <for:languages>
+                                       <option value="%[id]%">%[description]%</option>
+                                    </for:languages>
+                                    </select>
+                                </td>
+                            </tr>                           
+                            <tr><td colspan="3"><h2>%[lbl_paymethod]%</h2></td></tr>
+                            <for:paymethods>
+                                <tr><td>%[name]%</td><td><input type="radio" class="checkbox paymethod orderdetail" %[id=%[pay_method]%?'checked="checked"':'']% name="payment[method]" value="%[id]%" /></td><td>%[price_type=fixed_amount?'&euro; ':'']%%[price_amount]%%[price_type=percentage?' %':'']%</td></tr>
+                            </for:paymethods>
+                            <tr><td colspan="3"><h2>%[lbl_discount]%</h2></td></tr>                                        
+                            <tr><td>%[lbl_fixed_amount]%</td>
+                                <td><input class="checkbox orderdetail odfixed" %[checkfixed?'checked="checked"':'']% type="checkbox" name="discount[fixed_on]" value="1" /></td>
+                                <td><span style="display: inline-block; width:20px;">&euro;</span><input name="discount[euro]" class="discount_fixed orderdetail" style="text-align:right; width:40px;" type="text" value="%[discount_fixed_euro]%" />,<input name="discount[eurocent]" class="discount_fixed orderdetail" style="text-align:right; width:20px;" type="text" value="%[discount_fixed_cent]%" /></td>
+                            </tr>
+                            <tr><td>%[lbl_perc_purchaseprice]%</td>
+                                <td><input class="checkbox orderdetail odperc" %[checkpercent?'checked="checked"':'']% type="checkbox" name="discount[perc_on]" value="1" /></td>
+                                <td><span style="display: inline-block; width:20px;">&nbsp;</span><input name="discount[perc]" class="discount_perc orderdetail" style="text-align:right; width:40px;" type="text" value="%[discount_perc_euro]%" />,<input name="discount[promille]" class="discount_perc orderdetail" style="text-align:right; width:20px;" type="text" value="%[discount_perc_cent]%" /> %</td>
+                            </tr> 
+                            <tr><td colspan="3"><h2>%[lbl_delivery]%</h2></td></tr>     
+                            <tr><td>%[lbl_direct_delivery]%</td><td><input type="radio" class="checkbox orderdetail" %[send?'checked="checked"':'']% id="direct" name="delivery" value="direct" /></td></tr>
+                            <tr><td>%[lbl_send_later]%</td><td><input type="radio" class="checkbox orderdetail" %[send?'':'checked="checked"']%  id="picking" name="delivery" value="picking" /></td></tr>
+                        </table>  
+                        (%[lbl_working_from_stock]% %[location_name]%)                                                          
+                    </div>                                       
+            </div>  
+        </div>
+    </div>
+</div>
+<div id="pricetbl">
+    %[pricetbl]%
+</div>
+<div class="searchbox">
+    <div class="searchresults" style="padding:2px;">
+        <div class="searchtitle" style="margin:0;">%[lbl_roundup]%</div>
+            <div class="searchresults">      
+                <div style="padding:30px;">                    
+                    <center>             
+                        <input style="background-color:#88D21E; padding:5px; color:white;" type="submit" id="finalize" value="%[lbl_finalize]%" />
+                        <input style="background-color:#88D21E; padding:5px; color:white;" type="submit" id="offer" value="Offerte" />
+                        <input style="background-color:#d05813; padding:5px; color:white;" type="submit" id="park" value="%[lbl_park]%" />                        
+                        <input style="background-color:#c82a34; padding:5px; color:white;" type="submit" id="cancel" value="%[lbl_cancel]%" />
+                    </center>
+                </div> 
+        </div>
+    </div>
+</div>             
+<div style="display:none;">
+    <span id="err_no_products">%[lbl_err_no_products]%</span>
+    <span id="err_no_paymethod">%[lbl_err_no_paymethod]%</span>
+    <span id="err_no_stockselection">%[lbl_err_no_stockselection]%</span>
+    <span id="err_out_of_stock">%[lbl_err_out_of_stock]%</span>
+    <span id="err_invalid_input">%[lbl_err_invalid_input]%</span>
+    <span id="prompt_direct_payment">%[lbl_prompt_direct_payment]%</span>
+    <span id="inf_yes">%[lbl_inf_yes]%</span>
+    <span id="inf_no">%[lbl_inf_no]%</span>
+</div>
+ 

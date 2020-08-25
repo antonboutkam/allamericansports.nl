@@ -1,0 +1,37 @@
+<style type="text/css">
+body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
+</style>
+<body style="background:#F6F6F6; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+    <div style="background:#F6F6F6; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+    <table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">    
+        <tr>        
+        <td align="center" valign="top" style="padding:20px 0 20px 0">                                
+        <table bgcolor="FFFFFF" cellspacing="0" cellpadding="10" border="0" width="650" style="border:1px solid #E0E0E0;">                
+        <tr>                    
+        <td valign="top"><a href="%[host]%/" style="color:#1E7EC8;"><img src="%[host]%/img/logo.png" alt="%[company_name]%" border="0"/></a></td>                
+        </tr>          
+        <tr>
+        <td valign="top">
+        <h1 style="font-size:22px; font-weight:normal; line-height:22px; margin:0 0 11px 0;">Beste %[cp_firstname]% %[cp_lastname]%,</h1>   
+            <br /><br />                     
+            <p style="font-size:12px; line-height:16px; margin:0;">Via onze website hebben wij een verzoek ontvangen om uw wachtwoord te resetten.<p>
+            <p style="font-size:12px; line-height:16px; margin:0 0 8px 0;"><strong>Uw nieuwe wachtwoord is:</strong> %[new_pass]%</p>
+            <br /><br />                                    
+            <p style="font-size:12px; line-height:16px; margin:0;">U kunt uw wachtwoord op ieder gewenst moment aanpassen wanneer u <a href="%[host]%/login.html" style="color:#1E7EC8;">inlogt</a> op op onze webshop.<p>                    
+        </td>               
+        </tr>
+        <tr>
+        <td bgcolor="%[webshop_settings.mailing_color?'%[webshop_settings.mailing_color]%':'#91C616']%" align="center" style="background:%[webshop_settings.mailing_color?'%[webshop_settings.mailing_color]%':'#91C616']%; text-align:center;">
+        <center>
+        <p style="font-size:12px; margin:0;color:%[webshop_settings.mailing_txt_color?'%[webshop_settings.mailing_txt_color]%':'#000']%;">Met vriendelijke groet,
+        <strong>%[webshop_settings.company_name]%</strong>
+        </p>
+        </center>
+        </td>                
+        </tr>            
+        </table>        
+        </td>    
+        </tr>
+    </table>
+    </div>
+</body>

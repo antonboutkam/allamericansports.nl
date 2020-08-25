@@ -1,0 +1,169 @@
+        <h1>Afrekenen</h1>
+        <div class="content">
+        	<div class="left_form">
+                <form method="post" id="onestepform" action="%[root]%/checkout.html">
+                <input type="hidden" name="_do" value="create_account" />
+            	<p class="p_line">Heeft u nog geen account? Vul dan onderstaande gegevens in om een account aan te maken.</p>
+                <h4>Stap 1: Factuuradres</h4>
+                <div class="type_input">
+                	<label>Voornaam:*</label>
+                    <input type="text" name="client_new[cp_firstname]" id="cp_firstname" value="%[relation.cp_firstname]%" />
+                </div>
+                <div class="type_input">
+                	<label>Achternaam:*</label>
+                    <input type="text" name="client_new[cp_lastname]" id="cp_lastname" value="%[relation.cp_lastname]%" />
+                </div>
+                <div class="type_input">
+                	<label>Bedrijfsnaam:</label>
+                    <input type="text" name="client_new[company_name]" id="company_name" value="%[relation.company_name]%" />
+                </div>
+                <div class="type_input">
+                	<label>E-mailadres:*</label>
+                    <input type="text" name="client_new[email]" id="email" value="%[relation.email]%"  />
+                </div>
+                <div class="type_input">
+                	<label>Telefoon:*</label>
+                    <input type="text" name="client_new[phone]" id="phone" value="%[relation.phone]%"  />
+                </div>
+                <div class="type_input">
+                	<label>Straat:*</label>
+                    <input type="text" name="client_new[billing_street]" id="billing_street"value="%[relation.billing_street]%" />
+                </div>
+                <div class="type_input">
+                	<label>Nummer:*</label>
+                    <input type="text" name="client_new[billing_number]" id="billing_number" value="%[relation.billing_number]%"  />
+                </div>
+                <div class="type_input">
+                	<label>Postcode:*</label>
+                    <input name="client_new[billing_postal]" id="billing_postal" type="text" value="%[relation.billing_postal]%" />
+                </div>
+                <div class="type_input">
+                	<label>Stad:*</label>
+                     <input name="client_new[billing_city]" id="billing_city" type="text" value="%[relation.billing_city]%" />
+                </div>
+                <div class="type_input">
+                	<label>Land:*</label>
+                    <select name="client_new[billing_country]" id="billing_country" class="singlefld" val="%[relation.billing_country]%" >
+                        <optgroup label="Top 10">
+                            <option>Nederland</option>
+                            <option>Belgium</option>
+                            <option>Germany</option>                            
+                            <option>France</option>                            
+                            <option>United Kingdom</option>
+                            <option>Poland</option>
+                            <option>Spain</option>
+                            <option>Italy</option>                            
+                            <option>Austria</option>
+                            <option>Denmark</option>                            
+                        </optgroup>
+                        <optgroup label="Overig">
+                            <for:country_iso>
+                                <option>%[name]%</option>                                
+                            </for:country_iso>
+                        </optgroup>                        
+                    </select>
+                </div>
+                <div class="type_input" id="foreign_vat" style="display:none;">                            
+                    <label>Vat registration:</label>
+                    <input name="client_new[foreign_vat]" type="text" value="%[relation.foreign_vat]%" />
+                </div>                              
+                <div class="type_checkbox">                             
+                	<input id="create_account" name="client_new[create_account]" class="checkleft" type="checkbox"/>
+                    <label>Maak een account aan voor uw volgende bezoek.</label>
+                </div>
+                <div style="display:none;" id="set_password">
+                    <div class="type_input type_wi">
+                    	<label class="label_wi">Wachtwoord</label>
+                        <input type="password" autocomplete="off" class="input_wi" id="password" name="client_new[password]" value="%[relation.password]%" />                        
+                    </div>
+                    <div class="type_input type_wi type_padd">
+                    	<label class="label_wi type_mar">Wachtwoord bevestigen</label>
+                        <input type="password" autocomplete="off" class="input_wi type_mar" id="password_confirm" name="client_new[password_confirm]" value="%[relation.password_confirm]%" />
+                    </div>
+                </div>
+                <div class="type_checkbox">
+                	<input name="checkbox" id="fldsameasbilling" type="checkbox" value="" checked="checked" />
+                    <label>Verzenden naar hetzelfde adres </label>
+                </div> 
+                <div style="display:%[relation.shipping_street?'block':'none']%;padding-top:20px;" id="billing_addr">
+                    %[shipping_form]%                                                      
+                </div>                                                                                   
+                <div class="tab">
+                	<div class="verder padd_left">
+                    	<!--<div><img src="images/verder_left.png" alt="" /></div>-->
+                        <span><a class="create_account" href="#">Verder naar Stap 2</a></span>
+                        <!--<div><img src="%[root]%/img/verder_right.png" alt="" /></div>-->
+                    </div>
+                </div>
+                </form>   
+            </div>
+            <div class="right_form">
+                <div id="login-screen"> 
+                <form method="post" id="loginform">
+                    <input type="hidden"  name="_do" value="login" />
+                	<h3>Heeft u al een account?</h3>
+                    <div class="type_input">
+                    	<label>E-mailadres:</label>
+                        <input id="fld-eml" type="text" name="emailaddr" value="%[emailaddr]%"  />
+                    </div>
+                    <div class="type_input">
+                    	<label>Wachtwoord:</label>
+                        <input id="fld-password" type="password" name="password" />
+                    </div>
+                    <div class="tab">
+                    	<div class="verder padd_left1">
+                        	<!--<div><img src="images/verder_left.png" alt="" /></div>-->
+                            <span><a href="#" id="fld_login" style="color:white;">Inloggen</a></span>
+                           <!-- <div><img src="%[root]%/img/verder_right.png" alt="" /></div>-->
+                        </div>
+                    </div>
+                    <a href="#" id="reset-open">Wachtwoord vergeten</a>
+                </form>
+                 </div>
+                 <div id="reset-screen" style="display:none;">  
+
+                    <!-- Wachtwoord vergeten -->
+                	<h3>Wachtwoord resetten</h3>
+                    <p>Geef hieronder uw e-mailadres op en we sturen u een nieuw wachtwoord.</p>
+                    <div class="type_input">
+                    	<label>E-mailadres:</label>
+                        <input style="width:180px;" id="fld_forgot_email" type="text" name="email" />
+                    </div>
+                    <p>
+                    <span id="email-not-found" style="display:none;color:red;">Het opgegeven e-mailadres komt niet voor in onze database.</span>
+                    <span id="succes" style="display:none;color:blue;">Het nieuwe wachtwoord is per e-mail naar je verzonden</span>                    
+                    </p>
+                    <div class="tab">
+                        <a href="#" id="reset" class="button wide">Wachtwoord resetten</a>
+                    </div>                       
+                    <!-- Wachtwoord vergeten -->
+                </div>                   
+            </div>
+        </div>
+
+<script type="text/javascript">
+var login_failed = '%[login_failed]%';
+$.interval = null;
+$(document).ready(function(){        
+    $.blinkColor = function(){
+        $('a#reset-open').addClass('blinkcolor');
+        setTimeout(function(){
+            $('a#reset-open').removeClass('blinkcolor');        
+        },500)        
+    }    
+    if(login_failed){
+        $('a#reset-open').addClass('blinkcolor');
+        $.interval = setInterval(function(){$.blinkColor();},1000);
+        setTimeout(function(){
+            clearInterval($.interval)
+        },4000);
+        
+    }
+
+});
+</script>
+<if:login_failed>
+<script type="text/javascript">
+    alert('E-mailadres of wachtwoord incorrect');
+</script>
+</if:login_failed>                 

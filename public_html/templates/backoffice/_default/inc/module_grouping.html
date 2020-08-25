@@ -1,0 +1,41 @@
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="add_customer searchtitle">%[lbl_grouping]%</div>
+                <div class="edit_content">
+                    <if:id not="new">                   
+                        <div class="product_grouping" style="display:%[modules.has_is_part?'block':'none']%">
+                                <div class="cnt">
+                                    <h2><input name="partof" tabindex="260" class="partsview checkbox" value="partsoftable" checked="checked" type="radio" /> %[lbl_ispartof]%</h2>
+                                    <h2 class="right"><input name="partof"tabindex="270"  class="partsview checkbox" value="haspartstable" type="radio" /> %[lbl_haspart]%</h2>
+                                    <div class="clearsp"></div>
+                                    <div class="partstbls partsoftable">%[partsoftable]%</div>
+                                    <div class="partstbls haspartstable" style="display:none">%[haspartstable]%</div>
+                                </div>                                                       
+                                <div class="vertsep"></div>
+                                <div class="partstbls" id="partsoftablebtns">
+                                    <a href="%[root]%/products/catalogue.html?view=picker&iframe=1&addtype=product" class="iframe">%[lbl_addproduct]%</a>
+                                    <a href="%[root]%/products/catalogue.html?view=picker&iframe=1&addtype=product" class="iframe"><img src="%[root]%/img/icons/add-1-icon-16x16.png" width="16" height="16" /></a>
+                                </div>
+                                <div class="partstbls" id="haspartstablebtns" style="display:none">
+                                    <a href="%[root]%/products/catalogue.html?view=picker&iframe=1&addtype=part" class="iframe">%[lbl_addproduct]%</a>
+                                    <a href="%[root]%/products/catalogue.html?view=picker&iframe=1&addtype=part" class="iframe"><img src="%[root]%/img/icons/add-1-icon-16x16.png" width="16" height="16" /></a>
+                                </div>                            
+                            <div class="clear"></div>                            
+                        </div>
+                        <div class="option_grouping" style="display:%[modules.product_options?'block':'none']%">
+                            <div class="cnt">
+                            <h2>%[lbl_options]%</h2>
+                            <div class="clearsp"></div>
+                            <div class="optionoftable">%[optionoftable]%</div>
+                            </div>
+                            <a href="%[root]%/products/catalogue.html?view=picker&iframe=1&addtype=option" class="iframe">%[lbl_addoption]%</a>
+                            <a href="%[root]%/products/catalogue.html?view=picker&iframe=1&addtype=option" class="iframe"><img src="%[root]%/img/icons/add-1-icon-16x16.png" width="16" height="16" /></a>
+                        </div>                        
+                        <div class="clear"></div>
+                    </if:id>
+                    <if:id value="new">
+                        <center>%[lbl_link_product]%</center>
+                    </if:id>
+                </div>
+            </div>
+        </div>

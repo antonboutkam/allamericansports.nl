@@ -1,0 +1,22 @@
+<table style="margin:15px; width:90%;">
+    <tr class="rowheader">        
+            <th>%[lbl_articlenumber]%</th>                                    
+            <th>%[lbl_productname]%</th>                                    
+            <th>%[lbl_quantity]%</th>                             
+            <th>%[lbl_pieceprice]%</th>
+            <th>%[lbl_price]%</th>                 
+    </tr>
+    <for:order_items>
+        <tr class="row%[oddeven]%">            
+            <td>%[article_number]%</td>
+            <td>%[article_name]%</td>
+            <td style="text-align:center;">%[quantity]%</td>
+            <td style="text-align:right;" id="sale_price_%[oi_id]%">%[sale_price]%</td>
+            <td style="text-align:right;" class="price" id="price_%[oi_id]%">%[price]%</td>
+        </tr>
+    </for:order_items>
+    <tr class="rowfooter">
+        <td colspan="4" style="text-align:right; font-weight:bolder;">%[lbl_subtotal]%:</td>
+        <td id="subtotal" style="text-align:right;"></td>
+    </tr>                                
+</table>

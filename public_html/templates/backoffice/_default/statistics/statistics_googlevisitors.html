@@ -1,0 +1,22 @@
+<div class="searchbox">
+    <div class="searchresults">
+        <div class="searchtitle">Laatste 250 bezoekers uit Google</div>
+        <div style="margin:10px;">
+
+            <table>
+                <for:latest>
+                    <tr class="row%[oddeven]%">
+                        <if:query_alt>
+                            <td>%[query_alt]%</td>
+                        </if:query_alt>
+                        <if:query_alt condition="is_false">
+                            <td><a href="http://www.google.com/search?q=%[query]%" target="_blank">%[query]%</a></td>
+                        </if:query_alt>                        
+                        <td>%[start]%</td>
+                        <td>%[ip]%</td>                    
+                    </tr>
+                </for:latest>
+            </table>			
+        </div>
+    </div>    
+</div>

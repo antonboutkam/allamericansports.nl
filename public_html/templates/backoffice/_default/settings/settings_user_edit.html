@@ -1,0 +1,82 @@
+    %[id=new?'%[lbl_add_user]%':'%[lbl_edit_user]%']%
+
+    <form id="user_form" autocomplete="off">    
+        <input type="hidden" id="fld_id" name="id" value="%[id]%" />           
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="searchtitle">%[lbl_usernamepassord]%</div>
+                <div style="margin:10px;">
+                        <table>
+                            <tr>
+                                <td>%[lbl_email_address]%</td><td><input type="text" name="user[email]" value="%[email]%" /></td>
+                                <td>%[lbl_password]%</td><td><input type="password" name="user[pass]" value="%[pass]%" /></td>
+                            </tr>  
+                            <tr>
+                                <td>%[lbl_access]%</td><td>
+                                <if:level value="developer">
+                                    <span style="color:red;">User level is developer, this cannot be changed.</span>
+                                </if:level>
+                                <if:level not="developer">
+                                    <select name="user[level]" val="%[level]%">                                        
+                                        <option value="developer" style="display:%[developer?'block':'none']%;">developer</option>                                        
+                                        <option value="admin">%[lbl_user_admin]%</option>
+                                        <option value="commercial">%[lbl_user_commercial]%</option>                                    
+                                        <option value="warehouse">%[lbl_user_warehouse]%</option>                                                                  
+                                    </select>
+                                </if:level>                                    
+                                </td>
+                                <td>%[lbl_status]%</td>
+                                <td>
+                                    <select name="user[status]" val="%[status]%">
+                                        <option value="1">%[lbl_active]%</option>
+                                        <option value="0">%[lbl_disabled]%</option>                                                                                                        
+                                    </select>
+                                </td>                            
+                            </tr>                                             
+                        </table>   
+                </div>
+            </div>
+        </div>
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="searchtitle">%[lbl_employee_information]%</div>
+                <div style="margin:10px;">
+                        <table>
+                            <tr>
+                                <td>%[lbl_full_name]%</td><td><input type="text" name="user[full_name]" value="%[full_name]%" /></td>  
+                                <td>%[lbl_phone]%</td><td><input type="text" name="user[phone]" value="%[phone]%" /></td>                                                   
+                            </tr> 
+                            <tr>                             
+                                <td>%[lbl_address]%</td><td><input type="text" name="user[address]" value="%[address]%" /></td>
+                                <td>%[lbl_mobile]%</td><td><input type="text" name="user[mobile]" value="%[mobile]%" /></td>                                                                                                                 
+                            </tr>                                 
+                            <tr>                             
+                                <td>%[lbl_zipcode]%</td><td><input type="text" name="user[postal]" value="%[postal]%" /></td>
+                                <td>%[lbl_job]%</td><td><input type="text" name="user[job]" value="%[job]%" /></td>                                                         
+                            </tr>   
+                           <tr>                                                           
+                                <td>%[lbl_city]%</td><td><input type="text" name="user[city]" value="%[city]%" /></td>                                
+                                <td>%[lbl_birthdate]%</td><td><input type="text" class="date" name="user[birthdate]" value="%[birthdate]%" /></td>                                                                                                                       
+                            </tr>                         
+                            <tr>
+                                <td>%[lbl_country]%</td><td><input type="text" name="user[country]" value="%[country]%" /></td>
+                                <td>&nbsp;</td><td>&nbsp;</td>                                                                                                                                                                           
+                            </tr>
+                            <tr>
+                                <td>%[lbl_iso2countrycode]%</td><td><input type="text" name="user[countrycode]" value="%[countrycode]%" /></td>
+                                <td>&nbsp;</td><td>&nbsp;</td> 
+                            </tr>                                                              
+                        </table>   
+                </div>
+                <div class="actions">
+                <if:id value="new">
+                   <input type="submit" id="fld_store" value="%[lbl_create]%" />
+                </if:id>          
+                <if:id not="new"> 
+                   <input type="submit" id="fld_store" value="%[lbl_opslaan]%" />
+                </if:id>
+                    <span class="stored-ok" style="display:none;">%[lbl_save_info]%</span>                                     
+                </div>  
+            </div>          
+        </div>    
+    </form>

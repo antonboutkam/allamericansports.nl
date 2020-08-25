@@ -1,0 +1,51 @@
+<script>
+    var parentSectionId   = '%[parent]%';
+    var webshopId   = '%[webshop_id]%';
+</script>
+<form method="post" id="add_form" enctype="multipart/form-data" accept-charset="UTF-8">
+    <input type="hidden" id="fld_webshop_id" name="webshop_id" value="%[webshop_id]%" />
+    <input type="hidden" id="fld_parent" name="parent" value="%[parent]%" />
+    <if:menu_id>
+        <input type="hidden" id="fld_menu_id" name="menu_id" value="%[menu_id]%" />    
+    </if:menu_id>
+    <input type="hidden" name="_do" value="save" />
+    <div class="searchbox">
+        <div class="searchresults">
+            <if:menu_id><div class="searchtitle">Menu item bewerken</div></if:menu_id>
+            <if:menu_id condition="is_false"><div class="searchtitle">Menu item toevoegen</div></if:menu_id>            
+            <div id="treesegment" style="margin:10px;width:500px;float:left;" >
+                <h2 style="margin:10px 0px 0px 0px;">Label</h2>
+                <input type="text" id="fld_menu_item" name="menu_item" value="%[menu_item.menu_item]%" />
+                <if:locales>
+					<h2 style="margin:10px 0px 0px 0px;">Vertalingen</h2>
+                    <for:locales>
+                        <label><img src="/img/flags/flags_iso/24/%[locale]%.png"></label>%[description]%<br />
+                        <input type="text" id="fld_menu_item" name="menu_item_translation[%[fk_locale]%]" value="%[value]%"  style="width:460px" /><br />
+                        <textarea name="menu_item_description[%[fk_locale]%]" style="width:800px;height:150px;">%[description_txt]%</textarea>
+                        <br />
+                    </for:locales>
+                </if:locales>                
+                
+                <label for="fld_in_mainnav" >Opnemen in hoofdnavigatie</label><br />
+                <input type="hidden" name="in_mainnav" value="0" />
+                <input type="checkbox" id="fld_in_mainnav" name="in_mainnav" value="1" class="checkbox" %[menu_item.in_mainnav?'checked="checked"':'']% />
+                <br /><br />
+                <label>Afbeelding (Voor de beste weergave 190px breed)</label><br />
+        
+                <if:menu_item.leftmenu_img_ext>                
+                    <img src="/img/leftmenu-img/%[menu_item.id]%.%[menu_item.leftmenu_img_ext]%" width="150" />
+                    <div class="cl"></div><br />
+                </if:menu_item.leftmenu_img_ext>
+                
+                
+                <input type="file" name="file" /><br />
+                <input type="submit" id="btn_add_item" value="Opslaan" />
+            </div><br /> 
+                        
+            <if:menu_item.image>
+            <img style="float:left;" src="/img/caticons/140x180_%[menu_item.image]%" />
+            </if:menu_item.image>
+            <div class="clear"></div>            
+        </div>
+    </div>
+</form>

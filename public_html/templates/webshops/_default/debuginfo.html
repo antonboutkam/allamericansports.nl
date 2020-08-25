@@ -1,0 +1,117 @@
+<style type="text/css">
+    .debugpanel h1 a,#actionbar{
+            position:absolute;
+            border-top:1px solid #ccc;
+            border-left:1px solid #ccc;
+            border-right:1px solid #ccc;
+            color:black;
+            font-size:11px;
+            display:inline-block;            
+            padding:5px 7px 5px 7px;
+            line-height:16px;
+            border-radius:3px 3px 3px 0px;
+            background-color:#dfdfdf;
+            font-weight:bold;
+            top:-27px;            
+            margin:0;            
+            height:16px;            
+    }
+    #actionbar a{
+        text-decoration:underline;
+    }
+    #actionbar a:hover{
+        text-decoration:none;
+    }
+    .debugpanel h1 a{
+        
+        right:10px;
+    }
+    #actionbar{
+        
+        left:10px;        
+    }
+    .debugpanel h1 a:hover{
+        text-decoration:none;
+    }
+    .debugpanel{
+            width:100%;
+            z-index:100;
+            position:fixed;
+            background-color:white;
+            color:black;
+            right:0px;
+            bottom:0px;
+            border-top:1px solid #ccc;
+    }
+    #buttonbar{height:31px;background-color:#dfdfdf;margin-top:-18px;line-height:30px;}
+    #buttonbar a{color:black;font-size:10px;display:inline-block;line-height:29px;display:inline-block;padding-right:10px;border-right:1px solid #bcbcbc;margin-top:1px;}
+    .nextimg{margin-left:10px;}
+    
+    #buttonbar a.active{text-decoration:underline;font-weight:bold;}
+    #buttonbar a:hover{text-decoration:underline;}
+    #buttonbar img{vertical-align:middle;}
+    
+    #template_files{float:left;}
+    #template_files{width:300px;height:200px;background-color:#e8e8e8;overflow:scroll;padding-left:10px;padding-top:10px;}
+    #prerdata{height:200px;overflow:scroll;}
+    #template_files div a,#template_files div{margin:0;padding:0}
+    #template_panel{padding:0;margin:0;}    
+    
+ </style>
+
+<script type="text/javascript" src="%[root]%/js/devel.js"></script>       
+ <script type="text/javascript">
+     var code_base = '%[code_base]%';     
+     var active_tab = '%[active_tab]%';     
+ </script>
+
+            <div class="debugpanel" id="debug_panel_container" style="height:%[session.debug.state=open?'240':'0']%px">                            
+                <h1><a href="#" id="toggle_debugpanel">Debug</a></h1>
+                <div id="buttonbar">
+                    <img src="/img/icons/debugpanel/html-5-icon.png" />                        
+                    <a href="/" class="panelbtn" id="template_panel_btn">Template files</a>                    
+                    <img class="nextimg" src="/img/icons/debugpanel/console.icon.png" />                        
+                    <a href="/" class="panelbtn" id="php_console_btn">PHP console</a>
+                    <img class="nextimg" src="/img/icons/debugpanel/variabeles-icon.png" />                                                                                    
+                    <a href="/" class="panelbtn" id="prer_console_btn">Variables</a>
+                </div>
+                
+                
+                <div class="consoles" id="template_panel">
+                    <div id="template_files">
+                        <for:session.debug.loaded_templatefiles>
+                            <div><a href="/%[filename]%" class="editfile">%[filename]%</a></div>
+                        </for:session.debug.loaded_templatefiles>
+                    </div>
+                    <iframe id="preview_panel" src="http://codemirror.nuidev.nl/mode/htmlmixed/" style="width:1593px;height:210px;"></iframe>
+                </div>
+                <div class="consoles" id="php_console" style="display:none">
+                    %[console_messages]%
+                </div>
+                <div class="consoles" id="prer_console" style="display:none">
+                    <div id="prerdata">
+                    <pre>%[prer]%</pre>
+                    </div>
+                </div>                
+                    
+                    <!--
+
+                                   
+                
+                    <table style="color:black;">
+                        <tr><td colspan="2" class="titlecol"></td></tr>
+                        <tr><td>_SESSION[delivery]</td><td>%[session.delivery]%</td></tr>
+                        <tr><td>_SESSION[international_order]</td><td>%[session.international_order]%</td></tr>
+                        <tr><td>_SESSION[delivery_set]</td><td>%[session.delivery_set]%</td></tr>
+                        <tr><td>_SESSION[delivery_yn]</td><td>%[session.delivery_yn]%</td></tr>
+                        <tr><td>_SESSION[basket_db]</td><td>%[session.basket_db]%</td></tr>
+                    </table>
+                <br>
+-->            
+                <div id="actionbar">                             
+                    <a href="/" class="clear_basket">Clear basket</a>                    
+                    <if:checkout_form>
+                     | <a href="/" id="fill_in_checkout_form">Fill in form</a>
+                    </if:checkout_form>                       
+                </div>
+            </div>

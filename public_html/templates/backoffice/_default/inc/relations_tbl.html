@@ -1,0 +1,52 @@
+        <script type="text/javascript">
+            var current_page    = '%[current_page]%';
+            var view            = '%[view]%';
+            var restoreState    = '%[restoreState]%'; 
+        </script>
+        <div class="searchresults">
+            <div class="searchtitle">                
+                %[found_relations]%
+                <div style="float:right;color:#555;">%[rowcount]% %[lbl_relations]% <a href="#" class="reload"><img width="20" class="middle" src="%[root]%/img/icons/reload.png" /></a></div>
+                <div class="clear"></div>                 
+            </div>
+            <table style="margin:15px;">
+                <tr class="rowheader">
+                        <th style="width:18px;">&nbsp;</th>
+                        <th style="width:18px;">&nbsp;</th>
+                        <th><a href="#" class="sort" rel="%[sort=type?'type DESC':'type']%">%[sort_type]%</a></th>
+                        <th><a href="#" class="sort" rel="%[sort=company_name?'company_name DESC':'company_name']%">%[sort_firm]%</a></th>
+                        <th><a href="#" class="sort" rel="%[sort=cp_firstname?'cp_firstname DESC':'cp_firstname']%">Contactpersoon</a></th>
+                        <th><a href="#" class="sort" rel="%[sort=phone?'phone DESC':'phone']%">%[sort_phone]%</a></th>
+                        <th><a href="#" class="sort" rel="%[sort=email?'email DESC':'email']%">%[sort_mail]%</a></th>
+                        <th><a href="#" class="sort" rel="%[sort=billing_street?'billing_street DESC':'billing_street']%">%[sort_street]%</a></th>
+                        <th><a href="#" class="sort" rel="%[sort=billing_city?'billing_city DESC':'billing_city']%">%[sort_city]%</a></th>
+                </tr>
+                <for:relations>                    
+                    <tr class="row%[oddeven]%">
+                        <if:view value="selector">
+                            <td><a href="#" class="add_customer" rel="%[id]%"><img src="%[root]%/img/icons/add-1-icon-16x16.png" width="16" height="16"/></a></td>
+                            <td><a href="%[root]%/customer_view.html?id=%[id]%&iframe=1"><img src="%[root]%/img/icons/info-icon-16x16.png" width="16" height="16"/></a></td>
+                        </if:view>                                                 
+                        <if:view value="picker">
+                            <td><a class="viewclient" rel="%[id]%"><img src="%[root]%/img/icons/info-icon-16x16.png" width="16" height="16"/></a></td>
+                            <td><a href="%[root]%/customer_edit.html?type=%[type]%&id=%[id]%&iframe=1&view=picker"><img src="%[root]%/img/icons/edit-icon-16x16.png" width="16" height="16"/></a></td>                                                        
+                        </if:view> 
+                        <if:view not="selector|picker">
+                            <td><a href="%[root]%/customer_view.html?id=%[id]%"><img src="%[root]%/img/icons/info-icon-16x16.png" width="16" height="16"/></a></td>
+                            <td><a class="iframe" href="%[root]%/customer_edit.html?type=%[type]%&id=%[id]%&iframe=1"><img src="%[root]%/img/icons/edit-icon-16x16.png" width="16" height="16"/></a></td>                                                        
+                        </if:view>          
+                                                
+                        <td>%[type]%</td>
+                        <td>%[company_name]%</td>
+                        <td>%[full_name_short]%</td>                        
+                        <td>%[phone]%</td>
+                        <td><a href="mailto:%[email]%" style="color:#2C251F;">%[email]%</a></td>
+                        <td>%[billing_street]% %[billing_number]%</td>
+                        <td>%[billing_city]%</td>
+                    </tr>
+                </for:relations>                
+            </table>
+            <center>%[paginate]%</center>
+            <br />
+            <div class="clear"></div>         
+        </div>

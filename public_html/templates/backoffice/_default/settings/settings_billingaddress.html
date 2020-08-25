@@ -1,0 +1,74 @@
+<h2>Facturatie instellingen</h2>
+<form method="post">
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Overig</div>
+            <div style="padding:10px;" id="barcode_tbl">
+                <input type="hidden" name="_do" value="store_settings" />
+                <table style="width:300px;">
+                    <tr>
+                        <td>BTW Percentage</td>
+                        <td><input style="width:30px;" type="text" name="settings[btw]" value="%[settings.btw]%" /></td>                        
+                    </tr>
+                </table>                                
+                <input style="display:block; margin-top:10px;" type="submit" value="Opslaan" />
+            </div>
+        </div>
+    </div>
+</form>
+<form method="post">
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Factuuradres instellen</div>
+            <div style="padding:10px;" id="barcode_tbl">
+                <input type="hidden" name="_do" value="store" />
+                <div style="width:400px;float:left;padding:10px;">
+                Factuurheader (nederlands):<br>
+                    <textarea name="billing_address_nl" style="width:300px; height:300px;">%[settings.billing_address_nl]%</textarea>                    
+                </div>
+                 <div style="width:400px;float:left;border-left:1px solid #ccc;padding:10px;padding-left:100px;">
+                Factuurheader (engels):<br>
+                    <textarea name="billing_address_gb" style="width:300px; height:300px;">%[settings.billing_address_gb]%</textarea>                    
+                </div>
+                <div style="width:400px;float:left;padding:10px;">
+                Factuurfooter (nederlands):<br>
+                    <textarea name="billing_footer_nl" style="width:300px; height:300px;">%[settings.billing_footer_nl]%</textarea>                    
+                </div> 
+                <div style="width:400px;float:left;border-left:1px solid #ccc;padding:10px;padding-left:100px;">
+                Factuurfooter (engels):<br>
+                    <textarea name="billing_footer_gb" style="width:300px; height:300px;">%[settings.billing_footer_gb]%</textarea>                    
+                </div>               
+                <div class="clear"></div>
+                <input style="display:block; margin-top:10px;" type="submit" value="Opslaan" />                
+            </div>
+        </div>
+    </div>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Overige facturatie velden</div>
+            <div style="padding:10px;" id="barcode_tbl">
+                <input type="hidden" name="_do" value="store" />
+                <div style="width:400px;float:left;padding:10px;;">
+                    Footer tekst bij bestelling op rekening<br>
+                    <textarea name="billing_credit" style="width:300px; height:300px;">%[settings.billing_credit]%</textarea>                    
+                </div>    
+                <div style="width:400px;float:left;border-left:1px solid #ccc;padding:10px;padding-left:100px;">
+                    Factuur informatie op ordermail (nederlands):<br>
+                    <textarea name="billing_thankyouorder_nl" style="width:300px; height:300px;">%[settings.billing_thankyouorder_nl]%</textarea>                    
+                </div>                             
+                <div class="cl"></div>
+                <div style="width:400px;float:left;padding:10px;">
+                    Factuur informatie op ordermail (engels):<br />
+                    <textarea name="billing_thankyouorder_gb" style="width:300px; height:300px;">%[settings.billing_thankyouorder_gb]%</textarea>                    
+                </div>                   
+                <div class="clear"></div>
+                <input style="display:block; margin-top:10px;" type="submit" value="Opslaan" />                
+            </div>
+        </div>
+    </div>    
+</form>
+<if:saved>
+    <script type="text/javascript">
+        alert('Wijzigingen opgeslagen!');
+    </script>
+</if:saved>

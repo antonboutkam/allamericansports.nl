@@ -1,0 +1,27 @@
+
+<div id="sendmethod">
+  <form method="post" id="onestepform" action="%[root]%/%[lang]%/checkout_sendmethod.html">
+  <input type="hidden" name="_do" value="set_delivery" />
+  <h1>%[trans_sendmethod_checkout]%</h1>
+  <h4>%[trans_sendmethod_step_two]%: %[transl_sendhow]%</h4>
+  
+  <div class="content paymethod" style="margin-bottom:20px;">
+    
+    <div class="type_radio round-bg">
+        <input type="radio" id="sendmethod1" name="new_delivery" checked="checked" class="radio paymethod checkbox" value="1"  />
+        <label for="sendmethod1" style="cursor:pointer;">%[transl_send]% (&euro; %[delivery_price]%)</label>
+    </div>
+    <div class="type_radio round-bg">
+        <input type="radio" id="sendmethod2" name="new_delivery" class="radio paymethod checkbox" value="0"  />
+        <label for="sendmethod2" style="cursor:pointer;">%[transl_pickup]% (&euro; 0,00)</label>
+    </div>  
+    
+    <div class="clearer"></div>
+    <div class="tab" style="margin-top:40px;">
+         <a class="submit_prev prevnex button-account" style="float:left;" href="%[root]%/%[lang]%/checkout.html">%[trans_sendmethod_back_one]%</a>                      
+                <a class="submit_bank submit_lnk button-account" style="float:right;" href="#">%[trans_sendmethod_skip]%</a>
+        <div class="cl"></div>              
+    </div>
+  </div>
+</form>
+</div>

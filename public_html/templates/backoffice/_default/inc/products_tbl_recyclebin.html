@@ -1,0 +1,10 @@
+                <for:products>
+                    <div class="recyclebin_tile" id="item_%[product_id]%" style="background-image:url('%[root]%/img/upload/150x100_%[fileid]%')">
+                        <input type="checkbox" class="delete_photos" id="%[product_id]%" />
+                        <a href="#" class="delete_lnk tipsy" title="Verwijderen" data-id="%[product_id]%"><img class="delete" src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16" /></a>
+                        <a href="#" class="revert_lnk tipsy" title="Terugzetten" data-id="%[product_id]%"><img class="revert" src="%[root]%/img/icons/undo-icon-16x16.png" width="16" height="16"  /></a>
+                        <a href="/products/edit.html?id=%[product_id]%" class="tipsy edit_product_link" title="%[lbl_edit_product]%" data-id="%[product_id]%"><img class="revert" src="%[root]%/img/icons/edit-icon-16x16.png" width="16" height="16"  /></a>
+                    </div>
+                </for:products>
+                <div class="clear"></div>         
+                <div><center>%[paginate]%</center></div>

@@ -1,0 +1,143 @@
+<div id="checkout-final">
+		 <h1>%[trans_final_checkok]%</h1>
+         <h4 style="background: none;">%[trans_step_four]% : %[trans_final_check]%</h4>        
+        <div class="round-bg">
+        <form method="post" id="onestepform" action="%[root]%/%[lang]%/checkout_final.html">
+        <input type="hidden" name="_do" value="complete" />        	
+        <div class="content">
+        <div class="left_form" style="margin-bottom:10px;">            
+        	 
+            <div class="checkstuff">                               
+                <h4 align="left">%[trans_final_billing_address]% <span class="span">&nbsp;<a href="%[root]%/%[lang]%/myaccount.html?r=/checkout_final.html">%[trans_final_edit_data]%</a></span></h4>
+                <div class="type_input">
+                <label>%[trans_final_name]%:</label>
+                   <p>%[relation.cp_firstname]% %[relation.cp_lastname]%</p>
+                </div>
+                <if:relation.company_name>
+                    <div class="type_input">
+                        <label>%[trans_final_companyname]%:</label>
+                        <p>%[relation.company_name]%</p>
+                    </div>
+                </if:relation.company_name>
+                <div class="type_input">
+                <label>%[trans_final_address]%:</label>
+                    <p>%[relation.billing_street]% %[relation.billing_number]% %[relation.billing_number_add]%</p>
+                </div>
+                <div class="type_input">
+                <label>%[trans_final_postcode]%:</label>
+                    <p>%[relation.billing_postal]%</p>
+                </div>
+                <div class="type_input">
+                <label>%[trans_final_city]%:</label>
+                    <p>%[relation.billing_city]%</p>
+                </div>
+                <div class="type_input">
+                <label>%[trans_final_country]%:</label>
+                    <p>%[relation.billing_country]%</p>
+                </div>
+            </div>
+            
+            <div class="checkstuff" style="display:%[same_as_billing?'none':'block']%">    
+            <div><h4 align="left">%[trans_final_delivery_address]% <span class="span">&nbsp;<a href="%[root]%/%[lang]%/myaccount.html">%[trans_final_edit_data]%</a></span></h4></div>
+                <div class="type_input">           
+                <div class="type_input">
+                <label>%[trans_final_address]%:</label>
+                    <p>%[relation.shipping_street]% %[relation.shipping_number]% %[relation.shipping_number_add]%</p>
+                </div>
+                <div class="type_input">
+                <label>%[trans_final_postcode]%:</label>
+                    <p>%[relation.shipping_postal]%</p>
+                </div>
+                <div class="type_input">
+                <label>%[trans_final_city]%:</label>
+                    <p>%[relation.shipping_city]%</p>
+                </div>
+                <div class="type_input">
+                <label>%[trans_final_country]%:</label>
+                    <p>%[relation.shipping_country]%</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="checkstuff">        
+        <div class="winkelwagen">
+            <div class="winkelwagen_slide">
+                <h4 align="left">%[trans_final_payment]% <span class="span">&nbsp;<a href="%[root]%/%[lang]%/checkout_paymethod.html">%[trans_final_change_payment]%</a></span></h4>
+                    <p>%[cart.paymethod_vis.name]%%[cart.bank.value?'&nbsp;met %[cart.bank.value]%':'']%</p>
+            </div>
+        </div>    
+    </div>           	                        
+    <div class="checkstuff">
+        <div class="winkelwagen">       
+            <div class="winkelwagen_slide">
+            	<h4 align="left">%[trans_final_shipping_method]% <span class="span">&nbsp;<a href="%[root]%/%[lang]%/checkout_sendmethod.html">%[trans_final_change_shipping_method]%</a></span></h4>            
+                <p>
+                    <if:has_delivery_set>%[trans_send_order]% (&euro; %[cart.delivery_vat]%)</if:has_delivery_set>
+                    <if:has_delivery_set condition="is_false">%[trans_pickup_order]% (&euro; 0,00)</if:has_delivery_set>
+                </p>
+            </div>
+        </div>
+    </div>      
+    <div id="cart-table">
+       <h4 align="left" style="margin-bottom:10px;">%[trans_final_check_shoppingcart]%</h4> 
+        <table width="100%" border="0" id="cart-overzicht" class="basket-box">            
+            <thead>                
+                <tr class="basket-heading"><td>%[trans_final_productcode]%</td><td style="text-align:left">%[trans_final_article]%</td><td style="text-align:left">%[trans_final_size]%</td><td style="text-align:left">%[trans_final_color]%</td><td><div style="text-align:right">%[trans_final_price_per_piece]%</div></td><td><div style="text-align:right">%[trans_final_number]%</div></td><td style="text-align:right;">%[trans_final_price]%</td></tr>
+            </thead>
+            <tbody>     
+                <for:cart.basket>
+                    <tr><td>%[article_number]%</td><td style="width:160px;">%[article_name]%</td><td>%[product_size_tag]%</td><td>%[colors]%</td><td style="text-align:right;">&euro; %[sale_price_vat_vis]%</td><td style="text-align:right">%[order_quantity]%</td><td style="text-align:right;">&euro; %[subtotal_vis_vat]%</td></tr>                        
+                </for:cart.basket>                         
+                   <tr style="display:%[cart.has_discount?'table-row':'none']%"><td class="tdr" align="right" colspan="6">%[trans_final_discount]%:%[cart.discount_props.code]% </td><td style="text-align:right;">&euro; %[cart.discount]%</td></tr>
+                    <!--
+                    <if:discount_incvatvis>
+                    <ul>
+                        <li style="text-align:left;font-style:italic">Korting:%[discount_props.code]% %[discount_props.discount_amount]%</li>
+                        <li>- &euro; %[discount_incvatvis]%</li>
+                    </ul>                    
+                    <if:discount_incvatvis>            
+                   -->     
+                        
+                <tr><td class="tdr" align="right" colspan="6">%[trans_final_shipping]%</td><td style="text-align:right;">&euro; %[cart.delivery_vat]%</td></tr>
+                <if:cart.has_transaction_cost>
+                    <tr>
+                        <td  class="tdr" align="right" colspan="6"><strong>%[trans_final_transaction]% (<a title="Voor betalingen via %[cart.paymethod_vis.name]% maken wij extra kosten. 
+Deze kosten berekenen wij aan u door. 
+klik hier om de betaalmethode aan te passen" href="%[root]%/checkout.html?clear=paymethod_only">%[cart.paymethod_vis.name]%</a>)</strong></td>
+                        <td style="text-align:right;">&euro; %[transaction_vat]%</td>
+                    </tr>  
+                </if:cart.has_transaction_cost>              
+                <!--<tr><td class="tdr" align="right" colspan="4">%[trans_final_total_ex_vat]%</td><td style="text-align:right;">&euro; %[cart.subtotal]%</td></tr>-->                
+            </tbody>
+            <tfoot class="basket-footer">
+                <tr><td align="right" class="total" colspan="6">%[trans_final_total]%</td><td style="text-align:right;">&euro; %[cart.total]%</td></tr>
+                <tr><td class="tdr" align="right" colspan="6">%[trans_final_vat]%</td><td style="text-align:right;">&euro; %[cart.vat]%</td></tr>
+            </tfoot>
+        </table>
+        <div class="cl"></div>
+        <div class="checkstuff">
+               
+                <h4 align="left">&nbsp;</h4>
+                <div class="type_input" style="margin-top:20px;">
+                    <label>%[trans_final_message]%?</label><br />
+                   <textarea style="width:500px;" name="personal_note">%[personal_note]%</textarea>
+                </div>
+                
+                <div class="type_input" style="margin-top:20px;">
+                	<input type="checkbox" name="agree_terms" id="agreeterms" value="1" />
+                	<label for="agreeterms" style="display:inline;cursor:pointer">%[trans_final_terms_conditions]% <a style="text-decoration:underline" href="%[root]%/%[lang]%/%[lang=nl?'algemene-voorwaarden':'general-terms-and-conditions']%.html" target="_blank">%[trans_final_terms_conditions_link]%</a>:</label>
+                </div>
+         </div>
+        <div class="cl"></div><Br />
+        <div class="winkelwagen" style="margin:20px 0px">                        
+            <a class="back prevnex button-account" style="float:left;" href="%[root]%/%[lang]%/checkout_paymethod.html">%[trans_backtostepthree]%</a>     
+
+            <a href="#" class="submitroundup prevnex button-account" style="float:right;">%[trans_makepayment]%</a>            
+            <div class="cl"></div>
+        </div>
+    </div>
+    </form>
+    </div>
+</div>    
+<span id="agree_terms_err" style="display:none">%[trans_agree_terms_err]%</span>
+</div>

@@ -1,0 +1,223 @@
+ <link rel="stylesheet" href="/js/jwysiwyg/jquery.wysiwyg.css" type="text/css" />
+<script type="text/javascript" src="/js/jwysiwyg/jquery.wysiwyg.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){    
+    
+    $('.toggle_mode').live('click',function(e){
+         e.preventDefault();
+         if(confirm('Om over te schakelen moet het artikel worden opgeslagen, is dit in orde?')){                            
+            $('#fld_edit_mode').val($(this).attr('data-editmode'));                            
+            $('#editor_form').trigger('submit');
+         }
+    });	
+    
+});
+ </script>
+ 
+	
+<form id="editor_form" method="post" enctype="multipart/form-data">
+
+<input type="hidden"  id="fld_webshop_id" name="webshop_id" value="%[webshop_id]%" />
+<input type="hidden" id="fld_edit_mode" name="edit_mode" value="%[edit_mode]%" />
+<input type="hidden" name="_do" value="store" />
+<input type="hidden" name="id" id="cid" value="%[id]%" />
+<input type="hidden" id="clearaftercms" name="clearaftercms" value="0" />
+<if:id value="new"><h2>Pagina toevoegen</h2></if:id>
+<if:id not="new"><h2>Pagina bewerken</h2></if:id>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Pagina's %[shopname]%</div>
+            <div style="margin:10px;">                                
+                <if:is_member.level not="developer">
+                    %[page.about_txt]%
+                </if:is_member.level>
+                <a href="/settings/webshop_cms.html?webshop_id=%[webshop_id]%">Terug naar het overzicht</a><br /><br />
+
+
+
+                <label for="fk_menu_tree" >Menu item</label><br />
+                <select id="fk_menu_tree" name="fk_menu_tree" val="%[page.fk_menu_tree]%">
+                    <option value="">Koppelen aan menu item</option>
+                    <for:full_menu_tree>
+                        <option value="%[id]%">%[label]%</option>
+                    </for:full_menu_tree>
+                </select>
+                <br />
+                <br />
+                Pagina titel<br />                                                            
+                <input type="text" name="title" id="fld_title" title="Pagina titel" value="%[page.title?'%[page.title]%':'Pagina titel']%" class="focusblur edit_webshop" /><br />                  
+                <br />      
+                Pagina gewicht<br />                                                            
+                <input type="text" name="weight" id="fld_weight" title="Pagina titel" value="%[page.weight?'%[page.weight]%':'500']%" class="focusblur edit_webshop" />                
+
+                <br />
+                Pagina url<br />
+                <input type="text" id="fld_url" name="url" title="Pagina url" value="%[page.url?'%[page.url]%':'Pagina url']%" class="focusblur edit_webshop" /><br />
+
+                <div style="display:%[page.hide_language_settings=1?'none':'block']%;">
+                    <div style="margin-bottom:5px">
+                        <label for="fld_fk_locale" >Pagina taal</label><br />
+                        <select id="fld_fk_locale" name="fk_locale" val="%[page.fk_locale]%">                    
+                            <for:languages>
+                                <option value="%[fk_locale]%">%[description]%</option>
+                            </for:languages>
+                        </select>   
+                    </div><br />
+                </div>
+
+                <div style="display:%[page.hide_footercol_settings=1?'none':'block']%;">                
+                    Opnemen in het footer menu?<br /><br />                                    
+                    <input type="hidden" name="in_footer_menu" value="0" />                
+                    <div class="clear"></div>
+                    <div style="margin-bottom:5px">                        
+                        <input type="hidden" name="footer_col_one" value="0" />
+                        <input id="fld_footer_col_one" type="checkbox" class="checkbox" name="footer_col_one" %[page.footer_col_one?'checked="checked"':'']% value="1" />
+                        <label for="fld_footer_col_one" style="cursor:pointer;">In eerste kolom footer</label>
+                    </div>                    
+                    <div style="margin-bottom:5px">
+                        <input type="hidden" name="footer_col_two" value="0"/>
+                        <input id="fld_footer_col_two" type="checkbox" class="checkbox" name="footer_col_two" %[page.footer_col_two?'checked="checked"':'']% value="1"/>
+                        <label for="fld_footer_col_two" style="cursor:pointer;">In tweede kolom footer</label>
+                    </div>                    
+                    <div style="margin-bottom:5px">
+                        <input type="hidden" name="footer_col_three" value="0"/>                
+                        <input id="fld_footer_col_three" type="checkbox" class="checkbox" name="footer_col_three" %[page.footer_col_three?'checked="checked"':'']% value="1"/>
+                        <label for="fld_footer_col_three" style="cursor:pointer;">In derde kolom footer</label>
+                    </div>
+                </div>
+
+                <if:page.configurable_vars_all>
+                    <strong>Variabelen</strong>
+                    <p>
+                        De onderstaande "variabelen" worden in de webshop vervangen voor de bijbehorende tekst. <br />
+                        %[page.configurable_vars_all]%
+                    </p>                           
+                </if:page.configurable_vars_all>
+                
+                
+                <div class="clear"></div><br />
+                
+                <if:edit_mode value="wysiwyg">
+                    <script type="text/javascript">                    
+                        $(document).ready(function(){
+                            $('.wysiwyg').wysiwyg();
+                        });
+                    </script>
+                    <strong style="margin-bottom:5px;display:block;;">Artikel inhoud <a class="toggle_mode" data-editmode="html"  href="#">html editor</a></strong>                                                                                                                
+                    <textarea class="wysiwyg edit_webshop" name="content">%[page.content]%</textarea>
+                </if:edit_mode>
+                <if:edit_mode value="html">
+                    <strong style="margin-bottom:5px;display:block;;">Artikel inhoud <a class="toggle_mode" data-editmode="wysiwyg"  href="#">wysiwyg editor</a></strong>
+                    
+                    
+                    <pre id="editor" style="width:935px;height:500px;border:1px solid #ccc;;"></pre>                
+                    <script src="/js/ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+                    <script>
+                        var editor = ace.edit("editor");
+                        editor.setTheme("ace/theme/textmate");
+                        editor.getSession().setMode("ace/mode/html");
+                        editor.setValue(%[page.js_string]%);                        
+                        setInterval(function(){
+                            $('#content_fld').val(editor.getValue());    
+                        },300);
+                        
+                    </script>
+                    <!-- container om de html code op te vangen -->
+                    <textarea id="content_fld" style="display:none;" name="content">%[page.content]%</textarea>                                                
+                                                                                
+                </if:edit_mode>
+                
+                <div style="display:%[page.hide_layoutmanager?'none':'block']%;">
+                    <br />
+    				<strong>Layoutmanager</strong>
+    				<div id="layoutselector_container">
+                        <a href="#" id="no_layout_manager" class="layoutselector first tipsy" title="Geen layout manager"></a>
+                        <a href="#" id="one_leftup" class="layoutselector tipsy" title="Een afbeelding links boven"></a>
+                        <a href="#" id="one_righttup" class="layoutselector tipsy" title="Een afbeelding rechts boven"></a>
+                        <a href="#" id="leftup_rightup" class="layoutselector tipsy" title="Een afbeelding rechtsboven, een afbeelding lins boven"></a>
+                        <a href="#" id="leftdown_rightdown" class="layoutselector tipsy" title="Foto afbeelding rechts onder"></a>
+                        <a href="#" id="threeup" class="layoutselector tipsy" title="Drie afbeeldingen boven"></a>
+                        <a href="#" id="threedown" class="layoutselector tipsy" title="Drie afbeeldingen onder"></a>
+                        <a href="#" id="threeright" class="layoutselector tipsy" style="width:54px;" title="Drie afbeeldingen aan de rechter zijde"></a>
+                        <a href="#" id="threeleft" class="layoutselector tipsy" title="Drie afbeeldingen aan de linker sijde"></a>
+                        <a href="#" id="three_horiz_middle" class="layoutselector tipsy" title="Een horizontale rij met afbeeldingen in het midden"></a>
+                        <a href="#" id="oneleft_tworight" class="layoutselector tipsy" title="Een afbeelding links, twee rechts"></a>
+                        <a href="#" id="twoleft_oneright" class="layoutselector tipsy" title="Twee afbeeldingen links, een rechts"></a>
+                        <a href="#" id="twotop_one_bottom" class="layoutselector tipsy" title="Twee afbeeldingen boven, een onder"></a>
+                        <a href="#" id="onetop_twobottom" class="layoutselector tipsy" title="Een afbeelding boven, twee onder"></a>
+                        <a href="#" id="album" class="layoutselector last tipsy" title="Foto album"></a>
+                        <div class="cl"></div>
+                        <input type="hidden" name="layout_manager" id="fld_layoutmanager" value="%[page.layout_manager]%" /> 
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        if($('#fld_layoutmanager').val()==''){
+                            first = $('.layoutselector:first');
+                            $('#fld_layoutmanager').val(first.attr('id'));
+                            first.addClass('active');                            
+                        }else{
+                            $('#'+$('#fld_layoutmanager').val()).addClass('active');
+                        }
+                        $('.layoutselector').live('click',function(e){
+                            e.preventDefault();
+                            $('.layoutselector').removeClass('active');
+                            $(this).addClass('active');
+                            $('#fld_layoutmanager').val($(this).attr('id'));                             
+                        });                        
+                    });
+                </script>
+                
+            <div style="display:%[page.hide_imagemanager?'none':'block']%;">                
+                <if:cmsimg.data>
+                    <br /> 
+                	<strong>Afbeeldingen</strong>
+                    <ul id="cmsimg">
+                         <for:cmsimg.data>
+                            <li><img style="cursor: pointer;" src="%[root]%/img/cms-image/%[filename]%" width="120" />
+                                <div id="action">
+                                    <img src="%[root]%/img/icons/delete-icon-16x16.png" alt="Delete Image" title="Delete Image" rel="%[id]%" class="delimage" />
+                                    <input type="text" id="tag_%[id]%" value="%[alt_tag]%" class="alttag"  />
+                                    <img src="%[root]%/img/icons/save-icon-16x16.png" alt="Update Alt Tag" title="Update Alt Tag" rel="%[id]%" class="updatetag" /><BR>
+                                    <input style="width:100px;" type="text" value="%[root]%/img/cms-image/%[filename]%">
+                                </div>
+                            </li>
+                        </for:cmsimg.data>
+                        <li>                                                        
+                    </ul>
+                </if:cmsimg.data>  
+                                            				
+                <if:id not="new">          
+                    <br />
+                    <strong>Afbeelding toevoegen</strong><br />
+                        <input type="file" name="picture" />
+                    <br /> 
+                    <label>Alt Tag :</label><br />
+                        <input type="text" name="cmspicture[alt_tag]" />
+                    <br />    
+                    <label>URL :</label><br />
+                        <input type="text" name="cmspicture[url]" />
+                    <br />     
+                    <br />
+                 </if:id>                            
+             </div>
+                          				                                                               
+             <span id="sure-delete-3dimg" style="display:none;">Weet u zeker dat u deze afbeelding wilt verwijderen?</span> 
+             <span id="sure-update-tag" style="display:none;">Weet u zeker dat u de alt tag bij te werken?</span>                  
+             <input class="edit_webshop" type="submit" name="opslaan" value="Opslaan" /> <input style="display:%[iframe?'none':'inline']%" class="edit_webshop" type="submit" name="opslaan_next" value="Opslaan + naar overzicht" />
+
+            </div>
+        </div>            
+    </div>                                
+</form>
+
+ <script>
+     $(document).ready(function(){
+
+         $('#cmsimg img').click(function(e){
+             alert($(this).attr('src'));
+             $('.wysiwyg').wysiwyg('insertImage', $(this).attr('src'));
+             e.preventDefault();
+         });
+     })
+ </script>

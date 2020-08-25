@@ -1,0 +1,117 @@
+<h2>Mailing versturen</h2>
+<input type="hidden" id="currentPage" value="1" />
+<div class="searchbox">
+    <div class="searchresults">
+        <div class="searchtitle">Mailing versturen</div>
+        <div style="padding:15px;">
+            <h2>Mode:</h2>
+            <table style="width:200px; margin:10px;">
+                <tr>
+                    <td><input name="mode" class="mode checkbox filters" type="radio" value="1" checked="checked" /></td>
+                    <td>Test mode aan   </td>
+                </tr>
+                <tr>
+                    <td><input name="mode" class="mode checkbox filters" type="radio" value="0"/></td>
+                    <td>Test mode uit</td>
+                </tr>
+            </table>      
+        </div>
+    </div>
+</div>
+<div class="searchbox" id="testmode_to">
+    <div class="searchresults">
+    <div class="searchtitle">Aan:</div>
+        <div style="padding:15px;">
+            <h2>Test email adresssen:</h2>
+            <if:addresses condition="is_false">
+                <p class="msg" style="padding:10px; border:1px solid gray">De lijst met test adressen is nog leeg, voer hieronder wat adressen in.</p>
+            </if:addresses>
+            <table style="margin:10px;">
+                <tr class="rowheader">
+                    <td>&nbsp;</td>
+                    <td>Email</td>
+                    <td>Voornaam</td>
+                    <td>Achternaam</td>
+                    <td>Aanhef</td>
+                    <td>Firmanaam</td>
+                    <td>Accountmanager</td>
+                </tr>
+                %[test_addresses]%
+                <tr id="addaddressrow">
+                    <td><a href="#" class="addaddr"><img src="%[root]%/img/icons/add-1-icon-16x16.png" width="16" height="16" /></a></td>
+                    <td><input type="text" style="width:130px;" id="testaddr" name="test[email]" class="newtest focusblur" title="<<test email>>" value="<<test email>>" /></td>
+                    <td><input type="text" style="width:130px;" name="test[cp_firstname]" class="newtest focusblur" title="<<cp_firstname>>" value="<<cp_firstname>>" /></td>
+                    <td><input type="text" style="width:130px;" name="test[cp_lastname]" class="newtest focusblur" title="<<cp_lastname>>" value="<<cp_lastname>>" /></td>
+                    <td><input type="text" style="width:120px;" name="test[sallutation]" class="newtest focusblur" title="<<sallutation>>" value="<<sallutation>>" /></td>
+                    <td><input type="text" style="width:130px;" name="test[company_name]" class="newtest focusblur" title="<<company_name>>" value="<<company_name>>" /></td>
+                    <td><input type="text" style="width:130px;" name="test[accountmanager]" class="newtest focusblur" title="<<company_name>>" value="<<accountmanager>>" /></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="searchbox" id="realmode_to" style="display:none">
+    <div class="searchresults">
+    <div class="searchtitle">Aan:</div>
+        <div style="padding:15px;">
+            <h2>E-mailadressen:</h2>
+            <select id="to_group">
+                <option value="newsletter">Nieuwbrief abbonees</option>
+                <option value="">Alle relaties</option>
+                <option value="customer">Klanten</option>
+                <option value="prospect">Prospects</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="searchbox">
+    <div class="searchresults">
+    <div class="searchtitle">Producten toevoegen:</div>
+        <div style="padding:15px;">
+            <a class="iframe" href="%[root]%/products/catalogue.html?view=picker&iframe=1&showwostock=true"><img src="%[root]%/img/icons/add-1-icon-16x16.png" width="16" height="16" /></a>
+            <a class="iframe" href="%[root]%/products/catalogue.html?view=picker&iframe=1&showwostock=true"/>Product toevoegen</a>
+            <div id="mailing_images">
+                %[mailing_images]%
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div class="searchbox">
+    <div class="searchresults">
+    <div class="searchtitle">Bericht:</div>
+        <div style="padding:15px;">
+            <div style="float:left">
+                <h2>Bericht template: (plaats nieuwe templates in ./templates/mailings/)</h2>
+                <select id="fldtemplate"  style="width:600px;margin:10px">
+                    <for:mail_templates>
+                        <option>%[val]%</option>
+                    </for:mail_templates>
+                </select>
+                <h2>Bericht titel:</h2>
+                <input class="focusblur" type="text" id="title" style="width:600px;margin:10px" title="<<bericht titel>>" value="Nieuwsbrief" />
+                <h2>Bericht inhoud:</h2>
+                <textarea class="focusblur" id="messagecontent" style="width:600px;height:400px;margin:10px;background-color:white;" title="&lt;&lt;bericht inhoud&gt;&gt;">&lt;&lt;bericht inhoud&gt;&gt;</textarea>
+            </div>
+            <div style="float:left">
+                <h2>Varabelen</h2>
+                @[cp_name]@ (Paul B. Singelsma)<br />
+                @[custom]@ (laptopcentrale.nl)<br />
+            </div>
+            <div class="clear"></div>
+            <input type="submit" id="sendmailing" value="Start mailing" /> <a href="#" class="preview">preview</a>
+        </div>
+    </div>
+</div>
+<div class="searchbox" id="busy" style="display:none">
+    <div class="searchresults">
+    <div class="searchtitle">Bezig met versturen:</div>
+        <div style="padding:15px;">
+            <h2>Berichten versturen...</h2>
+            <div id="sendstatus"></div>
+        </div>
+    </div>
+</div>
+<div style="display:none" id="provide_valid_email">Geef alstublieft een correct e-mailadres op.</div>
+<div style="display:none" id="sure">Zeker weten?</div>
+<div style="display:none" id="mailingdone">De mailing is verzonden.</div>

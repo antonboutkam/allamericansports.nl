@@ -1,0 +1,51 @@
+<div style="margin:10px;margin-bottom:0px;display:%[current_view=quarter?'block':'none']%;" class="views quarter_view"> 
+	<table>
+		<for:latest_orders.data>
+			<tr class="row%[oddeven]%">										                   
+				<td style="width:16px;"><a title="Orderpicken" href="%[root]%/orders/collect.html?orderid=%[id]%"><img src="%[root]%/img/icons/ordering-icon-16x16.png" width="16" height="16"/></a></td>                       
+				<td style="text-align:center;">%[ordernumber]%</td>								
+				<td>                        
+					<a href="%[root]%/relations/view.html?id=%[relation_id]%&iframe=1" style="color:#2C251F" class="iframe"><img src="%[root]%/img/icons/%[client_type=C?'company':'customer']%-icon-16x16.png" width="16" height="16"/></a>                         
+					<a href="%[root]%/relations/view.html?id=%[relation_id]%&iframe=1" style="color:#2C251F" class="iframe">%[company_or_person_short]%</a>
+				</td>
+			</tr>                        
+		</for:latest_orders.data>                  
+	</table>   
+</div>
+<div style="margin:10px;margin-bottom:0px;display:%[current_view=half?'block':'none']%;" class="views half_view"> 
+	<table>
+		<for:latest_orders.data>
+			<tr class="row%[oddeven]%">
+				<td style="width:16px;"><a title="Bestelling bewerken" href="%[root]%/orders/new.html?orderid=%[id]%"><img src="%[root]%/img/icons/edit2-icon-16x16.png" width="16" height="16"/></a></td>						                    
+				<td style="width:16px;"><a title="Orderpicken" href="%[root]%/orders/collect.html?orderid=%[id]%"><img src="%[root]%/img/icons/ordering-icon-16x16.png" width="16" height="16"/></a></td>                       
+				<td style="text-align:center;">%[ordernumber]%</td>				
+				<td>%[status]%</td>
+				<td>%[last_status_short]%</td>                        
+				<td>                        
+					<a href="%[root]%/relations/view.html?id=%[relation_id]%&iframe=1" style="color:#2C251F" class="iframe"><img src="%[root]%/img/icons/%[client_type=C?'company':'customer']%-icon-16x16.png" width="16" height="16"/></a>                         
+					<a href="%[root]%/relations/view.html?id=%[relation_id]%&iframe=1" style="color:#2C251F" class="iframe">%[company_or_person_short]%</a>
+				</td>
+			</tr>                        
+		</for:latest_orders.data>                  
+	</table>   
+</div>
+<div style="margin:10px;margin-bottom:0px;display:%[current_view=full?'block':'none']%;" class="views full_view"> 
+	<table>
+		<for:latest_orders.data>
+			<tr class="row%[oddeven]%">
+				<td style="width:16px;"><a title="Bestelling bewerken" href="%[root]%/orders/new.html?orderid=%[id]%"><img src="%[root]%/img/icons/edit2-icon-16x16.png" width="16" height="16"/></a></td>						                    
+				<td style="width:16px;"><a title="Orderpicken" href="%[root]%/orders/collect.html?orderid=%[id]%"><img src="%[root]%/img/icons/ordering-icon-16x16.png" width="16" height="16"/></a></td>                       
+				<td style="text-align:center;">%[ordernumber]%</td>
+				<td>%[paymethod]%</td>
+				<td>%[status]%</td>
+				<td>%[last_status]%</td>                        
+				<td>                        
+					<a href="%[root]%/relations/view.html?id=%[relation_id]%&iframe=1" style="color:#2C251F" class="iframe"><img src="%[root]%/img/icons/%[client_type=C?'company':'customer']%-icon-16x16.png" width="16" height="16"/></a>                         
+					<a href="%[root]%/relations/view.html?id=%[relation_id]%&iframe=1" style="color:#2C251F" class="iframe">%[company_or_person]%</a>
+				</td>
+			</tr>                        
+		</for:latest_orders.data>                  
+	</table>   
+</div>
+<div class="clear"></div>            
+       

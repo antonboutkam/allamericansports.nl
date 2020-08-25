@@ -1,0 +1,67 @@
+<form method="post">
+<input type="hidden" name="_do" value="store" />
+<input type="hidden" name="id" value="%[article_generator.id]%" />
+<h2>Zoekmachine optimalisatie</h2>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Alinea</div>
+            <div style="padding:10px;">
+                <table>
+                    <tr>
+                        <td>Alinea type / groep</td>
+                        <td>
+                            <select name="article_generator[fk_article_generator_section]" val="%[article_generator.fk_article_generator_section]%" >
+                                <for:sections>
+                                    <option value="%[id]%">%[section]%</option>
+                                </for:sections>
+                            </select>                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Product</td>
+                        <td>
+                            <select name="article_generator[product]" val="%[article_generator.product]%" >
+                                <for:product_types>
+                                    <option value="%[id]%">%[type]%</option>
+                                </for:product_types>                                
+                            </select>                        
+                        </td>
+                    </tr>                    
+                    <tr>
+                        <td>Alinea titel</td>
+                        <td>
+                            <input type="text" name="article_generator[title]" value="%[article_generator.title]%" />
+                        </td>
+                    </tr>                    
+                    <tr>
+                        <td colspan="2">
+                            <textarea style="width:900px;height:140px;" name="article_generator[content]">%[article_generator.content]%</textarea>
+                        </td>
+                    </tr>
+                </table> 
+                <input type="submit" value="Opslaan" />                           
+            </div>        
+        </div>
+    </div>
+
+
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Alinea's</div>            
+            <div id="webshop_cms_pages">
+                <table>
+                <for:articles>
+                    <tr>
+                        <td><a href="?id=%[id]%">edit</a></td>                        
+                        <td>%[product_type]%</td>
+                        <td>%[section_label]%</td>
+                        <td>%[title]%</td>
+                    </tr>                        
+                </for:articles>
+                </table>                
+                <div class="clear"></div>
+            </div>             
+        </div>
+    </div>
+</form>
+<div style="display:none;" id="sure-delete">Weet u zeker dat u deze pagina wilt verwijderen?</div>

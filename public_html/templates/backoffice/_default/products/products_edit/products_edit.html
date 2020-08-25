@@ -1,0 +1,412 @@
+
+<link rel="stylesheet" href="/js/jwysiwyg/jquery.wysiwyg.css" type="text/css" />
+<script type="text/javascript" src="/js/jwysiwyg/jquery.wysiwyg.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.wysiwyg').wysiwyg();
+    });
+</script>
+<script type="text/javascript" src="/js/jq/pixlr.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// pixlr.settings.target = 'http://backoffice.%[hostname]%/products/pixlr.php';
+		// pixlr.settings.exit = 'http://developer.pixlr.com/exit_modal.html';
+		pixlr.settings.credentials = true;
+		pixlr.settings.method = 'get';
+		$('.editimg').live('click',function(e){
+			e.preventDefault();
+
+			imageUrl 	= 'http://'+window.location.hostname+'/'+$(this).attr('data-img');
+			imageType 	= $(this).hasClass('altimage')?'altimage':'regularimage';
+
+			pixlr.edit({
+				image:imageUrl,
+				title:'%[id]%.jpg',
+				service:'express',
+				locktitle:true,
+				target:'http://'+window.location.hostname+'/products/edit.html?id=%[id]%&_do=update_image&image_type='+imageType+'&overwrite='+$(this).attr('data-img'),
+				exit:'http://'+window.location.hostname+'/products/edit.html?id=%[id]%'
+			});
+		});
+	});
+</script>
+<form id="product_form" enctype="multipart/form-data" method="post">
+    <input type="hidden" name="id" id="fld_id" value="%[id]%" />
+    <input type="hidden" name="_do" value="store" />
+    <input type="hidden" id="btw" value="1%[btw]%" />
+    <input type="hidden" id="fld_view" value="%[view]%" />
+    <input type="hidden" name="product[is_computer]" value="%[is_computer]%" />
+    <input type="hidden" id="clearafterstore" name="clearafterstore" value="0" />
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="add_customer searchtitle">%[lbl_general]%</div>
+            <div class="edit_content">
+                    <div style="width:80%; float:left;">
+                        <table>
+                            <for:product_member_groups>
+                                <tr>
+                                    <td>Product group</td>
+                                    <td>
+                                        <a href="/products/groupedit.html?id=%[id]%">%[group_name]%</a> (groupid: %[id]%)
+                                    </td>
+                                </tr>
+                            </for:product_member_groups>
+                            <tr>
+                                <td>Id oude webshop</td>
+                                <td>%[oldid]%</td>
+                            </tr>
+                            <tr>
+                                <td>%[lbl_articlenumber]%</td>
+                                <td>
+                                    <input title="Dit veld is voor intern gebruik door u, het artikelnummer moet uniek zijn en is niet zichtbaar in de webshop." class="widefld" type="text" tabindex="10" name="product[article_number]" id="fld_article_number" value="%[article_number]%" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>%[lbl_productname]%</td>
+                                <td><input title="De productnaam wordt als naam van het product in de webshop getoont" class="widefld" type="text" tabindex="10" name="product[article_name]" id="fld_article_name" value="%[article_name]%" /></td>
+                            </tr>
+                            <tr>
+                                <td>%[lbl_supplier]%</td>
+                                <td>
+                                    <select class="widefld" name="product[supplier]" val="%[supplier]%" id="fld_supplier">
+                                        <option value="2869">Onbekende leverancier</option>
+                                        <for:suppliers>
+                                            <option value="%[id]%">%[company_name]%</option>
+                                        </for:suppliers>
+                                    </select>
+
+                                    <a class="tipsy sync_suppliers" title="Synchroniseer leveranciers" href="/products/edit.html?id=%[id]%&sync_suppliers=1">
+                                        <img src="/img/icons/sync-icon-16x16.png" />
+                                        Klik om te synchroniseren
+                                    </a>
+                                </td>
+                            </tr>
+
+							<tr>
+								<td>%[lbl_ledger]%</td>
+								<td>
+									<select id="fld_ledger" class="widefld" name="product[ledger]" val="%[ledger]%"  tabindex="10" >
+                                        <option value="">Maak een keuze</option>
+                                        <for:ledgers.data>
+                                            <option value="%[id]%">%[field]%</option>
+                                        </for:ledgers.data>
+									</select>
+
+                                    <a class="iframe" href="/settings/lookupeditor.html?group=ledger&iframe=1">
+                                        <img src="/img/icons/edit2-icon-16x16.png" width="16" height="16" />
+                                    </a>
+								</td>
+							</tr>
+                            <tr>
+                                <td>EAN</td>
+                                <td style="vertical-align:top;">
+                                <input style="width:192px;" title="Ean code, moet in het hele systeem uniek zijn" class="widefld" type="text" tabindex="10"  name="product[ean]" id="fld_ean" value="%[ean]%" />
+                                <span id="eannotexists" style="display:none" >
+                                    <img src="/img/icons/check-icon-16x16.png" alt=" (ean is uniek)" />
+                                    Deze ean code is uniek
+                                </span>
+                                <span id="eanexists" style="display:none" >
+                                    <img src="/img/icons/close-icon-16x16.png" alt=" (ean is niet uniek)" />
+                                    <a id="eanlink" class="iframe" href="#">Deze ean is in gebruik</a>
+                                </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pagina titel / link url</td>
+                                <td><input title="Op basis van dit veld wordt de blauwe balk bovenaan de pagina gewijzigd. Ook de link naar de productpagina wordt hiermee opgebouwd. Dit veld is zeer belangrijk voor zoekmachines. Als u niet weet wat u hier in moet vullen kunt u eventueel de produtnaam gebruiken" class="widefld" type="text" tabindex="10"  name="product[title]" id="fld_title" value="%[title]%" /></td>
+                            </tr>
+                            <tr>
+                                <td>Sport</td>
+                                <td>
+                                    <select class="widefld" tabindex="10" name="product[fk_sport]" val="%[fk_sport]%">
+                                        <option value="">Maak een keuze</option>
+
+                                        <for:product_sport>
+                                            <option value="%[id]%">%[type]%</option>
+                                        </for:product_sport>
+                                    </select>
+                                    <a class="iframe" href="/settings/producttypeeditor.html?iframe=1&table=product_sport">
+                                        <img src="/img/icons/edit2-icon-16x16.png" width="16" height="16" />
+                                        </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Subcategorie</td>
+                                <td>
+                                    <select class="widefld" name="product[type]" val="%[type]%" tabindex="10"  >
+                                        <option value="">%[lbl_choose]%</option>
+                                        <for:product_types>
+                                            <option value="%[id]%">%[type]%</option>
+                                        </for:product_types>
+                                    </select>
+                                    <a href="/settings/producttypeeditor.html?iframe=1&table=product_type" class="iframe" target="_blank">
+                                        <img height="16" width="16" src="/img/icons/edit2-icon-16x16.png" />
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maat</td>
+                                <td>
+                                    <select class="widefld" id="fk_size" name="product[fk_size]" val="%[fk_size]%" tabindex="10"  >
+                                        <option value="">%[lbl_choose]%</option>
+                                        <for:product_sizes>
+                                            <option value="%[id]%">%[type]%</option>
+                                        </for:product_sizes>
+                                    </select>
+                                    <a href="/settings/producttypeeditor.html?iframe=1&table=product_size" class="iframe" target="_blank">
+                                        <img height="16" width="16" src="/img/icons/edit2-icon-16x16.png" />
+                                    </a>
+                                </td>
+                            </tr>
+                            %[module_metatags]%
+                            %[module_metakeywords]%
+                            <tr>
+                                <td>Merk</td>
+                                <td>
+                                    <select id="fld_brand" class="widefld" tabindex="10" name="product[brand]" val="%[brand]%">
+                                        <option value="">Maak een keuze</option>
+                                        <for:brands.data>
+                                            <option value="%[id]%">%[field]%</option>
+                                        </for:brands.data>
+                                    </select>
+                                    <a target="_blank" href="/settings/lookupeditor.html?group=brand&iframe=1" class="iframe">
+                                        <img src="/img/icons/edit2-icon-16x16.png" width="16" height="16" />
+                                    </a>
+                                </td>
+                            </tr>
+                            </tr>
+                            <tr>
+                                <td>Levertijd bij voorradig</td>
+                                <td>
+                                        <select class="widefld" name="product[delivery_time]" val="%[delivery_time]%" tabindex="10" >
+                                                <option value="">%[lbl_choose]%</option>
+                                                <for:delivery_time_ranges>
+                                                        <option value="%[id]%">%[label]%</option>
+                                                </for:delivery_time_ranges>
+                                        </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Levertijd bij niet voorradig <a href="http://handleiding.nuicart.nl/w/index.php/Levertijd_bij_niet_voorradig" target="_blank" title="Uitleg over de functionaliteit achter deze instelling" class="tipsy"><img src="/img/icons/help-icon-16x16.png" width="16" height="16" /></a></td>
+                                <td>
+                                        <select class="widefld" name="product[delivery_time_nostock]" tabindex="10"  val="%[delivery_time_nostock]%">
+                                                <option value="">%[lbl_choose]%</option>
+                                                <for:delivery_time_ranges>
+                                                        <option value="%[id]%">%[label]%</option>
+                                                </for:delivery_time_ranges>
+                                        </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>%[lbl_image]%</td>
+                                <td><input id="uploadfield" tabindex="10" type="file" name="image" /></td>
+                            </tr>
+                            <tr>
+                              <td> %[lbl_sizetable]%</td>
+                              <td><select class="widefld" name="product[fk_size_table]" val=%[fk_size_table]%>
+                                        <option value="">%[lbl_choose]%</option>
+                                        <for:sizes>
+                                                <option value="%[id]%">%[title]%</option>
+                                        </for:sizes>
+                                </select></td>
+                            </tr>
+                            <tr>
+                              <td>Video</td>
+                              <td><textarea name="product[video_link]" tabindex="10" style="width:88%; height:100%;" >%[video_link]%</textarea></td>
+                            </tr>
+                            <tr>
+                              <td>PDF</td>
+                              <td><input id="uploadfield2" tabindex="10" type="file" name="pdf" /> %[product_pdf?'<a href="%[root]%/img/product-pdf/%[id]%.pdf" target="_blank">Download PDF</a>':'']%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="width:20%; float:left;">
+                        <div style="float: right;">
+                        <if:photo value="1">
+							<div style="width:200px;height:200px;position:relative;background-image:url('%[root]%/img/upload/200x200_%[id]%.jpg?unique=%[rand]%')">
+								<a href="#" title="Klik hier om deze afbeelding te bewerken" style="position:absolute;bottom:5px;left:5px;" class="editimg tipsy" data-img="%[root]%/img/upload/500x500_%[id]%.jpg"><img src="/img/icons/paint-24x24.png" /></a>
+							</div>
+                        </if:photo>
+                        <if:photo condition="is_false">
+                            <a id="upload-btn" href="#"><img style="width:200px;" src="%[root]%/img/icons/no-picture-available.png" /></a>
+                        </if:photo>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="add_customer searchtitle">%[lbl_extrainfo]%</div>
+                <div class="edit_content">
+                    <h2>%[lbl_description]%</h2>
+                    <textarea id="fld_description" class="wysiwyg" style="width:940px;height:100px;" tabindex="10" name="product[description]">%[description]%</textarea>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        %[module_exact_online]%
+        %[plugins]%
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="add_customer searchtitle">Vertalingen</div>
+                <div class="edit_content">
+                    <select id="translation_webshop_id" style="width:200px;" val="%[translation_webshop_id]%">
+                        <for:required_translations>
+                            <option value="%[translation_webshop_id]%">%[hostname]% - %[description]%</option>
+                        </for:required_translations>
+                    </select>
+                    <for:required_translations>
+                    <div class="translationblocks" id="translation_webshop_%[translation_webshop_id]%" style="display:%[first_item?'block':'none']%">
+                        <h2>%[hostname]% - %[description]%</h2>
+                        <table>
+                            <tr>
+                                <td>Titel</td>
+                                <td><input class="widefld" type="text" name="catalogue_translation[%[translation_webshop_id]%][title]" value="%[title]%" /></td>
+                            </tr>
+                            <tr>
+                                <td>Meta titel</td>
+                                <td><input class="widefld" type="text" name="catalogue_translation[%[translation_webshop_id]%][meta_title]" value="%[meta_title]%"  /></td>
+                            </tr>
+                            <tr>
+                                <td>Meta omschrijving</td>
+                                <td><input class="widefld" type="text" name="catalogue_translation[%[translation_webshop_id]%][meta_description]" value="%[meta_description]%"  /></td>
+                            </tr>
+                            <tr>
+                                <td>Keywords</td>
+                                <td><input class="widefld" type="text" name="catalogue_translation[%[translation_webshop_id]%][meta_keyword]" value="%[meta_keyword]%"  /></td>
+                            </tr>
+                        </table>
+                        <h2>%[lbl_description]%</h2>
+                        <style type="text/css">
+                            .wysiwyg{width:930px!important;}
+                            #undefinedIFrame{width:933px!important;}
+                        </style>
+                        <textarea class="wysiwyg" style="width:940px;height:100px;" tabindex="290" name="catalogue_translation[%[translation_webshop_id]%][description]">%[description_txt]%</textarea>
+                        <div class="clear"></div>
+                    </div>
+                    </for:required_translations>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="product_edit_usage">
+            %[product_edit_usage]%
+        </div>
+        <div id="product_edit_colors">
+            %[product_edit_colors]%
+        </div>
+
+        <!-- Was voorschriften -->
+        %[module_washing]%
+        %[module_3dimg]%
+
+        <div style="display:%[module_stockpile=1?'block':'none']%">
+            <if:id value="new">
+            <div class="searchbox" id="asdf" style="display:%[id=new?'block':'none'];">
+                <div class="searchresults">
+                    <div class="add_customer searchtitle">%[lbl_stock]%</div>
+                    <div class="edit_content">
+                        <table style="width:50%">
+                            <tr>
+                                <td>%[lbl_quantity]% (meter)</td>
+                                <td>
+                                    <input type="text" name="stock"  tabindex="80" id="fld_stock" style="width:20px;"  value="" />
+                                </td>
+                                <td>
+                                    <select name="warehouse" id="fld_warehouse" tabindex="90">
+                                        <for:warehouses>
+                                            <option value="%[id]%">%[name]%</option>
+                                        </for:warehouses>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="configuration" id="fld_configuration" tabindex="100">
+                                        <option value="0">%[lbl_please_choose]%</option>
+                                        <for:warehouse>
+                                            <option value="%[id]%">%[path]%, %[rack]%, %[shelf]%</option>
+                                        </for:warehouse>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            </if:id>
+        </div>
+        %[module_altproductnumbers]%
+        %[module_prices]%
+        <div id="notebook_properties" style="display:%[is_computer?'block':'none']%">%[notebook_properties]%</div>
+            <div class="searchbox">
+                <div class="searchresults">
+                    <div class="add_customer searchtitle">Webshop configuratie</div>
+                    <div class="edit_content">
+                        <if:id not="new">
+                            <ul class="treeselect">
+                                <for:webshop_root_menu_structures>
+                                    <li class="header">%[hostname]% <a href="%[root]%/settings/webshop_navigation.html?webshop_id=%[webshop_id]%">(bewerken)</a></li>
+                                    <ul>
+                                        <for:data>
+                                            <li>
+                                                <if:has_children><a rel="%[menu_id]%" class="togglemenu folder" href="#"></a></if:has_children>
+                                                <if:in_webshop value="1"><a title="Dit product is gelinkt aan sub items van deze groep" rel="%[menu_id]%" class="plus minplus" href="#"></a></if:in_webshop>
+                                                <if:in_webshop value="0"><a title="Dit product is gelinkt aan sub items van deze groep" rel="%[menu_id]%" class="min minplus" href="#"></a></if:in_webshop>
+                                                <a rel="%[menu_id]%" id="menu_item_%[menu_id]%" class="togglemenu" href="">%[menu_item]%</a>
+                                                <span style="color:#ccc;font-style:italic">(%[locales]%)</span>
+                                            </li>
+                                        </for:data>
+                                    </ul>
+                                </for:webshop_root_menu_structures>
+                            </ul>
+                            <h2>Legenda:</h2>
+                            <img src="%[root]%/img/icons/check-icon-16x16.png" /> Het product hangt onder dit menu in de webshop.<br />
+                            <img src="%[root]%/img/icons/delete-icon-16x16.png" /> Het product hangt niet onder dit menu in de webshop.<br />
+                             <img src="%[root]%/img/icons/folder.png" />  Dit menu item heeft heeft sub menu items.<br />
+                        </if:id>
+                        <if:id value="new">
+                            <center>U kunt een product pas in de webshop plaatsen als deze is opgeslagen</center>
+                        </if:id>
+                    </div>
+                </div>
+            </div>
+            <!--
+            %[module_grouping]%
+            -->
+            %[module_relate_products]%
+            %[module_barcodes]%
+
+        <div class="searchbox">
+            <div class="searchresults">
+                <div class="add_customer searchtitle">%[lbl_actions]%</div>
+                <div class="edit_content">
+                <div class="actions">
+                    <center>
+                        <input type="submit" class="fld_store" value="%[lbl_Save]%" tabindex="26" />
+                        <input type="submit" id="fld_store_next" value="%[lbl_Save_next]%" tabindex="27" />
+
+                        <if:id not="new">
+                            <input type="submit" id="fld_duplicate" value="Dupliceren" tabindex="28" />
+                        </if:id>
+                        <input type="submit" id="fld_cancel" value="%[lbl_Cancel]%" tabindex="28" />
+                    </center><br />
+                    <if:product_member_groups>
+                        <div style="display:%[id=new?'none':'block']%">
+                            <input class="checkbox" type="hidden" name="overwrite_group" value="0" />
+                            <input class="checkbox" id="fld_overwrite_group" type="checkbox" name="overwrite_group" value="1" /> <label for="fld_overwrite_group" style="cursor:pointer">Wijzigingen voor de hele productgroep doorvoeren </label><a href="http://handleiding.nuicart.nl/w/index.php/Wijzigingen_voor_de_hele_productgroep_doorvoeren" target="_blank" title="Uitleg over batch opslaan" class="tipsy"><img src="/img/icons/help-icon-16x16.png" width="16" height="16" /></a><br />
+                        </div>
+					<if:product_member_groups>
+
+                    <span class="stored-ok" style="display:none;">%[lbl_stored-ok]%</span>
+                    <span id="err-stock-no-location" style="display:none;">%[lbl_err-stock-no-location]%</span>
+                    <span id="err-no-art-num" style="display:none;">%[lbl_err-no-art-num]%</span>
+                    <span id="err-dupl-artnum" style="display:none;">%[lbl_err-dupl-artnum]%</span>
+                    <span id="err-prod-noname" style="display:none;">%[lbl_err-prod-noname]%</span>
+                    <span id="sure-delete-3dimg" style="display:none;">Weet u zeker dat u deze 3d afbeelding wilt verwijderen?</span>
+                </div>
+            </div>
+        </div>
+</form>

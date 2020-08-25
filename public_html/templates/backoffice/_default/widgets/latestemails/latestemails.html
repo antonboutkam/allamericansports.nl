@@ -1,0 +1,69 @@
+<script type="text/javascript">   
+    $('.delmessage').live('click',function(e){
+        if (!confirm('Are you sure you want to delete this message?')) {
+            e.preventDefault();
+        }
+    });  
+</script>
+<div style="margin:10px;margin-bottom:0px;display:%[current_view=quarter?'block':'none']%;" class="views quarter_view"> 
+    <div style="margin-left:30px;">
+        <a href="http://%[mailhostname]%/webmail" target="blank">
+            <img style="margin-left:10px;" src="/img/icons/%[unreadmails?'mail-128x128-closed':'mail-128x128-open']%.png"/>
+        </a>
+        <h2>You have %[unreadmails]% new emails</h2>
+    </div>
+</div>
+<table style="margin:10px;margin-bottom:0px;display:%[current_view=half?'block':'none']%" class="views half_view">                
+    <tr class="roweven">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Van</td>
+        <td>Datum</td>
+        <td>Onderwerp</td>
+    </tr>
+    <for:mail>
+        <tr class="row%[oddeven]%" style="font-weight:%[seen?'normal':'bold']%">
+            <td><a class="delmessage" href="/home.html?_do=deletemessage&id=%[id]%"><img width="16px;" src="/img/icons/delete.png"/></a></td>
+            <td><a class="iframe" href="/mail/read.html?id=%[id]%&iframe=1"> <img src="/img/icons/%[seen?'mail-old-16x16':'mail-new-16x16']%.png"/></a></td>
+            <td>%[fromAddress]%</td>
+            <td>%[date]%</td>
+            <td>%[subject_half]%</td>
+        </tr>
+    </for:mail>  
+</table>
+
+<table style="margin:10px;width:680px; margin-bottom:0px;display:%[current_view=three_quarters?'block':'none']%;" class="views three_quarters_view">                
+    <tr class="roweven">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Van</td>
+        <td>Onderwerp</td>
+    </tr>
+    <for:mail>
+        <tr class="row%[oddeven]%" style="font-weight:%[seen?'normal':'bold']%">
+            <td><a class="delmessage" href="/home.html?_do=deletemessage&id=%[id]%"><img width="16px;" src="/img/icons/delete.png"/></a></td>
+            <td><a class="iframe" href="/mail/read.html?id=%[id]%&iframe=1"> <img src="/img/icons/%[seen?'mail-old-16x16':'mail-new-16x16']%.png"/></a></td>
+            <td>%[fromAddress]%</td>
+            <td>%[subject_three_quarters]%</td>
+        </tr>
+    </for:mail>     
+</table>
+<table style="margin:10px;width:940px; margin-bottom:0px;display:%[current_view=full?'block':'none']%;" class="views full_view">                
+    <tr class="roweven">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Van</td>
+        <td>Datum</td>
+        <td>Onderwerp</td>
+    </tr>
+    <for:mail>
+        <tr class="row%[oddeven]%" style="font-weight:%[seen?'normal':'bold']%">
+            <td><a class="delmessage" href="/home.html?_do=deletemessage&id=%[id]%"><img width="16px;" src="/img/icons/delete.png"/></a></td>
+            <td><a class="iframe" href="/mail/read.html?id=%[id]%&iframe=1"> <img src="/img/icons/%[seen?'mail-old-16x16':'mail-new-16x16']%.png"/></a></td>
+            <td>%[fromAddress]%</td>
+            <td>%[date]%</td>
+            <td>%[subject_full]%</td>
+        </tr>
+    </for:mail>     
+</table>
+<div class="clear"></div>         

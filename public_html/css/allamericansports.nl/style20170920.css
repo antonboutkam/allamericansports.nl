@@ -1,0 +1,2061 @@
+@charset "UTF-8";
+
+/*
+Theme Name: allamericansports
+Theme URI: /wp-content/themes/
+Author: aceview
+Tags: 
+Author URI: http://aceview.nl/
+Description: All American Sports
+Version: 1.0
+License: copyright Aceview Internet
+License URI: license.txt
+*/
+
+
+/* Default ================================================================================ */
+
+HTML {
+	height: 100%;
+}
+
+body {
+	background: url("/img/custom/allamericansports.nl/bg_body.gif") repeat-x left top #fff;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 16px;
+	color: #231f20;
+}
+
+a:link {
+	color: #231F20;
+}
+
+
+a:visited{
+	color: #231F20;
+}
+
+a:hover{
+	color: #231F20;
+}
+
+.clearer, .cl {
+	clear:both;
+	height:1px;
+}
+
+
+/* Font ================================================================================ */
+
+
+a.h1, H1 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+	color: #92278f;
+	font-weight: normal;
+
+}
+h1.inline{display:inline-block;}
+a.h1:hover{
+    text-decoration:underline;
+}
+H2 {
+	color: #92278F;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+.artice_cnt h2{
+    margin-top:15px;
+    margin-bottom:0;
+    padding-bottom:0;
+}
+.artice_cnt p{
+    margin-top:5px!important;
+    padding-top:0;
+}
+H3 {
+	color: #003268;
+    font-size: 12px;
+	margin: 10px 0 0 0;
+}
+
+/* Layout ================================================================================ */
+
+#container {
+	background: url("/img/custom/allamericansports.nl/stipkes.png") no-repeat scroll 410px top transparent;
+    min-height: 60%;
+    margin: 0 auto;
+    width: 980px;
+}
+
+#main {
+	float: left;
+    position: relative;
+    text-align: left;
+    width: 980px;
+	margin-bottom: 10px;
+	/*padding-bottom: 95px;*/
+}
+
+.detailpagina #main{
+	background: #fff;
+}
+
+#maintop{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-top: 1px solid #E0E0DF;
+    float: left;
+    padding-top: 10px;
+    width: 980px;
+}
+
+#breadcrumbs{
+    color: #9D9FA2;
+    float: left;
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 760px;
+}
+/*
+#breadcrumbs a{
+	background: url("/img/custom/allamericansports.nl/custom/ic_breadcrumbs_a.png") no-repeat scroll right 2px transparent;
+	color: #9d9fa2;
+}
+
+#breadcrumbs a:hover{
+	text-decoration: underline;
+}
+*/
+#maintop .button{
+	float: right;
+    text-align: right;
+    width: 140px;
+}
+
+#maintop .button a{
+	background: url("/img/custom/allamericansports.nl/ic_maintop_button.png") no-repeat scroll left 3px transparent;
+    color: #9D9FA2;
+    font-size: 12px;
+    padding: 0 0 0 10px;
+}
+
+/* Header ================================================================================ */
+
+#header {
+    float: left;
+    height: 204px;
+    position: relative;
+    width: 980px;
+}
+
+#headertop{
+	float: left;
+    width: 980px;
+	height: 33px;
+}
+
+#talen{
+	float: left;
+    margin-top: 6px;
+}
+
+#talen ul li{
+	float: left;
+    list-style-type: none;
+    margin-left: 0;
+    padding: 0;
+}
+
+#talen ul li a{
+	background: none repeat scroll 0 0 lightgray;
+    padding: 6px 8px;
+	border-left: 1px solid #E0E0DF;
+}
+
+#talen ul li:first-child a{
+	border-left: none;
+}
+
+#talen ul li.current-menu-item a, #talen ul li a:hover{
+	color: #92278f;
+}
+
+#headerinner{
+	float: left;
+    width: 980px;
+	position:relative;
+}
+
+#zoeken{
+	background: url("/img/custom/allamericansports.nl/bg_zoeken.png") no-repeat scroll left top transparent;
+    color: #959595;
+    float: left;
+    font-size: 12px;
+    height: 12px;
+    margin-left: 105px;
+    margin-top: 39px;
+    padding: 10px;
+    width: 310px;
+
+}
+
+#zoeken span{
+	background: url("/img/custom/allamericansports.nl/vergrootglas.png") no-repeat scroll 299px top transparent;
+    padding: 0 262px 0 0;
+	color: #959595;
+}
+
+#sporttas{
+	background: url("/img/custom/allamericansports.nl/sporttas.png") no-repeat scroll left top transparent;
+    float: right;
+    margin-top: 27px;
+    padding: 0 0 18px 95px;
+	font-weight: bold;
+}
+
+#sporttas span{
+	color: #92278f;
+	font-weight: normal;
+}
+
+#logo{
+	float: left;
+    margin: 30px 0 19px;
+}
+
+#slogans{
+	float: left;
+    margin-top: 15px;
+}
+
+#slogans ul li {
+	float: left;
+    list-style-type: none;
+    margin-left: 75px;
+}
+
+#slogans ul li:first-child{
+	margin-left: 0;
+}
+
+#slogans ul li span{
+	background: url("/img/custom/allamericansports.nl/ic_slogans.png") no-repeat scroll left 2px transparent;
+    padding: 0 0 0 13px;
+}
+
+/* Sidebar ================================================================================ */
+
+#sidebar2 {
+    float: left;
+    overflow: hidden;
+    width: 187px;
+}
+
+.detailpagina #sidebar, .home #sidebar {
+	float: right;
+}
+
+.home #sidebar {
+	width: 250px;
+}
+
+.detailpagina #sidebar {
+	width: 200px;
+}
+
+.banner {
+	float: left;
+    margin-bottom: 20px;
+    width: 199px;
+}
+
+.home .banner{
+	float: right;
+	width: 248px;
+}
+
+.detailpagina #sidebar .banner{
+	/*width: 199px;*/
+}
+
+.banner.support {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #E0E0DF;
+    border-radius: 3px 3px 3px 3px;
+    padding: 15px;
+    width: 216px;
+	line-height: 19px;
+}
+
+.banner ul li {
+	border-top: 1px solid #DEDFDD;
+    float: left;
+    list-style-type: none;
+    margin-left: 0;
+    padding: 5px 0;
+	width: 218px;
+}
+
+.banner ul li ul li.image {
+	width: 70px;
+}
+
+.banner ul li ul li.image.phone{
+	margin-top: 6px;
+}
+
+/*.banner ul li ul li.image.email{
+	margin-top: 6px;
+}*/
+
+.banner ul li ul li.image.support{
+	margin-top: 20px;
+}
+
+.banner ul li ul li{
+	border: none;
+	width: auto;
+}
+
+.banner ul li ul li span{
+	font-size:16px;
+}
+
+.banner.support h2{
+	font-size: 16px;
+}
+
+.banner.showroom{
+	background: url("/img/custom/allamericansports.nl/bg_banner_showroom.png") no-repeat scroll left top transparent;
+    border-radius: 3px 3px 3px 3px;
+    padding: 20px 10px 15px;
+    width: 227px;
+	margin-top: 5px;
+}
+
+.banner.showroom h2{
+	color: #FFFFFF;
+    font-size: 18px;
+    text-align: right;
+}
+
+.banner.showroom a.button{
+	background: url("/img/custom/allamericansports.nl/ic_banner_showroom.png") no-repeat scroll right 6px transparent;
+    color: #FFFFFF;
+    float: right;
+    margin-top: 7px;
+    padding: 0 20px 0 0;
+    text-align: right;
+}
+
+.producten {
+	background: url("/img/custom/allamericansports.nl/bg_producten.png") no-repeat left top transparent;
+    padding: 8px 7px;
+    width: 185px;
+	margin-bottom: 20px;
+	border-radius: 3px;
+}
+
+.producten h2 {
+	color: #231F20;
+	padding: 2px 0;
+}
+
+.producten ul li{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #e0e0df;
+    border-radius: 3px 3px 3px 3px;
+    margin: 0 0 10px 0;
+    padding: 7px;
+	height: 138px;
+	line-height: 18px;
+	list-style:none;
+}
+
+.producten ul li img{
+	margin-bottom: 5px;
+}
+
+.producten ul li.last{
+	margin: 0;
+}
+
+.producten ul li h2 {
+	color: #92278f;
+	font-size: 12px;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+
+
+/* Content ================================================================================ */
+
+#content {
+    float: right;
+    margin: 0 0 0 8px;
+    width: 785px;
+}
+
+.detailpagina #content, .home #content {
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+.home #content {
+	width: 710px;
+}
+
+.detailpagina #content {
+	width: 760px;
+}
+
+#photo {
+	border: 1px solid #e0e0df;
+	border-radius: 3px;
+    float: left;
+    padding: 7px;
+	background: #FFFFFF;
+}
+
+
+/* Overzicht/Uitgelicht =================================== */
+
+#overzicht {
+    float: left;
+    width: 784px;
+	margin-top: 15px;	
+}
+#overzicht.wide{width: 980px;}
+#overzicht li, #uitgelicht li, .uitgelicht_hor li {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E0E0DF;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    list-style-type: none;
+    margin-bottom: 12px;
+    margin-left: 0;
+    margin-right: 12px;
+    padding: 15px;
+    text-align: left;
+    width: 155px;
+	line-height: 20px;
+	position:relative;
+}
+
+#uitgelicht li, .uitgelicht_hor li {
+	margin-right:11px;
+	position:relative;    
+}
+
+#overzicht.wide li {
+    margin-right:9px!important;
+}
+#overzicht.wide li.last,li.last{
+	margin-right:0px!important;
+}
+
+#overzicht li .button, #uitgelicht li .button, .uitgelicht_hor li .button {
+    float: left;
+}
+
+#overzicht li .button a, #uitgelicht li .button a, .uitgelicht_hor li .button a{
+	color: #FFFFFF;
+        display: block;
+        padding: 5px 10px 5px 14px;
+	border-radius: 3px;
+	background: #2f2b2c;
+	margin-top: 7px;
+}
+
+#overzicht li .button a:hover, #uitgelicht li .button a:hover, .uitgelicht_hor li .button a:hover {
+	text-decoration: underline;
+}
+
+#overzicht li .button a span, #uitgelicht li .button a span, .uitgelicht_hor li .button a span {
+	background: url("/img/custom/allamericansports.nl/ic_button.png") no-repeat scroll right 4px transparent;
+    padding: 0 35px 0 0;
+}
+
+#overzicht span.prijs, #uitgelicht span.prijs, .uitgelicht_hor span.prijs {
+	color: #272324;
+    font-size: 18px;
+}
+
+#uitgelicht h2, .uitgelicht_hor h2 {
+	background: #000;
+	float: left;
+	padding: 10px 15px;
+	color: #fff;
+	width: 950px;
+	border-radius: 3px;
+	margin-bottom: 25px;
+}
+
+
+#uitgelicht li h2, #overzicht li h2, .uitgelicht_hor li h2{
+	width: auto;
+	overflow:hidden;
+	width:160px;
+	/* height:20px; */
+	background: none;
+        font-size:13px;
+	color: #92278F;
+	padding: 0;
+	margin: 0;
+}
+
+
+.sterren{
+	margin: 0;
+}
+
+.sterren img{
+    margin-bottom:0;
+}
+#uitgelicht li span.prijs, .uitgelicht_hor li span.prijs{
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+#slideshow{
+	background: #fff;
+	border: 1px solid #e0e0df;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    padding: 7px;
+    width: 694px;
+	margin-bottom: 25px;
+	position: relative;
+	height: 266px;
+}
+
+.next{
+	background: url("/img/custom/allamericansports.nl/ic_next.png") no-repeat scroll right top transparent;
+    height: 41px;
+    position: absolute;
+    right: 7px;
+    top: 120px;
+    width: 25px;
+}
+
+.previous{
+	background: url("/img/custom/allamericansports.nl/ic_previous.png") no-repeat scroll left top transparent;
+    height: 41px;
+    position: absolute;
+    left: 7px;
+    top: 120px;
+    width: 25px;
+}
+
+
+
+#Nokona{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E0E0DF;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    padding: 7px;
+    width: 328px;
+	margin-right: 22px;
+}
+
+#Tanner-tees{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E0E0DF;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    padding: 7px;
+    width: 328px;
+}
+
+#organisaties{
+    float: left;
+    height: 50px;
+    margin-top: 30px;
+    width: 710px;
+}
+
+#organisaties ul li{
+	float: left;
+	list-style-type: none;
+	margin: 0 16px;
+}
+
+
+
+
+
+#pagination{
+	background: none repeat scroll 0 0 #eee;
+    float: left;
+    padding: 5px;
+    text-align: left;
+    width: 774px;
+    
+	border: 1px solid #e0e0df;
+	border-radius: 3px;
+	color: #FFFFFF;	
+}
+
+#pagination a{
+	background: #92278F;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    padding: 2px 6px;
+    font-size:15px;
+}
+#pagination a.active{
+    font-weight:bolder;
+    text-decoration:underline;
+}
+#pagination a.vorige, #pagination a.volgende{
+	background: none;	
+}
+
+#pagination a.vorige{
+	background: url("/img/custom/allamericansports.nl/ic_vorige.png") no-repeat scroll left 3px transparent;
+    padding: 0 0 0 10px;
+}
+
+#pagination a.volgende{
+	background: url("/img/custom/allamericansports.nl/ic_volgende.png") no-repeat scroll right 3px transparent;
+    padding: 0 10px 0 0;
+}
+
+
+
+
+
+.detail #content{
+    width: 765px;
+}
+
+#detail{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E0E0DF;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    padding: 10px;
+    width: 738px;
+}
+
+#detail #product{
+	border: 1px solid #E0E0DF;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    padding: 0 0 10px;
+    width: 377px;
+}
+
+#detail #product ul#images{
+	margin-top: 5px;
+}
+
+#detail #info{
+	float: left;
+    padding: 0 0 0 15px;
+    width: 344px;
+}
+
+#detail #info h1{
+	margin-bottom: 5px;
+}
+
+#maat_kleur{
+	float: left;
+    width: 344px;
+}
+
+#maat{
+	float: left;
+    width: 344px;
+	margin-top: 6px;
+}
+
+#maat h2, #kleur h2{
+	color: #231f24;
+}
+
+#maat h2 span{
+	color: #973494;
+}
+
+#maat h2 span a{
+	color: #973494;
+}
+
+#maat ul li{
+	background: #F4F4F4;
+    border: 1px solid #CCCBCB;
+    float: left;
+    list-style-type: none;
+    width: 20px;
+	margin-left: 7px;
+}
+
+#maat ul li:first-child{
+	margin-left: 0;
+}
+
+#maat ul li.active{
+	background: #ff1f1f;
+	border: 1px solid #ff1f1f;
+}
+
+#maat ul li.absent{
+	background: url("/img/custom/allamericansports.nl/absent.gif") no-repeat left top;
+}
+
+#maat ul li.active a{
+	color: #fff;
+}
+
+#maat ul li a{
+	display: block;
+    padding: 3px 0;
+    text-align: center;
+}
+
+#maat ul#voorraad{
+	float: left;
+    margin-top: 6px;
+}
+
+#maat ul#voorraad li#instock,#maat ul#voorraad li#notinstock{
+	background: url("/img/custom/allamericansports.nl/ic_voorraad_niet.gif") no-repeat left top;
+    border: medium none;
+    float: none;
+    margin-left: 0;
+    margin-top: 2px;
+    padding: 1px 22px;
+    width: auto;
+	font-size: 12px;
+}
+
+#maat ul#voorraad li#instock{
+	background: url("/img/custom/allamericansports.nl/ic_voorraad_wel.gif") no-repeat scroll left top transparent;
+    margin-left: 0;
+}
+
+#levertijd{
+	float: left;
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+#kleur{
+	float: left;
+    width: 344px;
+	margin-top: 10px;
+}
+
+#kleur ul li{
+	border: 1px solid #cccbcb;
+    float: left;
+    list-style-type: none;
+    margin-left: 10px;
+    padding: 1px;
+}
+
+#kleur ul li.active{
+	border: 2px solid #92278F;
+    padding: 0;
+}
+
+#kleur ul li:first-child{
+	margin-left: 0;
+}
+
+#prijs{
+    float: left;
+    margin-right: 20px;
+    margin-top: 11px;
+    width: 160px;
+}
+
+#prijs .prijs{
+	background: url("/img/custom/allamericansports.nl/bg_detail_prijs.png") no-repeat scroll right top #F3F3F3;
+	border: 1px solid #E0E0DF;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    font-size: 24px;
+    width:158px;
+    text-align:center;
+    padding: 27px 0 27px 0;
+}
+
+#combinatiekorting #prijs .prijs{
+	padding: 15px 30px;
+}
+
+#prijs .prijs img{
+	margin-bottom: 10px;
+}
+
+#prijs .prijs span{
+	color: #9f9f9f;
+	font-size: 16px;
+	font-weight:bold;
+	text-decoration:line-through;
+
+}
+
+#prijs .button{
+	float: left;
+}
+
+#prijs .button a{
+	background: url("/img/custom/allamericansports.nl/bg_button_sporttas.gif") repeat-x left top;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    display: block;
+    padding: 7px 5px;
+    width: 150px;
+}
+
+#prijs .button a:hover{
+	text-decoration: underline;
+}
+
+#prijs .button a span{
+	background: url("/img/custom/allamericansports.nl/ic_button_sporttas.png") no-repeat scroll right 8px transparent;
+    padding: 5px 60px 5px 10px;
+}
+
+
+#klantenservice{
+	float: left;
+    line-height: 21px;
+    margin-top: 21px;
+    width: 164px;
+}
+
+#klantenservice ul li{
+	border-top: 1px solid #eceaea;
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 8px 0;
+    width: 159px;
+}
+
+#klantenservice ul li:first-child{
+	border-top: none;
+	padding-top: 0;
+}
+
+#klantenservice ul li.klantenservice{
+	font-size: 16px;
+}
+
+#klantenservice ul li span{
+	color: #AAABAE;
+    font-size: 11px;
+}
+
+#klantenservice ul li ul li{
+	border: none;
+	width: auto;
+	padding: 0;
+}
+
+#klantenservice ul li ul li.image{
+	float: left;
+    list-style-type: none;
+    margin: 0;
+	padding: 0;
+	width: 40px;
+}
+
+
+
+ul#images li{
+	border: 1px solid #e0e1e3;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    
+    padding: 0;
+	list-style-type: none;
+	height: 70px;
+}
+
+#combinatiekorting{
+	background: url("/img/custom/allamericansports.nl/bg_combinatiekorting.png") no-repeat scroll right top transparent;
+    border: 1px solid #E5E5E5;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    margin-top: 20px;
+    padding: 15px 20px;
+    position: relative;
+    width: 718px;
+}
+
+#combinatiekorting h2{
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+#combinatiekorting ul li{
+	float: left;
+    list-style-type: none;
+    margin-left: 35px;
+    text-align: center;
+}
+
+#combinatiekorting ul li.is{
+	margin-top: 24px;
+}
+
+#combinatiekorting ul li h2{
+	font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+#combinatiekorting #prijs{
+	margin-left: 40px;
+    position: absolute;
+    right: -6px;
+    top: 8px;
+}
+
+#combinatiekorting #prijs .prijs{
+	background: none repeat scroll 0 0 #FFFFFF;
+	margin-top: 10px;
+}
+
+#combinatiekorting #prijs p{
+	font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+}
+
+
+#productinformatie{
+	width: 758px;
+    border: 1px solid #e0e0df;
+    border-top-width: 0;
+    border-radius: 3px;
+	background: #fff;
+    float: left;
+	margin-top: 20px;
+}
+
+#productinformatie ul#tabs{
+	background: none repeat scroll 0 0 #E5E5E5;
+    float: left;
+    width: 758px;
+}
+
+#productinformatie ul#tabs li{
+    float: left;
+    list-style-type: none;
+    margin-left: 0;
+    padding: 0;
+	border-left: 1px solid #FFF;
+}
+
+#productinformatie ul#tabs li:first-child{
+	border-left: none;	
+}
+
+#productinformatie ul#tabs li a{
+	border-color: #E5E5E5;
+    border-style: solid;
+    border-width: 1px 1px 0;	
+}
+
+#productinformatie ul#tabs li:first-child a{
+	border-left: none;
+}
+
+#productinformatie ul#tabs li:first-child a:hover{
+	border-left: none;
+}
+
+#productinformatie ul#tabs li a:hover{
+	background: #fff;
+	border-width: 1px 1px 0;
+	border-style: solid;
+	border-color: #e5e5e5;
+}
+
+#productinformatie ul#tabs li a{
+	color: #231F20;
+    display: block;
+    margin: 0;
+    padding: 8px 15px;
+}
+
+.text{
+	float: left;
+	padding: 20px 10px;
+}
+
+.beoordelingen{
+	float: left;
+    padding: 10px;
+}
+
+.beoordelingen .text{
+	padding: 10px 0 0;
+}
+
+.beoordeling{
+	background: #F4F4F4;
+    border: 1px solid #E0E0DF;
+    float: left;
+    padding: 10px;
+}
+
+.naam{
+	color: #922790;
+    float: left;
+    font-size: 12px;
+    margin-right: 5px;
+    text-decoration: underline;
+}
+
+.datum{
+	color: #A3A4A7;
+    float: left;
+    font-size: 12px;
+}
+
+.beoordelingen h2{
+	float: left;
+}
+
+.beoordelingen .sterren{
+	float: left;
+    margin: 3px 0 0 5px;
+}
+
+
+
+
+
+
+ul li{
+	/*background: url("/img/custom/allamericansports.nl/_ic_bulletlist.png") no-repeat left 7px transparent;*/
+	padding: 0 10px;
+	/*margin-left: 0;*/
+}
+
+
+
+
+
+
+
+
+#uitgelicht{
+	background: url("/img/custom/allamericansports.nl/border_uitgelicht.gif") repeat-x left top;
+    float: left;
+    margin-top: 5px;
+    width: 980px;
+}
+
+#uitgelicht .image{
+	border: 1px solid #27517e;
+	float: left;
+	margin-right: 46px;
+	width: 412px;
+}
+
+#uitgelicht .text{
+	padding-left: 0;
+    width: 480px;
+	float: left;
+}
+
+
+#uitgelicht a.button{
+	float: left;
+	width: 110px;
+	margin-top: 20px;
+}
+
+
+
+/* Hoofdnavigatie ================================================================================ */
+
+.main-menu{
+	background: none repeat scroll 0 0 #2C2829;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    width: 980px;
+}
+.purple-menu{
+    background:none;
+    width: 785px;    
+}		
+.main-menu ul{
+	background: #2C2829;
+}
+		
+.main-menu ul li{
+    float: left;
+}
+
+.main-menu ul li.last{
+	float: right;
+}
+
+.main-menu ul li.last a{
+	border-radius: 3px;
+}
+
+.main-menu ul li.af a{
+	border-right: 1px solid #696868;
+}
+			
+.main-menu ul li a{
+	background: #2C2829;
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    padding: 8px 15px;
+    text-decoration: none;
+	font-weight: normal;
+	border-left: 1px solid #696868;
+}
+.purple-menu ul li a{
+    border-left: 1px solid #fff;
+	background: #902D8D;
+    margin-right:0;
+    margin-bottom:1px;    
+    padding: 8px 10px;
+}
+.purple-menu ul li:first-child a,.purple-menu ul li:last-child a{
+    border-radius: 0 3px 3px 0;
+	background: #902D8D;    
+}		
+
+    			
+.main-menu ul li:first-child a{
+	border-left: none;	
+	border-radius: 3px 0 0 3px;
+}
+				
+.main-menu ul li a:hover{
+	background: #963293;
+}
+
+.main-menu ul li.current-menu-item a{
+	background: none repeat scroll 0 0 #CD202C;
+    border-radius: 5px 5px 5px 5px;
+	border: 1px solid #DC5861;
+}
+
+.main-menu ul li a.active{
+	font-weight:bold;
+}
+
+
+
+
+/* Hoofdnavigatie dropdown ================================================================================ */
+
+
+/* Subnavigatie ================================================================================ */
+
+
+.sub-menu{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E0E0DF;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+    width: 185px;
+	margin-bottom: 20px;
+}
+
+.sub-menu ul{
+	padding: 0 13px;
+}
+
+.sub-menu ul li{
+	background: url("/img/custom/allamericansports.nl/submenu_li.gif") repeat-x left top;
+}
+
+.sub-menu ul li:first-child a{
+	border: none;
+}
+
+.sub-menu ul li a{
+	background: url("/img/custom/allamericansports.nl/ic_submenu_a.png") no-repeat scroll left 14px transparent;
+    border-top: 1px solid #E0E0DF;
+    color: #231F20;
+    display: block;
+    font-size: 14px;
+    margin: 1px;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.sub-menu ul li a:hover, .sub-menu ul li a.active{
+	background: url("/img/custom/allamericansports.nl/ic_submenu_a_hover.png") no-repeat left 14px transparent;
+	text-decoration: none;
+	color: #902d8d;	
+}
+.sub-menu ul li a.active{
+    font-weight:bolder;
+}
+
+/* Service navigatie ================================================================================ */
+
+.service-menu{
+	float: right;
+}
+		
+.service-menu ul{
+	
+}
+		
+.service-menu ul li{
+    float: left;
+}
+			
+.service-menu ul li a{
+    color: #FFFFFF;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 5px 13px 8px;
+    text-decoration: none;
+	border-right: 1px solid #919194;
+}
+				
+.service-menu ul li:first-child a{
+	border-left: 1px solid #919194;	
+}
+				
+.service-menu ul li a:hover{
+	text-decoration: underline;
+}
+
+.service-menu ul li.current-menu-item a{
+   
+}
+
+
+/* Extra navigatie ================================================================================ */
+
+
+.extra-menu{
+	float: left;
+}
+
+.extra-menu ul li{
+	float: left;
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.extra-menu ul li a{
+	color: #FFFFFF;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 5px 13px 8px;
+    text-decoration: none;
+	border-right: 1px solid #919194;
+}
+.extra-menu ul li a.active{
+    font-weight:bold;
+}
+
+
+.extra-menu ul li:first-child a{
+	border-left: none;
+}
+
+.extra-menu ul li a:hover{
+	text-decoration: underline;
+}
+
+
+.extra-menu_1{
+	float: right;
+}
+		
+.extra-menu_1 ul li{
+    float: left;
+    list-style-type: none;
+    margin-left: 0;
+}
+			
+.extra-menu_1 ul li a{
+    color: #AAABAE;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 0;
+    text-decoration: none;
+}
+				
+.extra-menu_1 ul li:first-child a{
+		
+}
+				
+.extra-menu_1 ul li a:hover{
+	text-decoration: underline;
+}
+
+.extra-menu_1 ul li.current-menu-item a{
+   
+}
+
+
+
+
+
+/* Sidebar navigatie ================================================================================ */
+			
+	
+/* Extra navigatie ================================================================================== */	
+
+	
+/* Footer navigatie ================================================================================= */
+
+.footer-menu{
+	float: left;
+}
+
+.footer-menu ul{
+	list-style-type: none;
+}
+
+.footer-menu ul li{
+	float: left;
+    margin-left: 0;
+    width: 208px;
+}
+
+.footer-menu ul li ul{
+	margin: 10px 0 0 -10px;
+}
+
+.footer-menu ul li ul.social_media{
+	width: 180px;
+	margin-top: 17px;
+	margin-left: 0;
+}
+.footer-menu li.social_media{
+	width: 148px;
+
+}
+
+.footer-menu ul li a{
+	background: url("/img/custom/allamericansports.nl/ic_footermenu.png") no-repeat scroll left 3px transparent;
+    color: #F4F2E4;
+    font-size: 16px;
+    padding: 0 0 0 10px;
+    text-decoration: none;
+}
+
+.footer-menu ul li ul li a{
+	background: none;
+	font-size: 12px;
+	color: #AAABAE;
+	line-height: 20px;
+}
+.footer-menu ul li ul li a.active{
+    font-weight:bold;
+}
+
+.footer-menu ul li ul li.twitter a{
+	background: url("/img/custom/allamericansports.nl/twitter.png") no-repeat scroll left top transparent;
+    padding: 6px 33px;
+}
+
+.footer-menu ul li ul li.twitter{
+	margin-bottom: 18px;
+}
+
+.footer-menu ul li ul li.facebook a{
+	background: url("/img/custom/allamericansports.nl/facebook.png") no-repeat scroll left top transparent;
+    padding: 6px 33px;
+}
+
+.footer-menu ul li:first-child a{
+	border: none;
+}
+
+.footer-menu ul li a:hover{
+	text-decoration: underline;
+}
+
+/* Footer ================================================================================ */
+
+
+#footer {
+    background: none repeat scroll 0 0 #272324;
+    float: left;
+    width: 100%;
+}
+
+#footertop{
+    height: 28px;
+    margin: 0 auto;
+    padding: 25px 0;
+    position: relative;
+    width: 980px;
+}
+
+.aanmelden_nieuwsbrief{
+	color: #FFFFFF;
+}
+
+.aanmelden_nieuwsbrief h2{
+	float: left;
+	font-size: 16px;
+	color: #fff;
+	margin: 5px 0 0 0;
+}
+
+.aanmelden_nieuwsbrief .field{
+	background: url("/img/custom/allamericansports.nl/bg_aanmelden_nieuwsbrief.png") no-repeat scroll left top transparent;
+    float: left;
+    margin: 0 5px 0 25px;
+    padding: 6px 5px;
+    width: 255px;
+	color: #959595;
+}
+
+.aanmelden_nieuwsbrief .button{
+	background: none repeat scroll 0 0 #A42CA1;
+    border-radius: 3px 3px 3px 3px;
+    float: left;
+}
+
+.aanmelden_nieuwsbrief .button a{
+    color: #FFFFFF;
+    display: block;
+    font-size: 12px;
+    padding: 6px 15px;
+}
+
+#footerinner{
+	background: url("/img/custom/allamericansports.nl/line_footer.gif") repeat-x scroll left top transparent;
+    height: 165px;
+    margin: 0 auto;
+    padding: 25px 0;
+    position: relative;
+    width: 980px;
+}
+
+#footertop #logos{
+	border-top: 1px solid #EDEDEC;
+    bottom: 80px;
+    left: 0;
+    padding-top: 7px;
+    position: absolute;
+}
+
+#footertop #logos ul{
+	float: left;
+    padding: 5px 171px;
+    width: 638px;
+}
+
+#footertop #logos ul li{
+	float: left;
+    list-style-type: none;
+    margin-left: 29px;
+}
+
+#footertop #logos ul li:first-child{
+	margin-left: 0;
+}
+
+#footertop .contact{
+	font-size: 13px;
+	color: #fff;
+	line-height: 22px;
+}
+
+#footertop .contact ul{
+	float: left;
+    width: 215px;
+	list-style-type: none;
+}
+
+#footertop .contact ul li{
+	padding-left: 0;
+	margin-left: 0;
+}
+
+#footertop .contact ul li a{
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+
+#footertop .contact h2{
+	color: #fff;
+	font-size: 16px;
+	border-bottom: 0;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+
+#footerbottom{
+	background: url("/img/custom/allamericansports.nl/line_footer.gif") repeat-x scroll left top transparent;
+    height: 19px;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 980px;
+}
+
+#aceview{
+	float: left;
+}
+
+#aceview a{
+	background: url("/img/custom/allamericansports.nl/ic_aceview.png") no-repeat scroll left top transparent;
+    color: #A2A2A5;
+    font-size: 12px;
+    padding: 2px 25px;
+    text-decoration: none;
+}
+
+#copyright{
+	color: #AAABAE;
+    float: right;
+    margin-right: 10px;
+}
+
+#beforefooter{
+	clear:both;
+	width:980px;		
+	margin: 0 auto;
+	
+}
+
+#sitemap{
+
+	display:block;
+	position:relative;
+	width: 980px;
+	margin: 0 auto;
+	padding-top:20px;
+	padding-bottom:10px;
+	overflow:hidden;
+
+}
+#sitemap ul{
+	
+	margin-top:5px;
+	margin-bottom:5px;
+	float:left;
+	width:160px;
+	
+
+}
+#sitemap .catagory{
+	float:left;
+	width:160px;
+	
+
+}
+    #sitemap ul li{
+
+	list-style:none;
+	margin-bottom:2px;
+	margin-left:-10px;
+}
+
+#beforefooter #logos{
+	border-top: 1px solid #EDEDEC;
+    left: 0;
+    padding-top: 7px;
+	border-bottom: 1px solid #EDEDEC;
+	overflow:hidden;
+   
+}
+
+#beforefooter #logos ul{
+	float: left;
+    padding: 5px 30px; /*was 171px */
+    width: 938px;
+}
+
+#beforefooter #logos ul li{
+	float: left;
+    list-style-type: none;
+    margin-left: 27px;
+}
+
+#beforefooter #logos ul li:first-child{
+	margin-left: 0;
+}
+/* ======================================================================================= */
+
+.alignright {
+	float:right;
+	margin:0 0 10px 10px;
+	padding:2px;
+	border:1px solid #eee;
+}
+
+#fldsearch{
+	border:none;
+	height:25px;
+
+	margin-top:-12px;
+	margin-left:-8px;
+	width:250px;
+	color:#333;
+/*	background-color:#999;
+	position:absolute;*/
+}
+
+.fldnewsletter{
+	border:none;
+	height:25px;
+	margin-top:-2px;
+	margin-left:-2px;
+	width:250px;
+	color:#333;
+	/*background-color:#999;
+	position:absolute;*/
+}
+
+#buttons{
+	text-align:right;
+	line-height:20px;
+	width:90%;	
+}
+
+.checkOuts {
+	
+
+	color:#000;
+}
+
+.checkOuts {
+	clear:both;
+	padding:20px 0 0 0;
+	margin:12px 0 0 0;
+	font-family:Arial, sans-serif, Tahoma, Verdana;
+	font-size:12px;
+}
+
+.checkOuts .personalInfo, .checkOuts .checkPayment {
+	display:inline-block;
+	float:left;
+}
+
+.checkOuts .personalInfo {
+	width:204px;
+	text-align:left;
+	margin:0 60px 0 70px;
+}
+.checkOuts .personalInfo label {
+	display:block;
+}
+
+.checkOuts .personalInfo.passReset{
+    width:300px;
+}
+#reset{
+    width:123px!important;
+}
+
+.tabs li {
+	list-style:none;
+	display:inline;
+}
+
+.tabs a {
+	padding:5px 10px;
+	display:inline-block;
+	/*background:#666;*/
+	color:#fff;
+	text-decoration:none;
+}
+
+.tabs a.active {
+	background:#fff;
+	color:#000;
+}
+.serviceblock{
+    border-radius: 3px 3px 3px 3px;
+	width:185px;	
+	border:#E0E0DF solid 1px;    
+}
+.serviceblock p {
+ padding:15px;   
+}
+#clientService{
+    border-radius: 3px 3px 3px 3px;
+    height:72px;
+	width:185px;
+    border:#E0E0DF solid 1px;
+	
+}
+
+#clientService #img
+{
+	margin:10px;
+	float:left;
+}
+
+#clientService #phone
+{
+	margin:15px;
+	text-align:center;
+	font-weight:bold;
+}
+
+#clientService #phone span{
+	font-weight:normal;
+	color:#92278F;
+}
+
+#tabs1, #tabs2{
+        margin-top:30px;
+	padding:10px;	
+}
+
+/* =======================================================
+Styling by Biswa================================ */
+#loginbox{
+	width:46.5%;
+	height:240px;
+}
+#accountbox{
+	width:40%;
+	margin-left:1%;
+	height:240px;
+}
+.round-bg{
+	display:inline-block;
+	float:left;
+	background:#F2F2F2;
+	padding:20px 3%;
+	border:1px solid #e2e2e2;
+	-moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#F2F2F2'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#F2F2F2)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #FFFFFF,  #F2F2F2);
+}
+#loginbox p{
+	padding:0 0 20px 0;
+	font-weight:bold;
+}
+a.button-login{
+	-moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+	background:#92278f;
+	padding:5px 10px;
+	display:block;
+	min-width:80px;
+	max-width:80%;
+	width:80px;
+	color:#FFF;
+	text-align:center;
+	margin-top:10px;
+}
+a.button-login:hover{
+	background:#2c2829;
+}
+.txtfld{
+	margin-bottom:10px;
+	width:50%;
+	margin-right:15px;
+}
+.lvl{
+	min-width:90px;
+	padding-right:10px;
+	display:inline-block;
+}
+a.change-pwd{
+	color:#92278f;
+	text-decoration:underline;
+	padding-top:10px;
+	display:block;
+}
+.accountbox-bg{
+	height:240px;
+}
+
+a.button-account{
+	-moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+	background:#92278f;
+	padding:5px 10px;
+	display:inline-block;
+	min-width:150px;
+	max-width:80%;
+	width:150px;
+	color:#FFF;
+	text-align:center;
+	margin-top:10px;
+}
+a.button-account:hover{
+    background:#2c2829;
+}
+
+
+
+
+#createaccount{
+	width:85%;
+	padding:20px 0 20px 15%;
+}
+#createaccount .txtfld{
+	width:25%;
+}
+
+#basket{
+	width:94%;
+}
+tr.basket-heading{
+	background:#dedfe3;
+	border:1px solid #CCC;
+	color:#92278f;
+	font-weight:bold;
+	font-size:14px;
+}
+.basket-box td{
+	padding:8px 20px;
+	border:1px solid #CCC;
+}
+.basket-details {
+	background:#f1f1f1;
+	border-top:1px solid #bfbfbf;
+}
+.basket-footer {
+	background:#7b7978;
+	border-top:2px solid #666;
+}
+.basket-footer td{
+	border-color:#666;
+	color:#FFF;
+	text-shadow:1px 1px 1px #666666;
+}
+
+
+
+
+
+#checkout{
+	overflow:hidden;
+}
+.checkOuts h4{
+	font-size:18px;
+	color:#92278f;
+	font-weight:normal;
+	margin-bottom:20px;
+}
+.checkOuts .personalInfo {
+	width:45%;
+	text-align:left;
+	margin:0 0 20px 4%;
+	
+}
+.checkOuts .personalInfo label {
+	display:inline-block;
+	min-width:140px;
+	padding-right:10px;
+}
+.checkOuts .checkPayment{
+	width:30%;
+	text-align:left;
+	margin-left:5%;
+}
+
+
+
+
+#sendmethod h4,#paymethod h4{
+	margin-bottom:20px;
+}
+.type_radio{
+	padding:8px 1%;
+	width:98%;
+	margin:2px 0;
+}
+
+
+
+#paymethod .round-bg{
+	width:94%;
+}
+#paymethod .tab{
+	margin-top:0;
+}
+.paymethod-radiobg{
+	background:#F2F2F2;
+}
+
+
+
+
+#checkout-final .round-bg{
+	width:94%;
+	margin-bottom:20px;
+}
+
+
+#checkout-final h4{
+	background:#F2F2F2;	
+	margin-bottom:20px;
+    
+}
+#checkout-final h4 a{
+	color:#92278f;
+}
+#checkout-final label{
+	display:inline-block;
+	min-width:150px;
+	padding:10px;
+}
+#checkout-final p{
+	display:inline-block;
+	padding:10px;
+}
+
+
+#myaccount  .round-bg{
+	width:94%;
+}
+
+#myaccount .txtfld{
+	width:30%;
+}
+
+#myaccount .lvl{
+	width:180px;
+}
+
+/*
+ * jQuery Nivo Slider v2.6
+ * http://nivo.dev7studios.com
+ */
+/* The Nivo Slider styles */
+.nivoSlider {position:relative;}
+.nivoSlider img {position:absolute;top:0;left:0;}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {position:absolute;top:0;left:0;width:100%;height:100%;border:0;padding:0;margin:0;z-index:6;display:none;}
+/* The slices and boxes in the Slider */
+.nivo-slice {display:block;position:absolute;z-index:5;height:100%;}
+.nivo-box {display:block;position:absolute;z-index:5;}
+/* Caption styles */
+.nivo-caption {position:absolute;left:0px;bottom:0;background:#000;color:#fff;opacity:0.8;width:100%;z-index:8;}
+.nivo-caption p {padding:5px;margin:0;}
+.nivo-caption a {display:inline !important;}
+.nivo-html-caption {display:none;}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {position:absolute;top:45%;z-index:9;cursor:pointer;}
+.nivo-prevNav {left:0;}
+.nivo-nextNav {right:0;}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {position:relative;z-index:9;cursor:pointer;}
+.nivo-controlNav a.active {font-weight:bold;}
+/*
+Custuom theme nivo slider.
+Author Anton Boutkam
+Based on: http://nivo.dev7studios.com
+Original skin Name: Orman Theme
+Original Author: Gilbert Pellegrom & Orman Clark
+Author URI: http://dev7studios.com
+*/
+.theme-nui.slider-wrapper { width:694px;height:266px;margin:0 auto;padding-top:0;position:relative;}
+.theme-nui .nivoSlider {position:relative;width:694px;height:266px;background:url(/img/icons/loading.gif) no-repeat 50% 50%;}
+.theme-nui .nivoSlider img {position:absolute;top:0;left:0;display:none;width:694px; height:266px;}
+.theme-nui .nivoSlider a {border:0;display:block;}
+.theme-nui .nivo-controlNav {position:absolute;right:13px;bottom:11px;margin-left:0; /* Tweak this to center bullets */}
+.theme-nui .nivo-controlNav a {display:block;width:9px;height:11px;background:url("/img/icons/bullets.png") no-repeat;text-indent:-9999px;border:0;margin-right:3px;float:left;}
+.theme-nui .nivo-controlNav a.active {background-position:-10px 0;}
+
+
+
+.theme-nui .nivo-directionNav{height:300px;}
+.theme-nui .nivo-directionNav a {display:block;width:25px;height:300px;background:url(/img/custom/allamericansports.nl/ic_prevnext.png) no-repeat;text-indent:-9999px;border:0;top:110px;}
+.theme-nui a.nivo-nextNav {background-position:-25px 0;}
+.theme-nui a.nivo-prevNav {background-position:0 0;}
+
+.theme-nui .nivo-caption {font-family: Helvetica, Arial, sans-serif;}
+.theme-nui .nivo-caption a { color:#fff;border-bottom:1px dotted #fff;}
+.theme-nui .nivo-caption a:hover { color:#fff;}
+/* .theme-nui .ribbon {background:url(/img/custom/allamericansports.nl/ribbon.png) no-repeat;width:111px;height:111px;position:absolute;top:-3px;left:480px;z-index:300;} */
+
+#player{
+	width:100%;
+	padding-top:10px;
+	text-align:center
+}
+
+.offer-nl{
+	position:absolute;
+	width:101px;
+	height:75px;
+	right:0;
+	top:0;
+	background:url("/img/custom/allamericansports.nl/offer_nl.png") no-repeat;
+	z-index:9999;
+}
+
+.offer-gb{
+	position:absolute;
+	width:101px;
+	height:75px;
+	right:0;
+	top:0;
+	background:url("/img/custom/allamericansports.nl/offer_gb.png") no-repeat;
+	z-index:9999;
+}
+#gallery_output{
+	position:relative;
+    width:377px;	
+    height:308px;        
+}
+a.allbutton {
+    background: url("/img/custom/allamericansports.nl/bg_button_sporttas.gif") repeat-x left top;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    display: block;
+    padding: 7px 5px;
+    width:108px;
+}
+#save_review{
+    width:100px;
+}
+.error{background-color:#ff8787;}
+#preview_img{position:absolute;padding:10px;background:url(/img/custom/allamericansports.nl/previewbg.png);display:none;}
+
+#cms_page p{margin:10px 0 0 0;}
+
+
+
+#banner_overlay{position:absolute;top:0;left:0;height:200px;width:265px;margin-top:30px;margin-left:400px;z-index:70;color:white;font-size:20px;text-align:right;}
+#banner_overlay div.layer{width:100%;height:100%;position:absolute;top:0;display:none;line-height:50px;text-align:center;font-size:20px;}
+#banner_overlay div.layer{color:white;}
+#banner_overlay div.layer a{color:white;text-decoration:underline;}
+#banner_overlay div.layer a:hover{text-decoration:none;}
+#banner_overlay a{color:white;}
+
+.sizecharts{width:286px;margin:20px;height:250px;float:left;}

@@ -1,0 +1,35 @@
+<h2>Bezoekers log</h2>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Filter</div>
+            <form method="get" id="filterform">                             
+                <div style="margin:10px;">        
+                    <input type="hidden" name="current_page" id="fld_curr_page" value="%[current_page]%" />  
+                    
+                    <input type="radio" name="filter" class="filter checkbox" id="landingexit" checked="checked" value="landingexit"> 
+                    <label for="landingexit">Landingspagina / exitpagina</label><br>
+                    
+                    <input type="radio" name="filter" class="filter checkbox" id="landingconversion" value="landingconversion">
+                    <label for="landingconversion">Landingspagina / conversie<label><br>
+                            
+                    <input type="radio" name="filter" class="filter checkbox" id="refererconversion" value="refererconversion">
+                    <label for="refererconversion">Referer / conversie</label><br>                        
+                    
+                    <input type="radio" name="filter" class="filter checkbox" id="browserexit" value="browserexit">
+                    <label for="browserexit">Browser / exitpagina</label><br>
+                    
+                    <input type="radio" name="filter" class="filter checkbox" id="browserconversion" value="browserconversion">
+                    <label for="browserconversion">Browser / conversie</label><br>
+                </div>
+            </form>    
+        </div>
+    </div>
+
+    <div class="searchbox">
+      <div class="searchresults">
+        <div class="searchtitle">Bezoekers</div>            
+        <div id="visitors">%[visitors]%</div>                                     
+        <div class="clear"></div>
+        <center>%[paginate]%</center>         
+    </div>
+   </div>    

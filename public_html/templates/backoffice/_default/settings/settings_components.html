@@ -1,0 +1,196 @@
+<h2>Systeem instellingen</h2>
+<form id="modulefrm" method="post">
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">                
+                <div style="float:right;color:#555;">Modules</div>
+                <div class="clear"></div>                 
+            </div>
+            <div style="padding:10px;">
+                <table style="width:700px;">
+                    <tr><td colspan="2"><h2>Modules</h2></td></tr>
+                    <tr>
+                        <td>Webshop module</td>
+                        <td>
+                            <input type="hidden" name="modules[module_webshops]" value="0" />
+                            <input type="checkbox" class="module" name="modules[module_webshops]" %[module_webshops?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Voorraadbeheer met magazijnplan</td>
+                        <td>
+                            <input type="hidden" name="modules[module_stockpile]" value="0" />
+                            <input type="checkbox" class="module" name="modules[module_stockpile]" %[module_stockpile?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Metatags bij product in kunnnen voeren</td>
+                        <td>
+                            <input type="hidden" name="modules[module_metatags]" value="0" />
+                            <input type="checkbox" class="module" name="modules[module_metatags]" %[module_metatags?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr>    
+                    <tr>
+                        <td>Meta keywords bij product in kunnnen voeren</td>
+                        <td>
+                            <input type="hidden" name="modules[module_metakeywords]" value="0" />
+                            <input type="checkbox" class="module" name="modules[module_metakeywords]" %[module_metakeywords?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr>                                       
+                    <tr>
+                        <td>Registratie van barcodes</td>
+                        <td>
+                            <input type="hidden" name="modules[module_barcodes]" value="0" />
+                            <input type="checkbox" class="module" name="modules[module_barcodes]" %[module_barcodes?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr>                                                                                
+                    <tr>
+                        <td>Webshop cms</td>
+                        <td>
+                            <input type="hidden" name="modules[webshop_cms]" value="0" />
+                            <input type="checkbox" class="module" name="modules[webshop_cms]" %[webshop_cms?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Webshop menu editor</td>
+                        <td>
+                            <input type="hidden" name="modules[webshop_menu_editor]" value="0" />
+                            <input type="checkbox" class="module" name="modules[webshop_menu_editor]" %[webshop_menu_editor?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr>                    
+                    <tr>
+                        <td>Ondersteuning voor 3d afbeeldingen</td>
+                        <td>
+                            <input type="hidden" name="modules[3d_img]" value="0" />
+                            <input type="checkbox" class="module" name="modules[3d_img]" %[3d_img?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td>Wasvoorschriften</td>
+                        <td>
+                            <input type="hidden" name="modules[module_washing]" value="0" />
+                            <input type="checkbox" class="module" name="modules[module_washing]" %[module_washing?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr>                        
+                    <tr>
+                        <td>Is onderdeel / heeft als onderdeel</td>
+                        <td>
+                            <input type="hidden" name="modules[has_is_part]" value="0" />
+                            <input type="checkbox" class="module" name="modules[has_is_part]" %[has_is_part?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr>    
+                    <tr>
+                        <td>Product opties</td>
+                        <td>
+                            <input type="hidden" name="modules[product_options]" value="0" />
+                            <input type="checkbox" class="module" name="modules[product_options]" %[product_options?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr>                     
+                    <tr>
+                        <td>Producten relateren</td>
+                        <td>
+                            <input type="hidden" name="modules[relate_products]" value="0" />
+                            <input type="checkbox" class="module" name="modules[relate_products]" %[relate_products?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td>Producten uitlichten / in de spotlight zetten</td>
+                        <td>
+                            <input type="hidden" name="modules[product_spotlight]" value="0" />
+                            <input type="checkbox" class="module" name="modules[product_spotlight]" %[product_spotlight?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr>                     
+                    <tr>
+                        <td>Product groepen / sku's</td>
+                        <td>
+                            <input type="hidden" name="modules[product_groups]" value="0" />
+                            <input type="checkbox" class="module" name="modules[product_groups]" %[product_groups?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr>                          
+                    <tr>
+                        <td>Seo article generator</td>
+                        <td>
+                            <input type="hidden" name="modules[seo_article_generator]" value="0" />
+                            <input type="checkbox" class="module" name="modules[seo_article_generator]" %[seo_article_generator?'checked="checked"':'']% value="1"  />
+                        </td>
+                    </tr>     
+                    <tr><td colspan="2"><h2>Hosting</h2></td></tr>
+                    <tr>
+                        <td>Hostingpakket</td>
+                        <td>
+                            <select name="settings[hosting_package]" val="%[settings.hosting_package]%">
+								<option>Niet ingesteld</option>
+                                <option value="1.00G">Basic 1GB</option>
+                                <option value="2.00G">Premium 2GB</option>
+                                <option value="10.00G">Large 10GB</option>
+                                <option value="50.00G">VPS</option>
+                            </select>
+
+                        </td>
+                    </tr>                                          
+                    					
+                    <tr><td colspan="2"><h2>Instellingen</h2></td></tr>
+                    <tr>
+                        <td>Systeemnaam</td>
+                        <td>
+                            <input type="text" name="settings[system_name]" value="%[settings.system_name]%" />                            
+                        </td>
+                    </tr>                      
+                    <tr>
+                        <td>Paypal account (E-mailadres)</td>
+                        <td>
+                            <input type="text" name="settings[paypal_account]" value="%[settings.paypal_account]%" />                            
+                        </td>
+                    </tr>                      
+                    <tr>
+                        <td>Pad naar Ideal bestanden (vanaf de document root)</td>
+                        <td>
+                            <input type="text" name="settings[ideal_path]" value="%[settings.ideal_path]%" />                            
+                        </td>
+                    </tr>           
+                    <if:exact_online>
+                        <tr>
+                            <td>E-mailadres voor status e-mail berichten Exact online</td>
+                            <td>
+                                <input type="text" name="settings[exact_online_status_mails]" value="%[settings.exact_online_status_mails]%" />                            
+                            </td>
+                        </tr>                                                           
+                    </if:exact_online>
+                                 
+                    <!--
+                    <tr><td><a href="#">Helpdesk / technische ondersteuning</a></td><td>20 euro per maand</td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Barcode generatie</a></td><td>1x 10 euro</td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Barcode scanner</a></td><td>1x 400 euro</td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">1 Gig extra disk space</a></td><td>10 euro per maand</a></td><td><a href="">bestellen</a></td></tr>
+                    
+                    
+                    
+                    
+                    <tr><td><a href="#">Sms integratie</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>650 euro / 5000 sms berichten</td><td><a href="">bestellen</a></td></tr>
+                    
+                    <tr><td><a href="#">Mailchimp module</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>1x 50 euro</td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Magento connector</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>1x 50 euro</td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Afas connector</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>1x 250 euro</td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Leveranciers login</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>1x 30 euro <a href="">gratis 30 dagen trial</a></td><td><a href="">bestellen</a></td></tr>
+                    
+                    <tr><td><a href="#">Mail integratie</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>100 euro setup</a></td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Google calendar sync</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>50 euro setup</a></td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Google contacts sync</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>50 euro setup</a></td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Daily backup</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>50 euro per/maand</a></td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Online product cataloguev</td><td><input type="checkbox" class="checkbox" name="" /> </td><td>100 setup</a></td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Product staffel korting</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>150 setup</a></td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Staff commission reports + settings</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>150 setup</a></td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Report builder</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>150 setup</td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Custom repor</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>on request</td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Order at supplier</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>100 setup</td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Stock notifications</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>100 setup</td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Simple retail webshop</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>500 setup</td><td><a href="">bestellen</a></td></tr>
+                    <tr><td><a href="#">Setup hulp Customsation + DNS</a></td><td><input type="checkbox" class="checkbox" name="" /> </td><td>150 setup</td><td><a href="">bestellen</a></td></tr>
+                    -->
+                </table>
+                <input type="submit" value="Wijzigingen opslaan" />
+            </div>
+            <div class="clear"></div>         
+        </div>
+    </div>
+</form>

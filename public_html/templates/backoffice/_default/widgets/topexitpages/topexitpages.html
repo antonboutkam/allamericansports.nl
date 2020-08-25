@@ -1,0 +1,31 @@
+<div  class="views full_view" style="width:680px;margin:10px;margin-bottom:0px;display:%[current_view=full?'block':'none']%;">
+	<table style="margin:10px;margin-bottom:0px;;"> 
+		<tr class="row%[oddeven]%">
+			<td>Aantal</td>
+			<td>Pagina</td>
+		</tr>                     
+		<for:top_exit_pages>
+		<tr class="row%[oddeven]%">
+			<td>%[quantity]%</td>
+			<td><a href="%[exitpage]%" title="%[exitpage]%" target="_blank">%[exitpage]%</a></td>
+		</tr>
+		</for:top_exit_pages>                
+	</table>
+	<div class="clear"></div>  
+</div>    
+<div  class="views half_view" style="margin:10px;margin-bottom:0px;display:%[current_view=half?'block':'none']%;">
+	<table style="margin:10px;margin-bottom:0px;;"> 
+		<tr class="row%[oddeven]%">
+			<td>Aantal</td>
+			<td>Pagina</td>
+		</tr>                     
+		<for:top_exit_pages>
+		<tr class="row%[oddeven]%">
+			<td>%[quantity]%</td>
+			<td><a href="%[exitpage]%" title="%[exitpage]%" target="_blank">%[exitpage]%</a></td>
+		</tr>
+		</for:top_exit_pages>                
+	</table>
+	<div class="clear"></div>  
+</div>                
+        

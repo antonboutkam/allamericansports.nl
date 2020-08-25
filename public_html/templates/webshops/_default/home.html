@@ -1,0 +1,44 @@
+<div id="content">
+
+    <div id="slideshow" class="banner cms" style="overflow:hidden;position:relative">
+        <div style="position:relative; height:266px; width:694px;overflow:hidden;">            
+		<!-- <img src="/img/overlay-header.png" style="position:absolute;top:0px;left:0px;height:266px;width:694px;z-index:7" /> -->
+           <div id="banner_overlay">
+                <for:banner_items>                                                        
+                    <div class="layer">%[overlaytext]%</div>
+                </for:banner_items>
+            </div>            
+            <div class="slider-wrapper theme-nui">
+                <div id="sliderx" class="bannerimgs">
+                    <for:banner_items>                        
+                        <a href="%[click_url]%" target="%[target]%" title="%[link_title]%">
+                        <img alt="%[image_alt]%" src="/img/banner/%[hostname]%/%[id]%.jpg" width="694" height="266"/>
+                        </a>
+                    </for:banner_items>
+                </div>            
+            </div>
+        </div>        
+    </div>    
+
+
+
+   <if:brandboxes.0.title>
+   <div id="Nokona">
+        <a title="%[brandboxes.0.title]%" href="%[brandboxes.0.click_url]%" target="_%[brandboxes.0.target]%"><img alt="%[brandboxes.0.alt_tag]%" src="%[brandboxes.0.brandbox_img_path]%" width="328" height="232"/></a>
+   </div>
+   </if:brandboxes.0.title>
+   <if:brandboxes.1.title>
+   <div id="Tanner-tees">
+        <a title="%[brandboxes.1.title]%" href="%[brandboxes.1.click_url]%" target="_%[brandboxes.1.target]%"><img alt="%[brandboxes.1.alt_tag]%" src="%[brandboxes.1.brandbox_img_path]%" width="328" height="232" /></a>
+   </div>
+   </if:brandboxes.1.title>
+   <div id="organisaties">
+        <ul>
+            <li><a href="%[root]%/%[lang]%/under-armour.html"><img src="/img/logos/underarmour.png" width="79" height="51" alt="Underarmour" /></a></li>
+            <li><a href="%[root]%/%[lang]%/rawlings.html"><img src="/img/logos/rawlings.png" width="110" height="51" alt="Rawlings" /></a></li>
+            <li><a href="%[root]%/%[lang]%/gk-elite.html"><img src="/img/logos/gk-elite.png" width="100" height="51" alt="Gk elite" /></a></li>
+            <li><a href="%[root]%/%[lang]%/skins.html"><img src="/img/logos/skins.png" width="82" height="51" alt="Skins" /></a></li>
+			<li><a href="%[root]%/%[lang]%/dreamlight.html"><img src="/img/logos/dreamlight.png" width="71" height="51" alt="Dreamlight" /></a></li>
+        </ul>
+   </div>
+</div>

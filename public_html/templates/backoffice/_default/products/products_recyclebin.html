@@ -1,0 +1,53 @@
+<h2>Prullenbak</h2>
+<input type="hidden" id="addtype" value="%[addtype]%" />
+<form>
+    <!--
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">%[lbl_search_product]%</div>
+            <div style="margin:10px;">
+                <div id="simple-search">
+                    <div style="margin:10px;">
+                        <input type="text" id="fld_search" name="query" class="searchfield" title="%[lbl_searchfield]%" value="%[query]%"/>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    -->
+    <div class="searchbox" id="searchresult">
+        <div class="searchresults">
+            <div class="searchtitle">
+                %[lbl_found_products]%                
+                <div style="float:right;color:#555;">%[rowcount]% %[lbl_products]% <a href="#" class="reload"><img width="20" class="middle" src="%[root]%/img/icons/reload.png" /></a></div>                
+                <div class="clear"></div>                 
+            </div>
+
+            <div class="clear"></div>
+            <div class="recyclebin_container" id="products_tbl_recyclebin">    
+                %[products_tbl_recyclebin]%
+            </div>                        
+        </div>
+    </div> 
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Acties</div>
+            <div style="margin:10px;">
+                <input id="select_all" type="submit" name="" value="Alles selecteren" />
+                <input id="invert_selection" type="submit" name="" value="Selectie omkeren" />
+                <input id="delete_selected" style="float:right;color:red" type="submit" name="" value="Selectie verwijderen" />
+                <input id="recycle_selection" style="float:right;color:green;margin-right:5px" type="submit" name="" value="Selectie terugzetten" /> 
+                
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div style="display:none" id="translated_messages">
+        <span id="remove_single">Weet u zeker dat u de afbeeldingen van dit product permanent wilt verwijderen?</span>
+        <span id="remove_batch">Weet u zeker dat u de afbeeldingen van deze producten permanent wilt verwijderen?</span>
+        <span id="empty_selection">U heeft geen producten geselecteerd om te verwijderen</span>
+        <span id="revert_batch">Weet u zeker dat u de geselecteerde producten wilt terugzetten?</span>
+        <span id="revert_item">Weet u zeker dat u dit product wilt terugzetten?</span>                
+    </div>
+</form>

@@ -1,0 +1,23 @@
+    <li class="searchbox %[width]%" id="%[widget_name]%">
+        <input type="hidden" value="%[accepted_sizes]%" class="accepted_sizes" />    
+        <div class="searchresults" style="height:275px;">
+            <div class="searchtitle">
+                %[widget_title]%                     
+                            
+                <a class="deletewidget tipsy" style="float: right; margin:5px;" title="%[lbl_removewidget]%">
+                    <img width="12" height="12" src="%[root]%/img/icons/delete.png" />
+                </a>
+                <if:can_grow>
+                    <a class="resizewidget" style="float: right; margin:5px;" title="%[lbl_resizewidget]%">                                        
+                        <img width="12" height="12" src="%[root]%/img/icons/resize-%[is_wide?'big':'small']%-16x16.png" />
+                    </a>
+                </if:can_grow>
+                <if:enable_widgetconfig>
+                    <a style="float: right; margin:5px;" href="/?_do=reconfig_%[widget_name_lc]%">                                        
+                        <img width="12" height="12" src="%[root]%/img/icons/config-icon2-16x16.png" />
+                    </a>                    
+                </if:enable_widgetconfig>                    
+            </div>
+            %[widget_content]% 	
+        </div>
+    </li>  

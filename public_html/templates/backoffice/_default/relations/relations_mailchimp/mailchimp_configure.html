@@ -1,0 +1,41 @@
+<form method="post" action="%[request_uri]%">
+<input type="hidden" name="_do" value="configure_mailchimp" />
+
+<input type="hidden" id="current_page" value="%[current_page]%" />
+<if:view not="picker"><h2>MailChimp instellen</h2></if:view>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">API Key</div>
+            <div style="margin:10px;">
+                <strong>MailChimp instellen</strong>
+                <p>
+                    Om te kunnen communiceren met MailChimp, is er een zogenaamde API key nodig en we hebben een lege lijst binnen MailChimp nodig zodat wij daar vanuit NuiCart gegevens aan toe kunnen voegen.                                                                   Allereerst heeft u natuurlijk een MailChimp account nodig, als u nog geen account voor MailChimp heeft, ga dan nu naar <a href="http://mailchimp.com" target="_blank">mailchimp.com</a> om een account aant te maken.
+                    De volgende stap is de API Key. Klink binnen mailchimp op uw eigen naam, dan op "Account settings" &raquo; "API Keys" en klik dan op "Create a key".
+                   U ziet nu ergens halverwege het scherm een reeks tekens die er ongeveer zo uitziet: 1f7ca5678896320ertyrd5fa2fb5b666-us7.
+                </p>
+                <p>
+                   <input type="text" name="mailchimp_apikey" value="%[mailchimp_apikey]%" /> &laquo; Vul hier de API key in                    
+                </p>
+                <strong>Lijst aanmaken</strong>
+                <p>
+                   Via de API key kunnen kan NuiCart communiceren met MailChimp. We synchroniseren onder andere alle e-mailadressen vanuit het systeem naar MailChimp.
+                   Waar mogelijk voegen we extra informatie toe aan de e-mailadressen in MailChimp zodat u gericht campagnes kan maken.
+                   Om e-mailadressen te kunnen synchroniseren is er een lijst nodig in MailChimp, die lijst kunnen wij niet geautomatseerd aanmaken.
+                   Ga daarom nu naar <a href="http://mailchimp.com" target="_blank">MailChimp</a> en klik nadat u bent ingelogd op "Lists" en dan op "Create List".
+                   Het systeem stelt een aantal vragen, waaronder een naam voor de lijst die u aanmaakt.
+                   Wij hebben die naam van u nodig zodat wij weten aan welke lijst wij gegevens toe kunnen voegen, noem de lijst bijvoorbeeld NuiCart of Nieuwsbrief.
+                   Welke naam u kiest maakt niet uit zolang u maar weet dat die lijst wordt gebruikt in de communicatie met NuiCart.        
+                   Zorg er voor dat HTML email is aangevinkt bij het aanmaken van de lijst want anders ontvangen bezoekers alleen maar tekst in hun e-mailberichten.
+                   Als u er niet uitkomt dan helpen wij u graag.                                                                                          
+                </p>
+                <p>
+                    <input type="text" name="mailchimp_listname" value="%[mailchimp_listname]%" /> &laquo; Vul hier de lijstnaam in
+                </p>
+                <p>
+                    <input type="submit" name="Opslaan" value="Instellingen opslaan" />
+                </p>
+                
+            </div>
+        </div>
+    </div>
+</form>

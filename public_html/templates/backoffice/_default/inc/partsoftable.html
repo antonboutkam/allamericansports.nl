@@ -1,0 +1,13 @@
+        <table>
+            <for:options>
+            <tr>
+                <if:mode not="view">
+                    <td style="width:16px;"><a href="#" rel="%[link_id]%" class="delete_%[from]%"><img src="%[root]%/img/icons/delete-icon-16x16.png" /></a></td>
+                </if:mode>
+                <td style="width:16px;">
+                    <a href="%[root]%/products/view.html?id=%[linked_product_id]%&iframe=1" class="%[iframe=1?'':'iframe']%"><img src="%[root]%/img/icons/info-icon-16x16.png" /></a>
+                </td>
+                <td>%[article_name]%</td>
+            </tr>
+            </for:options>
+        </table>

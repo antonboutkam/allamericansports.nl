@@ -1,0 +1,53 @@
+ <if:configuration>        
+        <div class="searchbox configuration_editor" style="display:%[show_editor]%;">
+            <div class="searchresults">
+                <div style="display: block;" class="add_customer searchtitle">
+                <if:view not="other_locations">%[lbl_others]%</if:view>
+                <if:view value="other_locations">
+                    <span style="text-transform:capitalize;">%[location_name]%</span> %[lbl_locationfor]% %[article_number]%, %[article_name]%
+                </if:view>
+                </div>                                  
+                    <div class="edit_content">                        
+                        <table>
+                            <tbody>                  
+                                <tr class="rowheader-static">
+                                    <if:view value="picker|mover|other_locations">
+                                        <td style="width:18px;">&nbsp;</td>
+                                    </if:view>                              
+                                    <td>%[lbl_path]%</td>
+                                    <td>%[lbl_rack]%</td>
+                                    <td>%[lbl_shelf]%</td>
+                                    <if:view not="other_locations">
+                                        <td>%[lbl_products_groups_shelf]%</td>                                    
+                                        <td>%[lbl_products_shelf]%</td>
+                                    </if:view>
+                                    <if:view value="other_locations">
+                                        <td>%[lbl_stock]% %[location_name]%</td>
+                                    </if:view>                                        
+                                </tr>
+                                <for:configuration>
+                                    <tr class="row%[oddeven]% center">
+                                        <if:view value="picker">
+                                            <td><a href="#" class="add_picker" title="%[lbl_choose]%" rel="%[id]%"><img src="%[root]%/img/icons/import-icon-16x16.png"/></a></td>
+                                        </if:view>
+                                        <if:view value="mover|other_locations">
+                                            <td><a href="#" class="move_picker" title="%[lbl_move_here]%" rel="%[id]%"><img src="%[root]%/img/icons/import-icon-16x16.png"/></a></td>
+                                        </if:view>                                                                                                            
+                                        <td>%[path]%</td>
+                                        <td>%[rack]%</td>
+                                        <td>%[shelf]%</td>
+                                        <if:view not="other_locations">
+                                            <td>%[product_groups]%</td>                                        
+                                            <td>%[product_count]%</td>
+                                        </if:view>                                        
+                                        <if:view value="other_locations">
+                                            <td>%[product_count]%</td>
+                                        </if:view>    
+                                    </tr>                                
+                                </for:configuration>                             
+                            </tbody>
+                        </table>                
+                    </div>                
+            </div>                    
+        </div>       
+</if:configuration>     

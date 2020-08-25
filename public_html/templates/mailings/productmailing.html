@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>%[title]%</title>
+    <style type="text/css">
+    <!--
+    body {
+            color: #484848;
+                    font-size: 11px;
+            font-family: 'Trebuchet MS';
+
+    }
+    .titel {
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 0.3em;
+            color: white;
+            background-color:#e24601;
+    }
+
+    .merk_type {
+            font-size: 12px;
+            color: white;
+            background-color:#e24601;
+    }
+
+    a, a:link, a:visited, a:active {
+        font-family: Trebuchet MS, serif;
+        font-size: 11px;
+        text-decoration: underline;
+        color: #e24601;
+    }
+    a:hover {
+        text-decoration: none;
+        color: #e24601;
+    }
+    .subtitel {font-size: 14px; color: #e24601; }
+    .prijs {
+            color: #E24601;
+            font-weight: bold;
+            font-size: 18px;
+    }
+    -->
+    </style>
+  </head>
+  <body text="#000000" bgcolor="#ffffff">
+    <p class="titel">LaptopCentrale - Nieuwsbrief</p>
+    <p>Geachte heer/mevrouw %[cp_name]%,</p>
+    <p>In deze nieuwsbrief wederom spetterende aanbiedingen van
+      Laptopcentrale.</p>
+    <p class="subtitel">Overzicht aanbiedingen</p>
+    <table style="border: 1px dashed rgb(204, 204, 204);" width="600px"
+      cellpadding="3" cellspacing="0">
+      <tbody>
+        <for:products>
+        <tr><td colspan="2" style="" class="merk_type">%[title]%</td></tr>
+            <tr>
+              <td rowspan="2" width="160px">
+                <div align="center">
+                    
+                    <a href="http://laptopcentrale.nl/product/%[id]%/%[article_name]%.html" target="_blank">
+                        <img width="200" height="200" src="http://laptopcentrale.nl/img/upload/200x200_%[id]%.jpg" border="0">
+                    </a>
+                </div>
+              </td>
+              <td align="left">
+                <ul>
+                  <li>%[cpu]% %[cpu_speed]% Mhz %[cpu_number]%</li>
+                  <li>%[mem_mb]%MB %[mem_type]% (2x2GB)</li>
+                  <li>%[diskcapacity]%GB %[disk_speed]%RPM %[disktype]%</li>
+                  <li>%[screendiameter]%in. %[screentype]% %[resolution]%</li>
+                  <li>%[dvdplayburn]%</li>
+                  <li>%[battery_cells]%-cell battery</li>
+                  <li>%[keyboardtype]% Standaard layout</li>
+                  <li>%[warranty]% maanden garantie</li>
+                  <li>%[os]% %[os_version]%</li>
+                  <li>%[videofamily]% %[videotype]%</li>
+                  <li style="%[wifi_standard?'list-item':'none']%">Wifi standaarden %[wifi_standard]%</li>
+                  <!-- <li>Voorraad: %[stock]% stuk(s)</li> -->
+                </ul>
+              </td>
+            </tr>
+            <tr><td align="right"><span class="prijs">&#8364; %[sale_price_vat]%,%[sale_price_vat_ct]%</span></td></tr>
+        </for:products>
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <p>Indien u een bestelling wilt plaatsen of verder wilt kijken,
+      verwijzen wij u door naar de <a
+        href="http://www.laptopcentrale.nl/" target="_blank">website</a>.</p>
+    <p>Alle laptops zijn in technisch en cosmetisch goede staat. Prijzen
+      incl. BTW en 3 maanden garantie.</p>
+    <p>Hartelijk dank voor uw interesse!</p>
+    <p>&nbsp;</p>
+    <p>Met vriendelijke groet,</p>
+    <p><a href="http://www.laptopcentrale.nl/" target="_blank">LaptopCentrale</a></p>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center; font-size: 9pt;"><a
+href="http://www.laptopcentrale.nl/nieuwsbrief-uitschrijven.php?adres=verkoop@laptopcentrale.nl"
+        target="_blank">Klik hier om u uit te schrijven voor de
+        Laptopcentrale nieuwsbrief</a></div>
+  </body>
+
+</html>
+
+<!--
+<html>
+    <head>
+        <style type="text/css">
+            
+            body, html {
+              background-color: #FF7322;
+              font-family: Arial;
+              font-size: 12px;
+              margin: 0px;
+            }
+
+            a {
+              color: #285dab;
+              text-decoration: underline;
+            }
+
+            a:hover {
+              color: #0090e3;
+            }
+            
+        </style>
+
+        <title>%[title]%</title>
+    </head>
+    <body>
+        <p style="background-color:green;">
+            %[content]%
+        </p>
+        <h2>Onze producten</h2>
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td bgcolor="#0090e3" style="background-color: #FF7322;">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td height="111">&nbsp;</td>
+                            <td valign="top" height="111" align="left" colspan="3">
+                                <table width="680" cellspacing="0" cellpadding="0" border="0">
+                                    <tr>
+                                        <td width="170" height="111"><a target="_blank" alt="%[custom]%" href=""><img width="311" height="33" border="0" style="display: block;" alt="%[custom]%" src="http://laptopcentrale_nl/laptopcentrale/img/logo.jpg" /></a></td>
+                                        <td width="500" height="111">&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>  
+            </tr>            
+            <for:products>
+                Aanbieding: %[article_name]%,%[title]%,%[brand]%,%[article_number]%,%[product_type]%,%[photo]%,%[sale_price]%<br />
+            </for:products>            
+        </table>
+    </body>
+</html>
+-->

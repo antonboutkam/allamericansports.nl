@@ -1,0 +1,37 @@
+<div id="paymethod">
+	
+    <form method="post" id="onestepform" action="%[root]%/%[lang]%/checkout_paymethod.html">
+      <input type="hidden" id="pmethodfld" name="paymethod" value="%[paymethod]%" />
+      <h1>%[trans_paymethod_payment]%</h1>
+      <h4>%[trans_paymethod_step_three]%: %[trans_paymethod_paymenthow]%</h4>            
+      <div class="content paymethod round-bg">
+        <for:paymethods>
+          <div class="type_radio paymethod-radiobg" >
+            <input type="radio" name="pmethod" id="paymethod%[id]%" %[paymethod=%[id]%?'checked="checked"':'']% class="radio paymethod checkbox" value="%[id]%" />
+            <label for="paymethod%[id]%">%[name]%
+              <if:price_type value="free">(%[trans_free]%)</if:price_type>
+              <if:price_type value="percentage">(%[price_amount]%% %[trans_transactiekosten]%)</if:price_type>
+              <if:price_type value="fixed_amount">(&euro; %[price_amount]% %[trans_transactiekosten]%)</if:price_type>
+            </label>
+            &nbsp;
+            <!--
+            <if:id value="1">
+              <select id="paybank" name="payment[bank]" style="display:%[paymethod=1?'inline':'none']%;">
+                <option value="">kies uw bank</option>
+                <for:ideal_banks>
+                  <option value="%[id]%">%[value]%</option>
+                </for:ideal_banks>
+              </select>
+            </if:id>
+            -->
+          </div>
+        </for:paymethods>
+        <div class="tab">
+            <a class="submit_prev prevnex button-account" style="float:left;" href="%[root]%/%[lang]%/checkout_sendmethod.html">%[trans_paymethod_back_two]%</a>                      
+            <a class="submit_bank prevnex button-account" style="float:right;" href="#">%[trans_paymethod_skip]%</a>
+            <div class="cl"></div>              
+        </div>
+      </div>
+    </form>
+
+</div>

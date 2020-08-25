@@ -1,0 +1,34 @@
+        <script type="text/javascript">
+            var current_page    = '%[current_page]%';
+            var view            = '%[view]%';
+        </script>
+
+        <div class="searchresults">
+            <div class="searchtitle">
+                %[lbl_found_products]%                
+                <div style="float:right;color:#555;">%[rowcount]% %[lbl_products]% <a href="#" class="reload"><img width="20" class="middle" src="%[root]%/img/icons/reload.png" /></a></div>                
+                <div class="clear"></div>                 
+            </div>            
+            <for:products>
+                <div style="margin:10px 3px 2px 3px; padding:5px;  float:left; font-size:10px;  border:1px solid #DDD;">
+                    <div style="width:150px; height:100px; background-image:url('%[root]%/img/upload/150x100_%[id]%.jpg');">
+                    
+                        <div style="padding:5px;">
+                            <a href="%[root]%/products/view.html?id=%[id]%&iframe=1" title="%[article_name]%" class="iframe"><img src="%[root]%/img/icons/info-icon-16x16.png"></a>
+                            <if:view value="picker">
+                                <a class="add_product" title="%[lbl_product_add]%" rel="%[id]%" href="#"><img src="%[root]%/img/icons/add-1-icon-16x16.png" height="16" width="16"/></a>
+                            </if:view>
+                            <a href="%[root]%/img/upload/%[id]%.jpg" class="iframe" title="%[article_name]%" rel="images" ><img src="%[root]%/img/icons/full-icon-16x16.png"></a>
+                        </div>
+                    </div>
+                    <div style="text-align:center;">
+                        <a href="" style=" text-decoration:none; color:#222222;">%[article_number]%</a><br />
+                    </div>
+                    <!--Stock. %[local_stock]%<br />-->
+                </div>
+            </for:products>
+            <div class="clear"></div>
+            
+            <center>%[paginate]%</center>
+            <div class="clear"></div>         
+        </div>

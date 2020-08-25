@@ -1,0 +1,39 @@
+                                <h4>Stap 1.2: %[trans_deliveryaddress]%</h4>
+                                <div class="type_input">
+                                	<label>%[trans_myaccount_street_no]%:*</label>
+                                    <input type="text" name="client_new[shipping_street]" id="shipping_street"value="%[relation.shipping_street]%"  class="txtfld" />
+                                </div>                          
+                                <div class="type_input">
+                                	<label>%[trans_myaccount_postcode]%:*</label>
+                                    <input name="client_new[shipping_postal]" id="shipping_postal" type="text" value="%[relation.shipping_postal]%" class="txtfld" />
+                                </div>
+                                <div class="type_input">
+                                	<label>%[trans_myaccount_city]%:*</label>
+                                     <input name="client_new[shipping_city]" id="shipping_city" type="text" value="%[relation.shipping_city]%" class="txtfld" />
+                                </div>
+                                <div class="type_input">
+                                	<label>%[trans_myaccount_country]%:*</label>
+                                    <select name="client_new[shipping_country]" id="shipping_country" val="%[relation.shipping_country]%" class="txtfld" >
+                                        <optgroup label="Top 10">
+                                            <option value="The Netherlands">%[lang=nl?'Nederland':'The Netherlands']%</option>
+                                            <option value="Belgium">%[lang=nl?'België':'Belgium']%</option>
+                                            <option value="Germany">%[lang=nl?'Duitsland':'Germany']% </option>
+                                            <option value="France">%[lang=nl?'Frankrijk':'France']% </option>
+                                            <option value="English UK">%[lang=nl?'Engeland':'English UK']%</option>
+                                            <option value="Poland">%[lang=nl?'Polen':'Poland']%</option>
+                                            <option value="Spain">%[lang=nl?'Spanje':'Spain']%</option>
+                                            <option value="Italy">%[lang=nl?'Italië':'Italy']%</option>
+                                            <option value="Denmark">%[lang=nl?'Denemarken':'Denmark']%</option>                        
+                                        </optgroup>
+                                        <optgroup label="Overig">
+                                            <for:country_iso>
+                                                <if:lang value="nl">
+                                                    <option value="%[name]%">%[name_nl]%</option>
+                                                </if:lang>
+                                                <if:lang not="nl">
+                                                    <option value="%[name]%">%[name]%</option>
+                                                </if:lang>  
+                                            </for:country_iso>
+                                        </optgroup>                        
+                                    </select>
+                                </div>      

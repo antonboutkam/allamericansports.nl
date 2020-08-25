@@ -1,0 +1,63 @@
+<h2>Producten importeren</h2>
+<input type="hidden" id="addtype" value="%[addtype]%" />
+<form method="post" enctype="multipart/form-data">
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Stap 1: CSV bestand importeren</div>
+            <div style="margin:10px;">
+                <table>
+                    <tr>
+                        <td><label>CSV Bestand selecteren</label></td>
+                        <td><input type="file" name="csvfile" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Import key</label></td>
+                        <td><input type="text" name="importkey" value="%[importkey]%" /></td>
+                    </tr>                
+                </table>                                                                            
+                <div class="cl" style="margin-top:10px;"></div>
+                <input type="submit" value="Uploaden" />
+            </div>
+        </div>
+    </div>
+</form>
+<form method="post">
+<input type="hidden" name="_do" value="assign" />
+<if:csv_file_set>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Stap 2: Kolommen toekennen</div>
+            <div style="margin:10px;">
+                <table>
+                    <tr>
+                        <for:colrange>
+                            <td>
+                                <select name="columns[%[id]%]" style="width:100px;">
+                                    <option value="">n/a</option>
+                                    <for:table_cols>
+                                        <option>%[val]%</option>
+                                    </for:table_cols>
+                                </select>                            
+                            </td>
+                        </for:colrange>                                                
+                    </tr> 
+                    <for:csv>
+                    <tr>
+                        <for:rowdata>
+                            <td>%[val]%</td>                        
+                        </for:rowdata>                    
+                    </tr> 
+                    </for:csv>               
+                </table>                                                                            
+                <div class="cl" style="margin-top:10px;"></div>
+                <input type="submit" value="Uploaden" />
+            </div>
+        </div>
+    </div>
+</if:csv_file_set>    
+</form>
+<if:csv_file_set condition="is_false">
+<script type="text/javascript">
+    alert('Deze functionaliteit is nieuw zit nog in de beta fase, wij helpen u graag bij het maken van een import.'); 
+</script>
+</if:csv_file_set>

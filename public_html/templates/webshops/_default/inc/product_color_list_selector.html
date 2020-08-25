@@ -1,0 +1,16 @@
+                                    <div style="margin-bottom:10px;">
+                                        <div style="margin:8px 0px 8px 0px;">%[trans_availablecolorsinthesize]% %[product.product_size_tag]%:</div>                                                                                                                                                                                                                                                                                                                                                                                               
+                                        <ul>
+                                         <for:product_colors>
+                                            <li id="color_%[color_id]%"  style="padding:0px;width:40px;height:25px;">
+                                                <a class="size_toggle tipsy" title="%[color_combination]%" style="padding:0;" href="%[root]%/%[lang]%/product/%[title_encoded]%-%[fk_product_group]%-%[catalogue_id]%.html"><img src="/img/upload/40x25_%[catalogue_id]%.jpg" width="40" height="25" /></a>
+                                            </li>                                    
+                                         </for:product_colors>
+                                        </ul>
+                                        <div class="cl"></div>
+                                        <script type="text/javascript">                                        
+                                            el = document.getElementById('color_%[product.fk_color]%');
+                                            el.className = el.className + ' active';                                        
+                                        </script>                                                                                                                                    
+                                    </div>                                    
+                                    

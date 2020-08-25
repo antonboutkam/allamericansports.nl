@@ -1,0 +1,35 @@
+<h2>%[lbl_webshop_size_tables]%</h2>
+<div class="searchbox">
+    <div class="searchresults">
+        <div class="searchtitle">%[lbl_maattabellen]%</div>
+        <div id="sizetable_tbl">
+            %[sizetable_tbl]%
+        </div>
+    </div>
+</div>    
+<div class="searchbox location_editor">
+    <div class="searchresults">
+        <div style="display: block;" class="add_customer searchtitle">%[lbl_uploadsizetable]%</div>
+        <div class="edit_content">
+            <form method="post" enctype="multipart/form-data">
+                <input type="hidden" name="_do" value="addsizetable" />                
+                <input type="hidden" name="id" id="fld_id" value="%[id]%" class="wareh"/>
+                <table>
+                    <tbody>                  
+                        <tr><td>%[lbl_filename]%</td><td><input tabindex="1" name="image" value="%[location.filename]%" type="file" class="wareh"/></td></tr>
+                        <tr><td>%[lbl_title]%</td><td><input tabindex="2" id="fld_title" name="title" value="%[location.title]%" type="text" class="wareh"/> </td></tr>                                                                                                                                                                                                  
+                    </tbody>
+                </table>
+                <div class="actions">                    
+                    <input value="%[lbl_save]%" id="fld_save" type="submit" />                    
+                    <input class="fld_cancel" value="%[lbl_cancel]%" type="submit" />
+                </div>                
+            </form>   
+        </div>                    
+    </div>
+</div>   
+
+<div  style="display:none;">
+    <span id="delete_sizetable">%[lbl_suredeletefiletable]%</span>
+    <span id="please_provide_title">%[lbl_titlemandatory]%</span>
+</div>                   

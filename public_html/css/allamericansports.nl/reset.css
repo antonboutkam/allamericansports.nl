@@ -1,0 +1,128 @@
+/* WordPress WYSIWYG default syles */  
+
+.wp-caption {  
+   border: 1px solid #ddd;  
+   text-align: center;  
+   background-color: #f3f3f3;  
+   padding-top: 4px;  
+   margin: 10px;  
+   /* optional rounded corners for browsers that support it */  
+   -moz-border-radius: 3px;  
+   -khtml-border-radius: 3px;  
+   -webkit-border-radius: 3px;  
+   border-radius: 3px;  
+}  
+  
+.wp-caption img {  
+   margin: 0;  
+   padding: 0;  
+   border: 0 none;  
+}  
+  
+.wp-caption p.wp-caption-text {  
+   font-size: 11px;  
+   line-height: 17px;  
+   padding: 0 4px 5px;  
+   margin: 0;  
+}  
+  
+.aligncenter, div.aligncenter {  
+   display: block;  
+   margin-left: auto;  
+   margin-right: auto;  
+}  
+  
+/* WordPress template default classes */  
+  
+.categories {}  
+.cat-item {}  
+.current-cat {}  
+.current-cat-parent {}  
+.children {}  
+.pagenav {}  
+.page_item {}  
+.current_page_item {}  
+.current_page_parent {}  
+.current_page_ancestor {}  
+.widget {}  
+.widget_text {}  
+.blogroll {}  
+.linkcat{}
+.gallery-caption{}
+.sticky{}
+.bypostauthor{}  
+  
+/* Eric Meyer's CSS Reset v1.0 | 20080212 */  
+  
+html, body, div, span, applet, object, iframe,  
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
+a, abbr, acronym, address, big, cite, code,  
+del, dfn, em, font, img, ins, kbd, q, s, samp,  
+small, strike, strong, sub, sup, tt, var,  
+b, u, i, center,  
+dl, dt, dd, ol, ul, li,  
+fieldset, form, label, legend,  
+table, caption, tbody, tfoot, thead, tr, th, td {  
+    margin: 0;  
+    padding: 0;  
+    border: 0;  
+    outline: 0;  
+    font-size: 100%;  
+    vertical-align: baselinebaseline;  
+    background: transparent;  
+}  
+body {  
+    line-height: 1;  
+}  
+ol, ul {  
+    list-style: none;  
+}  
+blockquote, q {  
+    quotes: none;  
+}  
+blockquote:before, blockquote:after,  
+q:before, q:after {  
+    content: ''; 
+    content: none; 
+} 
+ 
+/* remember to define focus styles! */ 
+:focus { 
+    outline: 0; 
+} 
+ 
+/* remember to highlight inserts somehow! */ 
+ins { 
+    text-decoration: none; 
+} 
+del { 
+    text-decoration: line-through; 
+} 
+ 
+/* tables still need 'cellspacing="0"' in the markup */  
+table {  
+    border-collapse: collapse;  
+    border-spacing: 0;  
+}
+
+/* --- GENERAL DEFAULTS --- */
+
+html { overflow-y: scroll; }	/* Always show scrollbar on right side (as IE does) in all browsers to avoid jumping of centered sites caused by (dis)appearing these scrollbars. Overflow-y is a CSS3 property and therefor it does not validate yet (removing it only affects the jumping). */	
+body, html { height: 100%; }
+body { position: relative; float: left; clear: both; width: 100%; }
+
+ul { list-style-type: disc; }
+ul li { margin-left: 16px; }
+ol { list-style-type: decimal; }
+ol li { margin-left: 22px; }
+ul.menu, ol.menu, .menu li{
+	margin: 0; padding: 0; background-image: none; list-style-type: none;
+}
+
+a { text-decoration: none }
+
+button, input.button { cursor: pointer; }
+input[type="submit"] { cursor: pointer; }
+
+.alignleft { float: left; }
+.alignright { float: right; }

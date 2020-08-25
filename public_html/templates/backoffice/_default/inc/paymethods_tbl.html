@@ -1,0 +1,35 @@
+            <table style="margin:15px;">
+                <tr class="rowheader">
+                        <th style="width:18px;">&nbsp;</th>
+                        <th style="width:18px;">&nbsp;</th>
+                        <th style="width:18px;">&nbsp;</th>
+                        <th><a href="#" rel="%[sort=full_name?'full_name DESC':'full_name']%" class="sort">%[lbl_paymethod]%</a></th>    
+                        <th><a href="#" rel="%[sort=email?'email DESC':'email']%" class="sort">%[lbl_price_type]%</a></th>                                                 
+                        <th><a href="#" rel="%[sort=phone?'phone DESC':'phone']%" class="sort">%[lbl_price]%</a></th>
+                </tr>
+                <for:paymethods>
+                    <tr class="row%[oddeven]%">                        
+                        <td><a class="iframe" href="%[root]%/settings/paymethod_edit.html?id=%[id]%&iframe=1"><img src="%[root]%/img/icons/edit-icon-16x16.png" width="16" height="16" /></a></td>
+                        <td><a class="delete-paym" title="%[full_name]%" href="#" rel="%[id]%"><img src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16" /></a></td>
+                        <if:is_active value="0">
+                            <td><a title="%[lbl_paymethod_inactive]%" href="#" rel="%[id]%"><img src="%[root]%/img/icons/alert-icon-16x16.png" width="16" height="16" /></a></td>
+                        </if:is_active>  
+                        <if:is_active value="1">
+                            <td><a title="%[lbl_paymethod_active]%" href="#" rel="%[id]%"><img src="%[root]%/img/icons/check-icon-16x16.png" width="16" height="16" /></a></td>
+                        </if:is_active>                                                                             
+                        <td style="text-align:center;">%[name]%</td>
+                        <td style="text-align:center;">%[price_type]%</td>
+                        <if:price_type not="free">
+                            <td style="text-align:center;">%[price_type=fixed_amount?'&euro; ':'']%%[price_amount]%%[price_type=percentage?' %':'']%</td>
+                        </if:price_type>
+                        <if:price_type value="free">
+                            <td style="text-align:center;">n/a</td>
+                        </if:price_type>                        
+                    </tr>
+                </for:paymethods>
+                <tr>
+                    <td colspan="5"><a class="iframe" href="%[root]%/paymethod_edit.html?iframe=1&id=new">
+                        <img src="%[root]%/img/icons/add-2-icon-16x16.png" /></a>
+                    <a class="iframe" href="%[root]%/settings/paymethod_edit.html?iframe=1&id=new">%[lbl_add_paymethod]%</a></td>
+                </tr>                           
+            </table>

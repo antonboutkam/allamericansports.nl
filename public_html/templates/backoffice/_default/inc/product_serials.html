@@ -1,0 +1,31 @@
+    <table>
+        <tr class="rowheader">
+            <td style="width:16px;">&nbsp</td>
+            <td>Serienummer</td>
+            <td>Ingevoerd</td>
+            <td>Uitgegeven</td>
+            <td>Ordernummer</td>
+            <td>Relatie</td>
+        </tr>
+        <for:serials.data>
+            <tr class="row%[oddeven]%">
+                <if:view not="picker">
+                    <td><a href="" class="delete_serial" title="Serienummer verwijderen" rel="%[id]%"><img src="%[root]%/img/icons/delete-icon-16x16.png" width="16" height="16" /></a></td>
+                </if:view>
+                <if:view value="picker">
+                    <td><a href="" class="link_serial" title="Product koppelen" rel="%[id]%"><img src="%[root]%/img/icons/add-1-icon-16x16.png" width="16" height="16" /></a></td>
+                </if:view>
+                <td>%[serial]%</td>
+                <td>%[added]%</td>
+                <td>%[delivered]%</td>
+                <if:view not="picker">
+                    <td><a href="%[root]%/orders/collect.html?orderid=%[order_id]%&iframe=1" class="iframe">%[order_id]%</a></td>
+                    <td><a href="%[root]%/customer_view.html?id=%[relation_id]%&iframe=1" class="iframe">%[company_name?'%[company_name]%':'%[relation_id]%']%</a></td>
+                </if:view>
+                <if:view value="picker">
+                    <td>%[order_id]%</td>
+                    <td>%[relation_id]%</td>
+                </if:view>
+            </tr>
+        </for:serials.data>
+    </table>

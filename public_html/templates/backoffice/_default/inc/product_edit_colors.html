@@ -1,0 +1,26 @@
+            <div class="searchbox">
+                <div class="searchresults">
+                    <div class="add_customer searchtitle">Kleuren</div>       
+                      <div class="edit_content">            
+                        <div style="display:%[id=new?'none':'block']%;" class="edit_content colorlist">
+                            <if:product_colors>
+                                <for:product_colors>
+                                    <span>%[color]%<a href="#" class="removeproductcolor" data-colorid="%[fk_color]%"><img src="/img/icons/delete-icon-16x16.png" width="10" height="10" /></a></span>
+                                </for:product_colors>
+                                <br /><br />
+                            </if:product_colors>
+                            <select id="colorfld">
+                                <option value="">Kies een kleur</option>
+                                <for:colors>
+                                    <option value="%[id]%">%[color]%</option>
+                                </for:colors>                                                            
+                            </select>
+                            <a href="#" class="addcolor"><img style="vertical-align:baseline!important;" src="/img/icons/add-1-icon-16x16.png" /></a>
+                            <a href="#" class="addcolor">Kleur toevoegen</a>
+                            <a href="/settings/fielddef.html" target="_blank">(Kleuren instellen)</a>
+                        </div>                                                                
+                        <center style="display:%[id=new?'block':'none']%;" >U kunt pas kleuren instellen als het product is opgeslagen</center>        
+                        </div>                               
+                </div>
+            </div>
+            

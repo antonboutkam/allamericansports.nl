@@ -1,0 +1,64 @@
+<h2>Snelmenu <a class="showhidewidgets"  title="Configureer het homescherm"><img src="/img/icons/config-icon2-16x16.png" style="float:right;margin-top:4px;margin-right:5px;cursor:pointer;" /></a><div class="clear"></div></h2>
+<div id="snelmenu_outside" style="display:block;">
+	<div style="margin:auto;width:810px">
+		<div class="snelmenu_cnt round">
+			<div class="snelmenu_icon"><a href="%[root]%/relations/overview.html"><img src="%[root]%/img/icons/phone.png" /></a></div>
+			<div class="snelmenu_item"><a href="%[root]%/relations/overview.html">%[find_customer]%</a></div>
+		</div>
+		<div class="snelmenu_cnt round">
+			<div class="snelmenu_icon"><a href="%[root]%/orders/new.html"><img src="%[root]%/img/icons/pencil.png" /></a></div>
+			<div class="snelmenu_item"><a href="%[root]%/orders/new.html">%[take_order]%</a></div>
+		</div>
+		<div class="snelmenu_cnt round">
+			<div class="snelmenu_icon"><a href="%[root]%/billing.html"><img src="%[root]%/img/icons/bill.png" /></a></div>
+			<div class="snelmenu_item"><a href="%[root]%/billing.html">%[find_bill]%</a></div>
+		</div>
+		<div class="snelmenu_cnt round">
+			<div class="snelmenu_icon"><a href="%[root]%/orders/overview.html?view=picker" ><img src="%[root]%/img/icons/basket.png" /></a></div>
+			<div class="snelmenu_item"><a href="%[root]%/orders/overview.html?view=picker" >%[pick_order]% (%[pick_count]%)</a></div>
+		</div>
+		<if:module_stockpile>
+		<div class="snelmenu_cnt round">
+			<div class="snelmenu_icon"><a href="%[root]%/stock/current.html?iframe=1" class="iframe" ><img src="%[root]%/img/icons/address-icon-64x64.png" /></a></div>
+			<div class="snelmenu_item"><a href="%[root]%/stock/current.html?iframe=1" class="iframe" >%[stock]%</a></div>
+		</div>
+		</if:module_stockpile>
+		<div class="snelmenu_cnt round">
+			<div class="snelmenu_icon"><a href="%[root]%/products/catalogue.html?showwostock=true&view=barcodepicker"><img src="%[root]%/img/icons/barcode.png" /></a></div>
+			<div class="snelmenu_item"><a href="%%[root]%/products/catalogue.html?showwostock=true&view=barcodepicker">%[print_barcodes]%</a></div>
+		</div>
+	</div>
+</div>
+<div class="widgetsettings searchbox" style="display:none; width:960px;float:left;">
+    <div class="searchresults" >
+        <div class="searchtitle">Widget configuratie
+             <a class="showhidewidgets tipsy" style="float: right; margin:5px;" title="%[lbl_hide]%">
+                        <img width="12" height="12" src="%[root]%/img/icons/delete.png" />
+             </a>
+         </div>
+        <div style="padding:10px;" >
+            <for:all_widgets>                
+                <div class="tipsy" title="%[description]%" style="border-bottom:1px solid #ccc;">
+                    <div style="float:left;display:inline; margin:5px"> <a class="toggleswitch" id="widget_button_%[widget_name]%" data-isenabled="%[widget_enabled]%" data-id="%[id]%" href="#"></a></div>
+                    <div style="float:left;width:250px;line-height:40px;font-weight:bolder;"> <img src="%[icon]%"/> %[title]%</div>                     
+                    <div style="float:left;width:550px;line-height:45px;font-size:12px;">- %[description]%</div>
+                    <div class="clear"></div>                      
+                </div>             
+            </for:all_widgets>
+            
+        </div>        
+        <div class="clear"></div>            
+    </div>
+</div>
+
+
+<div class="clear"></div>
+<div id="widget_container">
+    <ul class="home_mainframe widget_content" id="sortable">
+        %[widget_content]%
+    </ul>
+</div>   
+<div id="widget_container_hidden" style="display:none"></div>
+<div class="clear"></div>          
+
+    

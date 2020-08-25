@@ -1,0 +1,37 @@
+<div style="margin:10px;margin-bottom:0px;display:%[current_view=quarter?'block':'none']%" class="views quarter_view"> 
+    <div style="margin-left:30px;">
+            <img style="margin-left:10px;" src="/img/icons/online-users-icon-128x128.png"/>
+        <h2>Er %[online_users=1?'is':'zijn']% %[online_users]% user%[online_users=1?'':'s']% online.</h2>
+    </div>
+</div>
+<table style="margin:10px;margin-bottom:0px;display:%[current_view=half?'block':'none']%" class="views half_view">                
+    <tr class="roweven">
+        <td style="width:16px; font-weight: bold"></td>
+        <td style="font-weight: bold">Huidige pagina</td>
+        <td style="font-weight: bold">Laatst gezien</td>
+    </tr>
+    <for:session_info>
+        <tr class="row%[oddeven]%">
+            <td><div class="browser_sprite %[agent_short]%"></div></td>
+            <td><a href="http://%[host]%%[uri]%">%[uri_short]%</a></td>
+            <td>%[last_seen]%</td>
+        </tr>
+    </for:session_info>  
+</table>
+<table style="margin:10px;margin-bottom:0px;display:%[current_view=full?'block':'none']%" class="views half_view">                
+    <tr class="roweven">
+        <td style="width:16px; font-weight: bold"></td>
+        <td style="font-weight: bold">IP Adres</td>
+        <td style="font-weight: bold">Huidige pagina</td>
+        <td style="font-weight: bold">Laatst gezien</td>
+    </tr>
+    <for:session_info>
+        <tr class="row%[oddeven]%">
+            <td>%[agent_short]%</td>
+            <td>%[ip]%</td>
+            <td><a href="http://%[host]%%[uri]%">%[uri]%</a></td>
+            <td>%[last_seen]%</td>
+        </tr>
+    </for:session_info>  
+</table>
+

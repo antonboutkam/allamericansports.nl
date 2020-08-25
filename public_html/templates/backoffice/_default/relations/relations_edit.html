@@ -1,0 +1,178 @@
+ <form id="customer_edit">
+    <input type="hidden" name="id" id="fld_id" value="%[id]%" />
+    <input type="hidden" name="view" id="fld_view" value="%[view]%" />
+    <div class="searchbox">
+        <div class="searchresults">
+            <div style="display:%[id?'none':'block']%" class="add_customer searchtitle">%[lbl_add_relation]%</div>
+            <div style="display:%[id?'block':'none']%" class="edit_customer searchtitle">%[lbl_relation]% <span id="customer_id">%[id]%</span> %[lbl_edit]%</div>
+            <div class="edit_content">                
+                    <table>                        
+                        <tr><td colspan="4"><h2>%[lbl_general]%</h2></td></tr>
+                        <if:product_member_groups>                            
+                            <for:product_member_groups>
+                                <tr>
+                                    <td>Product group</td>
+                                    <td>
+                                        <a href="/products/groupedit.html?id=%[id]%">%[group_name]%</a> (groupid: %[id]%)
+                                    </td>
+                                </tr>  
+                            </for:product_member_groups>                         
+                        </if:product_member_groups>
+
+                        <tr>
+                            <td>%[lbl_companyname]%</td>
+                            <td><input type="text" tabindex="1" name="customer[company_name]" id="fld_company_name" value="%[company_name]%" /></td>                                                                        
+                            <td>%[lbl_type]%</td>
+                            <td>
+                                <select name="customer[type]" tabindex="2">
+                                    <option %[type=customer?'selected="selected"':'']% value="customer">%[lbl_client]%</option>
+                                    <option %[type=prospect?'selected="selected"':'']% value="prospect">%[lbl_prospect]%</option>
+                                    <option %[type=supplier?'selected="selected"':'']% value="supplier">%[lbl_supplier]%</option>
+                                </select>
+                            </td>                        
+                        </tr>                      
+                        <tr><td colspan="4"><h2>%[lbl_contactinformation]%</h2></td></tr>                                         
+                        <tr>    
+                            <td>%[lbl_cp_unknown]%</td>
+                            <td>
+                                <input type="checkbox" class="checkbox" id="cp-unknown" tabindex="24" name="cn_unknown" value="0" %[cp_unknown=1?'checked="checked"':'']%/>
+                            </td>                                                                             
+                            <td>%[lbl_phone]%</td>
+                            <td><input type="text" tabindex="6" name="customer[phone]" value="%[phone]%" /><td>                         
+                        </tr>
+                        <tr>
+                            <td>%[lbl_sallutation]%</td>
+                            <td>
+                                <select style="width:150px;" tabindex="3" id="fld_sallutation" name="customer[sallutation]" val="%[sallutation]%">
+                                    <option value="">maak een keuze</option>
+                                    <option>%[lbl_mr]%</option>
+                                    <option>%[lbl_mrs]%</option>
+                                </select>                            
+                            </td>                      
+                            <td>%[lbl_mobile]%</td>
+                            <td><input type="text" tabindex="7" name="customer[phone_mobile]" value="%[phone_mobile]%" /><td>                                                             
+                        </tr>                         
+                        <tr>                        
+                            <td>%[lbl_firstname]%</td>
+                            <td><input type="text" tabindex="4" id="fld_cp_firstname" name="customer[cp_firstname]" value="%[cp_firstname]%" /></td>                         
+                            <td>%[lbl_email]%</td>
+                            <td><input type="text" tabindex="8" name="customer[email]" value="%[email]%" /></td>                         
+                        </tr>
+                        <tr>                        
+
+                            <td>%[lbl_lastname]%</td>
+                            <td><input type="text" tabindex="5" id="fld_cp_lastname" name="customer[cp_lastname]" value="%[cp_lastname]%" /></td>                                                     
+                            <td>%[lbl_fax]%</td>
+                            <td><input type="text" tabindex="9" name="customer[fax]" value="%[fax]%" /><td>                           
+                        </tr>
+                        <tr>                        
+                            <td>Webshop</td>
+                            <td>
+                                <select name="webshop" val="%[webshop_id]%">
+                                    <option value="">Maak een keuze</option>
+                                    <for:webshops>
+                                        <option value="%[id]%">%[hostname]%</option>
+                                    </for:webshops>
+                                </select>
+                            </td>
+                            <td>%[lbl_website]%</td>
+                            <td><input type="text" tabindex="10" id="fld_website" name="customer[website]" value="%[website]%" /></td>                     
+                        </tr>                        
+                        <tr><td colspan="2"><h2>%[lbl_billingaddress]%</h2></td><td colspan="2"><h2>%[lbl_deliveryaddress]%</h2></td></tr>                                                                                                                                
+                        <tr>                            
+                            <tr>
+                                <td>%[lbl_streetnumber]%</td>
+                                <td><input type="text" tabindex="11" id="billstreet" class="bill" name="customer[billing_street]" value="%[billing_street]%" /> <input type="text" style="width:35px;" tabindex="12" id="billnum"  class="bill" name="customer[billing_number]" value="%[billing_number]%"  /></td>     
+                                <td>%[lbl_streetnumber]%</td>
+                                <td><input type="text" id="shipstreet" tabindex="16" name="customer[shipping_street]" value="%[shipping_street]%" /> <input style="width:35px;" type="text" id="shipsnum" tabindex="17" name="customer[shipping_number]" value="%[shipping_number]%" /></td>
+                            </tr>
+                            
+                            <tr><td>%[lbl_postal]%</td><td><input type="text" tabindex="13" id="billpost" class="bill" name="customer[billing_postal]"  value="%[billing_postal]%"  /> <a href="" id="ziplookup" title="Adres bij postcode zoeken"><img src="%[root]%/img/icons/find-icon-16x16.png" /></a></td>   <td>%[lbl_postal]%</td><td><input type="text" id="shippost" tabindex="18" name="customer[shipping_postal]" value="%[shipping_postal]%" /></td></tr>
+                            <tr><td>%[lbl_city]%</td><td><input type="text" tabindex="14" id="billcity" class="bill" name="customer[billing_city]"  value="%[billing_city]%" /></td>   <td>%[lbl_city]%</td><td><input type="text" id="shipcity" tabindex="19" name="customer[shipping_city]" value="%[shipping_city]%" /></td></tr>
+                            <tr><td>%[lbl_country]%</td><td><input type="text" tabindex="15" id="billcountry" class="bill" name="customer[billing_country]" value="%[billing_country]%" /></td>      <td>%[lbl_country]%</td><td><input type="text" id="shipcountry"  tabindex="20" name="customer[shipping_country]" value="%[shipping_country]%" /></td></tr>
+                            <tr><td>&nbsp;</td><td>&nbsp;</td>                                          <td>%[lbl_same_as_billing]%</td><td><input class="checkbox" type="checkbox" id="copy-from-billing" tabindex="21" name="customer[copy-from-billing]" value="1" /></td></tr>
+                         </tr>
+                         <tr><td colspan="2"><h2>Relatiebeheer</h2></td><td colspan="2"><h2>Social media</h2></td></tr>
+                         <tr>
+                             <td>Accountmanager</td>
+                             <td>
+                                 <select name="customer[accountmanager]" val="%[accountmanager]%">
+                                     <option value="">-- maak een keuze --</option>
+                                     <for:users>
+                                        <option value="%[id]%">%[full_name]%</option>
+                                     </for:users>
+                                 </select>                                 
+                             </td>
+                             <td>Twitter</td><td><input name="customer[twitter]" type="text" value="%[twitter]%"  /></td>
+                         </tr>
+                         <tr>
+                             <td>Klant mag op rekening kopen</td>
+                             <td>
+                                 <input name="customer[buyoncredit]" type="hidden" value="0" />
+                                 <input class="checkbox" name="customer[buyoncredit]" type="checkbox" %[buyoncredit?'checked="checked"':'']% value="1" />
+                             </td>
+                             <td>LinkedIn</td><td><input type="text" name="customer[linkedin]" value="%[linkedin]%" /></td>
+                         </tr>
+                         <tr>
+                             <td>Klantsegment</td>
+                             <td>
+                                 <select name="customer[segment]" val="%[segment]%">
+
+                                     <option value="">-- maak een keuze --</option>
+                                     <option value="high">Hoog</option>
+                                     <option value="medium">Midden</option>
+                                     <option value="low">Laag</option>
+                                 </select>
+                             </td>
+                             <td>Facebook</td><td><input name="customer[facebook]" type="text" value="%[facebook]%" /></td>
+                         </tr>   
+                         <tr>
+                             <td>Buitelands btw nummer</td>
+                             <td><input name="customer[foreign_vat]" type="text" value="%[foreign_vat]%" /></td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                         </tr>                      
+                    </table>
+                <h2>%[lbl_description]%</h2>
+                <textarea style="width:90%; height:100px;" tabindex="21" name="customer[description]">%[description]%</textarea>
+                <div class="actions">
+                    <input type="submit" id="fld_save" tabindex="22" value="%[lbl_save]%" /> <input type="submit" tabindex="23" id="fld_cancel" value="%[lbl_cancel]%" />
+                    <span class="stored-ok" style="display:none;">%[lbl_stored-ok]%</span>
+                </div>   
+            </div>                    
+        </div>
+    </div>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">
+                Laatste e-mailberichten naar deze klant
+                <!-- <div style="float:right;color:#555;">%[lbl_total_bill_count]%: %[ordercount]%</div> -->
+                <div class="clear"></div>
+            </div>
+             <div class="edit_content">
+                 <table>
+                 <if:latest_emails>
+                    <tr class="rowheader">
+                            <th style="width: 18px;">&nbsp;</th>
+                            <th>Onderwerp</th>                                                    
+                            <th>Aan</th>
+                            <th>Datum</th>                                                                                  
+                    </tr>
+                    <for:latest_emails>
+                        <tr class="row%[oddeven]%">                                                                                    
+                            <td><a href="%[root]%/logs/viewmail.html?id=%[id]%&iframe=1" class="iframe" title="E-mailbericht bekijken"><img width="16" height="16" src="/img/icons/info-icon-16x16.png"></a></a></td>
+                            <td>%[subject]%</td>                                                        
+                            <td>%[tomail]%</td>
+                            <td>%[mailtime]%</td>                                                    
+                        </tr>
+                    </for:latest_emails>
+                    </table>
+                </if:latest_emails>
+                <if:latest_emails condition="is_false">
+                    <strong style="font-weight:bolder;text-align:center;">Er zijn nog een e-mailberichten geregistreerd.</strong>                
+                </if:latest_emails>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>         
+</form>

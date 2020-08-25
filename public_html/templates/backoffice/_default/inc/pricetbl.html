@@ -1,0 +1,39 @@
+    <div class="searchbox" id="show_pay_calc" style="display:none">
+        <div class="searchresults" style="padding:2px;">
+            <div class="searchtitle" style="margin:0;">Prijsopgave</div>
+                <div class="searchresults">
+                <div style="padding:30px;">
+                    <table>
+                        <table>
+                            <tr class="rowheader-static">
+                                <td>Product</td>
+                                <td>Aantal</td>
+                                <td>Stukprijs</td>
+                                <td>Prijs</td>
+                            </tr>
+                            <for:order_items>
+                                <tr class="row%[oddeven ]%">
+                                    <td>%[article_name]%</td>
+                                    <td class="tdcenter">%[quantity]%</td>
+                                    <td class="tdright">%[sale_price]%</td>
+                                    <td class="tdright">%[price]%</td>
+                                </tr>
+                            </for:order_items>
+                            <tr class="rowheader">
+                                <td colspan="3" class="tdright b">Subtotaal</td>
+                                <td class="subtotal tdright"></td>
+                            </tr>
+                            <tr class="rowheader">
+                                <td colspan="3" class="tdright b">BTW</td>
+                                <td class="vat tdright"></td>
+                            </tr>
+                            <tr class="rowheader">
+                                <td colspan="3" class="tdright b">Totaal</td>
+                                <td class="incvat tdright"></td>
+                            </tr>
+                        </table>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

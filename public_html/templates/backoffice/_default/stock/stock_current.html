@@ -1,0 +1,53 @@
+<if:mode value="iframe"><h2>%[lbl_search_stock]%</h2></if:mode> 
+<if:mode mode="is_false"><h2>%[lbl_current_stock]%</h2></if:mode> 
+<script type="text/javascript">
+    var show            = "%[show]%";
+    var request_uri     = "%[request_uri]%"
+</script>
+<form id="stockform" action="%[root]%/stock.html?show=%[show]%" method="post">
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Filters</div>    
+            <div style="margin:10px;">            
+                <tr>
+                    <td>%[lbl_location]%:</td>
+                    <td>
+                        <select id="flirter_location" val="%[location]%">
+                            <option value="">%[lbl_all_locations]%</option>
+                            <for:locations>
+                                <option "%[location=%[id]%?'selected="selected"':'']%" value="%[id]%">%[name]%</option>
+                            </for:locations>
+                        </select>
+                    </td>
+                    <td>%[lbl_filter]%:</td>
+                    <td>
+                        <input type="text" id="fld_search" name="query" class="searchfield" title="%[lbl_search_field]%" value="%[query]%"/>                            
+                    </td>
+                </tr>                                 
+            </div>
+        </div>
+    </div>                      
+    <div class="searchbox" id="searchresult">
+        %[stock_tbl]%
+    </div>    
+    <if:mode mode="is_false">
+        <if:user_level value="A">
+            <div class="searchbox">
+                <div class="searchresults">
+                    <div class="searchtitle">%[lbl_actions]%</div>   
+                    
+                    <div style="margin:10px; float:left">
+                        <h3>Export</h3>            
+                        <ul style="font-size: 12px;">                
+                            <li><a href="%[root]%/export.php?type=stock" target="_blank">Export all</a></li>
+                            <li><a id="export_location" href="%[root]%/export.php?type=stock&location=%[location]%" target="_blank">Export %[location_name]%</a></li>
+                            <li><a id="export_location" href="%[root]%/export.php?type=stock_spread&location=%[location]%" target="_blank">Producten versprijd over %[location_name]% </a></li>
+                        </ul>
+                    </div>  
+                                                                 
+                    <div class="clear"></div>            
+                </div>
+            </div>
+        </if:user_level>
+    </if:mode>     
+</form>

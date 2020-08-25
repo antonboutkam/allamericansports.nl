@@ -1,0 +1,23 @@
+                <ul class="treeselect" id="section_%[sectionid]%">
+                <for:menu.data>                                                                
+                    <li class="section">
+                        <a rel="%[menu_id]%" class="togglemenu folder" href="#"></a>
+                        <a title="Menu item hernoemen" href="%[root]%/settings/webshop_editnav.html?iframe=1&_do=rename_item&parent=%[sectionid]%&menu_id=%[menu_id]%&webshop_id=%[webshop_id]%" class="rename customiframe" data-iw="1000" data-ih="400" href="#"></a>                         
+                        <a class="banner" href="%[root]%/settings/webshop_navigationbannerphoto.html?&parent=%[sectionid]%&menu_id=%[menu_id]%&webshop_id=%[webshop_id]%&iframe=%[iframe?1:0]%"></a>
+
+                            <a href="#" class="moveup" data-webshop="%[webshop_id]%" data-id="%[menu_id]%" data-section="%[sectionid]%"><img src="/img/icons/up-icon-16x16.png"  /></a>                        
+                            <a href="#" class="movedown" data-webshop="%[webshop_id]%" data-id="%[menu_id]%" data-section="%[sectionid]%"><img src="/img/icons/down-icon-16x16.png" /></a>                            
+
+                        <a title="Menu item (en sub-menu items) verwijderen" rel="%[menu_id]%" class="remove" href="#"></a>                                                                                                            
+                        <a rel="%[menu_id]%" id="menu_item_%[menu_id]%" class="togglemenu %[image?'previewimg':'']%" data-previewimg="/img/caticons/180x180_%[image]%" href="">%[menu_item]%</a>
+                        <span style="color:#ccc;font-style:italic">(%[locales]%)</span>                                        
+                        %[in_mainnav?'Hoofdnav':'']%
+                    </li>                                                                                                                     
+                </for:menu.data>
+                <li class="addnew">                    
+                    <a title="Item aan %[section_name]% toevoegen" href="%[root]%/settings/webshop_editnav.html?iframe=1&_do=add_item&parent=%[sectionid]%&webshop_id=%[webshop_id]%" class="customiframe" data-iw="1000" data-ih="400" href="#"  rel="%[menu_id]%"><img src="%[root]%/img/icons/add-1-icon-16x16.png" /></a>
+                    <a title="Item aan %[section_name]% toevoegen" href="%[root]%/settings/webshop_editnav.html?iframe=1&_do=add_item&parent=%[sectionid]%&webshop_id=%[webshop_id]%" class="customiframe" data-iw="1000" data-ih="400" href="#">Item aan %[section_name]% toevoegen</a>                    
+                </li>                                  
+                </ul>  
+
+

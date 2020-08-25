@@ -1,0 +1,21 @@
+            <table style="margin:15px;">
+                <tr class="rowheader">
+                        <th>&nbsp;</th>                        
+                        <th><a href="#" class="sort" rel="street DESC">%[lbl_deliveryid]%</a></th>
+                        <th><a href="#" class="sort" rel="postal">%[lbl_created_on]%</a></th>
+                        <th><a href="#" class="sort" rel="city">%[lbl_created_by]%</a></th>
+                        <th><a href="#" class="sort" rel="billing_street">%[lbl_from_location]%</a></th>
+                        <th><a href="#" class="sort" rel="billing_city">%[lbl_to_location]%</a></th>
+
+                </tr>
+                <for:open_transfers>
+                    <tr class="row%[oddeven]%">
+                        <td><a class="edit_transfer" rel="%[delivery_id]%" href="#"><img src="%[root]%/img/icons/edit-icon-16x16.png" width="16" height="16"/></a></td>
+                        <td>%[delivery_id]%</td>
+                        <td>%[created_on]%</td>
+                        <td>%[send_by]%</td>
+                        <td>%[from_location]%</td>
+                        <td>%[to_location]%</td>
+                    </tr>
+                </for:open_transfers>
+            </table>

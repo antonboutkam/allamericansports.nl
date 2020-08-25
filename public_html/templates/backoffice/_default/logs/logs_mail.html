@@ -1,0 +1,58 @@
+<h2>Mail log</h2>
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Filter</div>
+            <form method="get" id="filterform">                             
+                <div style="margin:10px;">        
+                    <input type="text" name="search" placeholder="Zoeken" id="fld_search" value="%[search]%" />                      
+                </div>
+            </form>    
+        </div>
+    </div>
+
+    <div class="searchbox">
+        <div class="searchresults">                    
+            <div class="searchtitle">
+                E-mailberichten                                
+                <div style="float:right;color:#555;">%[rowcount]% Found messages <a href="#" class="reload"><img width="20" class="middle" src="%[root]%/img/icons/reload.png" /></a></div>                
+                <div class="clear"></div>                 
+            </div>        
+                
+
+        <div id="mail">
+            %[logs_mail_data]%                   
+        </div>                                     
+    </div>
+   </div>    
+   <script type="text/javascript">
+        $.seachTimeout = null;
+        $.currentPage = 1;
+        $(document).ready(function(){
+            filterItems = function(){                
+                send                = {};
+                send._do            = 'filter';
+                send.ajax           = 1;
+                send.current_page   = $.currentPage;
+                send.filter         = $('#fld_search').val(); 
+                $.fancybox.showActivity();
+                $.post(window.location,send,function(data){
+                    $.fancybox.hideActivity();                        
+                    $('#mail').html($('#mail',data.content).html());
+                    $.bindFancybox();                        
+                },'json');                
+            }
+            $('.gotopage').live('click',function(e){
+                e.preventDefault();
+                $.currentPage = $(this).attr('rel');
+                filterItems();                                    
+            });
+            
+            $('#fld_search').live('keyup',function(e){
+                e.preventDefault();
+                clearTimeout($.seachTimeout);
+                $.seachTimeout  = setTimeout(function(){
+                    filterItems();                    
+                },500);
+            });                        
+        });
+   </script>

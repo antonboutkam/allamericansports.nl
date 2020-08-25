@@ -1,0 +1,22 @@
+<form method="post" id="onestepform" action="%[root]%/checkout.html">
+	<h1>Afrekenen</h1>
+    <h4>Stap 4: Verzenden / afhalen</h4>
+    <div class="content paymethod">
+        <div class="type_radio">
+        	<input id="sendorder" name="delivery" type="radio" class="checkbox delivery" %[has_delivery=1?'checked="checked"':'']% value="1" />
+            <label for="sendorder">Bestelling verzenden (€ %[calc_send_cost]%)</label>
+        </div>
+        <div class="type_radio">
+        	<input id="pickuporder" name="delivery" type="radio" class="checkbox delivery" %[has_delivery=0?'':'checked="checked"']% value="0" />
+            <label for="pickuporder">Ophalen in de winkel (geen kosten)</label>
+        </div>
+        <div class="tab">
+        	<div><a href="%[root]%/checkout.html?clear=paymethod"><img src="images/vorige.png" alt="" /></a></div>
+            	<div class="verder padd_left">
+                	<div><img src="images/verder_left.png" alt="" /></div>
+                    <span><a class="submit" href="#">Verder naar Stap 5</a></span>
+                    <div><img src="images/verder_right.png" alt="" /></div>
+                </div>
+            </div>
+    </div>
+</form>                            

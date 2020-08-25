@@ -1,0 +1,52 @@
+<h2>Mutaties</h2>
+<script type="text/javascript">
+    var show            = "%[show]%";
+    var current_page    = "%[current_page]%"
+</script>
+<form id="stockform" action="%[root]%/stock.html?show=%[show]%" method="post">
+
+    <div class="searchbox">
+        <div class="searchresults">
+            <div class="searchtitle">Filters</div>    
+            <div style="margin:10px;">            
+            <div>
+                <div>
+                    <table style="width:650px; float:left;">
+                        <tr><td class="tabletitle">Lokatie</td><td colspan="2" class="tabletitle">Groepering</td><td colspan="2" class="tabletitle">Filters</td></tr>
+                        <tr><td>
+                                <select name="location" class="mutations">
+                                    <!-- <option value="">Alle locaties</option> -->
+                                    <for:locations>
+                                        <option "%[location=%[id]%?'selected="selected"':'']%" class="%[location=%[id]%?'selected="selected"':'']%" value="%[id]%">%[name]%</option>
+                                    </for:locations>                                        
+                                </select></td>
+                            <td>Producten</td><td style="text-align:left;"><input class="checkbox mutations" name="grouping" %[grouping=c.article_number?'checked="checked"':'']% value="c.article_number" type="radio" /></td>
+                            <td>Alleen negatief</td>
+                            <td>
+                                <input type="checkbox" id="fld_onlynegative" class="checkbox mutations"/>                            
+                            </td>
+                            </tr>
+                            <tr><td></td><td>Transacties</td><td style="text-align:left;"><input class="checkbox mutations" name="grouping" %[grouping=s.id?'checked="checked"':'']% value="s.id" type="radio" /></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="clear"></div>                          
+                </div>
+                <hr />                        
+                <table>
+                    <tr class="tabletitle"><td>Periode van</td><td>Periode tot</td></tr>
+                    <tr>                                
+                        <td><input type="text" name="fromdate" value="%[fromdate]%"  style="width:80px;" class="mutations date"/></td>
+                        <td><input type="text" name="todate" value="%[todate]%" style="width:80px;" class="mutations date"/></td>                                                                                                                                                               
+                    </tr>
+                </table>  
+            </div>
+            <div class="clear"></div>                                               
+            </div>
+        </div>
+    </div>                      
+    <div class="searchbox" id="searchresult">
+        %[stock_mutations_tbl]%
+    </div>    
+</form>
