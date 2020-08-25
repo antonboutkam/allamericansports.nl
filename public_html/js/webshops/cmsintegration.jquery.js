@@ -48,20 +48,20 @@ $(document).ready(function(){
 	$('.cms_edit').live('click',function(e){
 		e.preventDefault();
 		if($(this).hasClass('article')){					
-			url = 'http://backoffice.'+window.location.hostname+'/settings/webshop_cms.html?_do=edit&iframe=1&id='+$(this).attr('data-cmsid')+'&webshop_id='+current_webshop_id;			
+			url = 'https://backoffice.'+window.location.hostname+'/settings/webshop_cms.html?_do=edit&iframe=1&id='+$(this).attr('data-cmsid')+'&webshop_id='+current_webshop_id;			
 		}else if($(this).hasClass('spotlight')){
-			url = 'http://backoffice.'+window.location.hostname+'/products/spotlight.html?iframe=1';			
+			url = 'https://backoffice.'+window.location.hostname+'/products/spotlight.html?iframe=1';			
 		}else if($(this).hasClass('product')){
 			id = $(this).attr('data-id')?$(this).attr('data-id'):$(this).attr('id');
-			url = 'http://backoffice.'+window.location.hostname+'/products/edit.html?id='+id+'&iframe=1';			
+			url = 'https://backoffice.'+window.location.hostname+'/products/edit.html?id='+id+'&iframe=1';			
 		}else if($(this).hasClass('banner')){
-			url = 'http://backoffice.'+window.location.hostname+'/settings/webshop_banner.html?webshop_id='+current_webshop_id+'&iframe=1';						
+			url = 'https://backoffice.'+window.location.hostname+'/settings/webshop_banner.html?webshop_id='+current_webshop_id+'&iframe=1';						
 		}else if($(this).hasClass('navtree')){
-			url = 'http://backoffice.'+window.location.hostname+'/settings/webshop_navigation.html?webshop_id='+current_webshop_id+'&iframe=1';						
+			url = 'https://backoffice.'+window.location.hostname+'/settings/webshop_navigation.html?webshop_id='+current_webshop_id+'&iframe=1';						
 		}else if($(this).hasClass('webshop_setting')){
-			url = 'http://backoffice.'+window.location.hostname+'/settings/webshop_config.html?webshop_id='+current_webshop_id+'&iframe=1';						
+			url = 'https://backoffice.'+window.location.hostname+'/settings/webshop_config.html?webshop_id='+current_webshop_id+'&iframe=1';						
 		}else if($(this).hasClass('navtreeitemtext')){
-			url = 'http://backoffice.'+window.location.hostname+'/settings/webshop_editnav.html?iframe=1&parent=&menu_id='+$(this).attr('id').replace('submenu','')+'&webshop_id='+current_webshop_id+'&iframe=1';						
+			url = 'https://backoffice.'+window.location.hostname+'/settings/webshop_editnav.html?iframe=1&parent=&menu_id='+$(this).attr('id').replace('submenu','')+'&webshop_id='+current_webshop_id+'&iframe=1';						
 		}
 		url = url.replace('www.','');
 					

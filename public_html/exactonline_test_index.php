@@ -19,7 +19,7 @@ require_once 'ExactApi.php';
 // Configuration, change these:
 $clientId 		= '0927ee45-ccde-4370-bd8c-efaa50a8c88c';
 $clientSecret 	= '1LjpuWjCUwXb';
-$redirectUri 	= "http://backoffice.allamericansports.nuidev.nl";
+$redirectUri 	= "https://backoffice.allamericansports.nuidev.nl";
 $division		= "325848";
 
 try {

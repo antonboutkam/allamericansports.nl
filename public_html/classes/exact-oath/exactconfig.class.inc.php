@@ -9,7 +9,7 @@ class ExactConfig{
 
     public function __construct($sClientId, $sClientSecret, $sCountryCode, $iDivision, $sReturnUrl){
 
-        $sReturnUrl = 'http://backoffice.allamericansports.nl'.$sReturnUrl;
+        $sReturnUrl = 'https://backoffice.allamericansports.nl'.$sReturnUrl;
         if(isset($_SERVER['IS_DEVEL'])){
             $sReturnUrl = str_replace('allamericansports.nl', 'allamericansports.nuidev.nl', $sReturnUrl);
         }

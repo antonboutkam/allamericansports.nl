@@ -100,13 +100,13 @@ if ($action!="")    /* display the contact form */
 		    {     
 			    ?>
 				<script>$('.cta-container').addClass('cta-active');</script>
-				<script>$('.cta-content').html('<span class="cta-title">Bedankt voor uw vraag.</span><span class="cta-close" onclick="toggleCta();">Sluiten<img alt="Sluiten" src="http://allamericansports.nl/schoolsoftbal/wp-content/themes/schoolsoftbal/images/close.png"></span></br>Wij doen ons best om binnen 1 werkdag te antwoorden.');</script>
+				<script>$('.cta-content').html('<span class="cta-title">Bedankt voor uw vraag.</span><span class="cta-close" onclick="toggleCta();">Sluiten<img alt="Sluiten" src="https://allamericansports.nl/schoolsoftbal/wp-content/themes/schoolsoftbal/images/close.png"></span></br>Wij doen ons best om binnen 1 werkdag te antwoorden.');</script>
 			    <?php
 
 		    }else{
 			    ?>
 				<script>$('.cta-container').addClass('cta-active');</script>
-				<script>$('.cta-content').html('<span class="cta-title">Er is helaas iets misgegaan</span><span class="cta-close" onclick="toggleCta();">Sluiten<img alt="Sluiten" src="http://allamericansports.nl/schoolsoftbal/wp-content/themes/schoolsoftbal/images/close.png"></span></br>Stel uw vraag door hem direct te mailen aan<a href="mailto:info@schoolsoftbal.nl">info@schoolsoftbal.nl</a>.');</script>
+				<script>$('.cta-content').html('<span class="cta-title">Er is helaas iets misgegaan</span><span class="cta-close" onclick="toggleCta();">Sluiten<img alt="Sluiten" src="https://allamericansports.nl/schoolsoftbal/wp-content/themes/schoolsoftbal/images/close.png"></span></br>Stel uw vraag door hem direct te mailen aan<a href="mailto:info@schoolsoftbal.nl">info@schoolsoftbal.nl</a>.');</script>
 			    <?php
 		    }
 		

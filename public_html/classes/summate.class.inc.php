@@ -11,7 +11,7 @@ class Summate{
         $mail = new AttachmentMail($params['to'],$params['subject'], "Rama Takshak",$params['from']);                        
         $mail->addAttachment(new Multipart($params['outfile'],'attachment','application/pdf'));        
         
-        $params['content'] = '<center><img src="http://backoffice.blueturban.nl/img/the-blue-turban.gif" /></center>'.$params['content'];
+        $params['content'] = '<center><img src="https://backoffice.blueturban.nl/img/the-blue-turban.gif" /></center>'.$params['content'];
         $mail->setBodyHtml($params['content']);
         $mail->setPriority(AbstractMail::HIGH_PRIORITY);
         

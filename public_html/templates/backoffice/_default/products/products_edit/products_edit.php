@@ -9,7 +9,7 @@ class Products_edit
 
         if (isset($params['id']) && is_numeric($params['id'])) {
             // "Voorraad real-time ophalen.";
-            file_get_contents('http://backoffice.allamericansports.nl/stock?product_id=' . $params['id']);
+            file_get_contents('https://backoffice.allamericansports.nl/stock?product_id=' . $params['id']);
         }
 
         $oExactApi = ExactHandleOath::handle($_SERVER['REQUEST_URI']);
