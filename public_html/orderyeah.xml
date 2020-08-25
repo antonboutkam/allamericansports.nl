@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eExact xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="eExact-XML.xsd">
+<SalesOrders>
+<SalesOrder salesordernumber="0" status="12">
+<OrderDate>2014-04-14</OrderDate>
+<DeliveryDate>2014-04-14</DeliveryDate>
+<Description>Uw bestelling bij All-American Sports</Description>
+          <YourRef>000002</YourRef>
+            <OrderedBy>
+               <Name>NuiCart</Name>
+               <Phone>0641396495</Phone>
+            </OrderedBy>
+            <DeliverTo>
+                <Name>NuiCart</Name>
+                <Phone>0641396495</Phone>
+            </DeliverTo>
+            <DeliveryAddress />
+            <InvoiceTo>
+                <Name>NuiCart</Name>
+                <Phone>0641396495</Phone>
+            </InvoiceTo>
+            <ForeignAmount>
+                <Currency code="EUR" />
+                <Value>90.63</Value>
+                <Rate>1</Rate>
+                <PaymentDiscountAmount>
+                    <Value>0</Value>
+                </PaymentDiscountAmount>
+            </ForeignAmount>
+            <ShippingMethod code="">
+                <Description>Verzenden per post</Description>
+            </ShippingMethod>
+            <SalesPerson>
+                <FullName>All-American Sports</FullName>
+            </SalesPerson>
+            <SalesOrderLine line="1">
+                <Description>Reebok VRPNT 11,5 inch</Description>
+                <Item code="883623820848">
+                    <Description>Reebok VRPNT 11,5 inch</Description>
+                </Item>
+                <Quantity>1</Quantity>
+                <DeliveryDate>2014-04-14</DeliveryDate>
+                <Unit code="stuk">
+                    <Description termid="53050">stuk</Description>
+                </Unit>
+                <UnitPrice>
+                    <Currency code="EUR" />
+                    <Value>69.9501</Value>
+                    <VAT code="4">
+                        <Description>BTW 21%</Description>
+                    </VAT>
+                    <VATPercentage>0.21</VATPercentage>
+                </UnitPrice>
+                <NetPrice>
+                    <Currency code="EUR" />
+                    <Value>69.9501</Value>
+                    <VAT code="4">
+                        <Description>BTW 21%</Description>
+                    </VAT>
+                    <VATPercentage>0.21</VATPercentage>
+                </NetPrice>
+                <ForeignAmount>
+                    <Currency code="EUR" />
+                    <Value>74.26</Value>
+                    <Rate>1</Rate>
+                    <VATBaseAmount>74.26</VATBaseAmount>
+                    <VATAmount>15.59</VATAmount>
+                </ForeignAmount>
+                <DiscountPercentage>0</DiscountPercentage>
+                <UseDropShipment>0</UseDropShipment>
+            </SalesOrderLine>
+        </SalesOrder>
+    </SalesOrders>
+    <Messages />
+</eExact>

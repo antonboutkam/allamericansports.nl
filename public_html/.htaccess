@@ -1,0 +1,48 @@
+RewriteEngine On 
+ExpiresActive On
+
+
+php_flag magic_quotes_gpc Off
+
+# Favicon (cannot be renamed)
+ExpiresByType image/x-icon "access plus 1 week"
+
+# Media: images, video, audio
+ ExpiresByType image/gif "access plus 1 month"
+ ExpiresByType image/png "access plus 1 month"
+ ExpiresByType image/jpg "access plus 1 month"
+ ExpiresByType image/jpeg "access plus 1 month"
+
+# Webfonts
+ ExpiresByType font/truetype "access plus 1 month"
+ ExpiresByType font/opentype "access plus 1 month"
+ ExpiresByType application/x-font-woff   "access plus 1 month"
+ ExpiresByType image/svg+xml "access plus 1 month"
+ ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+
+# CSS and JavaScript
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType text/javascript "access plus 1 month"
+	
+	
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule img/upload/[0-9]+.jpg /img/no-img-available.jpg [QSA,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule img/caticons/(([0-9]+)x([0-9]+)_(.+)) /img/caticons/adapt.php?file=$4&w=$2&h=$3&original=$1 [L] 
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule img/product/(([0-9]+)x([0-9]+)_(.+)) /img/product/adapt.php?file=$4&w=$2&h=$3&original=$1 [L] 
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (([0-9]+)x([0-9]+)_(.+)) /img/upload/adapt.php?file=$4&w=$2&h=$3&original=$1 [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ([^/]+)(.jpg|.JPG|.gif|.GIF|.png|.PNG|.ico|.ICO)$ /img/custom.php?img=$1&ext=$2 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ([^/]+)(.css|.CSS)$ /css/custom.php?img=$1&ext=$2 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.+) /index.php?page=$1 [QSA]
