@@ -21,7 +21,7 @@ class Exact_stock
 
 	public function get_stock_exact($system)
 		{
-			
+
 		if($system == 'Amazon'){
 			// Configuration, change these:
 			$clientId 		= '{8dff146a-9377-455c-adbc-d826c7e4de9f}';
@@ -31,27 +31,27 @@ class Exact_stock
 			// Configuration, change these:
 			$clientId 		= '{be737814-828b-40d3-994b-e17610076024}';
 			$clientSecret 	= 'BH9apfpnES1z';
-			$redirectUri 	= "http://allamericansports.nl/exact_connection/index.php";
+			$redirectUri 	= "https://allamericansports.nl/exact_connection/index.php";
 		}
-		
+
 		$division		= "325848";
 
 		try {
-			
+
 			// Initialize ExactAPI
 			$exactApi = new ExactApi('nl', $clientId, $clientSecret, $division);
-			
+
 			$exactApi->getOAuthClient()->setRedirectUri($redirectUri);
-			
+
 			if (!isset($_GET['code'])) {
-				
+
 				// Redirect to Auth-endpoint
 				$authUrl = $exactApi->getOAuthClient()->getAuthenticationUrl();
 				header('Location: ' . $authUrl, TRUE, 302);
 				die('Redirect');
-				
+
 			} else {
-				
+
 				$time_api = microtime(true);
 				$time_xml = microtime(true);
 
@@ -60,13 +60,13 @@ class Exact_stock
 				$access_token = $tokenResult['access_token'];
 				$refresh_token = $tokenResult['refresh_token'];
 		}
-			
+
 		}catch(ErrorException $e){
-			
+
 			var_dump($e);
-			
+
 		}
-		
+
 		return array($access_token, $refresh_token);
 
 	}

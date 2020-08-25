@@ -31,7 +31,7 @@ class Exact_stock
 			// Configuration, change these:
 			$clientId 		= '{be737814-828b-40d3-994b-e17610076024}';
 			$clientSecret 	= 'BH9apfpnES1z';
-			$redirectUri 	= "http://allamericansports.nl/update/Voorraad_synchroniseren.php";
+			$redirectUri 	= "https://allamericansports.nl/update/Voorraad_synchroniseren.php";
 		}
 		
 		$division		= "325848";
