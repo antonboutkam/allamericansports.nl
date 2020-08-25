@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eExact xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="eExact-XML.xsd">
+<SalesOrders>
+<SalesOrder status="12">
+<OrderDate>2015-08-21</OrderDate>
+<DeliveryDate>2015-08-21</DeliveryDate>
+<Description>Uw bestelling bij All-American Sports</Description>
+          <YourRef>005237</YourRef>
+            <OrderedBy code="1128">
+               <Name>Adine Franka</Name>
+               <Phone>0641853105</Phone>
+            </OrderedBy>
+            <DeliverTo>
+                <Name>Adine Franka</Name>
+                <Phone>0641853105</Phone>
+            </DeliverTo>
+            <DeliveryAddress>
+              <AddressLine1>Dosiostraat 70</AddressLine1>
+              <PostalCode>3066NE</PostalCode>
+              <City>Rotterdam</City>
+              <Country code="NL" />
+                <Contact>
+                      <LastName>Franka</LastName>
+                      <FirstName>Adine</FirstName>
+                      <FullName>Adine Franka</FullName>
+                      <Email>r.franka02@gmail.com</Email>
+                </Contact>
+            </DeliveryAddress>
+            <InvoiceTo>
+                <Name>Adine Franka</Name>
+                <Phone>0641853105</Phone>
+            </InvoiceTo>
+            <ShippingMethod code="">
+                <Description>Verzenden per post</Description>
+            </ShippingMethod>
+            <SalesPerson>
+                <FullName>All-American Sports</FullName>
+            </SalesPerson>
+            <SalesOrderLine line="1">
+                <Description>Rip-It Defense Youth Softball Fielders Mask - Black</Description>
+                <Item code="897057001773">
+                    <Description>Rip-It Defense Youth Softball Fielders Mask - Black</Description>
+                </Item>
+                <Quantity>1</Quantity>
+                <DeliveryDate>2015-08-21</DeliveryDate>
+                <Unit code="stuk">
+                    <Description>Piece</Description>
+                </Unit>
+                <UnitPrice>
+                    <Currency code="EUR" />
+                    <Value>54.95</Value>
+                    <VAT code="4">
+                        <Description>BTW 21%</Description>
+                    </VAT>
+                    <VATPercentage>0.21</VATPercentage>
+                </UnitPrice>
+                <NetPrice>
+                    <Currency code="EUR" />
+                    <Value>54.9461</Value>
+                    <VAT code="4">
+                        <Description>BTW hoog tarief, inclusief</Description>
+                    </VAT>
+                    <VATPercentage>0.21</VATPercentage>
+                </NetPrice>
+                <DiscountPercentage>0</DiscountPercentage>
+                <UseDropShipment>0</UseDropShipment>
+            </SalesOrderLine>
+            <SalesOrderLine line="2">
+                <Description>Verzendkosten</Description>
+                <Item code="1001">
+                    <Description>1001 Handelings- en verzendkosten</Description>
+                </Item>
+                <Quantity>1</Quantity>
+                <DeliveryDate>2015-08-21</DeliveryDate>
+                <Unit code="pc">
+                    <Description>Piece</Description>
+                </Unit>
+                <UnitPrice>
+                    <Currency code="EUR" />
+                    <Value>4.95</Value>
+                    <VAT code="4">
+                        <Description>BTW 21%</Description>
+                    </VAT>
+                    <VATPercentage>0.21</VATPercentage>
+                </UnitPrice>
+                <NetPrice>
+                    <Currency code="EUR" />
+                    <Value>4.95</Value>
+                    <VAT code="4">
+                        <Description>BTW hoog tarief, inclusief</Description>
+                    </VAT>
+                    <VATPercentage>0.21</VATPercentage>
+                </NetPrice>
+                <DiscountPercentage>0</DiscountPercentage>
+                <UseDropShipment>0</UseDropShipment>
+            </SalesOrderLine>
+        </SalesOrder>
+    </SalesOrders>
+    <Messages />
+</eExact>

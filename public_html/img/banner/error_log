@@ -1,0 +1,70 @@
+[03-Aug-2011 17:09:29] PHP Fatal error:  Uncaught exception 'Exception' with message 'Image file not found: viadennis.nl/23.jpg' in /home/viadenni/public_html/newsite/classes/thumb_plugins/ThumbBase.inc.php:193
+Stack trace:
+#0 /home/viadenni/public_html/newsite/classes/thumb_plugins/ThumbBase.inc.php(172): ThumbBase->triggerError('Image file not ...')
+#1 /home/viadenni/public_html/newsite/classes/thumb_plugins/ThumbBase.inc.php(110): ThumbBase->fileExistsAndReadable()
+#2 /home/viadenni/public_html/newsite/classes/thumb_plugins/GdThumb.inc.php(96): ThumbBase->__construct('viadennis.nl/23...', false)
+#3 /home/viadenni/public_html/newsite/classes/thumb_plugins/ThumbLib.inc.php(127): GdThumb->__construct('viadennis.nl/23...', Array, false)
+#4 /home/viadenni/public_html/newsite/img/banner/adapt.php(7): PhpThumbFactory::create('viadennis.nl/23...')
+#5 /home/viadenni/public_html/newsite/img/banner/adapt.php(11): makeAdapt('viadennis.nl/23...', NULL, '180', '100')
+#6 {main}
+  thrown in /home/viadenni/public_html/newsite/classes/thumb_plugins/ThumbBase.inc.php on line 193
+[30-Aug-2011 14:48:46] PHP Fatal error:  Uncaught exception 'Exception' with message 'Image file not found: allesvoorgigabyte.nl/43.jpg' in /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php:193
+Stack trace:
+#0 /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php(172): ThumbBase->triggerError('Image file not ...')
+#1 /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php(110): ThumbBase->fileExistsAndReadable()
+#2 /home/viadenni/public_html/classes/thumb_plugins/GdThumb.inc.php(96): ThumbBase->__construct('allesvoorgigaby...', false)
+#3 /home/viadenni/public_html/classes/thumb_plugins/ThumbLib.inc.php(127): GdThumb->__construct('allesvoorgigaby...', Array, false)
+#4 /home/viadenni/public_html/img/banner/adapt.php(7): PhpThumbFactory::create('allesvoorgigaby...')
+#5 /home/viadenni/public_html/img/banner/adapt.php(11): makeAdapt('allesvoorgigaby...', NULL, '180', '100')
+#6 {main}
+  thrown in /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php on line 193
+[30-Aug-2011 14:48:49] PHP Fatal error:  Uncaught exception 'Exception' with message 'Image file not found: allesvoorgigabyte.nl/43.jpg' in /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php:193
+Stack trace:
+#0 /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php(172): ThumbBase->triggerError('Image file not ...')
+#1 /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php(110): ThumbBase->fileExistsAndReadable()
+#2 /home/viadenni/public_html/classes/thumb_plugins/GdThumb.inc.php(96): ThumbBase->__construct('allesvoorgigaby...', false)
+#3 /home/viadenni/public_html/classes/thumb_plugins/ThumbLib.inc.php(127): GdThumb->__construct('allesvoorgigaby...', Array, false)
+#4 /home/viadenni/public_html/img/banner/adapt.php(7): PhpThumbFactory::create('allesvoorgigaby...')
+#5 /home/viadenni/public_html/img/banner/adapt.php(11): makeAdapt('allesvoorgigaby...', NULL, '180', '100')
+#6 {main}
+  thrown in /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php on line 193
+[30-Aug-2011 15:20:16] PHP Fatal error:  Uncaught exception 'Exception' with message 'Image file not found: allesvoormsi.nl/44.jpg' in /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php:193
+Stack trace:
+#0 /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php(172): ThumbBase->triggerError('Image file not ...')
+#1 /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php(110): ThumbBase->fileExistsAndReadable()
+#2 /home/viadenni/public_html/classes/thumb_plugins/GdThumb.inc.php(96): ThumbBase->__construct('allesvoormsi.nl...', false)
+#3 /home/viadenni/public_html/classes/thumb_plugins/ThumbLib.inc.php(127): GdThumb->__construct('allesvoormsi.nl...', Array, false)
+#4 /home/viadenni/public_html/img/banner/adapt.php(7): PhpThumbFactory::create('allesvoormsi.nl...')
+#5 /home/viadenni/public_html/img/banner/adapt.php(11): makeAdapt('allesvoormsi.nl...', NULL, '180', '100')
+#6 {main}
+  thrown in /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php on line 193
+[30-Aug-2011 15:20:20] PHP Fatal error:  Uncaught exception 'Exception' with message 'Image file not found: allesvoormsi.nl/44.jpg' in /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php:193
+Stack trace:
+#0 /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php(172): ThumbBase->triggerError('Image file not ...')
+#1 /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php(110): ThumbBase->fileExistsAndReadable()
+#2 /home/viadenni/public_html/classes/thumb_plugins/GdThumb.inc.php(96): ThumbBase->__construct('allesvoormsi.nl...', false)
+#3 /home/viadenni/public_html/classes/thumb_plugins/ThumbLib.inc.php(127): GdThumb->__construct('allesvoormsi.nl...', Array, false)
+#4 /home/viadenni/public_html/img/banner/adapt.php(7): PhpThumbFactory::create('allesvoormsi.nl...')
+#5 /home/viadenni/public_html/img/banner/adapt.php(11): makeAdapt('allesvoormsi.nl...', NULL, '180', '100')
+#6 {main}
+  thrown in /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php on line 193
+[30-Aug-2011 15:24:18] PHP Fatal error:  Uncaught exception 'Exception' with message 'Image file not found: allesvoormsi.nl/44.jpg' in /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php:193
+Stack trace:
+#0 /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php(172): ThumbBase->triggerError('Image file not ...')
+#1 /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php(110): ThumbBase->fileExistsAndReadable()
+#2 /home/viadenni/public_html/classes/thumb_plugins/GdThumb.inc.php(96): ThumbBase->__construct('allesvoormsi.nl...', false)
+#3 /home/viadenni/public_html/classes/thumb_plugins/ThumbLib.inc.php(127): GdThumb->__construct('allesvoormsi.nl...', Array, false)
+#4 /home/viadenni/public_html/img/banner/adapt.php(7): PhpThumbFactory::create('allesvoormsi.nl...')
+#5 /home/viadenni/public_html/img/banner/adapt.php(11): makeAdapt('allesvoormsi.nl...', NULL, '180', '100')
+#6 {main}
+  thrown in /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php on line 193
+[30-Aug-2011 15:26:42] PHP Fatal error:  Uncaught exception 'Exception' with message 'Image file not found: allesvoormsi.nl/44.jpg' in /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php:193
+Stack trace:
+#0 /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php(172): ThumbBase->triggerError('Image file not ...')
+#1 /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php(110): ThumbBase->fileExistsAndReadable()
+#2 /home/viadenni/public_html/classes/thumb_plugins/GdThumb.inc.php(96): ThumbBase->__construct('allesvoormsi.nl...', false)
+#3 /home/viadenni/public_html/classes/thumb_plugins/ThumbLib.inc.php(127): GdThumb->__construct('allesvoormsi.nl...', Array, false)
+#4 /home/viadenni/public_html/img/banner/adapt.php(7): PhpThumbFactory::create('allesvoormsi.nl...')
+#5 /home/viadenni/public_html/img/banner/adapt.php(11): makeAdapt('allesvoormsi.nl...', NULL, '180', '100')
+#6 {main}
+  thrown in /home/viadenni/public_html/classes/thumb_plugins/ThumbBase.inc.php on line 193
