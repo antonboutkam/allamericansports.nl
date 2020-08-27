@@ -19,7 +19,7 @@ class MimeMailer extends Zend_Mail{
 	* @param $tag refers to a template + translation
 	*/
 	static function sendMail($from,$toMail,$toName,$subject,$html,$attachmentBinary=null,$attachementContentType='application/pdf',$attachementFilename='factuur.pdf'){
-        $fromEmail = 'info@allamericansports.nl';
+        $from = 'info@allamericansports.nl';
 	    $sqlTpl = 'INSERT INTO mail_log(tomail,frommail,subject,content,mailtime) VALUE("%s","%s","%s","%s",NOW())';
         $sql    = sprintf($sqlTpl,quote($toMail),quote($from),quote($subject),quote($html));
         query($sql,__METHOD__);
