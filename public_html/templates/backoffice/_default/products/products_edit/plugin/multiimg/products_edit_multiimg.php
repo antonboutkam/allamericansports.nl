@@ -20,9 +20,6 @@ class Products_Edit_Multiimg extends Products_edit_abstract {
 		
         $params['multi_image_edit']     = parse('multi_image_edit',$params,__FILE__);
 
-        echo "<h1>Template</h1>";
-        echo parse('products_edit_multiimg',$params,__FILE__);;
-
         $params['plugins']              .= parse('products_edit_multiimg',$params,__FILE__);
         
         

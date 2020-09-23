@@ -56,9 +56,6 @@ class Products_edit
 
         $params['modules'] = Cfg::areModulesActive($aAllModules);
 
-        // testing
-        echo "Active modules<br>";
-        print_r($params['modules']);
 
         if ($params['_do'] == 'update_image') {
             if ($params['image_type'] == 'altimage') {
@@ -299,11 +296,6 @@ class Products_edit
         $params['required_translations'] = TranslateWebshop::getAllAvailableTranslations($params['id']);
 
 
-echo __METHOD__;
-echo "Plugins<br>";
-echo "<pre>" . print_r($aPlugins, true) . "</pre>";
-
-
         if (!empty($aPlugins)) {
             foreach ($aPlugins as $oPlugin) {
                 if($oPlugin instanceof Products_edit_abstract) {
@@ -312,8 +304,6 @@ echo "<pre>" . print_r($aPlugins, true) . "</pre>";
             }
         }
 
-        echo __METHOD__;
-        echo "<pre>" . print_r($params, true) . "</pre>";
         
         $params['content'] = parse('products_edit', $params, __FILE__);
 
