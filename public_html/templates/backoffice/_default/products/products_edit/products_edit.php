@@ -56,7 +56,8 @@ class Products_edit
 
         $params['modules'] = Cfg::areModulesActive($aAllModules);
 
-        echo "Active modules"
+        // testing
+        echo "Active modules<br>";
         print_r($params['modules']);
 
         if ($params['_do'] == 'update_image') {
