@@ -275,6 +275,7 @@ function parse($template, $data, $php__FILE__ = null, $siteType = null, $customR
         $sTemplateDirAbsolutePath = dirname($php__FILE__) . '/' . $template . '.html';
         $sTemplateDirRelativePath = str_replace($sScript, '', $sTemplateDirAbsolutePath);
         $aFiles[] = $sTemplateDirRelativePath;
+        $aFiles[] = './' . $sTemplateDirRelativePath;
     }
 
     $aSiteTypes = array();
