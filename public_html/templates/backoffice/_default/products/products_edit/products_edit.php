@@ -38,7 +38,6 @@ class Products_edit
         }
 
 
-
         // Only allow module if active.
         $aAllModules = [
             'has_is_part',
@@ -56,6 +55,9 @@ class Products_edit
         ];
 
         $params['modules'] = Cfg::areModulesActive($aAllModules);
+
+        echo "Active modules"
+        print_r($params['modules']);
 
         if ($params['_do'] == 'update_image') {
             if ($params['image_type'] == 'altimage') {
@@ -294,6 +296,11 @@ class Products_edit
             $params['webshop_root_menu_structures'] = Webshop::getProductMenuStructures(null, $params['id']);
         $params['module_prices'] = parse('inc/module_prices', $params);
         $params['required_translations'] = TranslateWebshop::getAllAvailableTranslations($params['id']);
+
+
+echo __METHOD__;
+echo "Plugins<br>";
+echo "<pre>" . print_r($aPlugins, true) . "</pre>";
 
 
         if (!empty($aPlugins)) {
