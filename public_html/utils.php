@@ -300,6 +300,10 @@ function parse($template, $data, $php__FILE__ = null, $siteType = null, $customR
         $aFiles[] = './templates/' . $sSiteType . '/_default/' . $template . '.html';
     }
 
+    echo __METHOD__;
+    echo "<h1>FILES</h1>";
+    echo "<pre>" . print_r($aFiles, true) . "</pre>";
+    
     foreach($aFiles as $sFile){
 
         // echo 'Search for '. $sFile . "<br>";
