@@ -312,6 +312,9 @@ echo "<pre>" . print_r($aPlugins, true) . "</pre>";
             }
         }
 
+        echo __METHOD__;
+        echo "<pre>" . print_r($params, true) . "</pre>";
+        
         $params['content'] = parse('products_edit', $params, __FILE__);
 
         return $params;
